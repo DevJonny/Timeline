@@ -10,12 +10,14 @@
   } from '../lib/scale.ts';
   import { chooseTickScale, generateTicks } from '../lib/ticks.ts';
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
+  import { clusterOverflow, importanceGate } from '../lib/lod.ts';
   import { formatAxisYear, presentDecimalYear, resolveEnd, toDecimalYear } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
   import { onSelectionChange, readSelection, writeSelection } from '../lib/hash.ts';
   import { zoomable, type ZoomController } from '../lib/zoom.ts';
   import type { Entry } from '../lib/types.ts';
   import Axis from './Axis.svelte';
+  import ClusterMarker from './ClusterMarker.svelte';
   import DetailSheet from './DetailSheet.svelte';
   import EntryMarker from './EntryMarker.svelte';
   import EraRail from './EraRail.svelte';
@@ -146,31 +148,55 @@
     pinned: boolean;
   }
 
+  /**
+   * The zoom earns a level of detail; anything less important is not a
+   * candidate for a label at all. Without this, full zoom-out tries to draw
+   * every entry in the last five thousand years inside a single pixel.
+   */
+  const gate = $derived(importanceGate(transform.k));
+
   const labels: Label[] = $derived(
-    resolved.map((item) => {
-      const py0 = view(item.t0);
-      if (item.t1 === null) {
-        return { item, top: py0 - LABEL_HEIGHT / 2, pinned: false };
-      }
-      const py1 = view(item.t1);
-      // Hold a long span's label just inside the viewport so the Palaeolithic
-      // stays identified while you are in the middle of it, but never push it
-      // past the span's own end.
-      const top = Math.min(Math.max(py0, 0), Math.max(py1 - LABEL_HEIGHT, py0));
-      return { item, top, pinned: top > py0 + 0.5 };
-    }),
+    resolved
+      .filter((item) => item.entry.importance <= gate)
+      .map((item) => {
+        const py0 = view(item.t0);
+        if (item.t1 === null) {
+          return { item, top: py0 - LABEL_HEIGHT / 2, pinned: false };
+        }
+        const py1 = view(item.t1);
+        // Hold a long span's label just inside the viewport so the Palaeolithic
+        // stays identified while you are in the middle of it, but never push it
+        // past the span's own end.
+        const top = Math.min(Math.max(py0, 0), Math.max(py1 - LABEL_HEIGHT, py0));
+        return { item, top, pinned: top > py0 + 0.5 };
+      }),
   );
 
+  const labelBox = (l: Label) => labelExtent(l.top + LABEL_HEIGHT / 2, LABEL_HEIGHT);
+
   const labelPacking = $derived(
-    packLanes(
-      cullToViewport(labels, (l) => labelExtent(l.top + LABEL_HEIGHT / 2, LABEL_HEIGHT), safeHeight, 60),
-      (l) => labelExtent(l.top + LABEL_HEIGHT / 2, LABEL_HEIGHT),
-      maxLabelLanes,
-      4,
+    packLanes(cullToViewport(labels, labelBox, safeHeight, 60), labelBox, maxLabelLanes, 4),
+  );
+
+  /**
+   * Whatever survived the gate but still would not fit becomes a "+N" marker,
+   * so a crowded stretch advertises that there is more here rather than
+   * silently dropping entries.
+   */
+  const clusters = $derived(
+    clusterOverflow(
+      labelPacking.overflow,
+      labelBox,
+      (l) => ({ t0: l.item.t0, t1: l.item.t1 ?? l.item.t0 }),
+      LABEL_HEIGHT,
     ),
   );
 
   const hiddenCount = $derived(labelPacking.overflow.length);
+
+  function expandCluster(t0: number, t1: number): void {
+    controller?.zoomTo(transformForDomainPadded(base, t0, t1));
+  }
 
   // --- era rail --------------------------------------------------------------
 
@@ -335,6 +361,15 @@
             {compact}
             onselect={(id) => select(id)}
             onprefetch={prefetchDetail}
+          />
+        {/each}
+
+        {#each clusters as cluster (cluster.items[0]!.item.entry.id)}
+          <ClusterMarker
+            entries={cluster.items.map((l) => l.item.entry)}
+            lane={maxLabelLanes - 1}
+            y={cluster.y - 16}
+            onexpand={() => expandCluster(cluster.t0, cluster.t1)}
           />
         {/each}
       </div>

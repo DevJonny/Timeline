@@ -5,178 +5,618 @@
       "id": "palaeolithic",
       "title": "Palaeolithic",
       "type": "age",
-      "start": { "year": -3300000, "circa": true },
-      "end": { "year": -12000, "circa": true },
+      "start": {
+        "year": -3300000,
+        "circa": true
+      },
+      "end": {
+        "year": -12000,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["prehistory", "stone-age", "three-age-system"]
+      "keywords": [
+        "prehistory",
+        "stone-age",
+        "three-age-system"
+      ]
     },
     {
       "id": "mesolithic",
       "title": "Mesolithic",
       "type": "age",
-      "start": { "year": -12000, "circa": true },
-      "end": { "year": -10000, "circa": true },
+      "start": {
+        "year": -12000,
+        "circa": true
+      },
+      "end": {
+        "year": -10000,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["prehistory", "stone-age", "three-age-system"]
+      "keywords": [
+        "prehistory",
+        "stone-age",
+        "three-age-system"
+      ]
     },
     {
       "id": "neolithic",
       "title": "Neolithic",
       "type": "age",
-      "start": { "year": -10000, "circa": true },
-      "end": { "year": -3300, "circa": true },
+      "start": {
+        "year": -10000,
+        "circa": true
+      },
+      "end": {
+        "year": -3300,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["prehistory", "stone-age", "agriculture", "three-age-system"]
+      "keywords": [
+        "prehistory",
+        "stone-age",
+        "agriculture",
+        "three-age-system"
+      ]
     },
     {
       "id": "bronze-age",
       "title": "Bronze Age",
       "type": "age",
-      "start": { "year": -3300, "circa": true },
-      "end": { "year": -1200, "circa": true },
+      "start": {
+        "year": -3300,
+        "circa": true
+      },
+      "end": {
+        "year": -1200,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["prehistory", "metallurgy", "three-age-system"]
+      "keywords": [
+        "prehistory",
+        "metallurgy",
+        "three-age-system"
+      ]
     },
     {
       "id": "iron-age",
       "title": "Iron Age",
       "type": "age",
-      "start": { "year": -1200, "circa": true },
-      "end": { "year": -550, "circa": true },
+      "start": {
+        "year": -1200,
+        "circa": true
+      },
+      "end": {
+        "year": -550,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["prehistory", "metallurgy", "three-age-system"]
+      "keywords": [
+        "prehistory",
+        "metallurgy",
+        "three-age-system"
+      ]
     },
     {
       "id": "classical-antiquity",
       "title": "Classical Antiquity",
       "type": "age",
-      "start": { "year": -800, "circa": true },
-      "end": { "year": 500, "circa": true },
+      "start": {
+        "year": -800,
+        "circa": true
+      },
+      "end": {
+        "year": 500,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["antiquity", "greece", "rome"]
+      "keywords": [
+        "antiquity",
+        "greece",
+        "rome"
+      ]
     },
     {
       "id": "middle-ages",
       "title": "Middle Ages",
       "type": "age",
-      "start": { "year": 500, "circa": true },
-      "end": { "year": 1500, "circa": true },
+      "start": {
+        "year": 500,
+        "circa": true
+      },
+      "end": {
+        "year": 1500,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["medieval", "europe"]
+      "keywords": [
+        "medieval",
+        "europe"
+      ]
     },
     {
       "id": "early-modern-period",
       "title": "Early Modern Period",
       "type": "age",
-      "start": { "year": 1500, "circa": true },
-      "end": { "year": 1760, "circa": true },
+      "start": {
+        "year": 1500,
+        "circa": true
+      },
+      "end": {
+        "year": 1760,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["early-modern", "europe", "renaissance"]
+      "keywords": [
+        "early-modern",
+        "europe",
+        "renaissance"
+      ]
     },
     {
       "id": "industrial-age",
       "title": "Industrial Age",
       "type": "age",
-      "start": { "year": 1760, "circa": true },
-      "end": { "year": 1900, "circa": true },
+      "start": {
+        "year": 1760,
+        "circa": true
+      },
+      "end": {
+        "year": 1900,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["industrial-revolution", "modern"]
+      "keywords": [
+        "industrial-revolution",
+        "modern"
+      ]
     },
     {
       "id": "modern-age",
       "title": "Modern Age",
       "type": "age",
-      "start": { "year": 1900, "circa": true },
-      "end": { "year": 1945, "circa": true },
+      "start": {
+        "year": 1900,
+        "circa": true
+      },
+      "end": {
+        "year": 1945,
+        "circa": true
+      },
       "importance": 1,
-      "keywords": ["modern", "20th-century"]
+      "keywords": [
+        "modern",
+        "20th-century"
+      ]
     },
     {
       "id": "contemporary-age",
       "title": "Contemporary Age",
       "type": "age",
-      "start": { "year": 1945 },
+      "start": {
+        "year": 1945
+      },
       "end": "present",
       "importance": 1,
-      "keywords": ["contemporary", "modern", "20th-century"]
+      "keywords": [
+        "contemporary",
+        "modern",
+        "20th-century"
+      ]
     },
-
     {
       "id": "roman-empire",
       "title": "Roman Empire",
       "type": "empire",
-      "start": { "year": -27 },
-      "end": { "year": 476, "day": 4, "month": 9 },
+      "start": {
+        "year": -27
+      },
+      "end": {
+        "year": 476,
+        "day": 4,
+        "month": 9
+      },
       "importance": 1,
-      "keywords": ["rome", "antiquity", "empire"]
+      "keywords": [
+        "rome",
+        "antiquity",
+        "empire"
+      ]
     },
     {
       "id": "elizabeth-i",
       "title": "Elizabeth I",
       "type": "ruler",
-      "start": { "year": 1558, "month": 11, "day": 17 },
-      "end": { "year": 1603, "month": 3, "day": 24 },
+      "start": {
+        "year": 1558,
+        "month": 11,
+        "day": 17
+      },
+      "end": {
+        "year": 1603,
+        "month": 3,
+        "day": 24
+      },
       "importance": 2,
-      "keywords": ["england", "tudor", "early-modern", "monarchy"]
+      "keywords": [
+        "england",
+        "tudor",
+        "early-modern",
+        "monarchy"
+      ]
     },
     {
       "id": "isaac-newton",
       "title": "Isaac Newton",
       "type": "person",
-      "start": { "year": 1643, "month": 1, "day": 4 },
-      "end": { "year": 1727, "month": 3, "day": 31 },
+      "start": {
+        "year": 1643,
+        "month": 1,
+        "day": 4
+      },
+      "end": {
+        "year": 1727,
+        "month": 3,
+        "day": 31
+      },
       "importance": 2,
-      "keywords": ["science", "england", "early-modern", "mathematics"]
+      "keywords": [
+        "science",
+        "england",
+        "early-modern",
+        "mathematics"
+      ]
     },
     {
       "id": "magna-carta",
       "title": "Magna Carta",
       "type": "event",
-      "start": { "year": 1215, "month": 6, "day": 15 },
+      "start": {
+        "year": 1215,
+        "month": 6,
+        "day": 15
+      },
       "importance": 2,
-      "keywords": ["england", "medieval", "law"]
+      "keywords": [
+        "england",
+        "medieval",
+        "law"
+      ]
     },
     {
       "id": "battle-of-hastings",
       "title": "Battle of Hastings",
       "type": "battle",
-      "start": { "year": 1066, "month": 10, "day": 14 },
+      "start": {
+        "year": 1066,
+        "month": 10,
+        "day": 14
+      },
       "importance": 2,
-      "keywords": ["england", "medieval", "norman-conquest"]
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest"
+      ]
     },
     {
       "id": "world-war-2",
       "title": "Second World War",
       "type": "war",
-      "start": { "year": 1939, "month": 9, "day": 1 },
-      "end": { "year": 1945, "month": 9, "day": 2 },
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 1
+      },
+      "end": {
+        "year": 1945,
+        "month": 9,
+        "day": 2
+      },
       "importance": 1,
-      "keywords": ["world-war-2", "20th-century", "modern"]
+      "keywords": [
+        "world-war-2",
+        "20th-century",
+        "modern"
+      ]
     },
     {
       "id": "battle-of-britain",
       "title": "Battle of Britain",
       "type": "battle",
-      "start": { "year": 1940, "month": 7, "day": 10 },
-      "end": { "year": 1940, "month": 10, "day": 31 },
+      "start": {
+        "year": 1940,
+        "month": 7,
+        "day": 10
+      },
+      "end": {
+        "year": 1940,
+        "month": 10,
+        "day": 31
+      },
       "importance": 3,
-      "keywords": ["world-war-2", "20th-century", "britain"]
+      "keywords": [
+        "world-war-2",
+        "20th-century",
+        "britain"
+      ]
     },
     {
       "id": "d-day",
       "title": "D-Day Landings",
       "type": "battle",
-      "start": { "year": 1944, "month": 6, "day": 6 },
+      "start": {
+        "year": 1944,
+        "month": 6,
+        "day": 6
+      },
       "importance": 3,
-      "keywords": ["world-war-2", "20th-century", "france"]
+      "keywords": [
+        "world-war-2",
+        "20th-century",
+        "france"
+      ]
     },
     {
       "id": "hiroshima",
       "title": "Bombing of Hiroshima",
       "type": "event",
-      "start": { "year": 1945, "month": 8, "day": 6 },
+      "start": {
+        "year": 1945,
+        "month": 8,
+        "day": 6
+      },
       "importance": 3,
-      "keywords": ["world-war-2", "20th-century", "japan"]
+      "keywords": [
+        "world-war-2",
+        "20th-century",
+        "japan"
+      ]
+    },
+    {
+      "id": "roman-republic",
+      "title": "Roman Republic",
+      "type": "empire",
+      "start": {
+        "year": -509,
+        "circa": true
+      },
+      "end": {
+        "year": -27
+      },
+      "importance": 2,
+      "keywords": [
+        "rome",
+        "antiquity",
+        "republic"
+      ]
+    },
+    {
+      "id": "mongol-empire",
+      "title": "Mongol Empire",
+      "type": "empire",
+      "start": {
+        "year": 1206
+      },
+      "end": {
+        "year": 1368
+      },
+      "importance": 1,
+      "keywords": [
+        "mongols",
+        "medieval",
+        "empire",
+        "asia"
+      ]
+    },
+    {
+      "id": "genghis-khan",
+      "title": "Genghis Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1206
+      },
+      "end": {
+        "year": 1227,
+        "month": 8,
+        "day": 18
+      },
+      "importance": 2,
+      "keywords": [
+        "mongols",
+        "medieval",
+        "monarchy",
+        "asia"
+      ]
+    },
+    {
+      "id": "british-empire",
+      "title": "British Empire",
+      "type": "empire",
+      "start": {
+        "year": 1583,
+        "circa": true
+      },
+      "end": {
+        "year": 1997,
+        "month": 7,
+        "day": 1
+      },
+      "importance": 1,
+      "keywords": [
+        "britain",
+        "empire",
+        "colonialism"
+      ]
+    },
+    {
+      "id": "black-death",
+      "title": "The Black Death",
+      "type": "event",
+      "start": {
+        "year": 1346
+      },
+      "end": {
+        "year": 1353
+      },
+      "importance": 2,
+      "keywords": [
+        "medieval",
+        "europe",
+        "plague",
+        "disease"
+      ]
+    },
+    {
+      "id": "printing-press",
+      "title": "Gutenberg's Printing Press",
+      "type": "event",
+      "start": {
+        "year": 1440,
+        "circa": true
+      },
+      "importance": 2,
+      "keywords": [
+        "early-modern",
+        "europe",
+        "technology",
+        "printing"
+      ]
+    },
+    {
+      "id": "french-revolution",
+      "title": "French Revolution",
+      "type": "event",
+      "start": {
+        "year": 1789,
+        "month": 7,
+        "day": 14
+      },
+      "end": {
+        "year": 1799,
+        "month": 11,
+        "day": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "france",
+        "revolution",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "napoleon",
+      "title": "Napoleon Bonaparte",
+      "type": "ruler",
+      "start": {
+        "year": 1804,
+        "month": 5,
+        "day": 18
+      },
+      "end": {
+        "year": 1815,
+        "month": 6,
+        "day": 22
+      },
+      "importance": 2,
+      "keywords": [
+        "france",
+        "monarchy",
+        "napoleonic-wars"
+      ]
+    },
+    {
+      "id": "battle-of-waterloo",
+      "title": "Battle of Waterloo",
+      "type": "battle",
+      "start": {
+        "year": 1815,
+        "month": 6,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "napoleonic-wars",
+        "britain",
+        "france"
+      ]
+    },
+    {
+      "id": "charles-darwin",
+      "title": "Charles Darwin",
+      "type": "person",
+      "start": {
+        "year": 1809,
+        "month": 2,
+        "day": 12
+      },
+      "end": {
+        "year": 1882,
+        "month": 4,
+        "day": 19
+      },
+      "importance": 2,
+      "keywords": [
+        "science",
+        "britain",
+        "biology",
+        "evolution"
+      ]
+    },
+    {
+      "id": "world-war-1",
+      "title": "First World War",
+      "type": "war",
+      "start": {
+        "year": 1914,
+        "month": 7,
+        "day": 28
+      },
+      "end": {
+        "year": 1918,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1",
+        "20th-century",
+        "modern"
+      ]
+    },
+    {
+      "id": "moon-landing",
+      "title": "Apollo 11 Moon Landing",
+      "type": "event",
+      "start": {
+        "year": 1969,
+        "month": 7,
+        "day": 20
+      },
+      "importance": 2,
+      "keywords": [
+        "space",
+        "20th-century",
+        "contemporary",
+        "science"
+      ]
+    },
+    {
+      "id": "berlin-wall-falls",
+      "title": "Fall of the Berlin Wall",
+      "type": "event",
+      "start": {
+        "year": 1989,
+        "month": 11,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "cold-war",
+        "20th-century",
+        "germany",
+        "contemporary"
+      ]
     }
   ]
 }
