@@ -12,9 +12,11 @@
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
   import { formatAxisYear, presentDecimalYear, resolveEnd, toDecimalYear } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
+  import { onSelectionChange, readSelection, writeSelection } from '../lib/hash.ts';
   import { zoomable, type ZoomController } from '../lib/zoom.ts';
   import type { Entry } from '../lib/types.ts';
   import Axis from './Axis.svelte';
+  import DetailSheet from './DetailSheet.svelte';
   import EntryMarker from './EntryMarker.svelte';
   import EraRail from './EraRail.svelte';
   import Legend from './Legend.svelte';
@@ -194,9 +196,33 @@
     controller?.zoomTo(transformForDomainPadded(base, t0, t1));
   }
 
-  function select(id: string): void {
-    selectedId = selectedId === id ? null : id;
+  /**
+   * Nothing is selected on load and the sheet stays closed — the timeline
+   * reads as a clean axis until the user picks something. Selection is
+   * mirrored into the URL so a detail view is linkable and Back dismisses it.
+   */
+  function select(id: string | null, fromUrl = false): void {
+    const next = id !== null && selectedId === id ? null : id;
+    const opening = selectedId === null && next !== null;
+    selectedId = next;
+    if (!fromUrl) writeSelection(next, !opening);
+    if (next) prefetchDetail(next);
   }
+
+  const selected: Resolved | null = $derived(
+    resolved.find((item) => item.entry.id === selectedId) ?? null,
+  );
+
+  function zoomToSelected(): void {
+    if (!selected || selected.t1 === null) return;
+    controller?.zoomTo(transformForDomainPadded(base, selected.t0, selected.t1));
+  }
+
+  $effect(() => {
+    const initial = readSelection();
+    if (initial && entries.some((e) => e.id === initial)) select(initial, true);
+    return onSelectionChange((id) => select(id, true));
+  });
 
   // Preserve the visible year range across viewport height changes.
   $effect(() => {
@@ -240,7 +266,7 @@
         controller.reset();
         break;
       case 'Escape':
-        selectedId = null;
+        select(null);
         break;
       default:
         return;
@@ -293,7 +319,7 @@
             y0={placement.item.py0}
             y1={placement.item.py1}
             selected={selectedId === placement.item.item.entry.id}
-            onselect={select}
+            onselect={(id) => select(id)}
           />
         {/each}
       </div>
@@ -307,7 +333,7 @@
             pinned={placement.item.pinned}
             selected={selectedId === placement.item.item.entry.id}
             {compact}
-            onselect={select}
+            onselect={(id) => select(id)}
             onprefetch={prefetchDetail}
           />
         {/each}
@@ -322,6 +348,14 @@
 
     <EraRail ages={railAges} {visible} onjump={jumpTo} />
     <Legend />
+
+    {#if selected}
+      <DetailSheet
+        entry={selected.entry}
+        onzoom={selected.t1 === null ? null : zoomToSelected}
+        onclose={() => select(null)}
+      />
+    {/if}
 
     <div class="readout">
       {formatAxisYear(visible[0], false, readoutStep)} – {formatAxisYear(
