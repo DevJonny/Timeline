@@ -4,6 +4,7 @@ import { zoomIdentity } from 'd3-zoom';
 import {
   createBaseScale,
   rescale,
+  extentOf,
   transformForDomain,
   transformForDomainPadded,
   visibleDomain,
@@ -108,6 +109,42 @@ describe('resize behaviour', () => {
 
     expect(after[0]).toBeCloseTo(before[0], 6);
     expect(after[1]).toBeCloseTo(before[1], 6);
+  });
+});
+
+describe('extentOf', () => {
+  it('returns null for an empty set so nothing zooms to Infinity', () => {
+    expect(extentOf([])).toBeNull();
+  });
+
+  it('spans the earliest start and latest end', () => {
+    expect(
+      extentOf([
+        { t0: 1939, t1: 1945 },
+        { t0: 1914, t1: 1918 },
+        { t0: 1969, t1: null },
+      ]),
+    ).toEqual([1914, 1969]);
+  });
+
+  it('treats an instant as contributing only its start', () => {
+    expect(extentOf([{ t0: 1066, t1: null }])).toEqual([1066, 1066]);
+  });
+
+  it('feeds a padded transform that lands on the requested range', () => {
+    // "Fit results" end to end: extent of a filtered set, then zoom to it.
+    const b = base();
+    const extent = extentOf([
+      { t0: 1939, t1: 1945 },
+      { t0: 1914, t1: 1918 },
+    ])!;
+    const [t0, t1] = visibleDomain(
+      b,
+      transformForDomainPadded(b, extent[0], extent[1], 0.1),
+      HEIGHT,
+    );
+    expect(t0).toBeCloseTo(1910.9, 4);
+    expect(t1).toBeCloseTo(1948.1, 4);
   });
 });
 

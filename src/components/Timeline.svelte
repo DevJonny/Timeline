@@ -3,6 +3,7 @@
 
   import {
     createBaseScale,
+    extentOf,
     transformForDomain,
     transformForDomainPadded,
     visibleDomain,
@@ -10,7 +11,8 @@
   } from '../lib/scale.ts';
   import { chooseTickScale, generateTicks } from '../lib/ticks.ts';
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
-  import { clusterOverflow, importanceGate } from '../lib/lod.ts';
+  import { clusterOverflow, importanceGate, relaxationFor } from '../lib/lod.ts';
+  import { applyFilters, EMPTY_FILTERS, isFilterActive, type Filters } from '../lib/filter.ts';
   import { formatAxisYear, presentDecimalYear, resolveEnd, toDecimalYear } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
   import { onSelectionChange, readSelection, writeSelection } from '../lib/hash.ts';
@@ -22,6 +24,7 @@
   import EntryMarker from './EntryMarker.svelte';
   import EraRail from './EraRail.svelte';
   import Legend from './Legend.svelte';
+  import SearchPanel from './SearchPanel.svelte';
   import SpanBand from './SpanBand.svelte';
 
   interface Props {
@@ -45,13 +48,28 @@
     t1: number | null;
   }
 
+  let filters = $state<Filters>(EMPTY_FILTERS);
+  let searchOpen = $state(false);
+
+  /** Excluded entries are removed outright rather than dimmed. */
+  const filtered = $derived(applyFilters(entries, filters));
+  const filterActive = $derived(isFilterActive(filters));
+  const hiddenByFilter = $derived(entries.length - filtered.length);
+
+  function resolve(entry: Entry): Resolved {
+    return {
+      entry,
+      t0: toDecimalYear(entry.start),
+      t1: entry.end === undefined ? null : resolveEnd(entry.end, present),
+    };
+  }
+
+  /** Every entry, regardless of filters. */
+  const allResolved: Resolved[] = $derived(entries.map(resolve));
+
   const resolved: Resolved[] = $derived(
-    entries
-      .map((entry) => ({
-        entry,
-        t0: toDecimalYear(entry.start),
-        t1: entry.end === undefined ? null : resolveEnd(entry.end, present),
-      }))
+    filtered
+      .map(resolve)
       // Priority order for lane assignment: important first, then longer spans
       // (they carry more context), then chronological.
       .sort((a, b) => {
@@ -65,10 +83,16 @@
       }),
   );
 
+  /**
+   * Derived from *all* entries, never the filtered set. If the domain shrank
+   * to fit the current filter the axis would rescale underneath the reader
+   * every time they toggled a chip, and the zoom transform would mean
+   * something different from one moment to the next.
+   */
   const domain: [number, number] = $derived.by(() => {
     let min = Infinity;
     let max = present;
-    for (const item of resolved) {
+    for (const item of allResolved) {
       min = Math.min(min, item.t0);
       max = Math.max(max, item.t1 ?? item.t0);
     }
@@ -153,7 +177,14 @@
    * candidate for a label at all. Without this, full zoom-out tries to draw
    * every entry in the last five thousand years inside a single pixel.
    */
-  const gate = $derived(importanceGate(transform.k));
+  /**
+   * With a filter active there is less competing for space, so the gate opens
+   * further: filtering should drill *in* and reveal more of what survived,
+   * not merely thin the page out.
+   */
+  const gate = $derived(
+    importanceGate(transform.k, relaxationFor(filtered.length, entries.length)),
+  );
 
   const labels: Label[] = $derived(
     resolved
@@ -235,9 +266,24 @@
     if (next) prefetchDetail(next);
   }
 
+  /**
+   * Looked up across all entries, not just the filtered set: a deep link or a
+   * filter change should not silently close an open detail sheet.
+   */
   const selected: Resolved | null = $derived(
-    resolved.find((item) => item.entry.id === selectedId) ?? null,
+    allResolved.find((item) => item.entry.id === selectedId) ?? null,
   );
+
+  /** Chronological, for the results list — not the lane-packing priority order. */
+  const searchResults = $derived(
+    [...filtered].sort((a, b) => toDecimalYear(a.start) - toDecimalYear(b.start)),
+  );
+
+  function fitResults(): void {
+    const extent = extentOf(resolved);
+    if (!extent) return;
+    controller?.zoomTo(transformForDomainPadded(base, extent[0], extent[1]));
+  }
 
   function zoomToSelected(): void {
     if (!selected || selected.t1 === null) return;
@@ -384,6 +430,36 @@
     <EraRail ages={railAges} {visible} onjump={jumpTo} />
     <Legend />
 
+    <button
+      class="search-toggle"
+      class:active={filterActive}
+      onclick={() => (searchOpen = true)}
+      aria-label="Search and filter entries"
+    >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.8" />
+        <path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+      </svg>
+      {#if filterActive}
+        <span class="badge">{filtered.length}</span>
+      {/if}
+    </button>
+
+    <SearchPanel
+      open={searchOpen}
+      {filters}
+      results={searchResults}
+      total={entries.length}
+      {selectedId}
+      onchange={(next) => (filters = next)}
+      onselect={(id) => {
+        select(id);
+        if (compact) searchOpen = false;
+      }}
+      onfit={fitResults}
+      onclose={() => (searchOpen = false)}
+    />
+
     {#if selected}
       <DetailSheet
         entry={selected.entry}
@@ -398,8 +474,10 @@
         false,
         readoutStep,
       )}
-      {#if hiddenCount > 0}
-        <span class="hidden-count">· {hiddenCount} hidden</span>
+      {#if filterActive}
+        <span class="hidden-count">· {hiddenByFilter} filtered out</span>
+      {:else if hiddenCount > 0}
+        <span class="hidden-count">· {hiddenCount} clustered</span>
       {/if}
     </div>
   {/if}
@@ -489,5 +567,41 @@
 
   .hidden-count {
     color: var(--text-muted);
+  }
+
+  .search-toggle {
+    position: absolute;
+    top: max(0.5rem, env(safe-area-inset-top));
+    right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: auto;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    background: color-mix(in srgb, var(--surface-1) 88%, transparent);
+    backdrop-filter: blur(6px);
+    color: var(--text-secondary);
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .search-toggle.active {
+    color: var(--text-primary);
+    border-color: currentColor;
+  }
+
+  .badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .search-toggle:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 1px;
   }
 </style>

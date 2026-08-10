@@ -92,6 +92,26 @@ export function yearsPerPixel(base: TimeScale, transform: ZoomTransform, height:
 }
 
 /**
+ * Combined time extent of a set of entries, for zoom-to-fit.
+ *
+ * `t1` is null for instantaneous entries, which contribute only their start.
+ * Returns null for an empty set so callers do not zoom to Infinity.
+ */
+export function extentOf(
+  items: readonly { t0: number; t1: number | null }[],
+): [number, number] | null {
+  if (items.length === 0) return null;
+
+  let t0 = Infinity;
+  let t1 = -Infinity;
+  for (const item of items) {
+    t0 = Math.min(t0, item.t0);
+    t1 = Math.max(t1, item.t1 ?? item.t0);
+  }
+  return [t0, t1];
+}
+
+/**
  * Zoom bounds. k=1 shows the whole 3.3-million-year span; the upper bound is
  * set so the deepest zoom approaches roughly one day per pixel.
  */
