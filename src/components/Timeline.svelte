@@ -13,9 +13,23 @@
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
   import { clusterOverflow, importanceGate, relaxationFor } from '../lib/lod.ts';
   import { applyFilters, EMPTY_FILTERS, isFilterActive, type Filters } from '../lib/filter.ts';
-  import { formatAxisYear, presentDecimalYear, resolveEnd, toDecimalYear } from '../lib/time.ts';
+  import {
+    formatAxisYear,
+    presentDecimalYear,
+    resolveEnd,
+    toDecimalYear,
+    toHistoricalYear,
+  } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
   import { onSelectionChange, readSelection, writeSelection } from '../lib/hash.ts';
+  import {
+    DEFAULT_PREFERENCES,
+    debounce,
+    loadPreferences,
+    savePreferences,
+    type Preferences,
+  } from '../lib/prefs.ts';
+  import { applyMotion, applyTheme } from '../lib/theme.ts';
   import { zoomable, type ZoomController } from '../lib/zoom.ts';
   import type { Entry } from '../lib/types.ts';
   import Axis from './Axis.svelte';
@@ -25,6 +39,7 @@
   import EraRail from './EraRail.svelte';
   import Legend from './Legend.svelte';
   import SearchPanel from './SearchPanel.svelte';
+  import SettingsSheet from './SettingsSheet.svelte';
   import SpanBand from './SpanBand.svelte';
 
   interface Props {
@@ -48,8 +63,22 @@
     t1: number | null;
   }
 
+  let prefs = $state<Preferences>(DEFAULT_PREFERENCES);
+  let storageAvailable = $state(true);
   let filters = $state<Filters>(EMPTY_FILTERS);
   let searchOpen = $state(false);
+  let settingsOpen = $state(false);
+
+  const persist = debounce((next: Preferences) => {
+    storageAvailable = savePreferences(next);
+  });
+
+  function updatePrefs(next: Preferences): void {
+    prefs = next;
+    applyTheme(next.theme);
+    applyMotion(next.motion);
+    persist(next);
+  }
 
   /** Excluded entries are removed outright rather than dimmed. */
   const filtered = $derived(applyFilters(entries, filters));
@@ -104,7 +133,13 @@
   let transform = $state<ZoomTransform>(zoomIdentity);
   let selectedId = $state<string | null>(null);
 
-  let controller: ZoomController | undefined;
+  /**
+   * Reactive so effects that need it re-run once the zoom action is ready.
+   * As a plain variable, the initial-view effect would run before mount
+   * completed, find it undefined, and never fire again — silently ignoring a
+   * saved default view.
+   */
+  let controller = $state<ZoomController | undefined>(undefined);
 
   /**
    * Visible range tracked outside the reactive graph, updated only on user
@@ -290,10 +325,88 @@
     controller?.zoomTo(transformForDomainPadded(base, selected.t0, selected.t1));
   }
 
+  /**
+   * Read once during initialisation rather than inside an effect.
+   *
+   * The initial-view effect needs to know whether the page was deep-linked,
+   * and it must not depend on another effect having already run: effects fire
+   * in creation order but only after mount, so the view effect could latch
+   * "applied" while the selection was still null and then never re-run.
+   */
+  const initialSelectionId = readSelection();
+
   $effect(() => {
-    const initial = readSelection();
-    if (initial && entries.some((e) => e.id === initial)) select(initial, true);
+    if (initialSelectionId && entries.some((e) => e.id === initialSelectionId)) {
+      select(initialSelectionId, true);
+    }
     return onSelectionChange((id) => select(id, true));
+  });
+
+  /**
+   * Load stored preferences once, before the first view is chosen.
+   * Filters are restored here too, so a filtered session survives a reload.
+   */
+  $effect(() => {
+    const stored = loadPreferences();
+    prefs = stored;
+    filters = stored.filters;
+    applyTheme(stored.theme);
+    applyMotion(stored.motion);
+  });
+
+  /**
+   * Filter changes persist on the user action that causes them, not from an
+   * effect watching `filters`.
+   *
+   * An effect cannot tell "the user changed this" from "we just restored it":
+   * Svelte wraps $state objects in proxies, so the obvious reference check
+   * against `prefs.filters` never matches and the effect fires on mount,
+   * writing defaults over whatever was saved. Persisting at the call site has
+   * no such ambiguity.
+   */
+  function updateFilters(next: Filters): void {
+    filters = next;
+    persist({ ...prefs, filters: next });
+  }
+
+  /**
+   * Initial view, applied once the viewport has a height.
+   *
+   * Precedence is deliberate: a deep-linked ranged entry wins, because
+   * someone following a shared link wants to land on that thing; then the
+   * user's saved default range; then the full span. Transient scroll position
+   * is never restored — the default is the whole timeline unless configured.
+   */
+  let initialViewApplied = false;
+
+  $effect(() => {
+    if (initialViewApplied || height <= 0 || !controller) return;
+    initialViewApplied = true;
+
+    const linked = initialSelectionId
+      ? allResolved.find((item) => item.entry.id === initialSelectionId)
+      : undefined;
+
+    if (linked) {
+      // Instants included: someone following a link to the Battle of Hastings
+      // wants to land on 1066, not on the full 3.3-million-year span where it
+      // is invisible. transformForDomainPadded gives a zero-length range a
+      // sensible window rather than infinite zoom.
+      controller.zoomTo(transformForDomainPadded(base, linked.t0, linked.t1 ?? linked.t0), false);
+      return;
+    }
+
+    const view = prefs.defaultView;
+    if (!view) return;
+
+    controller.zoomTo(
+      transformForDomain(
+        base,
+        toDecimalYear({ year: view.startYear }),
+        toDecimalYear({ year: view.endYear }),
+      ),
+      false,
+    );
   });
 
   // Preserve the visible year range across viewport height changes.
@@ -451,13 +564,41 @@
       results={searchResults}
       total={entries.length}
       {selectedId}
-      onchange={(next) => (filters = next)}
+      onchange={updateFilters}
       onselect={(id) => {
         select(id);
         if (compact) searchOpen = false;
       }}
       onfit={fitResults}
       onclose={() => (searchOpen = false)}
+    />
+
+    <button
+      class="settings-toggle"
+      onclick={() => (settingsOpen = true)}
+      aria-label="Settings"
+    >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7" />
+        <path
+          d="M8 1.4v1.7M8 12.9v1.7M14.6 8h-1.7M3.1 8H1.4M12.7 3.3l-1.2 1.2M4.5 11.5l-1.2 1.2M12.7 12.7l-1.2-1.2M4.5 4.5 3.3 3.3"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+
+    <SettingsSheet
+      open={settingsOpen}
+      {prefs}
+      currentView={{
+        startYear: toHistoricalYear(Math.floor(visible[0])),
+        endYear: toHistoricalYear(Math.floor(visible[1])),
+      }}
+      {storageAvailable}
+      onchange={updatePrefs}
+      onclose={() => (settingsOpen = false)}
     />
 
     {#if selected}
@@ -569,10 +710,10 @@
     color: var(--text-muted);
   }
 
-  .search-toggle {
+  .search-toggle,
+  .settings-toggle {
     position: absolute;
     top: max(0.5rem, env(safe-area-inset-top));
-    right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem);
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -589,6 +730,15 @@
     z-index: 3;
   }
 
+  .search-toggle {
+    right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem + 3rem);
+  }
+
+  .settings-toggle {
+    right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem);
+    justify-content: center;
+  }
+
   .search-toggle.active {
     color: var(--text-primary);
     border-color: currentColor;
@@ -600,7 +750,8 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .search-toggle:focus-visible {
+  .search-toggle:focus-visible,
+  .settings-toggle:focus-visible {
     outline: 2px solid var(--text-primary);
     outline-offset: 1px;
   }

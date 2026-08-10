@@ -10,9 +10,6 @@
  *    steal the gesture for page scrolling before d3 ever sees it.
  *  - iOS Safari additionally fires non-standard `gesture*` events and will
  *    apply its own page zoom on top of ours unless they are cancelled.
- *  - Transform updates are coalesced to one animation frame. A pinch fires far
- *    more often than the display refreshes, and re-laying out the timeline per
- *    event drops frames on a phone.
  */
 
 import { select } from 'd3-selection';
@@ -20,6 +17,7 @@ import { zoom as d3Zoom, zoomIdentity, type D3ZoomEvent, type ZoomTransform } fr
 import 'd3-transition'; // side-effect import: gives selections .transition()
 
 import { MAX_ZOOM, MIN_ZOOM } from './scale.ts';
+import { prefersReducedMotion } from './theme.ts';
 
 export interface ZoomController {
   /** Apply a transform, optionally animated. Honours reduced-motion. */
@@ -40,50 +38,24 @@ export interface ZoomableOptions {
   disabled?: boolean;
 }
 
-const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
-
-function prefersReducedMotion(): boolean {
-  return typeof matchMedia === 'function' && matchMedia(REDUCED_MOTION).matches;
-}
-
 export function zoomable(node: HTMLElement, options: ZoomableOptions) {
   let current = options.initial ?? zoomIdentity;
-  let frame = 0;
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  let pending: ZoomTransform | null = null;
   let opts = options;
-
-  /**
-   * Coalesce transform updates to one frame, with a timeout fallback.
-   *
-   * A pinch fires far more often than the display refreshes, so batching per
-   * frame is what keeps a phone at 60fps. The fallback exists because
-   * `requestAnimationFrame` is not guaranteed to run: headless browsers and
-   * some embedded webviews never paint, and a state update must not be the
-   * only thing gated behind a callback the environment may never invoke.
-   */
-  function schedule(transform: ZoomTransform): void {
-    pending = transform;
-    if (frame !== 0 || timer !== undefined) return;
-
-    const flush = () => {
-      if (frame !== 0) cancelAnimationFrame(frame);
-      if (timer !== undefined) clearTimeout(timer);
-      frame = 0;
-      timer = undefined;
-      if (pending) opts.onTransform(pending);
-      pending = null;
-    };
-
-    frame = requestAnimationFrame(flush);
-    timer = setTimeout(flush, 100);
-  }
 
   const behaviour = d3Zoom<HTMLElement, unknown>()
     .scaleExtent(opts.scaleExtent ?? [MIN_ZOOM, MAX_ZOOM])
     .on('zoom', (event: D3ZoomEvent<HTMLElement, unknown>) => {
       current = event.transform;
-      schedule(event.transform);
+      // Published synchronously and deliberately not coalesced.
+      //
+      // An earlier version batched these into a requestAnimationFrame with a
+      // timeout fallback. It was both unnecessary and fragile: Svelte already
+      // batches state changes into one render per microtask, so the only
+      // per-event cost here is a single assignment, while the in-flight guard
+      // could be left latched by a programmatic zoom arriving mid-mount —
+      // after which no further transform ever reached the component and the
+      // whole view silently froze while d3 kept updating underneath.
+      opts.onTransform(event.transform);
     });
 
   const selection = select(node);
@@ -142,8 +114,6 @@ export function zoomable(node: HTMLElement, options: ZoomableOptions) {
       }
     },
     destroy() {
-      if (frame !== 0) cancelAnimationFrame(frame);
-      if (timer !== undefined) clearTimeout(timer);
       selection.on('.zoom', null);
       node.removeEventListener('gesturestart', preventGesture);
       node.removeEventListener('gesturechange', preventGesture);
