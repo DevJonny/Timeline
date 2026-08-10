@@ -96,6 +96,11 @@ Do not add a fifth hue without re-running a palette validator.
   `$state` objects in proxies, so a reference check against stored state never
   matches and an effect cannot tell a user edit from a restore — it will write
   defaults over saved values on mount.
+- **`prefs` is the only copy of a preference, and `updatePrefs` the only writer.**
+  `filters` is `$derived(prefs.filters)` for that reason. Storage is written
+  whole, so a second copy of any field only has to go un-synced once: the next
+  unrelated change spreads the stale copy back over what was saved. That is how
+  saving a theme used to wipe the active search.
 - **`controller` in `Timeline.svelte` is `$state`** so effects re-run once the
   zoom action is ready. As a plain variable, initial-view logic silently
   no-ops.

@@ -12,7 +12,7 @@
   import { chooseTickScale, generateTicks } from '../lib/ticks.ts';
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
   import { clusterOverflow, importanceGate, relaxationFor } from '../lib/lod.ts';
-  import { applyFilters, EMPTY_FILTERS, isFilterActive, type Filters } from '../lib/filter.ts';
+  import { applyFilters, isFilterActive, type Filters } from '../lib/filter.ts';
   import {
     formatAxisYear,
     presentDecimalYear,
@@ -65,14 +65,22 @@
 
   let prefs = $state<Preferences>(DEFAULT_PREFERENCES);
   let storageAvailable = $state(true);
-  let filters = $state<Filters>(EMPTY_FILTERS);
   let searchOpen = $state(false);
   let settingsOpen = $state(false);
+
+  /**
+   * Derived from `prefs`, never held separately. A second copy has to be
+   * written back on every filter change, and the one write that forgets
+   * leaves `prefs.filters` stale — after which the next settings change
+   * spreads that stale copy over what was saved.
+   */
+  const filters = $derived(prefs.filters);
 
   const persist = debounce((next: Preferences) => {
     storageAvailable = savePreferences(next);
   });
 
+  /** The single write path: every preference change goes through here. */
   function updatePrefs(next: Preferences): void {
     prefs = next;
     applyTheme(next.theme);
@@ -344,12 +352,11 @@
 
   /**
    * Load stored preferences once, before the first view is chosen.
-   * Filters are restored here too, so a filtered session survives a reload.
+   * Filters ride along in `prefs`, so a filtered session survives a reload.
    */
   $effect(() => {
     const stored = loadPreferences();
     prefs = stored;
-    filters = stored.filters;
     applyTheme(stored.theme);
     applyMotion(stored.motion);
   });
@@ -365,8 +372,7 @@
    * no such ambiguity.
    */
   function updateFilters(next: Filters): void {
-    filters = next;
-    persist({ ...prefs, filters: next });
+    updatePrefs({ ...prefs, filters: next });
   }
 
   /**
