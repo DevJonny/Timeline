@@ -49,20 +49,41 @@ function prefersReducedMotion(): boolean {
 export function zoomable(node: HTMLElement, options: ZoomableOptions) {
   let current = options.initial ?? zoomIdentity;
   let frame = 0;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   let pending: ZoomTransform | null = null;
   let opts = options;
+
+  /**
+   * Coalesce transform updates to one frame, with a timeout fallback.
+   *
+   * A pinch fires far more often than the display refreshes, so batching per
+   * frame is what keeps a phone at 60fps. The fallback exists because
+   * `requestAnimationFrame` is not guaranteed to run: headless browsers and
+   * some embedded webviews never paint, and a state update must not be the
+   * only thing gated behind a callback the environment may never invoke.
+   */
+  function schedule(transform: ZoomTransform): void {
+    pending = transform;
+    if (frame !== 0 || timer !== undefined) return;
+
+    const flush = () => {
+      if (frame !== 0) cancelAnimationFrame(frame);
+      if (timer !== undefined) clearTimeout(timer);
+      frame = 0;
+      timer = undefined;
+      if (pending) opts.onTransform(pending);
+      pending = null;
+    };
+
+    frame = requestAnimationFrame(flush);
+    timer = setTimeout(flush, 100);
+  }
 
   const behaviour = d3Zoom<HTMLElement, unknown>()
     .scaleExtent(opts.scaleExtent ?? [MIN_ZOOM, MAX_ZOOM])
     .on('zoom', (event: D3ZoomEvent<HTMLElement, unknown>) => {
       current = event.transform;
-      pending = event.transform;
-      if (frame !== 0) return;
-      frame = requestAnimationFrame(() => {
-        frame = 0;
-        if (pending) opts.onTransform(pending);
-        pending = null;
-      });
+      schedule(event.transform);
     });
 
   const selection = select(node);
@@ -122,6 +143,7 @@ export function zoomable(node: HTMLElement, options: ZoomableOptions) {
     },
     destroy() {
       if (frame !== 0) cancelAnimationFrame(frame);
+      if (timer !== undefined) clearTimeout(timer);
       selection.on('.zoom', null);
       node.removeEventListener('gesturestart', preventGesture);
       node.removeEventListener('gesturechange', preventGesture);

@@ -16,6 +16,7 @@ import {
   daysInMonth,
   daysInYear,
   formatAxisYear,
+  formatHistoricalYear,
   fromDecimalYear,
   partsToDecimalYear,
   toHistoricalYear,
@@ -76,17 +77,41 @@ export function chooseTickScale(yearsPerPixel: number, minGapPx = 56): TickScale
 
 const MAX_TICKS = 400;
 
+/**
+ * Year ticks land on round *historical* years, not round astronomical ones.
+ *
+ * The two conventions are offset by one across the BCE boundary, so stepping
+ * the astronomical coordinate by 500 produces ticks labelled "3501 BCE" and
+ * "3001 BCE". Readers expect round numbers, so the iteration happens in
+ * historical space and each value is converted back for positioning.
+ */
 function yearTicks(t0: number, t1: number, step: number, compact: boolean): Tick[] {
   const ticks: Tick[] = [];
-  const first = Math.ceil(t0 / step) * step;
+  const from = toHistoricalYear(Math.floor(t0));
+  const to = toHistoricalYear(Math.floor(t1)) + step;
 
-  for (let i = 0; first + i * step <= t1; i++) {
+  for (
+    let h = Math.ceil(from / step) * step, guard = 0;
+    h <= to && guard < MAX_TICKS * 2;
+    h += step, guard++
+  ) {
+    let historical = h;
+    if (historical === 0) {
+      // Year zero does not exist. At step 1 the next iteration supplies 1 CE;
+      // at coarser steps, pull the boundary tick onto 1 CE so the BCE/CE
+      // transition still gets a rule.
+      if (step === 1) continue;
+      historical = 1;
+    }
+
+    const t = historical < 0 ? historical + 1 : historical;
+    if (t < t0 || t > t1) continue;
     if (ticks.length >= MAX_TICKS) break;
-    const t = first + i * step;
+
     ticks.push({
       t,
-      label: formatAxisYear(t, compact),
-      major: Math.round(t / step) % 5 === 0,
+      label: formatHistoricalYear(historical, compact, step),
+      major: Math.round(historical / step) % 5 === 0,
     });
   }
   return ticks;
@@ -103,7 +128,7 @@ function monthTicks(t0: number, t1: number, step: number, compact: boolean): Tic
       const major = month === 1;
       ticks.push({
         t,
-        label: major ? formatAxisYear(y, compact) : MONTH_ABBR[month - 1]!,
+        label: major ? formatAxisYear(y, compact, 1) : MONTH_ABBR[month - 1]!,
         major,
       });
     }

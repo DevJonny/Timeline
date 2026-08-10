@@ -129,6 +129,12 @@ const MONTH_NAMES = [
   'July', 'August', 'September', 'October', 'November', 'December',
 ] as const;
 
+/** Decimal places needed for `unit`-scaled labels to distinguish `step`-spaced values. */
+function unitDecimals(unit: number, step: number, max: number): number {
+  if (!(step > 0)) return 1;
+  return Math.min(max, Math.max(0, Math.ceil(Math.log10(unit / step))));
+}
+
 /**
  * Format a historical year for display.
  *
@@ -136,14 +142,30 @@ const MONTH_NAMES = [
  * BCE. At that magnitude the ~2000-year difference is far below the rendered
  * precision, so the distinction is not worth surfacing to a reader.
  */
-export function formatHistoricalYear(historicalYear: number, compact = false): string {
+export function formatHistoricalYear(
+  historicalYear: number,
+  compact = false,
+  /**
+   * Spacing between adjacent labels, in years. Deep-time units lose precision
+   * fast: at one decimal place every tick between 1,650,000 and 1,749,999 BCE
+   * reads "1.7 Mya". Supplying the step lets the label carry exactly enough
+   * decimals to distinguish neighbours.
+   */
+  step?: number,
+): string {
   const abs = Math.abs(historicalYear);
 
   if (abs >= 1_000_000) {
     const mya = abs / 1_000_000;
-    return `${mya >= 10 ? Math.round(mya) : mya.toFixed(1)} Mya`;
+    const decimals =
+      step === undefined ? (mya >= 10 ? 0 : 1) : unitDecimals(1_000_000, step, 6);
+    return `${mya.toFixed(decimals)} Mya`;
   }
-  if (abs >= 100_000) return `${Math.round(abs / 1000).toLocaleString('en-GB')} kya`;
+  if (abs >= 100_000) {
+    const kya = abs / 1000;
+    const decimals = step === undefined ? 0 : unitDecimals(1000, step, 3);
+    return `${kya.toFixed(decimals)} kya`;
+  }
 
   // Convention: no thousands separator below 10,000 ("3300 BCE"), but one
   // above it ("12,000 BCE"), where the digit count stops being scannable.
@@ -159,8 +181,16 @@ export function formatHistoricalYear(historicalYear: number, compact = false): s
  * Rounding would report a date in August 2026 as "2027 CE". The epsilon
  * absorbs float error so a tick computed as 1939.9999999 still reads 1940.
  */
-export function formatAxisYear(astronomicalYear: number, compact = false): string {
-  return formatHistoricalYear(toHistoricalYear(Math.floor(astronomicalYear + 1e-9)), compact);
+export function formatAxisYear(
+  astronomicalYear: number,
+  compact = false,
+  step?: number,
+): string {
+  return formatHistoricalYear(
+    toHistoricalYear(Math.floor(astronomicalYear + 1e-9)),
+    compact,
+    step,
+  );
 }
 
 /** Full date of a `TimePoint`, honouring `circa` and available precision. */

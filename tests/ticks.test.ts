@@ -74,12 +74,28 @@ describe('generateTicks', () => {
 
   it('marks every fifth step as major', () => {
     const ticks = generateTicks([0, 100], { kind: 'year', step: 10 });
-    expect(ticks.filter((t) => t.major).map((t) => t.t)).toEqual([0, 50, 100]);
+    // 1 CE rather than 0: year zero does not exist, so the boundary tick is
+    // pulled onto the first real year.
+    expect(ticks.filter((t) => t.major).map((t) => t.t)).toEqual([1, 50, 100]);
   });
 
-  it('handles BCE domains and labels them historically', () => {
+  it('lands on round historical years, not round astronomical ones', () => {
+    // Regression: stepping the astronomical coordinate produced "3501 BCE".
+    // The two conventions are offset by one across the BCE boundary.
     const ticks = generateTicks([-3300, -3250], { kind: 'year', step: 20 });
-    expect(ticks.map((t) => t.label)).toEqual(['3301 BCE', '3281 BCE', '3261 BCE']);
+    expect(ticks.map((t) => t.label)).toEqual(['3300 BCE', '3280 BCE', '3260 BCE']);
+  });
+
+  it('produces round labels either side of the BCE/CE boundary', () => {
+    const labels = generateTicks([-520, 520], { kind: 'year', step: 200 }).map((t) => t.label);
+    expect(labels).toEqual(['400 BCE', '200 BCE', '1 CE', '200 CE', '400 CE']);
+  });
+
+  it('never emits a tick for the non-existent year zero', () => {
+    for (const step of [1, 2, 5, 10, 100]) {
+      const ticks = generateTicks([-50, 50], { kind: 'year', step });
+      expect(ticks.some((t) => t.label === '0 CE' || t.label === '0 BCE')).toBe(false);
+    }
   });
 
   it('labels deep time in Mya', () => {

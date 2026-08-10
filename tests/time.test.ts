@@ -136,6 +136,22 @@ describe('formatting', () => {
     expect(formatHistoricalYear(1066, true)).toBe('1066');
   });
 
+  it('carries enough decimals in deep time to distinguish adjacent labels', () => {
+    // Regression: zoomed into the Palaeolithic, every tick read "1.7 Mya" and
+    // the range readout said "1.7 Mya – 1.7 Mya".
+    expect(formatHistoricalYear(-1_700_000, false, 100_000)).toBe('1.7 Mya');
+    expect(formatHistoricalYear(-1_710_000, false, 10_000)).toBe('1.71 Mya');
+    expect(formatHistoricalYear(-1_711_000, false, 1_000)).toBe('1.711 Mya');
+    expect(formatHistoricalYear(-3_000_000, false, 1_000_000)).toBe('3 Mya');
+
+    // Adjacent ticks must never render identically.
+    for (const step of [1_000_000, 500_000, 100_000, 50_000, 10_000, 1_000]) {
+      const a = formatHistoricalYear(-2_000_000, false, step);
+      const b = formatHistoricalYear(-2_000_000 + step, false, step);
+      expect(a).not.toBe(b);
+    }
+  });
+
   it('uses deep-time units at scale', () => {
     expect(formatHistoricalYear(-3300000)).toBe('3.3 Mya');
     expect(formatHistoricalYear(-12000000)).toBe('12 Mya');
