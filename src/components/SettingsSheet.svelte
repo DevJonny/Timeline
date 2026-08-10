@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { untrack } from 'svelte';
+
   import { formatHistoricalYear } from '../lib/time.ts';
   import type { DefaultView, MotionChoice, Preferences, ThemeChoice } from '../lib/prefs.ts';
 
@@ -14,27 +16,40 @@
 
   let { open, prefs, currentView, storageAvailable, onchange, onclose }: Props = $props();
 
-  let startInput = $state('');
-  let endInput = $state('');
+  /**
+   * Typed as the binding actually behaves: `bind:value` on `<input
+   * type="number">` assigns a number, or null once the field is empty or
+   * mid-way through something the browser cannot parse (a lone "-"). Holding
+   * these as strings and calling string methods on them threw inside the
+   * derived below, which took `saveView` down with it and silently lost every
+   * typed default view.
+   */
+  let startInput = $state<number | null>(null);
+  let endInput = $state<number | null>(null);
 
-  // Seed the inputs from the saved view whenever the sheet opens.
+  /**
+   * Seed the inputs when the sheet opens — and only then. Reading
+   * `prefs.defaultView` tracked would re-seed on every preference change,
+   * which makes a two-field range impossible to enter: committing "From"
+   * saves a null view (the range is still incomplete), and that null comes
+   * straight back through here and erases what was just typed.
+   */
   $effect(() => {
     if (!open) return;
-    startInput = String(prefs.defaultView?.startYear ?? '');
-    endInput = String(prefs.defaultView?.endYear ?? '');
+    const view = untrack(() => prefs.defaultView);
+    startInput = view?.startYear ?? null;
+    endInput = view?.endYear ?? null;
   });
 
   const parsedView = $derived.by((): DefaultView | null => {
-    const start = Number(startInput);
-    const end = Number(endInput);
-    if (startInput.trim() === '' || endInput.trim() === '') return null;
-    if (!Number.isFinite(start) || !Number.isFinite(end)) return null;
-    if (end <= start) return null;
-    return { startYear: start, endYear: end };
+    if (startInput === null || endInput === null) return null;
+    if (!Number.isFinite(startInput) || !Number.isFinite(endInput)) return null;
+    if (endInput <= startInput) return null;
+    return { startYear: startInput, endYear: endInput };
   });
 
   const inputsInvalid = $derived(
-    startInput.trim() !== '' && endInput.trim() !== '' && parsedView === null,
+    startInput !== null && endInput !== null && parsedView === null,
   );
 
   function saveView(): void {
@@ -42,20 +57,14 @@
   }
 
   function useCurrent(): void {
-    startInput = String(Math.round(currentView.startYear));
-    endInput = String(Math.round(currentView.endYear));
-    onchange({
-      ...prefs,
-      defaultView: {
-        startYear: Math.round(currentView.startYear),
-        endYear: Math.round(currentView.endYear),
-      },
-    });
+    startInput = Math.round(currentView.startYear);
+    endInput = Math.round(currentView.endYear);
+    onchange({ ...prefs, defaultView: { startYear: startInput, endYear: endInput } });
   }
 
   function clearView(): void {
-    startInput = '';
-    endInput = '';
+    startInput = null;
+    endInput = null;
     onchange({ ...prefs, defaultView: null });
   }
 
