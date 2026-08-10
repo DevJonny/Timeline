@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "palaeolithic",
+      "title": "Palaeolithic",
+      "type": "age",
+      "start": { "year": -3300000, "circa": true },
+      "end": { "year": -12000, "circa": true },
+      "importance": 1,
+      "keywords": ["prehistory", "stone-age", "three-age-system"]
+    },
+    {
+      "id": "mesolithic",
+      "title": "Mesolithic",
+      "type": "age",
+      "start": { "year": -12000, "circa": true },
+      "end": { "year": -10000, "circa": true },
+      "importance": 1,
+      "keywords": ["prehistory", "stone-age", "three-age-system"]
+    },
+    {
+      "id": "neolithic",
+      "title": "Neolithic",
+      "type": "age",
+      "start": { "year": -10000, "circa": true },
+      "end": { "year": -3300, "circa": true },
+      "importance": 1,
+      "keywords": ["prehistory", "stone-age", "agriculture", "three-age-system"]
+    },
+    {
+      "id": "bronze-age",
+      "title": "Bronze Age",
+      "type": "age",
+      "start": { "year": -3300, "circa": true },
+      "end": { "year": -1200, "circa": true },
+      "importance": 1,
+      "keywords": ["prehistory", "metallurgy", "three-age-system"]
+    },
+    {
+      "id": "iron-age",
+      "title": "Iron Age",
+      "type": "age",
+      "start": { "year": -1200, "circa": true },
+      "end": { "year": -550, "circa": true },
+      "importance": 1,
+      "keywords": ["prehistory", "metallurgy", "three-age-system"]
+    },
+    {
+      "id": "classical-antiquity",
+      "title": "Classical Antiquity",
+      "type": "age",
+      "start": { "year": -800, "circa": true },
+      "end": { "year": 500, "circa": true },
+      "importance": 1,
+      "keywords": ["antiquity", "greece", "rome"]
+    },
+    {
+      "id": "middle-ages",
+      "title": "Middle Ages",
+      "type": "age",
+      "start": { "year": 500, "circa": true },
+      "end": { "year": 1500, "circa": true },
+      "importance": 1,
+      "keywords": ["medieval", "europe"]
+    },
+    {
+      "id": "early-modern-period",
+      "title": "Early Modern Period",
+      "type": "age",
+      "start": { "year": 1500, "circa": true },
+      "end": { "year": 1760, "circa": true },
+      "importance": 1,
+      "keywords": ["early-modern", "europe", "renaissance"]
+    },
+    {
+      "id": "industrial-age",
+      "title": "Industrial Age",
+      "type": "age",
+      "start": { "year": 1760, "circa": true },
+      "end": { "year": 1900, "circa": true },
+      "importance": 1,
+      "keywords": ["industrial-revolution", "modern"]
+    },
+    {
+      "id": "modern-age",
+      "title": "Modern Age",
+      "type": "age",
+      "start": { "year": 1900, "circa": true },
+      "end": { "year": 1945, "circa": true },
+      "importance": 1,
+      "keywords": ["modern", "20th-century"]
+    },
+    {
+      "id": "contemporary-age",
+      "title": "Contemporary Age",
+      "type": "age",
+      "start": { "year": 1945 },
+      "end": "present",
+      "importance": 1,
+      "keywords": ["contemporary", "modern", "20th-century"]
+    },
+
+    {
+      "id": "roman-empire",
+      "title": "Roman Empire",
+      "type": "empire",
+      "start": { "year": -27 },
+      "end": { "year": 476, "day": 4, "month": 9 },
+      "importance": 1,
+      "keywords": ["rome", "antiquity", "empire"]
+    },
+    {
+      "id": "elizabeth-i",
+      "title": "Elizabeth I",
+      "type": "ruler",
+      "start": { "year": 1558, "month": 11, "day": 17 },
+      "end": { "year": 1603, "month": 3, "day": 24 },
+      "importance": 2,
+      "keywords": ["england", "tudor", "early-modern", "monarchy"]
+    },
+    {
+      "id": "isaac-newton",
+      "title": "Isaac Newton",
+      "type": "person",
+      "start": { "year": 1643, "month": 1, "day": 4 },
+      "end": { "year": 1727, "month": 3, "day": 31 },
+      "importance": 2,
+      "keywords": ["science", "england", "early-modern", "mathematics"]
+    },
+    {
+      "id": "magna-carta",
+      "title": "Magna Carta",
+      "type": "event",
+      "start": { "year": 1215, "month": 6, "day": 15 },
+      "importance": 2,
+      "keywords": ["england", "medieval", "law"]
+    },
+    {
+      "id": "battle-of-hastings",
+      "title": "Battle of Hastings",
+      "type": "battle",
+      "start": { "year": 1066, "month": 10, "day": 14 },
+      "importance": 2,
+      "keywords": ["england", "medieval", "norman-conquest"]
+    },
+    {
+      "id": "world-war-2",
+      "title": "Second World War",
+      "type": "war",
+      "start": { "year": 1939, "month": 9, "day": 1 },
+      "end": { "year": 1945, "month": 9, "day": 2 },
+      "importance": 1,
+      "keywords": ["world-war-2", "20th-century", "modern"]
+    },
+    {
+      "id": "battle-of-britain",
+      "title": "Battle of Britain",
+      "type": "battle",
+      "start": { "year": 1940, "month": 7, "day": 10 },
+      "end": { "year": 1940, "month": 10, "day": 31 },
+      "importance": 3,
+      "keywords": ["world-war-2", "20th-century", "britain"]
+    },
+    {
+      "id": "d-day",
+      "title": "D-Day Landings",
+      "type": "battle",
+      "start": { "year": 1944, "month": 6, "day": 6 },
+      "importance": 3,
+      "keywords": ["world-war-2", "20th-century", "france"]
+    },
+    {
+      "id": "hiroshima",
+      "title": "Bombing of Hiroshima",
+      "type": "event",
+      "start": { "year": 1945, "month": 8, "day": 6 },
+      "importance": 3,
+      "keywords": ["world-war-2", "20th-century", "japan"]
+    }
+  ]
+}
