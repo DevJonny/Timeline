@@ -73,6 +73,44 @@ export function toDecimalYear(point: TimePoint): number {
   return a + (doy - 1) / daysInYear(a);
 }
 
+/** Month (1-12) and day (1-31) for a 1-based day-of-year. */
+export function dayOfYearToMonthDay(
+  astronomicalYear: number,
+  doy: number,
+): { month: number; day: number } {
+  let remaining = doy;
+  for (let month = 1; month <= 12; month++) {
+    const length = daysInMonth(astronomicalYear, month);
+    if (remaining <= length) return { month, day: remaining };
+    remaining -= length;
+  }
+  return { month: 12, day: 31 };
+}
+
+/** Inverse of `toDecimalYear`, in astronomical years. */
+export function fromDecimalYear(t: number): {
+  astronomicalYear: number;
+  month: number;
+  day: number;
+} {
+  const astronomicalYear = Math.floor(t);
+  const fraction = t - astronomicalYear;
+  const doy = Math.min(
+    daysInYear(astronomicalYear),
+    Math.floor(fraction * daysInYear(astronomicalYear) + 1e-9) + 1,
+  );
+  return { astronomicalYear, ...dayOfYearToMonthDay(astronomicalYear, doy) };
+}
+
+/** Build an axis coordinate directly from astronomical parts. */
+export function partsToDecimalYear(
+  astronomicalYear: number,
+  month = 1,
+  day = 1,
+): number {
+  return astronomicalYear + (dayOfYear(astronomicalYear, month, day) - 1) / daysInYear(astronomicalYear);
+}
+
 /** Today as an axis coordinate. Injectable so tests can pin the clock. */
 export function presentDecimalYear(now: Date = new Date()): number {
   const a = now.getUTCFullYear();
@@ -114,9 +152,15 @@ export function formatHistoricalYear(historicalYear: number, compact = false): s
   return compact ? digits : `${digits} CE`;
 }
 
-/** Format an axis coordinate (astronomical) for display. */
+/**
+ * Format an axis coordinate (astronomical) for display.
+ *
+ * Floors rather than rounds: the label names the year an instant falls *in*.
+ * Rounding would report a date in August 2026 as "2027 CE". The epsilon
+ * absorbs float error so a tick computed as 1939.9999999 still reads 1940.
+ */
 export function formatAxisYear(astronomicalYear: number, compact = false): string {
-  return formatHistoricalYear(toHistoricalYear(Math.round(astronomicalYear)), compact);
+  return formatHistoricalYear(toHistoricalYear(Math.floor(astronomicalYear + 1e-9)), compact);
 }
 
 /** Full date of a `TimePoint`, honouring `circa` and available precision. */

@@ -149,6 +149,20 @@ describe('formatting', () => {
     expect(formatAxisYear(toDecimalYear({ year: 1 }))).toBe('1 CE');
   });
 
+  it('names the year an instant falls in, rather than the nearest year', () => {
+    // Regression: rounding reported 10 August 2026 as "2027 CE" on the
+    // today marker and the visible-range readout.
+    const august2026 = presentDecimalYear(new Date(Date.UTC(2026, 7, 10)));
+    expect(formatAxisYear(august2026)).toBe('2026 CE');
+
+    expect(formatAxisYear(1939.99)).toBe('1939 CE');
+    expect(formatAxisYear(toDecimalYear({ year: -3300, month: 12 }))).toBe('3300 BCE');
+  });
+
+  it('tolerates float error on tick coordinates', () => {
+    expect(formatAxisYear(1939.9999999999)).toBe('1940 CE');
+  });
+
   it('renders time points at the precision available', () => {
     expect(formatTimePoint({ year: -3300, circa: true })).toBe('c. 3300 BCE');
     expect(formatTimePoint({ year: 1939, month: 9 })).toBe('September 1939 CE');
