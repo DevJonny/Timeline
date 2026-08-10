@@ -25,6 +25,14 @@ let motionOverride: MotionChoice = 'system';
 
 export function applyMotion(choice: MotionChoice): void {
   motionOverride = choice;
+  // Also stamped on the root so CSS transitions honour the override, not just
+  // the JS-driven zoom animations.
+  const root = document.documentElement;
+  if (choice === 'reduced') {
+    root.setAttribute('data-motion', 'reduced');
+  } else {
+    root.removeAttribute('data-motion');
+  }
 }
 
 /** True when animation should be skipped, honouring the stored override. */

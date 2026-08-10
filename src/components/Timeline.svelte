@@ -468,6 +468,39 @@
 >
   {#if height > 0}
     <!--
+      The controls come first in the DOM even though they are positioned over
+      the timeline. Keyboard users would otherwise have to tab through every
+      marker on screen before reaching search — and the search list is the
+      accessible route to the content, so it must be reachable immediately.
+    -->
+    <button
+      class="search-toggle"
+      class:active={filterActive}
+      onclick={() => (searchOpen = true)}
+      aria-label="Search and filter entries"
+    >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.8" />
+        <path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+      </svg>
+      {#if filterActive}
+        <span class="badge">{filtered.length}</span>
+      {/if}
+    </button>
+
+    <button class="settings-toggle" onclick={() => (settingsOpen = true)} aria-label="Settings">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7" />
+        <path
+          d="M8 1.4v1.7M8 12.9v1.7M14.6 8h-1.7M3.1 8H1.4M12.7 3.3l-1.2 1.2M4.5 11.5l-1.2 1.2M12.7 12.7l-1.2-1.2M4.5 4.5 3.3 3.3"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+
+    <!--
       role="application" because arrow keys and +/- are captured for
       navigation rather than page scrolling; the role tells assistive tech to
       pass those keys through instead of intercepting them. The list in the
@@ -543,21 +576,6 @@
     <EraRail ages={railAges} {visible} onjump={jumpTo} />
     <Legend />
 
-    <button
-      class="search-toggle"
-      class:active={filterActive}
-      onclick={() => (searchOpen = true)}
-      aria-label="Search and filter entries"
-    >
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.8" />
-        <path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-      </svg>
-      {#if filterActive}
-        <span class="badge">{filtered.length}</span>
-      {/if}
-    </button>
-
     <SearchPanel
       open={searchOpen}
       {filters}
@@ -572,22 +590,6 @@
       onfit={fitResults}
       onclose={() => (searchOpen = false)}
     />
-
-    <button
-      class="settings-toggle"
-      onclick={() => (settingsOpen = true)}
-      aria-label="Settings"
-    >
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7" />
-        <path
-          d="M8 1.4v1.7M8 12.9v1.7M14.6 8h-1.7M3.1 8H1.4M12.7 3.3l-1.2 1.2M4.5 11.5l-1.2 1.2M12.7 12.7l-1.2-1.2M4.5 4.5 3.3 3.3"
-          stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linecap="round"
-        />
-      </svg>
-    </button>
 
     <SettingsSheet
       open={settingsOpen}
