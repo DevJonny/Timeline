@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover enables env(safe-area-inset-*) on notched devices.
+         Deliberately NO user-scalable=no: it is an accessibility anti-pattern and
+         iOS ignores it anyway. Gesture suppression is scoped to the timeline
+         viewport element instead. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="A zoomable, inspectable timeline from the Stone Age to the present day." />
+    <meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)" />
+    <title>Timeline</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

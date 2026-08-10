@@ -1,0 +1,88 @@
+/*
+ * Global tokens. Colour values come from the validated categorical palette —
+ * see docs in README. The four type-family hues are validated colourblind-safe
+ * under the all-pairs test in BOTH modes; do not add a fifth hue without
+ * re-running the validator.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces & ink — light */
+  --surface-1: #fcfcfb;
+  --surface-2: #f9f9f7;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --gridline: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.1);
+
+  /* Type-family hues — light */
+  --family-age: #008300;
+  --family-empire: #4a3aa7;
+  --family-people: #e87ba4;
+  --family-conflict: #eda100;
+  --family-event: #52514e;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface-1: #1a1a19;
+    --surface-2: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --gridline: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.1);
+
+    --family-age: #008300;
+    --family-empire: #9085e9;
+    --family-people: #d55181;
+    --family-conflict: #c98500;
+    --family-event: #c3c2b7;
+  }
+}
+
+:root[data-theme='dark'] {
+  --surface-1: #1a1a19;
+  --surface-2: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted: #898781;
+  --gridline: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255, 255, 255, 0.1);
+
+  --family-age: #008300;
+  --family-empire: #9085e9;
+  --family-people: #d55181;
+  --family-conflict: #c98500;
+  --family-event: #c3c2b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* dvh, never vh: mobile URL-bar collapse breaks vh. */
+  min-height: 100dvh;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--surface-2);
+  color: var(--text-primary);
+  -webkit-text-size-adjust: 100%;
+}
+
+#app {
+  min-height: 100dvh;
+}
