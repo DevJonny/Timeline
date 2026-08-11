@@ -101,12 +101,16 @@ Do not add a fifth hue without re-running a palette validator.
   whole, so a second copy of any field only has to go un-synced once: the next
   unrelated change spreads the stale copy back over what was saved. That is how
   saving a theme used to wipe the active search.
+- **The default view is committed by its Save button; everything else applies
+  live.** A year range is one value across two fields, so per-field commits
+  necessarily persist half-written state — the first field alone cannot form a
+  view, so it saves "no default view" and wipes what was there. Theme and
+  motion are single values with immediate visible feedback and stay instant.
 - **A form seeded from state must `untrack` what it seeds from.** The default-view
-  inputs in `SettingsSheet.svelte` fill from `prefs.defaultView` on open. Read
-  tracked, that effect re-runs on *every* preference write, and a two-field
-  range becomes impossible to enter: committing "From" persists a null view
-  because the range is still incomplete, and the null immediately erases the
-  field. Seed on the `open` transition only.
+  inputs fill from `prefs.defaultView` on open. Read tracked, that effect
+  re-runs on *every* preference write — including a theme change made while
+  the sheet is open — and silently discards whatever is half-typed. Seed on the
+  `open` transition only.
 - **`bind:value` on `<input type="number">` yields `number | null`, never a
   string.** Empty fields and half-typed values (a lone `-`) arrive as null.
   State behind such a binding must be typed that way; string helpers like
@@ -152,9 +156,3 @@ animated `zoomTo` — will appear not to work. Setting the `motion: 'reduced'`
 preference makes zoom synchronous and testable. Most bugs in this codebase were
 found by driving the built app and inspecting the DOM, not by reading code.
 
-## Other agent configs
-
-An OpenAI Codex config exists at `~/.codex/config.toml`. To bring anything
-across, reply `/import` to scan and list what is importable, then
-`/import --yes=<digest>` to apply. If `/import` is unavailable here, run
-`claude import` from a terminal.

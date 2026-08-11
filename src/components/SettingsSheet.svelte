@@ -48,24 +48,55 @@
     return { startYear: startInput, endYear: endInput };
   });
 
+  const bothEmpty = $derived(startInput === null && endInput === null);
+  const halfFilled = $derived(!bothEmpty && (startInput === null || endInput === null));
+
   const inputsInvalid = $derived(
     startInput !== null && endInput !== null && parsedView === null,
   );
 
-  function saveView(): void {
+  /**
+   * A year range is one value spread over two fields, so it is saved
+   * explicitly rather than on each field's change event. Committing per field
+   * means committing a half-written range: the first field alone cannot form
+   * a view, so it would persist "no default view" and wipe whatever was
+   * already saved. Nothing here reaches storage until the whole range is
+   * valid and the reader asks for it.
+   */
+  const canSave = $derived.by((): boolean => {
+    if (halfFilled || inputsInvalid) return false;
+    const saved = prefs.defaultView;
+    // Both fields empty is a real edit — it means "clear the saved view".
+    if (parsedView === null) return saved !== null;
+    return (
+      saved === null ||
+      saved.startYear !== parsedView.startYear ||
+      saved.endYear !== parsedView.endYear
+    );
+  });
+
+  function save(): void {
+    if (!canSave) return;
     onchange({ ...prefs, defaultView: parsedView });
   }
 
+  /** Fills the fields only. `save` remains the one path to storage. */
   function useCurrent(): void {
     startInput = Math.round(currentView.startYear);
     endInput = Math.round(currentView.endYear);
-    onchange({ ...prefs, defaultView: { startYear: startInput, endYear: endInput } });
   }
 
   function clearView(): void {
     startInput = null;
     endInput = null;
-    onchange({ ...prefs, defaultView: null });
+  }
+
+  function handleInputKeydown(event: KeyboardEvent): void {
+    if (event.key !== 'Enter') return;
+    // Enter is the expected commit in a form; without it the only way to save
+    // on a phone keyboard is to dismiss it and hunt for the button.
+    event.preventDefault();
+    save();
   }
 
   function setTheme(theme: ThemeChoice): void {
@@ -110,7 +141,7 @@
               type="number"
               inputmode="numeric"
               bind:value={startInput}
-              onchange={saveView}
+              onkeydown={handleInputKeydown}
               placeholder="-3300"
             />
           </label>
@@ -120,7 +151,7 @@
               type="number"
               inputmode="numeric"
               bind:value={endInput}
-              onchange={saveView}
+              onkeydown={handleInputKeydown}
               placeholder="2026"
             />
           </label>
@@ -128,18 +159,23 @@
 
         {#if inputsInvalid}
           <p class="warn" role="alert">The end year must be after the start year.</p>
+        {:else if halfFilled}
+          <p class="warn" role="alert">Enter both years.</p>
         {:else if prefs.defaultView}
           <p class="hint">
             Opens at {formatHistoricalYear(prefs.defaultView.startYear)} – {formatHistoricalYear(
               prefs.defaultView.endYear,
             )}
           </p>
+        {:else}
+          <p class="hint">No saved view — opens fully zoomed out.</p>
         {/if}
 
         <div class="row">
+          <button class="save" onclick={save} disabled={!canSave}>Save</button>
           <button class="link" onclick={useCurrent}>Use current view</button>
-          {#if prefs.defaultView}
-            <button class="link" onclick={clearView}>Reset</button>
+          {#if !bothEmpty}
+            <button class="link" onclick={clearView}>Clear</button>
           {/if}
         </div>
       </fieldset>
@@ -299,6 +335,8 @@
 
   .row {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
     margin-top: 0.5rem;
   }
@@ -328,6 +366,32 @@
     font-weight: 600;
   }
 
+  /*
+   * The default view is the one setting that is committed rather than applied
+   * live, so it gets the only filled button in the sheet. Disabled until the
+   * range is both complete and different from what is saved, which doubles as
+   * the "unsaved changes" signal.
+   */
+  .save {
+    min-height: 36px;
+    padding: 0.25rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: var(--text-primary);
+    color: var(--surface-1);
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .save:disabled {
+    border-color: var(--border);
+    background: none;
+    color: var(--text-muted);
+    cursor: default;
+  }
+
   .link {
     min-height: 32px;
     padding: 0;
@@ -343,6 +407,7 @@
   }
 
   .chip:focus-visible,
+  .save:focus-visible,
   .link:focus-visible,
   .icon:focus-visible,
   input:focus-visible {
