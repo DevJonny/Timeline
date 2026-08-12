@@ -957,11 +957,18 @@
     z-index: 2;
   }
 
+  /*
+    Capped short of the button cluster in the opposite corner. Unbounded, a
+    long focus title runs underneath the timelines button on a phone — the
+    crumb is the wider of the two rows, so the cap belongs here rather than on
+    the container, where it would also start wrapping the year readout.
+  */
   .crumb-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.375rem;
+    max-width: calc(100vw - 13rem);
   }
 
   .crumb {
@@ -999,7 +1006,22 @@
     outline-offset: 1px;
   }
 
+  /*
+    Chipped like the readout, not left as bare text. It floats over a canvas
+    whose first label sits at the same height, and the timeline's answer to
+    that everywhere else is a translucent backing rather than a reserved strip
+    — the axis ticks under the readout have the same problem.
+  */
   .focus-title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    background: color-mix(in srgb, var(--surface-1) 88%, transparent);
+    backdrop-filter: blur(6px);
     font-size: 0.6875rem;
     font-weight: 700;
     color: var(--text-primary);

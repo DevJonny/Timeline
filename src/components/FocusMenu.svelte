@@ -54,7 +54,12 @@
           is reachable the same way.
         -->
         <li>
-          <button class="item" class:on={current === null} onclick={leave} aria-current={current === null}>
+          <button
+            class="item"
+            class:on={current === null}
+            onclick={leave}
+            aria-current={current === null ? 'true' : undefined}
+          >
             <span class="title">All of history</span>
             <span class="range">3.3 Mya – today</span>
             <span class="blurb">Every entry, from the Palaeolithic to the present day.</span>
@@ -67,7 +72,7 @@
               class="item"
               class:on={current === focus.id}
               onclick={() => choose(focus.id)}
-              aria-current={current === focus.id}
+              aria-current={current === focus.id ? 'true' : undefined}
             >
               <span class="title">{focus.title}</span>
               <span class="range">{formatRange(focus.range.start, focus.range.end)}</span>

@@ -147,9 +147,38 @@ export function gateScaleFor(mainSpan: number, focusSpan: number): number {
   return mainSpan / focusSpan;
 }
 
+/**
+ * A resolved focus as the timeline component consumes it: the dataset, plus
+ * the three things rendering needs that a raw `Focus` does not carry.
+ */
 export interface FocusView extends ResolvedFocus {
   id: string;
   title: string;
+  /** See `gateScaleFor`. */
   gateScale: number;
+  /**
+   * Ids this focus authored. The timeline uses it to decide which details
+   * directory an entry's prose comes from — inherited entries keep theirs in
+   * the main one.
+   */
   ownIds: Set<string>;
+}
+
+/** Resolve a focus and package it for rendering. */
+export function focusView(
+  focus: Focus,
+  main: readonly Entry[],
+  own: readonly Entry[],
+  present: number,
+): FocusView {
+  const resolved = resolveFocus(focus, main, own, present);
+  const [mainStart, mainEnd] = mainDomain(main, present);
+
+  return {
+    ...resolved,
+    id: focus.id,
+    title: focus.title,
+    gateScale: gateScaleFor(mainEnd - mainStart, resolved.domain[1] - resolved.domain[0]),
+    ownIds: new Set(resolved.own.map((entry) => entry.id)),
+  };
 }
