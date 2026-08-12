@@ -120,9 +120,14 @@
     cursor: default;
   }
 
+  /*
+   * Muted, but deliberately still readable. Stacking an opacity on top of the
+   * muted colour took the label to roughly 1.9:1, which defeats the reason
+   * these are dimmed rather than removed — a reader still needs to see *which*
+   * age is empty, not just that something is.
+   */
   .segment.empty .abbr {
     color: var(--text-muted);
-    opacity: 0.5;
   }
 
   .abbr {
