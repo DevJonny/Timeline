@@ -318,12 +318,28 @@
    * reads as a clean axis until the user picks something. Selection is
    * mirrored into the URL so a detail view is linkable and Back dismisses it.
    */
-  function select(id: string | null, fromUrl = false): void {
+  function select(id: string | null): void {
+    // Clicking the open entry's own marker closes it.
     const next = id !== null && selectedId === id ? null : id;
     const opening = selectedId === null && next !== null;
     selectedId = next;
-    if (!fromUrl) writeSelection(next, !opening);
+    writeSelection(next, !opening);
     if (next) prefetchDetail(next);
+  }
+
+  /**
+   * URL-driven selection, deliberately *not* routed through `select`.
+   *
+   * `select` toggles, which is right for a marker — tapping the open entry
+   * again closes it — and wrong for a URL, where `#/e/x` means "show x"
+   * whatever is already open. Sharing one path meant any hash change between
+   * two entries evaluated the toggle and closed the sheet instead of
+   * switching, and it must not write the hash back either: it is reacting to
+   * the hash, and re-writing it here would stack history against the reader.
+   */
+  function selectFromUrl(id: string | null): void {
+    selectedId = id;
+    if (id) prefetchDetail(id);
   }
 
   /**
@@ -360,11 +376,19 @@
    */
   const initialSelectionId = readSelection();
 
+  /**
+   * Registers once. `selectFromUrl` assigns `selectedId` without reading it,
+   * which is what keeps that true — the previous version called `select`,
+   * whose toggle *reads* `selectedId`, so the effect took a dependency on the
+   * state it writes and re-ran on every selection. That tore down and
+   * re-registered the listener each time, and re-applied the deep-linked id
+   * on top of whatever the reader had just chosen.
+   */
   $effect(() => {
     if (initialSelectionId && entries.some((e) => e.id === initialSelectionId)) {
-      select(initialSelectionId, true);
+      selectFromUrl(initialSelectionId);
     }
-    return onSelectionChange((id) => select(id, true));
+    return onSelectionChange(selectFromUrl);
   });
 
   /**
