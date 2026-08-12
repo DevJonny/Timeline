@@ -617,6 +617,3638 @@
         "germany",
         "contemporary"
       ]
+    },
+    {
+      "id": "alfred-the-great",
+      "title": "Alfred the Great",
+      "type": "ruler",
+      "start": {
+        "year": 871
+      },
+      "end": {
+        "year": 899,
+        "month": 10,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "monarchy",
+        "england",
+        "anglo-saxon",
+        "vikings",
+        "medieval"
+      ]
+    },
+    {
+      "id": "athelstan",
+      "title": "Athelstan",
+      "type": "ruler",
+      "start": {
+        "year": 924
+      },
+      "end": {
+        "year": 939,
+        "month": 10,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "anglo-saxon",
+        "medieval"
+      ]
+    },
+    {
+      "id": "cnut",
+      "title": "Cnut the Great",
+      "type": "ruler",
+      "start": {
+        "year": 1016
+      },
+      "end": {
+        "year": 1035,
+        "month": 11,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "anglo-saxon",
+        "vikings",
+        "medieval"
+      ]
+    },
+    {
+      "id": "macbeth",
+      "title": "Macbeth",
+      "type": "ruler",
+      "start": {
+        "year": 1040,
+        "month": 8,
+        "day": 14
+      },
+      "end": {
+        "year": 1057,
+        "month": 8,
+        "day": 15
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "scotland",
+        "medieval"
+      ]
+    },
+    {
+      "id": "harold-ii",
+      "title": "Harold II",
+      "type": "ruler",
+      "start": {
+        "year": 1066,
+        "month": 1,
+        "day": 6
+      },
+      "end": {
+        "year": 1066,
+        "month": 10,
+        "day": 14
+      },
+      "importance": 5,
+      "keywords": [
+        "monarchy",
+        "england",
+        "anglo-saxon",
+        "norman-conquest",
+        "medieval"
+      ]
+    },
+    {
+      "id": "william-i",
+      "title": "William I",
+      "type": "ruler",
+      "start": {
+        "year": 1066,
+        "month": 12,
+        "day": 25
+      },
+      "end": {
+        "year": 1087,
+        "month": 9,
+        "day": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "monarchy",
+        "england",
+        "norman-conquest",
+        "medieval"
+      ]
+    },
+    {
+      "id": "henry-ii",
+      "title": "Henry II",
+      "type": "ruler",
+      "start": {
+        "year": 1154,
+        "month": 12,
+        "day": 19
+      },
+      "end": {
+        "year": 1189,
+        "month": 7,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "plantagenet",
+        "medieval",
+        "law"
+      ]
+    },
+    {
+      "id": "llywelyn-the-great",
+      "title": "Llywelyn the Great, Prince of Gwynedd",
+      "type": "ruler",
+      "start": {
+        "year": 1199
+      },
+      "end": {
+        "year": 1240,
+        "month": 4,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "wales",
+        "medieval"
+      ]
+    },
+    {
+      "id": "king-john",
+      "title": "King John",
+      "type": "ruler",
+      "start": {
+        "year": 1199,
+        "month": 5,
+        "day": 27
+      },
+      "end": {
+        "year": 1216,
+        "month": 10,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "plantagenet",
+        "medieval",
+        "law"
+      ]
+    },
+    {
+      "id": "llywelyn-ap-gruffudd",
+      "title": "Llywelyn ap Gruffudd, Prince of Wales",
+      "type": "ruler",
+      "start": {
+        "year": 1255
+      },
+      "end": {
+        "year": 1282,
+        "month": 12,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "wales",
+        "england",
+        "medieval"
+      ]
+    },
+    {
+      "id": "edward-i",
+      "title": "Edward I",
+      "type": "ruler",
+      "start": {
+        "year": 1272,
+        "month": 11,
+        "day": 20
+      },
+      "end": {
+        "year": 1307,
+        "month": 7,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "plantagenet",
+        "medieval",
+        "wales"
+      ]
+    },
+    {
+      "id": "robert-the-bruce",
+      "title": "Robert the Bruce",
+      "type": "ruler",
+      "start": {
+        "year": 1306,
+        "month": 3,
+        "day": 25
+      },
+      "end": {
+        "year": 1329,
+        "month": 6,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "scotland",
+        "england",
+        "medieval",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "edward-iii",
+      "title": "Edward III",
+      "type": "ruler",
+      "start": {
+        "year": 1327,
+        "month": 1,
+        "day": 25
+      },
+      "end": {
+        "year": 1377,
+        "month": 6,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "england",
+        "plantagenet",
+        "hundred-years-war",
+        "medieval"
+      ]
+    },
+    {
+      "id": "owain-glyndwr",
+      "title": "Owain Glyndwr, Prince of Wales",
+      "type": "ruler",
+      "start": {
+        "year": 1400,
+        "month": 9,
+        "day": 16
+      },
+      "end": {
+        "year": 1415,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "monarchy",
+        "wales",
+        "england",
+        "medieval"
+      ]
+    },
+    {
+      "id": "henry-v",
+      "title": "Henry V",
+      "type": "ruler",
+      "start": {
+        "year": 1413,
+        "month": 3,
+        "day": 21
+      },
+      "end": {
+        "year": 1422,
+        "month": 8,
+        "day": 31
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "england",
+        "hundred-years-war",
+        "medieval",
+        "france"
+      ]
+    },
+    {
+      "id": "richard-iii",
+      "title": "Richard III",
+      "type": "ruler",
+      "start": {
+        "year": 1483,
+        "month": 6,
+        "day": 26
+      },
+      "end": {
+        "year": 1485,
+        "month": 8,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "england",
+        "wars-of-the-roses",
+        "medieval"
+      ]
+    },
+    {
+      "id": "henry-vii",
+      "title": "Henry VII",
+      "type": "ruler",
+      "start": {
+        "year": 1485,
+        "month": 8,
+        "day": 22
+      },
+      "end": {
+        "year": 1509,
+        "month": 4,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "tudor",
+        "wars-of-the-roses",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "henry-viii",
+      "title": "Henry VIII",
+      "type": "ruler",
+      "start": {
+        "year": 1509,
+        "month": 4,
+        "day": 21
+      },
+      "end": {
+        "year": 1547,
+        "month": 1,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "monarchy",
+        "england",
+        "tudor",
+        "reformation",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "mary-queen-of-scots",
+      "title": "Mary, Queen of Scots",
+      "type": "ruler",
+      "start": {
+        "year": 1542,
+        "month": 12,
+        "day": 14
+      },
+      "end": {
+        "year": 1567,
+        "month": 7,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "scotland",
+        "tudor",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "lady-jane-grey",
+      "title": "Lady Jane Grey",
+      "type": "ruler",
+      "start": {
+        "year": 1553,
+        "month": 7,
+        "day": 10
+      },
+      "end": {
+        "year": 1553,
+        "month": 7,
+        "day": 19
+      },
+      "importance": 5,
+      "keywords": [
+        "monarchy",
+        "england",
+        "tudor",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "mary-i",
+      "title": "Mary I",
+      "type": "ruler",
+      "start": {
+        "year": 1553,
+        "month": 7,
+        "day": 19
+      },
+      "end": {
+        "year": 1558,
+        "month": 11,
+        "day": 17
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "england",
+        "tudor",
+        "reformation",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "james-vi-and-i",
+      "title": "James VI and I",
+      "type": "ruler",
+      "start": {
+        "year": 1567,
+        "month": 7,
+        "day": 24
+      },
+      "end": {
+        "year": 1625,
+        "month": 3,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "scotland",
+        "stuart",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "charles-i",
+      "title": "Charles I",
+      "type": "ruler",
+      "start": {
+        "year": 1625,
+        "month": 3,
+        "day": 27
+      },
+      "end": {
+        "year": 1649,
+        "month": 1,
+        "day": 30
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "stuart",
+        "english-civil-war",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "oliver-cromwell",
+      "title": "Oliver Cromwell, Lord Protector",
+      "type": "ruler",
+      "start": {
+        "year": 1653,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 1658,
+        "month": 9,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "republic",
+        "english-civil-war",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "charles-ii",
+      "title": "Charles II",
+      "type": "ruler",
+      "start": {
+        "year": 1660,
+        "month": 5,
+        "day": 29
+      },
+      "end": {
+        "year": 1685,
+        "month": 2,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "england",
+        "stuart",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "william-iii-and-mary-ii",
+      "title": "William III and Mary II",
+      "type": "ruler",
+      "start": {
+        "year": 1689,
+        "month": 2,
+        "day": 13
+      },
+      "end": {
+        "year": 1702,
+        "month": 3,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "england",
+        "stuart",
+        "law",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "anne",
+      "title": "Anne",
+      "type": "ruler",
+      "start": {
+        "year": 1702,
+        "month": 3,
+        "day": 8
+      },
+      "end": {
+        "year": 1714,
+        "month": 8,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "scotland",
+        "stuart",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "george-iii",
+      "title": "George III",
+      "type": "ruler",
+      "start": {
+        "year": 1760,
+        "month": 10,
+        "day": 25
+      },
+      "end": {
+        "year": 1820,
+        "month": 1,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "industrial-revolution",
+        "napoleonic-wars"
+      ]
+    },
+    {
+      "id": "victoria",
+      "title": "Victoria",
+      "type": "ruler",
+      "start": {
+        "year": 1837,
+        "month": 6,
+        "day": 20
+      },
+      "end": {
+        "year": 1901,
+        "month": 1,
+        "day": 22
+      },
+      "importance": 2,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "empire",
+        "industrial-revolution"
+      ]
+    },
+    {
+      "id": "edward-viii",
+      "title": "Edward VIII",
+      "type": "ruler",
+      "start": {
+        "year": 1936,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 1936,
+        "month": 12,
+        "day": 11
+      },
+      "importance": 5,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "20th-century",
+        "modern"
+      ]
+    },
+    {
+      "id": "george-vi",
+      "title": "George VI",
+      "type": "ruler",
+      "start": {
+        "year": 1936,
+        "month": 12,
+        "day": 11
+      },
+      "end": {
+        "year": 1952,
+        "month": 2,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "20th-century",
+        "world-war-2",
+        "modern"
+      ]
+    },
+    {
+      "id": "elizabeth-ii",
+      "title": "Elizabeth II",
+      "type": "ruler",
+      "start": {
+        "year": 1952,
+        "month": 2,
+        "day": 6
+      },
+      "end": {
+        "year": 2022,
+        "month": 9,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "20th-century",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "charles-iii",
+      "title": "Charles III",
+      "type": "ruler",
+      "start": {
+        "year": 2022,
+        "month": 9,
+        "day": 8
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "monarchy",
+        "britain",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "little-willie",
+      "title": "Little Willie",
+      "type": "event",
+      "start": {
+        "year": 1915,
+        "month": 9
+      },
+      "end": {
+        "year": 1915,
+        "month": 12
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "britain",
+        "world-war-1",
+        "technology"
+      ]
+    },
+    {
+      "id": "mark-i-tank",
+      "title": "Mark I Tank",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 9,
+        "day": 15
+      },
+      "end": {
+        "year": 1917
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "britain",
+        "world-war-1",
+        "technology",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "renault-ft",
+      "title": "Renault FT",
+      "type": "event",
+      "start": {
+        "year": 1917
+      },
+      "end": {
+        "year": 1940
+      },
+      "importance": 2,
+      "keywords": [
+        "tank",
+        "france",
+        "world-war-1",
+        "technology"
+      ]
+    },
+    {
+      "id": "panzer-iv",
+      "title": "Panzer IV",
+      "type": "event",
+      "start": {
+        "year": 1937,
+        "month": 10
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "germany",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "t-34",
+      "title": "T-34",
+      "type": "event",
+      "start": {
+        "year": 1940,
+        "month": 9
+      },
+      "end": {
+        "year": 1955,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "soviet-union",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "churchill-tank",
+      "title": "Churchill Tank",
+      "type": "event",
+      "start": {
+        "year": 1941,
+        "month": 6
+      },
+      "end": {
+        "year": 1952
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "britain",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "m4-sherman",
+      "title": "M4 Sherman",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 2
+      },
+      "end": {
+        "year": 1957
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "united-states",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "tiger-i",
+      "title": "Tiger I",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 8
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "germany",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "panther-tank",
+      "title": "Panther",
+      "type": "event",
+      "start": {
+        "year": 1943,
+        "month": 1
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "germany",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "is-2",
+      "title": "IS-2",
+      "type": "event",
+      "start": {
+        "year": 1943,
+        "month": 10
+      },
+      "end": {
+        "year": 1995
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "soviet-union",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "centurion-tank",
+      "title": "Centurion",
+      "type": "event",
+      "start": {
+        "year": 1946,
+        "month": 12
+      },
+      "end": {
+        "year": 1992
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "britain",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "t-55",
+      "title": "T-55",
+      "type": "event",
+      "start": {
+        "year": 1958,
+        "month": 5
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "soviet-union",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "chieftain-tank",
+      "title": "Chieftain",
+      "type": "event",
+      "start": {
+        "year": 1966
+      },
+      "end": {
+        "year": 1995
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "britain",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "t-72",
+      "title": "T-72",
+      "type": "event",
+      "start": {
+        "year": 1973,
+        "month": 8,
+        "day": 7
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "soviet-union",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "merkava",
+      "title": "Merkava",
+      "type": "event",
+      "start": {
+        "year": 1979
+      },
+      "end": "present",
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "israel",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "leopard-2",
+      "title": "Leopard 2",
+      "type": "event",
+      "start": {
+        "year": 1979,
+        "month": 10,
+        "day": 24
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "germany",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "m1-abrams",
+      "title": "M1 Abrams",
+      "type": "event",
+      "start": {
+        "year": 1980
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "united-states",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "challenger-1",
+      "title": "Challenger 1",
+      "type": "event",
+      "start": {
+        "year": 1983
+      },
+      "end": {
+        "year": 2001
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "britain",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "challenger-2",
+      "title": "Challenger 2",
+      "type": "event",
+      "start": {
+        "year": 1998,
+        "month": 6
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "britain",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "challenger-3",
+      "title": "Challenger 3",
+      "type": "event",
+      "start": {
+        "year": 2024,
+        "month": 1
+      },
+      "end": "present",
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "britain",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "robert-walpole",
+      "title": "Robert Walpole",
+      "type": "ruler",
+      "start": {
+        "year": 1721,
+        "month": 4,
+        "day": 3
+      },
+      "end": {
+        "year": 1742,
+        "month": 2,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "early-modern",
+        "liberal"
+      ]
+    },
+    {
+      "id": "william-pitt-the-younger",
+      "title": "William Pitt the Younger",
+      "type": "ruler",
+      "start": {
+        "year": 1783,
+        "month": 12,
+        "day": 19
+      },
+      "end": {
+        "year": 1806,
+        "month": 1,
+        "day": 23
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "napoleonic-wars",
+        "conservative"
+      ]
+    },
+    {
+      "id": "robert-peel",
+      "title": "Robert Peel",
+      "type": "ruler",
+      "start": {
+        "year": 1834,
+        "month": 12,
+        "day": 10
+      },
+      "end": {
+        "year": 1846,
+        "month": 6,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "industrial-revolution",
+        "free-trade",
+        "conservative"
+      ]
+    },
+    {
+      "id": "lord-palmerston",
+      "title": "Lord Palmerston",
+      "type": "ruler",
+      "start": {
+        "year": 1855,
+        "month": 2,
+        "day": 6
+      },
+      "end": {
+        "year": 1865,
+        "month": 10,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "empire",
+        "liberal"
+      ]
+    },
+    {
+      "id": "benjamin-disraeli",
+      "title": "Benjamin Disraeli",
+      "type": "ruler",
+      "start": {
+        "year": 1868,
+        "month": 2,
+        "day": 27
+      },
+      "end": {
+        "year": 1880,
+        "month": 4,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "empire",
+        "conservative"
+      ]
+    },
+    {
+      "id": "william-gladstone",
+      "title": "William Gladstone",
+      "type": "ruler",
+      "start": {
+        "year": 1868,
+        "month": 12,
+        "day": 3
+      },
+      "end": {
+        "year": 1894,
+        "month": 3,
+        "day": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "liberal",
+        "ireland"
+      ]
+    },
+    {
+      "id": "david-lloyd-george",
+      "title": "David Lloyd George",
+      "type": "ruler",
+      "start": {
+        "year": 1916,
+        "month": 12,
+        "day": 6
+      },
+      "end": {
+        "year": 1922,
+        "month": 10,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "world-war-1",
+        "liberal",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "stanley-baldwin",
+      "title": "Stanley Baldwin",
+      "type": "ruler",
+      "start": {
+        "year": 1923,
+        "month": 5,
+        "day": 22
+      },
+      "end": {
+        "year": 1937,
+        "month": 5,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "neville-chamberlain",
+      "title": "Neville Chamberlain",
+      "type": "ruler",
+      "start": {
+        "year": 1937,
+        "month": 5,
+        "day": 28
+      },
+      "end": {
+        "year": 1940,
+        "month": 5,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "world-war-2",
+        "conservative",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "winston-churchill",
+      "title": "Winston Churchill",
+      "type": "ruler",
+      "start": {
+        "year": 1940,
+        "month": 5,
+        "day": 10
+      },
+      "end": {
+        "year": 1955,
+        "month": 4,
+        "day": 5
+      },
+      "importance": 2,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "world-war-2",
+        "conservative",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "clement-attlee",
+      "title": "Clement Attlee",
+      "type": "ruler",
+      "start": {
+        "year": 1945,
+        "month": 7,
+        "day": 26
+      },
+      "end": {
+        "year": 1951,
+        "month": 10,
+        "day": 26
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "labour",
+        "welfare-state",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "harold-macmillan",
+      "title": "Harold Macmillan",
+      "type": "ruler",
+      "start": {
+        "year": 1957,
+        "month": 1,
+        "day": 10
+      },
+      "end": {
+        "year": 1963,
+        "month": 10,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "cold-war",
+        "conservative",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "harold-wilson",
+      "title": "Harold Wilson",
+      "type": "ruler",
+      "start": {
+        "year": 1964,
+        "month": 10,
+        "day": 16
+      },
+      "end": {
+        "year": 1976,
+        "month": 4,
+        "day": 5
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "labour",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "edward-heath",
+      "title": "Edward Heath",
+      "type": "ruler",
+      "start": {
+        "year": 1970,
+        "month": 6,
+        "day": 19
+      },
+      "end": {
+        "year": 1974,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "europe",
+        "conservative",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "margaret-thatcher",
+      "title": "Margaret Thatcher",
+      "type": "ruler",
+      "start": {
+        "year": 1979,
+        "month": 5,
+        "day": 4
+      },
+      "end": {
+        "year": 1990,
+        "month": 11,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "cold-war",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "john-major",
+      "title": "John Major",
+      "type": "ruler",
+      "start": {
+        "year": 1990,
+        "month": 11,
+        "day": 28
+      },
+      "end": {
+        "year": 1997,
+        "month": 5,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "europe",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "tony-blair",
+      "title": "Tony Blair",
+      "type": "ruler",
+      "start": {
+        "year": 1997,
+        "month": 5,
+        "day": 2
+      },
+      "end": {
+        "year": 2007,
+        "month": 6,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "labour",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "gordon-brown",
+      "title": "Gordon Brown",
+      "type": "ruler",
+      "start": {
+        "year": 2007,
+        "month": 6,
+        "day": 27
+      },
+      "end": {
+        "year": 2010,
+        "month": 5,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "labour",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "david-cameron",
+      "title": "David Cameron",
+      "type": "ruler",
+      "start": {
+        "year": 2010,
+        "month": 5,
+        "day": 11
+      },
+      "end": {
+        "year": 2016,
+        "month": 7,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "brexit",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "theresa-may",
+      "title": "Theresa May",
+      "type": "ruler",
+      "start": {
+        "year": 2016,
+        "month": 7,
+        "day": 13
+      },
+      "end": {
+        "year": 2019,
+        "month": 7,
+        "day": 24
+      },
+      "importance": 5,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "brexit",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "boris-johnson",
+      "title": "Boris Johnson",
+      "type": "ruler",
+      "start": {
+        "year": 2019,
+        "month": 7,
+        "day": 24
+      },
+      "end": {
+        "year": 2022,
+        "month": 9,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "brexit",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "liz-truss",
+      "title": "Liz Truss",
+      "type": "ruler",
+      "start": {
+        "year": 2022,
+        "month": 9,
+        "day": 6
+      },
+      "end": {
+        "year": 2022,
+        "month": 10,
+        "day": 25
+      },
+      "importance": 5,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "rishi-sunak",
+      "title": "Rishi Sunak",
+      "type": "ruler",
+      "start": {
+        "year": 2022,
+        "month": 10,
+        "day": 25
+      },
+      "end": {
+        "year": 2024,
+        "month": 7,
+        "day": 5
+      },
+      "importance": 5,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "conservative",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "keir-starmer",
+      "title": "Keir Starmer",
+      "type": "ruler",
+      "start": {
+        "year": 2024,
+        "month": 7,
+        "day": 5
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "prime-minister",
+        "britain",
+        "labour",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "george-washington",
+      "title": "George Washington",
+      "type": "ruler",
+      "start": {
+        "year": 1789,
+        "month": 4,
+        "day": 30
+      },
+      "end": {
+        "year": 1797,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 2,
+      "keywords": [
+        "us-president",
+        "revolution",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "john-adams",
+      "title": "John Adams",
+      "type": "ruler",
+      "start": {
+        "year": 1797,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1801,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "early-modern",
+        "law"
+      ]
+    },
+    {
+      "id": "thomas-jefferson",
+      "title": "Thomas Jefferson",
+      "type": "ruler",
+      "start": {
+        "year": 1801,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1809,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "early-modern",
+        "republic"
+      ]
+    },
+    {
+      "id": "james-madison",
+      "title": "James Madison",
+      "type": "ruler",
+      "start": {
+        "year": 1809,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1817,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "britain",
+        "republic"
+      ]
+    },
+    {
+      "id": "andrew-jackson",
+      "title": "Andrew Jackson",
+      "type": "ruler",
+      "start": {
+        "year": 1829,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1837,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "william-henry-harrison",
+      "title": "William Henry Harrison",
+      "type": "ruler",
+      "start": {
+        "year": 1841,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1841,
+        "month": 4,
+        "day": 4
+      },
+      "importance": 5,
+      "keywords": [
+        "us-president",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "abraham-lincoln",
+      "title": "Abraham Lincoln",
+      "type": "ruler",
+      "start": {
+        "year": 1861,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1865,
+        "month": 4,
+        "day": 15
+      },
+      "importance": 2,
+      "keywords": [
+        "us-president",
+        "american-civil-war",
+        "slavery"
+      ]
+    },
+    {
+      "id": "ulysses-s-grant",
+      "title": "Ulysses S. Grant",
+      "type": "ruler",
+      "start": {
+        "year": 1869,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1877,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "american-civil-war",
+        "reconstruction"
+      ]
+    },
+    {
+      "id": "theodore-roosevelt",
+      "title": "Theodore Roosevelt",
+      "type": "ruler",
+      "start": {
+        "year": 1901,
+        "month": 9,
+        "day": 14
+      },
+      "end": {
+        "year": 1909,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "20th-century",
+        "industrial-revolution"
+      ]
+    },
+    {
+      "id": "woodrow-wilson",
+      "title": "Woodrow Wilson",
+      "type": "ruler",
+      "start": {
+        "year": 1913,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1921,
+        "month": 3,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "world-war-1",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "franklin-d-roosevelt",
+      "title": "Franklin D. Roosevelt",
+      "type": "ruler",
+      "start": {
+        "year": 1933,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1945,
+        "month": 4,
+        "day": 12
+      },
+      "importance": 2,
+      "keywords": [
+        "us-president",
+        "world-war-2",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "harry-s-truman",
+      "title": "Harry S. Truman",
+      "type": "ruler",
+      "start": {
+        "year": 1945,
+        "month": 4,
+        "day": 12
+      },
+      "end": {
+        "year": 1953,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "cold-war",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "dwight-d-eisenhower",
+      "title": "Dwight D. Eisenhower",
+      "type": "ruler",
+      "start": {
+        "year": 1953,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 1961,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "cold-war",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "john-f-kennedy",
+      "title": "John F. Kennedy",
+      "type": "ruler",
+      "start": {
+        "year": 1961,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 1963,
+        "month": 11,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "cold-war",
+        "space"
+      ]
+    },
+    {
+      "id": "lyndon-b-johnson",
+      "title": "Lyndon B. Johnson",
+      "type": "ruler",
+      "start": {
+        "year": 1963,
+        "month": 11,
+        "day": 22
+      },
+      "end": {
+        "year": 1969,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "civil-rights",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "richard-nixon",
+      "title": "Richard Nixon",
+      "type": "ruler",
+      "start": {
+        "year": 1969,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 1974,
+        "month": 8,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "cold-war",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "ronald-reagan",
+      "title": "Ronald Reagan",
+      "type": "ruler",
+      "start": {
+        "year": 1981,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 1989,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "us-president",
+        "cold-war",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "bill-clinton",
+      "title": "Bill Clinton",
+      "type": "ruler",
+      "start": {
+        "year": 1993,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 2001,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "george-w-bush",
+      "title": "George W. Bush",
+      "type": "ruler",
+      "start": {
+        "year": 2001,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 2009,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary",
+        "terrorism"
+      ]
+    },
+    {
+      "id": "barack-obama",
+      "title": "Barack Obama",
+      "type": "ruler",
+      "start": {
+        "year": 2009,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 2017,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary",
+        "civil-rights"
+      ]
+    },
+    {
+      "id": "donald-trump-first-term",
+      "title": "Donald Trump (first term)",
+      "type": "ruler",
+      "start": {
+        "year": 2017,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 2021,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "joe-biden",
+      "title": "Joe Biden",
+      "type": "ruler",
+      "start": {
+        "year": 2021,
+        "month": 1,
+        "day": 20
+      },
+      "end": {
+        "year": 2025,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "donald-trump-second-term",
+      "title": "Donald Trump (second term)",
+      "type": "ruler",
+      "start": {
+        "year": 2025,
+        "month": 1,
+        "day": 20
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "us-president",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "swedish-empire",
+      "title": "Swedish Empire",
+      "type": "empire",
+      "start": {
+        "year": 1611
+      },
+      "end": {
+        "year": 1721
+      },
+      "importance": 2,
+      "keywords": [
+        "sweden",
+        "europe",
+        "empire",
+        "early-modern",
+        "baltic"
+      ]
+    },
+    {
+      "id": "gustavus-adolphus",
+      "title": "Gustavus Adolphus",
+      "type": "ruler",
+      "start": {
+        "year": 1611
+      },
+      "end": {
+        "year": 1632
+      },
+      "importance": 2,
+      "keywords": [
+        "sweden",
+        "europe",
+        "monarchy",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "thirty-years-war",
+      "title": "Thirty Years' War",
+      "type": "war",
+      "start": {
+        "year": 1618,
+        "month": 5,
+        "day": 23
+      },
+      "end": {
+        "year": 1648,
+        "month": 10,
+        "day": 24
+      },
+      "importance": 2,
+      "keywords": [
+        "sweden",
+        "europe",
+        "germany",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-breitenfeld",
+      "title": "Battle of Breitenfeld",
+      "type": "battle",
+      "start": {
+        "year": 1631,
+        "month": 9,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "germany",
+        "europe",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-lutzen",
+      "title": "Battle of Lützen",
+      "type": "battle",
+      "start": {
+        "year": 1632,
+        "month": 11,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "germany",
+        "europe",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "peace-of-westphalia",
+      "title": "Peace of Westphalia",
+      "type": "event",
+      "start": {
+        "year": 1648,
+        "month": 10,
+        "day": 24
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "europe",
+        "germany",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "charles-xi",
+      "title": "Charles XI",
+      "type": "ruler",
+      "start": {
+        "year": 1660
+      },
+      "end": {
+        "year": 1697
+      },
+      "importance": 4,
+      "keywords": [
+        "sweden",
+        "monarchy",
+        "europe",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "charles-xii",
+      "title": "Charles XII",
+      "type": "ruler",
+      "start": {
+        "year": 1697
+      },
+      "end": {
+        "year": 1718
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "monarchy",
+        "europe",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "great-northern-war",
+      "title": "Great Northern War",
+      "type": "war",
+      "start": {
+        "year": 1700,
+        "month": 2
+      },
+      "end": {
+        "year": 1721,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "russia",
+        "europe",
+        "early-modern",
+        "baltic"
+      ]
+    },
+    {
+      "id": "battle-of-narva",
+      "title": "Battle of Narva",
+      "type": "battle",
+      "start": {
+        "year": 1700,
+        "month": 11,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "sweden",
+        "russia",
+        "early-modern",
+        "baltic"
+      ]
+    },
+    {
+      "id": "battle-of-fraustadt",
+      "title": "Battle of Fraustadt",
+      "type": "battle",
+      "start": {
+        "year": 1706,
+        "month": 2,
+        "day": 13
+      },
+      "importance": 5,
+      "keywords": [
+        "sweden",
+        "poland",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-poltava",
+      "title": "Battle of Poltava",
+      "type": "battle",
+      "start": {
+        "year": 1709,
+        "month": 7,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "sweden",
+        "russia",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "death-of-charles-xii",
+      "title": "Death of Charles XII",
+      "type": "event",
+      "start": {
+        "year": 1718,
+        "month": 12,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "sweden",
+        "monarchy",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "treaty-of-nystad",
+      "title": "Treaty of Nystad",
+      "type": "event",
+      "start": {
+        "year": 1721,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "sweden",
+        "russia",
+        "baltic",
+        "early-modern",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "akkadian-empire",
+      "title": "Akkadian Empire",
+      "type": "empire",
+      "start": {
+        "year": -2334,
+        "circa": true
+      },
+      "end": {
+        "year": -2154,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "mesopotamia",
+        "antiquity",
+        "bronze-age"
+      ]
+    },
+    {
+      "id": "egyptian-new-kingdom",
+      "title": "Egyptian New Kingdom",
+      "type": "empire",
+      "start": {
+        "year": -1550,
+        "circa": true
+      },
+      "end": {
+        "year": -1069,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "egypt",
+        "antiquity",
+        "bronze-age"
+      ]
+    },
+    {
+      "id": "achaemenid-empire",
+      "title": "Achaemenid Persian Empire",
+      "type": "empire",
+      "start": {
+        "year": -550
+      },
+      "end": {
+        "year": -330
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "persia",
+        "antiquity",
+        "asia"
+      ]
+    },
+    {
+      "id": "macedonian-empire",
+      "title": "Alexander's Macedonian Empire",
+      "type": "empire",
+      "start": {
+        "year": -336
+      },
+      "end": {
+        "year": -323
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "greece",
+        "antiquity",
+        "persia"
+      ]
+    },
+    {
+      "id": "han-dynasty",
+      "title": "Han Dynasty",
+      "type": "empire",
+      "start": {
+        "year": -202
+      },
+      "end": {
+        "year": 220
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "china",
+        "asia",
+        "antiquity"
+      ]
+    },
+    {
+      "id": "byzantine-empire",
+      "title": "Byzantine Empire",
+      "type": "empire",
+      "start": {
+        "year": 330,
+        "month": 5,
+        "day": 11
+      },
+      "end": {
+        "year": 1453,
+        "month": 5,
+        "day": 29
+      },
+      "importance": 2,
+      "keywords": [
+        "empire",
+        "medieval",
+        "europe",
+        "rome"
+      ]
+    },
+    {
+      "id": "umayyad-caliphate",
+      "title": "Umayyad Caliphate",
+      "type": "empire",
+      "start": {
+        "year": 661
+      },
+      "end": {
+        "year": 750
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "islam",
+        "medieval",
+        "asia"
+      ]
+    },
+    {
+      "id": "holy-roman-empire",
+      "title": "Holy Roman Empire",
+      "type": "empire",
+      "start": {
+        "year": 962,
+        "month": 2,
+        "day": 2
+      },
+      "end": {
+        "year": 1806,
+        "month": 8,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "europe",
+        "germany",
+        "medieval"
+      ]
+    },
+    {
+      "id": "ottoman-empire",
+      "title": "Ottoman Empire",
+      "type": "empire",
+      "start": {
+        "year": 1299,
+        "circa": true
+      },
+      "end": {
+        "year": 1922,
+        "month": 11,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "empire",
+        "ottoman-empire",
+        "europe",
+        "asia",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "aztec-empire",
+      "title": "Aztec Empire",
+      "type": "empire",
+      "start": {
+        "year": 1428
+      },
+      "end": {
+        "year": 1521,
+        "month": 8,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "americas",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "inca-empire",
+      "title": "Inca Empire",
+      "type": "empire",
+      "start": {
+        "year": 1438,
+        "circa": true
+      },
+      "end": {
+        "year": 1533,
+        "month": 7,
+        "day": 26
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "americas",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "fall-of-constantinople",
+      "title": "Fall of Constantinople",
+      "type": "event",
+      "start": {
+        "year": 1453,
+        "month": 5,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "ottoman-empire",
+        "medieval",
+        "europe"
+      ]
+    },
+    {
+      "id": "spanish-empire",
+      "title": "Spanish Empire",
+      "type": "empire",
+      "start": {
+        "year": 1492
+      },
+      "end": {
+        "year": 1898,
+        "month": 12,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "spain",
+        "colonialism",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "fall-of-tenochtitlan",
+      "title": "Fall of Tenochtitlan",
+      "type": "event",
+      "start": {
+        "year": 1521,
+        "month": 8,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "americas",
+        "colonialism",
+        "spain"
+      ]
+    },
+    {
+      "id": "mughal-empire",
+      "title": "Mughal Empire",
+      "type": "empire",
+      "start": {
+        "year": 1526
+      },
+      "end": {
+        "year": 1857
+      },
+      "importance": 4,
+      "keywords": [
+        "empire",
+        "india",
+        "asia",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "qing-dynasty",
+      "title": "Qing Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 1636
+      },
+      "end": {
+        "year": 1912,
+        "month": 2,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "china",
+        "asia",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "russian-empire",
+      "title": "Russian Empire",
+      "type": "empire",
+      "start": {
+        "year": 1721
+      },
+      "end": {
+        "year": 1917,
+        "month": 3,
+        "day": 15
+      },
+      "importance": 3,
+      "keywords": [
+        "empire",
+        "russia",
+        "europe",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "battle-of-thermopylae",
+      "title": "Battle of Thermopylae",
+      "type": "battle",
+      "start": {
+        "year": -480
+      },
+      "importance": 2,
+      "keywords": [
+        "sabaton",
+        "antiquity",
+        "greece",
+        "persia"
+      ]
+    },
+    {
+      "id": "hannibal",
+      "title": "Hannibal",
+      "type": "person",
+      "start": {
+        "year": -247,
+        "circa": true
+      },
+      "end": {
+        "year": -183,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "sabaton",
+        "antiquity",
+        "rome",
+        "carthage"
+      ]
+    },
+    {
+      "id": "crossing-the-rubicon",
+      "title": "Caesar Crosses the Rubicon",
+      "type": "event",
+      "start": {
+        "year": -49,
+        "month": 1,
+        "day": 10
+      },
+      "importance": 2,
+      "keywords": [
+        "sabaton",
+        "antiquity",
+        "rome",
+        "republic"
+      ]
+    },
+    {
+      "id": "battle-of-bannockburn",
+      "title": "Battle of Bannockburn",
+      "type": "battle",
+      "start": {
+        "year": 1314,
+        "month": 6,
+        "day": 23
+      },
+      "end": {
+        "year": 1314,
+        "month": 6,
+        "day": 24
+      },
+      "importance": 3,
+      "keywords": [
+        "sabaton",
+        "medieval",
+        "scotland",
+        "england"
+      ]
+    },
+    {
+      "id": "joan-of-arc",
+      "title": "Joan of Arc",
+      "type": "person",
+      "start": {
+        "year": 1412,
+        "circa": true
+      },
+      "end": {
+        "year": 1431,
+        "month": 5,
+        "day": 30
+      },
+      "importance": 3,
+      "keywords": [
+        "sabaton",
+        "medieval",
+        "france",
+        "england"
+      ]
+    },
+    {
+      "id": "vlad-the-impaler",
+      "title": "Vlad the Impaler",
+      "type": "ruler",
+      "start": {
+        "year": 1456
+      },
+      "end": {
+        "year": 1462
+      },
+      "importance": 4,
+      "keywords": [
+        "sabaton",
+        "medieval",
+        "wallachia",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "sack-of-rome-1527",
+      "title": "Sack of Rome",
+      "type": "event",
+      "start": {
+        "year": 1527,
+        "month": 5,
+        "day": 6
+      },
+      "end": {
+        "year": 1528,
+        "month": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "sabaton",
+        "rome",
+        "renaissance",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "miyamoto-musashi",
+      "title": "Miyamoto Musashi",
+      "type": "person",
+      "start": {
+        "year": 1584,
+        "circa": true
+      },
+      "end": {
+        "year": 1645,
+        "month": 6,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "sabaton",
+        "japan",
+        "early-modern",
+        "samurai"
+      ]
+    },
+    {
+      "id": "battle-of-vienna",
+      "title": "Battle of Vienna",
+      "type": "battle",
+      "start": {
+        "year": 1683,
+        "month": 9,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "sabaton",
+        "early-modern",
+        "europe",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "battle-of-shiroyama",
+      "title": "Battle of Shiroyama",
+      "type": "battle",
+      "start": {
+        "year": 1877,
+        "month": 9,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "sabaton",
+        "japan",
+        "samurai",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "battle-of-rorkes-drift",
+      "title": "Battle of Rorke's Drift",
+      "type": "battle",
+      "start": {
+        "year": 1879,
+        "month": 1,
+        "day": 22
+      },
+      "end": {
+        "year": 1879,
+        "month": 1,
+        "day": 23
+      },
+      "importance": 5,
+      "keywords": [
+        "sabaton",
+        "britain",
+        "colonialism",
+        "africa"
+      ]
+    },
+    {
+      "id": "falklands-war",
+      "title": "Falklands War",
+      "type": "war",
+      "start": {
+        "year": 1982,
+        "month": 4,
+        "day": 2
+      },
+      "end": {
+        "year": 1982,
+        "month": 6,
+        "day": 14
+      },
+      "importance": 4,
+      "keywords": [
+        "sabaton",
+        "britain",
+        "20th-century",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "assassination-of-franz-ferdinand",
+      "title": "Assassination of Archduke Franz Ferdinand",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 6,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "europe",
+        "20th-century",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "first-battle-of-the-marne",
+      "title": "First Battle of the Marne",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 9,
+        "day": 5
+      },
+      "end": {
+        "year": 1914,
+        "month": 9,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "france",
+        "germany",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "christmas-truce",
+      "title": "Christmas Truce",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 12,
+        "day": 24
+      },
+      "end": {
+        "year": 1914,
+        "month": 12,
+        "day": 26
+      },
+      "importance": 5,
+      "keywords": [
+        "world-war-1",
+        "europe",
+        "20th-century",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "gallipoli-campaign",
+      "title": "Gallipoli Campaign",
+      "type": "battle",
+      "start": {
+        "year": 1915,
+        "month": 4,
+        "day": 25
+      },
+      "end": {
+        "year": 1916,
+        "month": 1,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "ottoman-empire",
+        "britain",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "sinking-of-the-lusitania",
+      "title": "Sinking of the Lusitania",
+      "type": "event",
+      "start": {
+        "year": 1915,
+        "month": 5,
+        "day": 7
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "naval",
+        "united-states",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "battle-of-verdun",
+      "title": "Battle of Verdun",
+      "type": "battle",
+      "start": {
+        "year": 1916,
+        "month": 2,
+        "day": 21
+      },
+      "end": {
+        "year": 1916,
+        "month": 12,
+        "day": 18
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "france",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-jutland",
+      "title": "Battle of Jutland",
+      "type": "battle",
+      "start": {
+        "year": 1916,
+        "month": 5,
+        "day": 31
+      },
+      "end": {
+        "year": 1916,
+        "month": 6,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "naval",
+        "britain",
+        "germany"
+      ]
+    },
+    {
+      "id": "battle-of-the-somme",
+      "title": "Battle of the Somme",
+      "type": "battle",
+      "start": {
+        "year": 1916,
+        "month": 7,
+        "day": 1
+      },
+      "end": {
+        "year": 1916,
+        "month": 11,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "britain",
+        "france",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-passchendaele",
+      "title": "Battle of Passchendaele",
+      "type": "battle",
+      "start": {
+        "year": 1917,
+        "month": 7,
+        "day": 31
+      },
+      "end": {
+        "year": 1917,
+        "month": 11,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "britain",
+        "europe",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "german-spring-offensive",
+      "title": "German Spring Offensive",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 3,
+        "day": 21
+      },
+      "end": {
+        "year": 1918,
+        "month": 7,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "germany",
+        "france",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "armistice-of-11-november-1918",
+      "title": "Armistice of 11 November 1918",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "france",
+        "germany",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "treaty-of-versailles",
+      "title": "Treaty of Versailles",
+      "type": "event",
+      "start": {
+        "year": 1919,
+        "month": 6,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "world-war-2",
+        "germany",
+        "treaty",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "great-depression",
+      "title": "Great Depression",
+      "type": "event",
+      "start": {
+        "year": 1929,
+        "month": 10,
+        "day": 24
+      },
+      "end": {
+        "year": 1939
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "world-war-2",
+        "united-states",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "spanish-civil-war",
+      "title": "Spanish Civil War",
+      "type": "war",
+      "start": {
+        "year": 1936,
+        "month": 7,
+        "day": 17
+      },
+      "end": {
+        "year": 1939,
+        "month": 4,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "spain",
+        "europe",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "munich-agreement",
+      "title": "Munich Agreement",
+      "type": "event",
+      "start": {
+        "year": 1938,
+        "month": 9,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "germany",
+        "britain",
+        "treaty"
+      ]
+    },
+    {
+      "id": "molotov-ribbentrop-pact",
+      "title": "Molotov-Ribbentrop Pact",
+      "type": "event",
+      "start": {
+        "year": 1939,
+        "month": 8,
+        "day": 23
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "germany",
+        "russia",
+        "treaty"
+      ]
+    },
+    {
+      "id": "invasion-of-poland",
+      "title": "Invasion of Poland",
+      "type": "battle",
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 1
+      },
+      "end": {
+        "year": 1939,
+        "month": 10,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "poland",
+        "germany",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "battle-of-wizna",
+      "title": "Battle of Wizna",
+      "type": "battle",
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 7
+      },
+      "end": {
+        "year": 1939,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 5,
+      "keywords": [
+        "world-war-2",
+        "poland",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "winter-war",
+      "title": "Winter War",
+      "type": "war",
+      "start": {
+        "year": 1939,
+        "month": 11,
+        "day": 30
+      },
+      "end": {
+        "year": 1940,
+        "month": 3,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "finland",
+        "russia",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "dunkirk-evacuation",
+      "title": "Dunkirk Evacuation",
+      "type": "event",
+      "start": {
+        "year": 1940,
+        "month": 5,
+        "day": 26
+      },
+      "end": {
+        "year": 1940,
+        "month": 6,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "britain",
+        "france",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "the-blitz",
+      "title": "The Blitz",
+      "type": "battle",
+      "start": {
+        "year": 1940,
+        "month": 9,
+        "day": 7
+      },
+      "end": {
+        "year": 1941,
+        "month": 5,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "britain",
+        "germany",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "operation-barbarossa",
+      "title": "Operation Barbarossa",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 6,
+        "day": 22
+      },
+      "end": {
+        "year": 1941,
+        "month": 12,
+        "day": 5
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "germany",
+        "russia",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "attack-on-pearl-harbor",
+      "title": "Attack on Pearl Harbor",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 12,
+        "day": 7
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-2",
+        "japan",
+        "united-states",
+        "pacific"
+      ]
+    },
+    {
+      "id": "battle-of-midway",
+      "title": "Battle of Midway",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 6,
+        "day": 4
+      },
+      "end": {
+        "year": 1942,
+        "month": 6,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "japan",
+        "united-states",
+        "naval",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-stalingrad",
+      "title": "Battle of Stalingrad",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 8,
+        "day": 23
+      },
+      "end": {
+        "year": 1943,
+        "month": 2,
+        "day": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-2",
+        "russia",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "second-battle-of-el-alamein",
+      "title": "Second Battle of El Alamein",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 10,
+        "day": 23
+      },
+      "end": {
+        "year": 1942,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "britain",
+        "germany",
+        "africa"
+      ]
+    },
+    {
+      "id": "battle-of-kursk",
+      "title": "Battle of Kursk",
+      "type": "battle",
+      "start": {
+        "year": 1943,
+        "month": 7,
+        "day": 5
+      },
+      "end": {
+        "year": 1943,
+        "month": 8,
+        "day": 23
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "russia",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-monte-cassino",
+      "title": "Battle of Monte Cassino",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 1,
+        "day": 17
+      },
+      "end": {
+        "year": 1944,
+        "month": 5,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "italy",
+        "europe",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "warsaw-uprising",
+      "title": "Warsaw Uprising",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 8,
+        "day": 1
+      },
+      "end": {
+        "year": 1944,
+        "month": 10,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "poland",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "operation-market-garden",
+      "title": "Operation Market Garden",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 9,
+        "day": 17
+      },
+      "end": {
+        "year": 1944,
+        "month": 9,
+        "day": 25
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-2",
+        "britain",
+        "netherlands",
+        "germany"
+      ]
+    },
+    {
+      "id": "battle-of-the-bulge",
+      "title": "Battle of the Bulge",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 1945,
+        "month": 1,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "united-states",
+        "germany",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "battle-of-berlin",
+      "title": "Battle of Berlin",
+      "type": "battle",
+      "start": {
+        "year": 1945,
+        "month": 4,
+        "day": 16
+      },
+      "end": {
+        "year": 1945,
+        "month": 5,
+        "day": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "germany",
+        "russia",
+        "sabaton"
+      ]
+    },
+    {
+      "id": "ve-day",
+      "title": "VE Day",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 5,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "europe",
+        "germany",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "atomic-bombing-of-nagasaki",
+      "title": "Atomic Bombing of Nagasaki",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 8,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "japan",
+        "united-states",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "surrender-of-japan",
+      "title": "Surrender of Japan",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 8,
+        "day": 15
+      },
+      "end": {
+        "year": 1945,
+        "month": 9,
+        "day": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-2",
+        "japan",
+        "united-states",
+        "pacific"
+      ]
     }
   ]
 }
