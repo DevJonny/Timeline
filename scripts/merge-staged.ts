@@ -17,11 +17,17 @@
  *   - importance 1, which is what renders fully zoomed out
  *
  * Usage:
- *   node scripts/merge-staged.ts <staging-root>            # dry run
- *   node scripts/merge-staged.ts <staging-root> --apply    # write
+ *   node scripts/merge-staged.ts <staging-root>                    # dry run
+ *   node scripts/merge-staged.ts <staging-root> --apply            # write
+ *   node scripts/merge-staged.ts <staging-root> --focus rome       # into a focus
  *
  * Each immediate subdirectory of <staging-root> holding an entries.json is
  * treated as one category.
+ *
+ * With `--focus`, the merge targets that focused timeline's files instead of
+ * the main dataset. The id check then spans both: a focus entry may not reuse
+ * a main-timeline id, because the focus renders inherited main entries
+ * alongside its own and two entries under one id make a link ambiguous.
  *
  * Runs under Node's strip-only TypeScript mode — no build step.
  */
@@ -40,6 +46,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const DATA_DIR = join(ROOT, 'public', 'data');
 const DETAILS_DIR = join(DATA_DIR, 'details');
 const ENTRIES_FILE = join(DATA_DIR, 'entries.json');
+const FOCUS_DIR = join(DATA_DIR, 'focus');
 
 /** Below this a shared keyword is too rare to be worth reporting. */
 const REDUNDANCY_FLOOR = 3;
@@ -142,18 +149,47 @@ function redundantKeywords(entries: Entry[]): string[] {
 }
 
 async function main(): Promise<void> {
-  const stagingRoot = process.argv[2];
+  const argv = process.argv.slice(2);
+  let stagingRoot: string | undefined;
+  let focusId: string | undefined;
+
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i]!;
+    if (arg.startsWith('--focus=')) focusId = arg.slice('--focus='.length);
+    else if (arg === '--focus') focusId = argv[++i];
+    else if (!arg.startsWith('-')) stagingRoot ??= arg;
+  }
+
   if (stagingRoot === undefined) {
-    console.error('Usage: node scripts/merge-staged.ts <staging-root> [--apply]');
+    console.error(
+      'Usage: node scripts/merge-staged.ts <staging-root> [--apply] [--focus <id>]',
+    );
     process.exitCode = 1;
     return;
   }
-  const apply = process.argv.includes('--apply');
+  const apply = argv.includes('--apply');
   const present = presentDecimalYear();
 
-  const existingFile = entriesFileSchema.parse(await readJson(ENTRIES_FILE));
+  const targetEntriesFile =
+    focusId === undefined ? ENTRIES_FILE : join(FOCUS_DIR, focusId, 'entries.json');
+  const targetDetailsDir =
+    focusId === undefined ? DETAILS_DIR : join(FOCUS_DIR, focusId, 'details');
+
+  const existingFile = entriesFileSchema.parse(await readJson(targetEntriesFile));
   const claimed = new Map<string, string>();
-  for (const entry of existingFile.entries) claimed.set(entry.id, 'existing dataset');
+  for (const entry of existingFile.entries) {
+    claimed.set(entry.id, focusId === undefined ? 'existing dataset' : `the "${focusId}" focus`);
+  }
+
+  // A focus renders inherited main entries beside its own, so an id taken on
+  // the main timeline is taken here too — and this is the last place to catch
+  // it before it becomes a validation failure on a directory full of prose.
+  if (focusId !== undefined) {
+    const mainFile = entriesFileSchema.parse(await readJson(ENTRIES_FILE));
+    for (const entry of mainFile.entries) {
+      if (!claimed.has(entry.id)) claimed.set(entry.id, 'the main timeline');
+    }
+  }
 
   const categories = (await readdir(stagingRoot, { withFileTypes: true }))
     .filter((d) => d.isDirectory())
@@ -215,7 +251,11 @@ async function main(): Promise<void> {
         fail(where, 'duplicate keywords');
       }
       if (entry.importance === 1) {
-        notes.push(`${where}: importance 1 renders fully zoomed out — is that intended?`);
+        notes.push(
+          focusId === undefined
+            ? `${where}: importance 1 renders fully zoomed out — is that intended?`
+            : `${where}: importance 1 is reserved for this focus's chapters — is that intended?`,
+        );
       }
 
       const detailFile = `${entry.id}.json`;
@@ -246,7 +286,12 @@ async function main(): Promise<void> {
     summaries.push(`  ${category.padEnd(16)} ${String(count).padStart(3)} entries   ${shape}`);
   }
 
-  console.log('Staged categories:');
+  console.log(
+    focusId === undefined
+      ? 'Merging into the main timeline.'
+      : `Merging into the "${focusId}" focused timeline.`,
+  );
+  console.log('\nStaged categories:');
   for (const line of summaries) console.log(line);
   console.log(
     `\n  new: ${staged.length}   existing: ${existingFile.entries.length}   ` +
@@ -288,11 +333,11 @@ async function main(): Promise<void> {
   );
 
   existingFile.entries.push(...ordered.map((s) => s.entry));
-  await writeFile(ENTRIES_FILE, `${JSON.stringify(existingFile, null, 2)}\n`, 'utf8');
+  await writeFile(targetEntriesFile, `${JSON.stringify(existingFile, null, 2)}\n`, 'utf8');
 
-  await mkdir(DETAILS_DIR, { recursive: true });
+  await mkdir(targetDetailsDir, { recursive: true });
   for (const item of ordered) {
-    await copyFile(item.detailPath, join(DETAILS_DIR, `${item.entry.id}.json`));
+    await copyFile(item.detailPath, join(targetDetailsDir, `${item.entry.id}.json`));
   }
 
   console.log(`\nWrote ${ordered.length} entries and ${ordered.length} detail files.`);

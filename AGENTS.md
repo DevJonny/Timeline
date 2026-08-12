@@ -16,6 +16,9 @@ npm run icons                     # regenerate PWA icons; output is committed
 npm run brief -- /tmp/b/BRIEF.md          # research brief, generated from live data
 npm run merge-staged -- /tmp/b            # merge staged agent output; --apply to write
 
+npm run brief -- /tmp/b/BRIEF.md --focus roman-empire   # same, for a focused timeline
+npm run merge-staged -- /tmp/b --focus roman-empire
+
 npx vitest run tests/ticks.test.ts          # one file
 npx vitest run -t "no granularity hole"     # one test by name
 npx vitest                                  # watch mode
@@ -29,6 +32,10 @@ to GitHub Pages. All four must pass.
 Client-side only: a single Svelte 5 page, no router, no SSR, no server. Content
 is data — `public/data/entries.json` is an index; each entry's prose lives in
 `public/data/details/{id}.json` and is fetched lazily on selection.
+
+There are two kinds of timeline, rendered by the same component. The main one
+spans 3.3 million years. A **focused timeline** covers one subject — see
+"Focused timelines" below.
 
 ### Five things that will bite you
 
@@ -85,6 +92,46 @@ subset larger than four passes. Two consequences are binding, not stylistic:
   the relief rule).
 
 Do not add a fifth hue without re-running a palette validator.
+
+### Focused timelines
+
+A focus is the same pipeline over a different dataset and a different domain:
+`public/data/focus/{id}/` holds its metadata, entries and prose, and
+`focus/index.json` is the menu. It **selects** the main entries belonging to its
+period rather than copying them, so the main timeline growing grows the focus
+too. Resolution is pure and lives in `src/lib/focus.ts`.
+
+Four things about it are load-bearing:
+
+- **`range` is the opening view; the domain is `range` ∪ everything in the
+  focus.** An entry reaching outside the period widens the axis rather than
+  being dropped — which is why `select.exclude` matters: one boundary-touching
+  empire can double the axis and push the whole subject into a corner.
+- **The domain is not stretched to `present`.** That is a main-timeline rule.
+  An axis running from Augustus to today would leave the Roman Empire in the
+  top fifth of the screen.
+- **Zoom depth and the importance gate are both relative to the span.**
+  `maxZoomFor` derives the ceiling from the domain so the deepest zoom always
+  shows about four months, and `focus.gateScale` multiplies `k` before the gate
+  reads it, so the same visible span earns the same detail in either timeline.
+  Without that scaling a focus opens at gate 1 — a bare band. The two cancel
+  exactly, which `tests/focus.test.ts` asserts.
+- **Importance 1 inside a focus belongs to its chapters** — its own `age` spans,
+  which become the era rail. Elsewhere importance 1 is closed.
+
+A focus's filters are component-local and never persisted: carrying the main
+timeline's filter into a focus would open it empty. Its `defaultView` is
+likewise ignored. Both are main-timeline state about a different dataset.
+
+The URL carries which focus is open (`#/f/{focus}`, `#/f/{focus}/e/{entry}`),
+so Back leaves a focus for free, and `App.svelte` keys the timeline on the
+focus id so no zoom transform or filter state survives the switch.
+
+Detail prose resolves per *entry*, not per timeline: inherited entries keep
+their prose in the main `details/` directory while a focus is open. That is
+what `detailScope` in `Timeline.svelte` decides.
+
+Use the `timeline-focus` skill to author one.
 
 ### Other cross-cutting rules
 
@@ -150,6 +197,10 @@ README.md for the field reference.
 **Importance 1 is closed.** It is what renders when the timeline is fully
 zoomed out, and it belongs to the ages and the few spans already holding it.
 New content starts at 2.
+
+To add a focused timeline, or entries to one, use the `timeline-focus` skill.
+Its `focus.json` field reference is in README.md, and the rules that bite are
+under "Focused timelines" above.
 
 For bulk additions, use the `timeline-batch` skill: it researches subject areas
 in parallel via `timeline-researcher` agents and merges centrally. Two rules

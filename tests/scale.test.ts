@@ -5,6 +5,10 @@ import {
   createBaseScale,
   rescale,
   extentOf,
+  FINEST_VISIBLE_SPAN,
+  MAX_ZOOM,
+  maxZoomFor,
+  MIN_ZOOM,
   transformForDomain,
   transformForDomainPadded,
   visibleDomain,
@@ -157,5 +161,26 @@ describe('yearsPerPixel', () => {
     const b = base();
     const transform = transformForDomain(b, 1945, 1945 + 1 / 365);
     expect(yearsPerPixel(b, transform, HEIGHT)).toBeLessThan(1 / 365);
+  });
+});
+
+describe('maxZoomFor', () => {
+  it('leaves the main timeline where the old constant put it', () => {
+    // The bound used to be the literal 1e7. Deriving it from the domain must
+    // not quietly change how deep the main timeline zooms.
+    const mainSpan = 3_300_000;
+    expect(maxZoomFor(mainSpan) / MAX_ZOOM).toBeCloseTo(1, 1);
+  });
+
+  it('reaches the same finest view whatever the domain spans', () => {
+    for (const span of [3_300_000, 5000, 503, 80]) {
+      expect(span / maxZoomFor(span)).toBeCloseTo(FINEST_VISIBLE_SPAN, 9);
+    }
+  });
+
+  it('never returns a ceiling below the floor', () => {
+    for (const span of [0, -1, 0.01, Number.NaN]) {
+      expect(maxZoomFor(span)).toBeGreaterThanOrEqual(MIN_ZOOM);
+    }
   });
 });

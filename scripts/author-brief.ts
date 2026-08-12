@@ -12,9 +12,15 @@
  * is why this script imports `ENTRY_TYPES` rather than listing the types: if
  * someone adds a type, the brief follows without anyone remembering to edit it.
  *
+ * With `--focus`, the same brief is calibrated for a focused timeline instead:
+ * a narrower period, its own keyword vocabulary, and — the part that matters
+ * most — the main-timeline entries that focus *inherits*, which an agent would
+ * otherwise cheerfully research again.
+ *
  * Usage:
- *   node scripts/author-brief.ts                 # to stdout
- *   node scripts/author-brief.ts path/BRIEF.md   # to a file
+ *   node scripts/author-brief.ts                             # to stdout
+ *   node scripts/author-brief.ts path/BRIEF.md               # to a file
+ *   node scripts/author-brief.ts path/BRIEF.md --focus rome  # for a focus
  *
  * Runs under Node's strip-only TypeScript mode — no build step.
  */
@@ -25,12 +31,15 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { inheritedEntries } from '../src/lib/focus.ts';
+import { formatRange, presentDecimalYear } from '../src/lib/time.ts';
 import { ENTRY_TYPES } from '../src/lib/types.ts';
-import type { Detail, EntriesFile, Entry } from '../src/lib/types.ts';
+import type { Detail, EntriesFile, Entry, Focus } from '../src/lib/types.ts';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const DATA_DIR = join(ROOT, 'public', 'data');
 const DETAILS_DIR = join(DATA_DIR, 'details');
+const FOCUS_DIR = join(DATA_DIR, 'focus');
 
 /** How many real entries to show per importance level, as calibration. */
 const EXEMPLARS_PER_LEVEL = 3;
@@ -74,6 +83,86 @@ async function proseExample(): Promise<Detail | null> {
   return (await readJson(join(DETAILS_DIR, chosen))) as Detail;
 }
 
+/**
+ * What the brief is being written about.
+ *
+ * The main timeline and a focus differ in five places — the pool the exemplars
+ * and vocabulary come from, the period entries must fall in, what importance 1
+ * is reserved for, and which ids are already taken. Everything else in the
+ * brief is identical, so it is one template with these substituted rather than
+ * two that would drift apart.
+ */
+interface Subject {
+  /** The dataset the agent is adding to. */
+  pool: Entry[];
+  heading: string;
+  /** Period constraint, or empty for the main timeline. */
+  period: string;
+  reserved: string;
+  /** Ids that must not be reused, grouped by why. */
+  taken: Array<{ label: string; ids: string[] }>;
+}
+
+async function focusSubject(id: string, main: Entry[]): Promise<Subject> {
+  const focus = (await readJson(join(FOCUS_DIR, id, 'focus.json'))) as Focus;
+  const file = (await readJson(join(FOCUS_DIR, id, 'entries.json'))) as EntriesFile;
+  const own = file.entries;
+  const inherited = inheritedEntries(focus, main, presentDecimalYear());
+  const range = formatRange(focus.range.start, focus.range.end);
+
+  const chapters = own
+    .filter((entry) => entry.type === 'age')
+    .map((entry) => `\`${entry.id}\` (${formatRange(entry.start, entry.end)})`);
+
+  return {
+    pool: own,
+    heading: `# Authoring brief — ${focus.title}
+
+Generated from the live dataset. This is a **focused timeline**, not the main
+one: it covers ${range} alone, at a grain the whole of history has no room for.
+Entries you write here appear only in this focus.`,
+    period: `## 0. The period — ${range}
+
+Every entry must fall inside it. Something that merely leads up to the period
+or follows from it belongs on the main timeline, not here.
+
+The focus is divided into these chapters, which are already written:
+
+${chapters.length > 0 ? chapters.map((c) => `- ${c}`).join('\n') : '_none yet_'}`,
+    reserved: `**Level 1 is reserved for the chapters above** and is closed. Everything you
+write starts at 2. Because this timeline spans ${range} rather than the whole
+of history, the scale is compressed: a 3 here means significant *within this
+period*, not within all of history.`,
+    taken: [
+      { label: `already in this focus`, ids: own.map((e) => e.id).sort() },
+      {
+        label:
+          `inherited from the main timeline — this focus already shows every one of ` +
+          `these, so writing them again produces a duplicate that is discarded at merge`,
+        ids: inherited.map((e) => e.id).sort(),
+      },
+    ],
+  };
+}
+
+function mainSubject(entries: Entry[]): Subject {
+  return {
+    pool: entries,
+    heading: `# Timeline data authoring brief
+
+Generated from the live dataset — ${entries.length} entries. Do not cache this
+file; regenerate it for every batch.
+
+You are adding entries to a zoomable historical timeline (a static Svelte app).
+Content is pure data: an index entry plus a prose detail file per subject.`,
+    period: '',
+    reserved: `**Level 1 is effectively closed.** It is what renders when the timeline is
+fully zoomed out, and it is reserved for the ages and the few spans already
+holding it. Do not use it.`,
+    taken: [{ label: 'existing', ids: entries.map((e) => e.id).sort() }],
+  };
+}
+
 function indentAsQuote(text: string): string {
   return text
     .split('\n')
@@ -81,25 +170,50 @@ function indentAsQuote(text: string): string {
     .join('\n');
 }
 
+interface Args {
+  out: string | undefined;
+  focus: string | undefined;
+}
+
+function parseArgs(argv: string[]): Args {
+  let out: string | undefined;
+  let focus: string | undefined;
+
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i]!;
+    if (arg.startsWith('--focus=')) {
+      focus = arg.slice('--focus='.length);
+    } else if (arg === '--focus') {
+      focus = argv[++i];
+    } else if (!arg.startsWith('-')) {
+      out ??= arg;
+    }
+  }
+
+  return { out, focus };
+}
+
 async function main(): Promise<void> {
+  const { out, focus: focusId } = parseArgs(process.argv.slice(2));
+
   const file = (await readJson(join(DATA_DIR, 'entries.json'))) as EntriesFile;
-  const entries = file.entries;
+  const mainEntries = file.entries;
+
+  const subject =
+    focusId === undefined ? mainSubject(mainEntries) : await focusSubject(focusId, mainEntries);
+
+  const entries = subject.pool;
   const keywords = keywordCounts(entries);
   const example = await proseExample();
 
-  const ids = entries.map((e) => e.id).sort();
   const chipThreshold = keywords[KEYWORD_CHIP_LIMIT - 1]?.[1] ?? 1;
 
-  const brief = `# Timeline data authoring brief
-
-Generated from the live dataset — ${entries.length} entries, ${keywords.length} distinct
-keywords. Do not cache this file; regenerate it for every batch.
-
-You are adding entries to a zoomable historical timeline (a static Svelte app).
-Content is pure data: an index entry plus a prose detail file per subject.
+  const brief = `${subject.heading}
 
 Read this whole file before writing anything. Your category, target count and
 ownership boundaries are in your own task prompt.
+
+${subject.period}
 
 ## 1. Output — write ONLY to your own staging directory
 
@@ -181,10 +295,11 @@ when zoomed right in. Calibrate against what is already there:
 | 4 | A standard member of your set | ${exemplarsFor(entries, 4)} |
 | 5 | Minor, brief or specialist | ${exemplarsFor(entries, 5)} |
 
-**Level 1 is effectively closed.** It is what renders when the timeline is fully
-zoomed out, and it is reserved for the ages and the few spans already holding
-it. Do not use it. Aim for a pyramid: roughly 10% at 2, 30% at 3, 45% at 4,
+${subject.reserved} Aim for a pyramid: roughly 10% at 2, 30% at 3, 45% at 4,
 15% at 5.
+
+Note that 5 is the deepest tier and only appears at the very closest zoom, so
+it is for genuine marginalia. When in doubt between 4 and 5, choose 4.
 
 ## 5. Keywords
 
@@ -236,11 +351,14 @@ reader. Prefer the second paragraph to explain *what followed*.
   \`circa\` if genuinely approximate, and say so in the prose.
 - Do not invent subjects to hit a count. Fewer, correct entries beat padding.
 
-## 8. Do not duplicate these ${ids.length} existing ids
+## 8. Do not duplicate these ids
 
-\`\`\`
-${ids.join(', ')}
-\`\`\`
+${subject.taken
+  .map(
+    ({ label, ids }) =>
+      `**${ids.length} ${label}:**\n\n\`\`\`\n${ids.length > 0 ? ids.join(', ') : '(none)'}\n\`\`\``,
+  )
+  .join('\n\n')}
 
 If your category would naturally include one, skip it — it is covered. Do not
 create a variant id for the same subject (\`ww2\`, \`hastings\`). Your prompt also
@@ -255,15 +373,14 @@ duplicates are thrown away at merge and a discarded entry is wasted work.
 - any new keyword slugs you introduced
 `;
 
-  const out = process.argv[2];
   if (out === undefined) {
     process.stdout.write(brief);
     return;
   }
   await writeFile(out, brief, 'utf8');
   console.log(
-    `Brief written to ${out} — ${entries.length} entries, ${keywords.length} keywords, ` +
-      `chip threshold ${chipThreshold}.`,
+    `Brief written to ${out} — ${focusId === undefined ? 'main timeline' : `focus "${focusId}"`}, ` +
+      `${entries.length} entries, ${keywords.length} keywords, chip threshold ${chipThreshold}.`,
   );
 }
 

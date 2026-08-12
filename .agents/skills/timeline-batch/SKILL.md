@@ -9,6 +9,11 @@ Research runs in parallel, one `timeline-researcher` agent per subject area,
 writing to isolated staging directories. Merging, validation and verification
 happen centrally, here.
 
+**This skill is for the main timeline.** To add a *focused* timeline — one
+subject at a much finer grain, like the Roman Empire — or to add entries to one
+that exists, use the `timeline-focus` skill instead. The procedure is similar
+but the brief, the merge target and the meaning of `importance` all differ.
+
 The failure modes are specific and none of them announce themselves: duplicate
 subjects across agents, importance inflation that clutters the zoomed-out view,
 keyword sprawl that crowds the search panel, and stale instructions that tell

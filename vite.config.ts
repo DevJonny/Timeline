@@ -48,7 +48,17 @@ export default defineConfig({
          * makes Workbox revision the file per build, so a deploy that changes
          * the data also changes the precache manifest and forces an update.
          */
-        globPatterns: ['**/*.{js,css,html,svg,woff2}', 'data/entries.json'],
+        /**
+         * The focus index is precached for the same reason entries.json is:
+         * it is an index, and a stale one hides timelines that have since been
+         * published. The focuses' own entries and prose are not — they are
+         * opened on demand and revalidate below.
+         */
+        globPatterns: [
+          '**/*.{js,css,html,svg,woff2}',
+          'data/entries.json',
+          'data/focus/index.json',
+        ],
         navigateFallback: 'index.html',
         runtimeCaching: [
           {
@@ -60,6 +70,21 @@ export default defineConfig({
             options: {
               cacheName: 'entry-details',
               expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            // A focused timeline's own data: its metadata, its entries, and
+            // its prose. Cached under its own name so one large focus cannot
+            // evict the main timeline's details. The index is excluded — it is
+            // precached above, and two routes claiming one URL is ambiguous.
+            urlPattern: ({ url }) =>
+              url.pathname.includes('/data/focus/') &&
+              !url.pathname.endsWith('/data/focus/index.json'),
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'focus-data',
+              expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 90 },
               cacheableResponse: { statuses: [0, 200] },
             },
           },
