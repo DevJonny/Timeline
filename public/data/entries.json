@@ -6972,6 +6972,248 @@
         "britain",
         "germany"
       ]
+    },
+    {
+      "id": "terracotta-army",
+      "title": "Terracotta Army",
+      "type": "event",
+      "start": {
+        "year": -246
+      },
+      "end": {
+        "year": -209,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "empire",
+        "archaeology"
+      ]
+    },
+    {
+      "id": "qianlong-emperor",
+      "title": "Qianlong Emperor",
+      "type": "ruler",
+      "start": {
+        "year": 1735,
+        "month": 10,
+        "day": 18
+      },
+      "end": {
+        "year": 1796,
+        "month": 2,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "monarchy",
+        "empire",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "second-opium-war",
+      "title": "Second Opium War",
+      "type": "war",
+      "start": {
+        "year": 1856,
+        "month": 10,
+        "day": 8
+      },
+      "end": {
+        "year": 1860,
+        "month": 10,
+        "day": 24
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "19th-century",
+        "britain",
+        "france",
+        "colonialism"
+      ]
+    },
+    {
+      "id": "boxer-rebellion",
+      "title": "Boxer Rebellion",
+      "type": "war",
+      "start": {
+        "year": 1899
+      },
+      "end": {
+        "year": 1901,
+        "month": 9,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "20th-century",
+        "colonialism",
+        "empire",
+        "religion"
+      ]
+    },
+    {
+      "id": "timurid-empire",
+      "title": "Timurid Empire",
+      "type": "empire",
+      "start": {
+        "year": 1370
+      },
+      "end": {
+        "year": 1507
+      },
+      "importance": 3,
+      "keywords": [
+        "timurid",
+        "empire",
+        "central-asia",
+        "persia",
+        "silk-road"
+      ]
+    },
+    {
+      "id": "timur",
+      "title": "Timur",
+      "type": "ruler",
+      "start": {
+        "year": 1370,
+        "month": 4,
+        "day": 9
+      },
+      "end": {
+        "year": 1405,
+        "month": 2,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "timurid",
+        "monarchy",
+        "central-asia",
+        "mongols",
+        "medieval"
+      ]
+    },
+    {
+      "id": "sack-of-delhi-1398",
+      "title": "Sack of Delhi",
+      "type": "event",
+      "start": {
+        "year": 1398,
+        "month": 12,
+        "day": 17
+      },
+      "importance": 4,
+      "keywords": [
+        "timurid",
+        "india",
+        "medieval",
+        "islam"
+      ]
+    },
+    {
+      "id": "battle-of-ankara",
+      "title": "Battle of Ankara",
+      "type": "battle",
+      "start": {
+        "year": 1402,
+        "month": 7,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "timurid",
+        "ottoman-empire",
+        "medieval"
+      ]
+    },
+    {
+      "id": "shah-rukh",
+      "title": "Shah Rukh",
+      "type": "ruler",
+      "start": {
+        "year": 1405,
+        "month": 2,
+        "day": 20
+      },
+      "end": {
+        "year": 1447,
+        "month": 3,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "timurid",
+        "monarchy",
+        "persia",
+        "medieval"
+      ]
+    },
+    {
+      "id": "ulugh-beg-observatory",
+      "title": "Ulugh Beg Observatory",
+      "type": "event",
+      "start": {
+        "year": 1424
+      },
+      "end": {
+        "year": 1449
+      },
+      "importance": 5,
+      "keywords": [
+        "timurid",
+        "science",
+        "islam",
+        "central-asia"
+      ]
+    },
+    {
+      "id": "ulugh-beg",
+      "title": "Ulugh Beg",
+      "type": "ruler",
+      "start": {
+        "year": 1447,
+        "month": 3,
+        "day": 13
+      },
+      "end": {
+        "year": 1449,
+        "month": 10,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "timurid",
+        "monarchy",
+        "science",
+        "central-asia"
+      ]
+    },
+    {
+      "id": "babur",
+      "title": "Babur",
+      "type": "ruler",
+      "start": {
+        "year": 1494
+      },
+      "end": {
+        "year": 1530,
+        "month": 12,
+        "day": 26
+      },
+      "importance": 4,
+      "keywords": [
+        "timurid",
+        "india",
+        "monarchy",
+        "central-asia"
+      ]
     }
   ]
 }
