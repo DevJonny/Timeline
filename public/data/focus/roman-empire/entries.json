@@ -1,0 +1,2317 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "principate",
+      "title": "Principate",
+      "type": "age",
+      "start": {
+        "year": -27
+      },
+      "end": {
+        "year": 235
+      },
+      "importance": 1,
+      "keywords": [
+        "principate"
+      ]
+    },
+    {
+      "id": "third-century-crisis",
+      "title": "Third-Century Crisis",
+      "type": "age",
+      "start": {
+        "year": 235
+      },
+      "end": {
+        "year": 284
+      },
+      "importance": 1,
+      "keywords": [
+        "crisis"
+      ]
+    },
+    {
+      "id": "dominate",
+      "title": "Dominate",
+      "type": "age",
+      "start": {
+        "year": 284
+      },
+      "end": {
+        "year": 476
+      },
+      "importance": 1,
+      "keywords": [
+        "dominate"
+      ]
+    },
+    {
+      "id": "battle-of-actium",
+      "title": "Battle of Actium",
+      "type": "battle",
+      "start": {
+        "year": -31,
+        "month": 9,
+        "day": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "civil-war",
+        "naval"
+      ]
+    },
+    {
+      "id": "reign-of-diocletian",
+      "title": "Diocletian",
+      "type": "ruler",
+      "start": {
+        "year": 284,
+        "month": 11,
+        "day": 20
+      },
+      "end": {
+        "year": 305,
+        "month": 5,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "emperor",
+        "dominate"
+      ]
+    },
+    {
+      "id": "edict-of-milan",
+      "title": "Edict of Milan",
+      "type": "event",
+      "start": {
+        "year": 313
+      },
+      "importance": 2,
+      "keywords": [
+        "christianity",
+        "law"
+      ]
+    },
+    {
+      "id": "sack-of-rome-410",
+      "title": "Sack of Rome",
+      "type": "event",
+      "start": {
+        "year": 410,
+        "month": 8,
+        "day": 24
+      },
+      "importance": 2,
+      "keywords": [
+        "crisis",
+        "goths"
+      ]
+    },
+    {
+      "id": "forum-of-augustus",
+      "title": "Forum of Augustus",
+      "type": "event",
+      "start": {
+        "year": -20,
+        "circa": true
+      },
+      "end": {
+        "year": -2
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "ara-pacis",
+      "title": "Ara Pacis",
+      "type": "event",
+      "start": {
+        "year": -13,
+        "month": 7,
+        "day": 4
+      },
+      "end": {
+        "year": -9,
+        "month": 1,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "aqua-claudia",
+      "title": "Aqua Claudia",
+      "type": "event",
+      "start": {
+        "year": 38
+      },
+      "end": {
+        "year": 52
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "principate",
+        "aqueduct"
+      ]
+    },
+    {
+      "id": "pont-du-gard",
+      "title": "Pont du Gard",
+      "type": "event",
+      "start": {
+        "year": 40,
+        "circa": true
+      },
+      "end": {
+        "year": 60,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "principate",
+        "aqueduct"
+      ]
+    },
+    {
+      "id": "portus-ostia-harbour",
+      "title": "Portus, the Harbour of Rome",
+      "type": "event",
+      "start": {
+        "year": 42
+      },
+      "end": {
+        "year": 112
+      },
+      "importance": 5,
+      "keywords": [
+        "building",
+        "principate",
+        "naval"
+      ]
+    },
+    {
+      "id": "domus-aurea",
+      "title": "Domus Aurea",
+      "type": "event",
+      "start": {
+        "year": 64
+      },
+      "end": {
+        "year": 68
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "colosseum",
+      "title": "Colosseum",
+      "type": "event",
+      "start": {
+        "year": 72
+      },
+      "end": {
+        "year": 80
+      },
+      "importance": 2,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "arch-of-titus",
+      "title": "Arch of Titus",
+      "type": "event",
+      "start": {
+        "year": 81,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "building",
+        "principate"
+      ]
+    },
+    {
+      "id": "forum-of-trajan",
+      "title": "Forum of Trajan",
+      "type": "event",
+      "start": {
+        "year": 107,
+        "circa": true
+      },
+      "end": {
+        "year": 112
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "trajans-column",
+      "title": "Trajan's Column",
+      "type": "event",
+      "start": {
+        "year": 113,
+        "month": 5,
+        "day": 12
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "principate"
+      ]
+    },
+    {
+      "id": "pantheon",
+      "title": "Pantheon",
+      "type": "event",
+      "start": {
+        "year": 118,
+        "circa": true
+      },
+      "end": {
+        "year": 128,
+        "circa": true
+      },
+      "importance": 2,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "hadrians-villa",
+      "title": "Hadrian's Villa",
+      "type": "event",
+      "start": {
+        "year": 118,
+        "circa": true
+      },
+      "end": {
+        "year": 138
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "baths-of-caracalla",
+      "title": "Baths of Caracalla",
+      "type": "event",
+      "start": {
+        "year": 212
+      },
+      "end": {
+        "year": 216
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "principate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "aurelian-walls",
+      "title": "Aurelian Walls",
+      "type": "event",
+      "start": {
+        "year": 271
+      },
+      "end": {
+        "year": 275
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "crisis",
+        "emperor"
+      ]
+    },
+    {
+      "id": "baths-of-diocletian",
+      "title": "Baths of Diocletian",
+      "type": "event",
+      "start": {
+        "year": 298
+      },
+      "end": {
+        "year": 306
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "dominate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "arch-of-constantine",
+      "title": "Arch of Constantine",
+      "type": "event",
+      "start": {
+        "year": 312
+      },
+      "end": {
+        "year": 315,
+        "month": 7,
+        "day": 25
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "dominate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "old-st-peters-basilica",
+      "title": "Old St Peter's Basilica",
+      "type": "event",
+      "start": {
+        "year": 319,
+        "circa": true
+      },
+      "end": {
+        "year": 333,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "building",
+        "dominate",
+        "christianity"
+      ]
+    },
+    {
+      "id": "founding-of-constantinople",
+      "title": "Founding of Constantinople",
+      "type": "event",
+      "start": {
+        "year": 324,
+        "month": 11,
+        "day": 8
+      },
+      "end": {
+        "year": 330,
+        "month": 5,
+        "day": 11
+      },
+      "importance": 2,
+      "keywords": [
+        "building",
+        "dominate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "theodosian-walls",
+      "title": "Theodosian Walls",
+      "type": "event",
+      "start": {
+        "year": 408
+      },
+      "end": {
+        "year": 413
+      },
+      "importance": 3,
+      "keywords": [
+        "building",
+        "dominate"
+      ]
+    },
+    {
+      "id": "great-fire-of-rome-64",
+      "title": "Great Fire of Rome",
+      "type": "event",
+      "start": {
+        "year": 64,
+        "month": 7,
+        "day": 19
+      },
+      "end": {
+        "year": 64,
+        "month": 7,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "principate"
+      ]
+    },
+    {
+      "id": "eruption-of-vesuvius-79",
+      "title": "Eruption of Vesuvius",
+      "type": "event",
+      "start": {
+        "year": 79
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "principate"
+      ]
+    },
+    {
+      "id": "antonine-plague",
+      "title": "Antonine Plague",
+      "type": "event",
+      "start": {
+        "year": 165
+      },
+      "end": {
+        "year": 180
+      },
+      "importance": 2,
+      "keywords": [
+        "crisis",
+        "principate",
+        "plague"
+      ]
+    },
+    {
+      "id": "auction-of-the-empire-193",
+      "title": "Auction of the Empire",
+      "type": "event",
+      "start": {
+        "year": 193,
+        "month": 3,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "principate",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "plague-of-cyprian",
+      "title": "Plague of Cyprian",
+      "type": "event",
+      "start": {
+        "year": 249
+      },
+      "end": {
+        "year": 262
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "plague"
+      ]
+    },
+    {
+      "id": "gothic-invasions-250s-260s",
+      "title": "Gothic Invasions of the Balkans",
+      "type": "event",
+      "start": {
+        "year": 250
+      },
+      "end": {
+        "year": 269
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "goths"
+      ]
+    },
+    {
+      "id": "capture-of-valerian-260",
+      "title": "Capture of Valerian",
+      "type": "event",
+      "start": {
+        "year": 260
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "emperor"
+      ]
+    },
+    {
+      "id": "gallic-empire",
+      "title": "Gallic Empire",
+      "type": "empire",
+      "start": {
+        "year": 260
+      },
+      "end": {
+        "year": 274
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "palmyrene-empire",
+      "title": "Palmyrene Empire",
+      "type": "empire",
+      "start": {
+        "year": 270
+      },
+      "end": {
+        "year": 273
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "rhine-crossing-406",
+      "title": "Crossing of the Rhine",
+      "type": "event",
+      "start": {
+        "year": 406,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 2,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "vandals"
+      ]
+    },
+    {
+      "id": "withdrawal-from-britain-410",
+      "title": "Withdrawal from Britain",
+      "type": "event",
+      "start": {
+        "year": 410
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "dominate"
+      ]
+    },
+    {
+      "id": "vandal-capture-of-carthage-439",
+      "title": "Vandal Capture of Carthage",
+      "type": "event",
+      "start": {
+        "year": 439,
+        "month": 10,
+        "day": 19
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "vandals"
+      ]
+    },
+    {
+      "id": "attila-invasion-of-italy-452",
+      "title": "Attila's Invasion of Italy",
+      "type": "event",
+      "start": {
+        "year": 452
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "huns"
+      ]
+    },
+    {
+      "id": "murder-of-aetius-454",
+      "title": "Murder of Aetius",
+      "type": "event",
+      "start": {
+        "year": 454,
+        "month": 9,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "dominate"
+      ]
+    },
+    {
+      "id": "sack-of-rome-455",
+      "title": "Vandal Sack of Rome",
+      "type": "event",
+      "start": {
+        "year": 455,
+        "month": 6,
+        "day": 2
+      },
+      "end": {
+        "year": 455,
+        "month": 6,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "vandals"
+      ]
+    },
+    {
+      "id": "battle-of-cape-bon-468",
+      "title": "Battle of Cape Bon",
+      "type": "event",
+      "start": {
+        "year": 468
+      },
+      "importance": 4,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "naval",
+        "vandals"
+      ]
+    },
+    {
+      "id": "deposition-of-romulus-augustulus-476",
+      "title": "Deposition of Romulus Augustulus",
+      "type": "event",
+      "start": {
+        "year": 476,
+        "month": 9,
+        "day": 4
+      },
+      "importance": 2,
+      "keywords": [
+        "crisis",
+        "dominate",
+        "emperor"
+      ]
+    },
+    {
+      "id": "augustus",
+      "title": "Augustus",
+      "type": "ruler",
+      "start": {
+        "year": -27,
+        "month": 1,
+        "day": 16
+      },
+      "end": {
+        "year": 14,
+        "month": 8,
+        "day": 19
+      },
+      "importance": 2,
+      "keywords": [
+        "emperor",
+        "principate",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "tiberius",
+      "title": "Tiberius",
+      "type": "ruler",
+      "start": {
+        "year": 14,
+        "month": 9,
+        "day": 17
+      },
+      "end": {
+        "year": 37,
+        "month": 3,
+        "day": 16
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "caligula",
+      "title": "Caligula",
+      "type": "ruler",
+      "start": {
+        "year": 37,
+        "month": 3,
+        "day": 18
+      },
+      "end": {
+        "year": 41,
+        "month": 1,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate"
+      ]
+    },
+    {
+      "id": "claudius",
+      "title": "Claudius",
+      "type": "ruler",
+      "start": {
+        "year": 41,
+        "month": 1,
+        "day": 24
+      },
+      "end": {
+        "year": 54,
+        "month": 10,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "nero",
+      "title": "Nero",
+      "type": "ruler",
+      "start": {
+        "year": 54,
+        "month": 10,
+        "day": 13
+      },
+      "end": {
+        "year": 68,
+        "month": 6,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate"
+      ]
+    },
+    {
+      "id": "year-of-the-four-emperors",
+      "title": "Year of the Four Emperors",
+      "type": "event",
+      "start": {
+        "year": 68,
+        "month": 6,
+        "day": 9
+      },
+      "end": {
+        "year": 69,
+        "month": 12,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "civil-war",
+        "succession"
+      ]
+    },
+    {
+      "id": "vespasian",
+      "title": "Vespasian",
+      "type": "ruler",
+      "start": {
+        "year": 69,
+        "month": 7,
+        "day": 1
+      },
+      "end": {
+        "year": 79,
+        "month": 6,
+        "day": 23
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "principate",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "titus",
+      "title": "Titus",
+      "type": "ruler",
+      "start": {
+        "year": 79,
+        "month": 6,
+        "day": 24
+      },
+      "end": {
+        "year": 81,
+        "month": 9,
+        "day": 13
+      },
+      "importance": 5,
+      "keywords": [
+        "emperor",
+        "principate"
+      ]
+    },
+    {
+      "id": "domitian",
+      "title": "Domitian",
+      "type": "ruler",
+      "start": {
+        "year": 81,
+        "month": 9,
+        "day": 14
+      },
+      "end": {
+        "year": 96,
+        "month": 9,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate"
+      ]
+    },
+    {
+      "id": "nerva",
+      "title": "Nerva",
+      "type": "ruler",
+      "start": {
+        "year": 96,
+        "month": 9,
+        "day": 18
+      },
+      "end": {
+        "year": 98,
+        "month": 1,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "trajan",
+      "title": "Trajan",
+      "type": "ruler",
+      "start": {
+        "year": 98,
+        "month": 1,
+        "day": 28
+      },
+      "end": {
+        "year": 117,
+        "month": 8,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "hadrian",
+      "title": "Hadrian",
+      "type": "ruler",
+      "start": {
+        "year": 117,
+        "month": 8,
+        "day": 11
+      },
+      "end": {
+        "year": 138,
+        "month": 7,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "antoninus-pius",
+      "title": "Antoninus Pius",
+      "type": "ruler",
+      "start": {
+        "year": 138,
+        "month": 7,
+        "day": 10
+      },
+      "end": {
+        "year": 161,
+        "month": 3,
+        "day": 7
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "marcus-aurelius",
+      "title": "Marcus Aurelius",
+      "type": "ruler",
+      "start": {
+        "year": 161,
+        "month": 3,
+        "day": 7
+      },
+      "end": {
+        "year": 180,
+        "month": 3,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "commodus",
+      "title": "Commodus",
+      "type": "ruler",
+      "start": {
+        "year": 177
+      },
+      "end": {
+        "year": 192,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "year-of-the-five-emperors",
+      "title": "Year of the Five Emperors",
+      "type": "event",
+      "start": {
+        "year": 193,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 193,
+        "month": 6,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "civil-war",
+        "succession"
+      ]
+    },
+    {
+      "id": "septimius-severus",
+      "title": "Septimius Severus",
+      "type": "ruler",
+      "start": {
+        "year": 193,
+        "month": 4,
+        "day": 9
+      },
+      "end": {
+        "year": 211,
+        "month": 2,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "principate",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "caracalla",
+      "title": "Caracalla",
+      "type": "ruler",
+      "start": {
+        "year": 198,
+        "month": 1,
+        "day": 28
+      },
+      "end": {
+        "year": 217,
+        "month": 4,
+        "day": 8
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "principate",
+        "succession"
+      ]
+    },
+    {
+      "id": "severus-alexander",
+      "title": "Severus Alexander",
+      "type": "ruler",
+      "start": {
+        "year": 222,
+        "month": 3,
+        "day": 13
+      },
+      "end": {
+        "year": 235,
+        "month": 3
+      },
+      "importance": 5,
+      "keywords": [
+        "emperor",
+        "principate",
+        "crisis"
+      ]
+    },
+    {
+      "id": "gallienus",
+      "title": "Gallienus",
+      "type": "ruler",
+      "start": {
+        "year": 253,
+        "month": 9
+      },
+      "end": {
+        "year": 268,
+        "month": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "crisis",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "aurelian",
+      "title": "Aurelian",
+      "type": "ruler",
+      "start": {
+        "year": 270,
+        "month": 9
+      },
+      "end": {
+        "year": 275,
+        "month": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "crisis"
+      ]
+    },
+    {
+      "id": "constantine-i",
+      "title": "Constantine I",
+      "type": "ruler",
+      "start": {
+        "year": 306,
+        "month": 7,
+        "day": 25
+      },
+      "end": {
+        "year": 337,
+        "month": 5,
+        "day": 22
+      },
+      "importance": 2,
+      "keywords": [
+        "emperor",
+        "dominate",
+        "civil-war"
+      ]
+    },
+    {
+      "id": "julian",
+      "title": "Julian",
+      "type": "ruler",
+      "start": {
+        "year": 361,
+        "month": 11,
+        "day": 3
+      },
+      "end": {
+        "year": 363,
+        "month": 6,
+        "day": 26
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "dominate"
+      ]
+    },
+    {
+      "id": "valentinian-i",
+      "title": "Valentinian I",
+      "type": "ruler",
+      "start": {
+        "year": 364,
+        "month": 2,
+        "day": 26
+      },
+      "end": {
+        "year": 375,
+        "month": 11,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "emperor",
+        "dominate",
+        "succession"
+      ]
+    },
+    {
+      "id": "theodosius-i",
+      "title": "Theodosius I",
+      "type": "ruler",
+      "start": {
+        "year": 379,
+        "month": 1,
+        "day": 19
+      },
+      "end": {
+        "year": 395,
+        "month": 1,
+        "day": 17
+      },
+      "importance": 2,
+      "keywords": [
+        "emperor",
+        "dominate",
+        "succession"
+      ]
+    },
+    {
+      "id": "honorius",
+      "title": "Honorius",
+      "type": "ruler",
+      "start": {
+        "year": 393,
+        "month": 1,
+        "day": 23
+      },
+      "end": {
+        "year": 423,
+        "month": 8,
+        "day": 15
+      },
+      "importance": 4,
+      "keywords": [
+        "emperor",
+        "dominate"
+      ]
+    },
+    {
+      "id": "valentinian-iii",
+      "title": "Valentinian III",
+      "type": "ruler",
+      "start": {
+        "year": 425,
+        "month": 10,
+        "day": 23
+      },
+      "end": {
+        "year": 455,
+        "month": 3,
+        "day": 16
+      },
+      "importance": 5,
+      "keywords": [
+        "emperor",
+        "dominate"
+      ]
+    },
+    {
+      "id": "romulus-augustulus",
+      "title": "Romulus Augustulus",
+      "type": "ruler",
+      "start": {
+        "year": 475,
+        "month": 10,
+        "day": 31
+      },
+      "end": {
+        "year": 476,
+        "month": 9,
+        "day": 4
+      },
+      "importance": 5,
+      "keywords": [
+        "emperor",
+        "dominate",
+        "succession"
+      ]
+    },
+    {
+      "id": "roman-provincial-census",
+      "title": "The Provincial Census",
+      "type": "event",
+      "start": {
+        "year": -28
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "administration",
+        "taxation",
+        "principate"
+      ]
+    },
+    {
+      "id": "roman-citizenship-before-212",
+      "title": "Roman Citizenship before 212",
+      "type": "event",
+      "start": {
+        "year": -27
+      },
+      "end": {
+        "year": 212
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "citizenship",
+        "principate"
+      ]
+    },
+    {
+      "id": "first-settlement-27-bce",
+      "title": "The First Settlement",
+      "type": "event",
+      "start": {
+        "year": -27,
+        "month": 1,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "law",
+        "principate",
+        "administration"
+      ]
+    },
+    {
+      "id": "second-settlement-23-bce",
+      "title": "The Second Settlement",
+      "type": "event",
+      "start": {
+        "year": -23,
+        "month": 7,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "law",
+        "principate",
+        "administration"
+      ]
+    },
+    {
+      "id": "praetorian-prefecture",
+      "title": "The Praetorian Prefecture",
+      "type": "event",
+      "start": {
+        "year": -2
+      },
+      "end": {
+        "year": 476
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "administration",
+        "principate",
+        "dominate"
+      ]
+    },
+    {
+      "id": "annona",
+      "title": "The Annona",
+      "type": "event",
+      "start": {
+        "year": 8
+      },
+      "end": {
+        "year": 476
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "administration",
+        "principate"
+      ]
+    },
+    {
+      "id": "debasement-of-the-denarius",
+      "title": "The Debasement of the Denarius",
+      "type": "event",
+      "start": {
+        "year": 64
+      },
+      "end": {
+        "year": 274
+      },
+      "importance": 3,
+      "keywords": [
+        "law",
+        "coinage",
+        "crisis"
+      ]
+    },
+    {
+      "id": "constitutio-antoniniana",
+      "title": "Constitutio Antoniniana",
+      "type": "event",
+      "start": {
+        "year": 212
+      },
+      "importance": 2,
+      "keywords": [
+        "law",
+        "citizenship",
+        "principate"
+      ]
+    },
+    {
+      "id": "antoninianus",
+      "title": "The Antoninianus",
+      "type": "event",
+      "start": {
+        "year": 215
+      },
+      "end": {
+        "year": 294
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "coinage",
+        "crisis"
+      ]
+    },
+    {
+      "id": "the-tetrarchy",
+      "title": "The Tetrarchy",
+      "type": "event",
+      "start": {
+        "year": 293,
+        "month": 3,
+        "day": 1
+      },
+      "end": {
+        "year": 324,
+        "month": 9,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "law",
+        "dominate",
+        "administration"
+      ]
+    },
+    {
+      "id": "diocletian-provincial-reform",
+      "title": "Diocletian's Provincial and Diocesan Reform",
+      "type": "event",
+      "start": {
+        "year": 296,
+        "circa": true
+      },
+      "end": {
+        "year": 476
+      },
+      "importance": 3,
+      "keywords": [
+        "law",
+        "dominate",
+        "administration"
+      ]
+    },
+    {
+      "id": "edict-on-maximum-prices",
+      "title": "Edict on Maximum Prices",
+      "type": "event",
+      "start": {
+        "year": 301
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "coinage",
+        "dominate"
+      ]
+    },
+    {
+      "id": "constantine-solidus",
+      "title": "Constantine's Solidus",
+      "type": "event",
+      "start": {
+        "year": 312
+      },
+      "importance": 3,
+      "keywords": [
+        "law",
+        "coinage",
+        "dominate"
+      ]
+    },
+    {
+      "id": "colonate",
+      "title": "The Colonate",
+      "type": "event",
+      "start": {
+        "year": 332
+      },
+      "end": {
+        "year": 476
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "administration",
+        "dominate"
+      ]
+    },
+    {
+      "id": "division-of-the-empire-395",
+      "title": "Division of the Empire between Arcadius and Honorius",
+      "type": "event",
+      "start": {
+        "year": 395,
+        "month": 1,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "law",
+        "dominate"
+      ]
+    },
+    {
+      "id": "notitia-dignitatum",
+      "title": "Notitia Dignitatum",
+      "type": "event",
+      "start": {
+        "year": 400,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "law",
+        "administration",
+        "dominate"
+      ]
+    },
+    {
+      "id": "codex-theodosianus",
+      "title": "Codex Theodosianus",
+      "type": "event",
+      "start": {
+        "year": 438,
+        "month": 2,
+        "day": 15
+      },
+      "importance": 4,
+      "keywords": [
+        "law",
+        "dominate"
+      ]
+    },
+    {
+      "id": "augustan-military-reforms",
+      "title": "Augustan Military Reforms",
+      "type": "event",
+      "start": {
+        "year": -30,
+        "circa": true
+      },
+      "end": {
+        "year": -13
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "legion",
+        "principate"
+      ]
+    },
+    {
+      "id": "praetorian-guard",
+      "title": "Praetorian Guard",
+      "type": "event",
+      "start": {
+        "year": -27
+      },
+      "end": {
+        "year": 312
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "legion",
+        "principate"
+      ]
+    },
+    {
+      "id": "battle-of-teutoburg-forest",
+      "title": "Battle of the Teutoburg Forest",
+      "type": "battle",
+      "start": {
+        "year": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "military",
+        "germania",
+        "principate"
+      ]
+    },
+    {
+      "id": "claudian-invasion-of-britain",
+      "title": "Claudian Invasion of Britain",
+      "type": "war",
+      "start": {
+        "year": 43
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "britain",
+        "principate"
+      ]
+    },
+    {
+      "id": "boudican-revolt",
+      "title": "Boudica's Revolt",
+      "type": "war",
+      "start": {
+        "year": 60
+      },
+      "end": {
+        "year": 61
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "britain",
+        "principate"
+      ]
+    },
+    {
+      "id": "first-jewish-roman-war",
+      "title": "First Jewish-Roman War",
+      "type": "war",
+      "start": {
+        "year": 66
+      },
+      "end": {
+        "year": 73
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "judaea",
+        "principate"
+      ]
+    },
+    {
+      "id": "siege-of-jerusalem-70",
+      "title": "Siege of Jerusalem",
+      "type": "battle",
+      "start": {
+        "year": 70,
+        "month": 4
+      },
+      "end": {
+        "year": 70,
+        "month": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "judaea",
+        "principate"
+      ]
+    },
+    {
+      "id": "siege-of-masada",
+      "title": "Siege of Masada",
+      "type": "battle",
+      "start": {
+        "year": 73,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "military",
+        "judaea",
+        "principate"
+      ]
+    },
+    {
+      "id": "limes-germanicus",
+      "title": "Limes Germanicus",
+      "type": "event",
+      "start": {
+        "year": 83
+      },
+      "end": {
+        "year": 260
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "germania",
+        "frontier"
+      ]
+    },
+    {
+      "id": "trajans-dacian-wars",
+      "title": "Trajan's Dacian Wars",
+      "type": "war",
+      "start": {
+        "year": 101
+      },
+      "end": {
+        "year": 106
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "dacia",
+        "principate"
+      ]
+    },
+    {
+      "id": "trajans-parthian-war",
+      "title": "Trajan's Parthian War",
+      "type": "war",
+      "start": {
+        "year": 113
+      },
+      "end": {
+        "year": 117
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "parthia",
+        "principate"
+      ]
+    },
+    {
+      "id": "hadrians-wall",
+      "title": "Hadrian's Wall",
+      "type": "event",
+      "start": {
+        "year": 122
+      },
+      "end": {
+        "year": 410,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "britain",
+        "frontier"
+      ]
+    },
+    {
+      "id": "bar-kokhba-revolt",
+      "title": "Bar Kokhba Revolt",
+      "type": "war",
+      "start": {
+        "year": 132
+      },
+      "end": {
+        "year": 135
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "judaea",
+        "principate"
+      ]
+    },
+    {
+      "id": "antonine-wall",
+      "title": "Antonine Wall",
+      "type": "event",
+      "start": {
+        "year": 142
+      },
+      "end": {
+        "year": 162
+      },
+      "importance": 5,
+      "keywords": [
+        "military",
+        "britain",
+        "frontier"
+      ]
+    },
+    {
+      "id": "parthian-war-of-lucius-verus",
+      "title": "Parthian War of Lucius Verus",
+      "type": "war",
+      "start": {
+        "year": 161
+      },
+      "end": {
+        "year": 166
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "parthia",
+        "principate"
+      ]
+    },
+    {
+      "id": "marcomannic-wars",
+      "title": "Marcomannic Wars",
+      "type": "war",
+      "start": {
+        "year": 166
+      },
+      "end": {
+        "year": 180
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "germania",
+        "principate"
+      ]
+    },
+    {
+      "id": "roman-persian-wars-of-shapur-i",
+      "title": "Roman-Persian Wars of Shapur I",
+      "type": "war",
+      "start": {
+        "year": 252
+      },
+      "end": {
+        "year": 260
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "sasanians",
+        "crisis"
+      ]
+    },
+    {
+      "id": "battle-of-milvian-bridge",
+      "title": "Battle of the Milvian Bridge",
+      "type": "battle",
+      "start": {
+        "year": 312,
+        "month": 10,
+        "day": 28
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "civil-war",
+        "dominate"
+      ]
+    },
+    {
+      "id": "julians-persian-campaign",
+      "title": "Julian's Persian Campaign",
+      "type": "war",
+      "start": {
+        "year": 363,
+        "month": 3
+      },
+      "end": {
+        "year": 363,
+        "month": 6,
+        "day": 26
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "sasanians",
+        "dominate"
+      ]
+    },
+    {
+      "id": "battle-of-adrianople",
+      "title": "Battle of Adrianople",
+      "type": "battle",
+      "start": {
+        "year": 378,
+        "month": 8,
+        "day": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "military",
+        "goths",
+        "dominate"
+      ]
+    },
+    {
+      "id": "battle-of-frigidus",
+      "title": "Battle of the Frigidus",
+      "type": "battle",
+      "start": {
+        "year": 394,
+        "month": 9,
+        "day": 5
+      },
+      "end": {
+        "year": 394,
+        "month": 9,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "military",
+        "civil-war",
+        "dominate"
+      ]
+    },
+    {
+      "id": "battle-of-catalaunian-plains",
+      "title": "Battle of the Catalaunian Plains",
+      "type": "battle",
+      "start": {
+        "year": 451,
+        "month": 6,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "military",
+        "huns",
+        "dominate"
+      ]
+    },
+    {
+      "id": "virgil",
+      "title": "Virgil",
+      "type": "person",
+      "start": {
+        "year": -70,
+        "month": 10,
+        "day": 15
+      },
+      "end": {
+        "year": -19,
+        "month": 9,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "literature",
+        "principate"
+      ]
+    },
+    {
+      "id": "imperial-cult",
+      "title": "The Imperial Cult",
+      "type": "event",
+      "start": {
+        "year": -27
+      },
+      "end": {
+        "year": 391
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "paganism",
+        "principate"
+      ]
+    },
+    {
+      "id": "ovid-exile",
+      "title": "Ovid's Exile",
+      "type": "event",
+      "start": {
+        "year": 8
+      },
+      "end": {
+        "year": 17
+      },
+      "importance": 5,
+      "keywords": [
+        "religion",
+        "literature",
+        "principate"
+      ]
+    },
+    {
+      "id": "tacitus",
+      "title": "Tacitus",
+      "type": "person",
+      "start": {
+        "year": 56,
+        "circa": true
+      },
+      "end": {
+        "year": 120,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "literature",
+        "principate"
+      ]
+    },
+    {
+      "id": "neronian-persecution",
+      "title": "Neronian Persecution",
+      "type": "event",
+      "start": {
+        "year": 64
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "christianity",
+        "persecution",
+        "principate"
+      ]
+    },
+    {
+      "id": "mithraism",
+      "title": "Mithraism",
+      "type": "event",
+      "start": {
+        "year": 70,
+        "circa": true
+      },
+      "end": {
+        "year": 400,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "religion",
+        "paganism"
+      ]
+    },
+    {
+      "id": "pliny-younger-on-christians",
+      "title": "Pliny the Younger's Letters on the Christians",
+      "type": "event",
+      "start": {
+        "year": 112,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "christianity",
+        "principate"
+      ]
+    },
+    {
+      "id": "marcus-aurelius-meditations",
+      "title": "Marcus Aurelius Writes the Meditations",
+      "type": "event",
+      "start": {
+        "year": 170,
+        "circa": true
+      },
+      "end": {
+        "year": 180
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "philosophy",
+        "principate"
+      ]
+    },
+    {
+      "id": "plotinus-neoplatonism",
+      "title": "Plotinus and Neoplatonism",
+      "type": "person",
+      "start": {
+        "year": 205,
+        "circa": true
+      },
+      "end": {
+        "year": 270,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "philosophy",
+        "crisis"
+      ]
+    },
+    {
+      "id": "decian-persecution",
+      "title": "Decian Persecution",
+      "type": "event",
+      "start": {
+        "year": 250,
+        "month": 1
+      },
+      "end": {
+        "year": 251
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "christianity",
+        "persecution",
+        "crisis"
+      ]
+    },
+    {
+      "id": "valerianic-persecution",
+      "title": "Valerianic Persecution",
+      "type": "event",
+      "start": {
+        "year": 257
+      },
+      "end": {
+        "year": 260
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "christianity",
+        "persecution",
+        "crisis"
+      ]
+    },
+    {
+      "id": "great-persecution",
+      "title": "The Great Persecution",
+      "type": "event",
+      "start": {
+        "year": 303,
+        "month": 2,
+        "day": 23
+      },
+      "end": {
+        "year": 311,
+        "month": 4,
+        "day": 30
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "christianity",
+        "persecution",
+        "dominate"
+      ]
+    },
+    {
+      "id": "council-of-nicaea",
+      "title": "Council of Nicaea",
+      "type": "event",
+      "start": {
+        "year": 325,
+        "month": 5,
+        "day": 20
+      },
+      "end": {
+        "year": 325,
+        "month": 8,
+        "day": 25
+      },
+      "importance": 2,
+      "keywords": [
+        "religion",
+        "christianity",
+        "dominate"
+      ]
+    },
+    {
+      "id": "jerome-vulgate",
+      "title": "Jerome and the Vulgate",
+      "type": "person",
+      "start": {
+        "year": 347,
+        "circa": true
+      },
+      "end": {
+        "year": 420,
+        "month": 9,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "christianity",
+        "literature",
+        "dominate"
+      ]
+    },
+    {
+      "id": "augustine-of-hippo",
+      "title": "Augustine of Hippo",
+      "type": "person",
+      "start": {
+        "year": 354,
+        "month": 11,
+        "day": 13
+      },
+      "end": {
+        "year": 430,
+        "month": 8,
+        "day": 28
+      },
+      "importance": 3,
+      "keywords": [
+        "religion",
+        "christianity",
+        "dominate"
+      ]
+    },
+    {
+      "id": "julian-pagan-restoration",
+      "title": "Julian's Pagan Restoration",
+      "type": "event",
+      "start": {
+        "year": 361,
+        "month": 11
+      },
+      "end": {
+        "year": 363,
+        "month": 6,
+        "day": 26
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "paganism",
+        "dominate"
+      ]
+    },
+    {
+      "id": "edict-of-thessalonica",
+      "title": "Edict of Thessalonica",
+      "type": "event",
+      "start": {
+        "year": 380,
+        "month": 2,
+        "day": 27
+      },
+      "importance": 2,
+      "keywords": [
+        "religion",
+        "christianity",
+        "dominate"
+      ]
+    },
+    {
+      "id": "altar-of-victory-controversy",
+      "title": "The Altar of Victory Controversy",
+      "type": "event",
+      "start": {
+        "year": 382
+      },
+      "end": {
+        "year": 394
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "paganism",
+        "dominate"
+      ]
+    },
+    {
+      "id": "theodosian-edicts-against-paganism",
+      "title": "Theodosian Edicts Against Paganism",
+      "type": "event",
+      "start": {
+        "year": 391,
+        "month": 6
+      },
+      "end": {
+        "year": 392,
+        "month": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "paganism",
+        "dominate"
+      ]
+    },
+    {
+      "id": "council-of-chalcedon",
+      "title": "Council of Chalcedon",
+      "type": "event",
+      "start": {
+        "year": 451,
+        "month": 10,
+        "day": 8
+      },
+      "end": {
+        "year": 451,
+        "month": 11,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "religion",
+        "christianity",
+        "dominate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "focuses": [
+    {
+      "id": "roman-empire",
+      "title": "The Roman Empire",
+      "blurb": "Five centuries between Augustus and the last emperor in the west, at the grain the whole of history has no room for.",
+      "range": { "start": { "year": -27 }, "end": { "year": 476 } }
+    }
+  ]
+}
