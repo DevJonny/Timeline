@@ -51,6 +51,48 @@ export function applyFilters(entries: readonly Entry[], filters: Filters): Entry
   return entries.filter((entry) => matchesFilters(entry, filters));
 }
 
+/**
+ * Which hidden keywords are still hiding.
+ *
+ * Hiding a tag is a starting state, not a ban — the reader asked for it to be
+ * out of the way by default, not to become unfindable. A tag steps aside the
+ * moment it is explicitly asked for: its chip selected, or its name typed.
+ * Without that, searching "tank" after hiding tanks returns nothing at all,
+ * which reads as broken data rather than as a preference being honoured.
+ *
+ * The query is matched against the tag the same way `matchesFilters` matches
+ * it — substring, hyphens as spaces — so "tank" reveals `tank` while "battle"
+ * leaves it hidden. A loose query can reveal a tag it only partly names, but
+ * the entry still has to match that query to appear, so nothing surfaces that
+ * the reader was not already searching for.
+ */
+export function activeHidden(hidden: readonly string[], filters: Filters): string[] {
+  if (hidden.length === 0) return [];
+  const query = filters.query.trim().toLowerCase().replace(/-/g, ' ');
+  return hidden.filter((keyword) => {
+    if (filters.keywords.includes(keyword)) return false;
+    return !(query.length > 0 && humanKeyword(keyword).includes(query));
+  });
+}
+
+export function isHiddenEntry(entry: Entry, activeHiddenKeywords: readonly string[]): boolean {
+  return activeHiddenKeywords.some((keyword) => entry.keywords.includes(keyword));
+}
+
+/**
+ * Applied *before* the filters, so the reader's own filtering runs against the
+ * dataset they have chosen to keep. That also keeps the level-of-detail gate
+ * honest: it compares what survives filtering against what is available, and
+ * a permanently hidden tag is not available.
+ */
+export function applyHidden(
+  entries: readonly Entry[],
+  activeHiddenKeywords: readonly string[],
+): Entry[] {
+  if (activeHiddenKeywords.length === 0) return [...entries];
+  return entries.filter((entry) => !isHiddenEntry(entry, activeHiddenKeywords));
+}
+
 export interface KeywordCount {
   keyword: string;
   count: number;

@@ -47,6 +47,7 @@ describe('parsePreferences', () => {
       theme: 'dark',
       motion: 'reduced',
       dimEmptyAges: false,
+      hiddenKeywords: ['tank'],
     };
     expect(parsePreferences(JSON.stringify(prefs))).toEqual(prefs);
   });
@@ -56,6 +57,17 @@ describe('parsePreferences', () => {
     // not read as an explicit "off".
     const raw = JSON.stringify({ version: 1, theme: 'dark' });
     expect(parsePreferences(raw).dimEmptyAges).toBe(true);
+  });
+
+  it('defaults hiddenKeywords to empty and drops non-string entries', () => {
+    expect(parsePreferences(JSON.stringify({ version: 1 })).hiddenKeywords).toEqual([]);
+    expect(
+      parsePreferences(JSON.stringify({ version: 1, hiddenKeywords: 'tank' })).hiddenKeywords,
+    ).toEqual([]);
+    expect(
+      parsePreferences(JSON.stringify({ version: 1, hiddenKeywords: ['tank', 7, 'tank', null] }))
+        .hiddenKeywords,
+    ).toEqual(['tank']);
   });
 
   it('keeps an explicit dimEmptyAges: false and rejects non-booleans', () => {

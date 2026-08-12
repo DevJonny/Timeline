@@ -39,6 +39,12 @@ export interface Preferences {
    * the clutter it saves.
    */
   dimEmptyAges: boolean;
+  /**
+   * Tags kept out of the way by default. Not a ban — see `activeHidden` in
+   * filter.ts; explicitly asking for a hidden tag brings it back for that
+   * session without changing what is stored here.
+   */
+  hiddenKeywords: string[];
 }
 
 export const DEFAULT_PREFERENCES: Preferences = {
@@ -48,6 +54,7 @@ export const DEFAULT_PREFERENCES: Preferences = {
   theme: 'system',
   motion: 'system',
   dimEmptyAges: true,
+  hiddenKeywords: [],
 };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -118,6 +125,9 @@ export function parsePreferences(raw: string | null): Preferences {
       typeof parsed.dimEmptyAges === 'boolean'
         ? parsed.dimEmptyAges
         : DEFAULT_PREFERENCES.dimEmptyAges,
+    // Same de-duplicating, non-throwing parse the filter keywords get; an
+    // unrecognised tag is harmless, it simply matches nothing.
+    hiddenKeywords: stringArray(parsed.hiddenKeywords),
   };
 }
 

@@ -2,6 +2,7 @@
   import { untrack } from 'svelte';
 
   import { formatHistoricalYear } from '../lib/time.ts';
+  import { humanKeyword, toggle, type KeywordCount } from '../lib/filter.ts';
   import type { DefaultView, MotionChoice, Preferences, ThemeChoice } from '../lib/prefs.ts';
 
   interface Props {
@@ -10,11 +11,14 @@
     /** The range currently on screen, offered as "use current view". */
     currentView: DefaultView;
     storageAvailable: boolean;
+    /** Every tag in the dataset, not just the visible ones. */
+    allKeywords: KeywordCount[];
     onchange: (prefs: Preferences) => void;
     onclose: () => void;
   }
 
-  let { open, prefs, currentView, storageAvailable, onchange, onclose }: Props = $props();
+  let { open, prefs, currentView, storageAvailable, allKeywords, onchange, onclose }: Props =
+    $props();
 
   /**
    * Typed as the binding actually behaves: `bind:value` on `<input
@@ -114,6 +118,44 @@
    */
   function setDimEmptyAges(dimEmptyAges: boolean): void {
     onchange({ ...prefs, dimEmptyAges });
+  }
+
+  /**
+   * Narrows the tag list only. Local to the sheet and deliberately not part of
+   * `prefs` — it is a way of finding a row, not a setting.
+   */
+  let tagQuery = $state('');
+
+  /** Cleared on the `open` transition, for the same reason the year fields are seeded there. */
+  $effect(() => {
+    if (open) tagQuery = '';
+  });
+
+  /**
+   * Hidden tags first, so the way back from a hide is always at the top and
+   * never behind a scroll or a search term the reader has to guess.
+   */
+  const tagRows = $derived.by(() => {
+    const needle = tagQuery.trim().toLowerCase().replace(/-/g, ' ');
+    const rows = allKeywords.filter(
+      ({ keyword }) => needle.length === 0 || humanKeyword(keyword).includes(needle),
+    );
+    const isHidden = (k: string) => prefs.hiddenKeywords.includes(k);
+    return rows.sort((a, b) => {
+      const ah = isHidden(a.keyword);
+      if (ah !== isHidden(b.keyword)) return ah ? -1 : 1;
+      return b.count - a.count || a.keyword.localeCompare(b.keyword);
+    });
+  });
+
+  const hiddenCount = $derived(prefs.hiddenKeywords.length);
+
+  function toggleHidden(keyword: string): void {
+    onchange({ ...prefs, hiddenKeywords: toggle(prefs.hiddenKeywords, keyword) });
+  }
+
+  function showAllTags(): void {
+    onchange({ ...prefs, hiddenKeywords: [] });
   }
 
   function handleKeydown(event: KeyboardEvent): void {
@@ -250,6 +292,53 @@
             always show all
           </button>
         </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hidden tags</legend>
+        <p class="hint">
+          Tags hidden here stay out of the timeline and the search list. Searching for one, or
+          picking its chip, still brings it back for that visit.
+        </p>
+
+        <input
+          type="search"
+          class="tag-search"
+          bind:value={tagQuery}
+          placeholder="Find a tag"
+          aria-label="Find a tag to hide"
+        />
+
+        <div class="tags" role="group" aria-label="Tags">
+          {#each tagRows as { keyword, count } (keyword)}
+            {@const isHidden = prefs.hiddenKeywords.includes(keyword)}
+            <button
+              class="chip tag"
+              class:hidden-tag={isHidden}
+              onclick={() => toggleHidden(keyword)}
+              aria-pressed={isHidden}
+              aria-label="{isHidden ? 'Show' : 'Hide'} {humanKeyword(keyword)}, {count} entries"
+            >
+              {humanKeyword(keyword)}<span class="count">{count}</span>
+            </button>
+          {:else}
+            <p class="hint">No tag matches that.</p>
+          {/each}
+        </div>
+
+        {#if hiddenCount > 0}
+          <div class="row">
+            <!--
+              "Unhide", not "Show all": the era-rail control two fieldsets up
+              is already labelled "always show all", and two buttons in one
+              sheet whose names differ only by a leading word are ambiguous to
+              anyone scanning by label rather than by position.
+            -->
+            <button class="link" onclick={showAllTags}>
+              Unhide all {hiddenCount} tags
+            </button>
+          </div>
+        {/if}
       </fieldset>
 
       {#if !storageAvailable}
@@ -391,6 +480,43 @@
     font: inherit;
     font-size: 0.75rem;
     cursor: pointer;
+  }
+
+  .tag-search {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /*
+   * Capped and scrollable: the vocabulary runs past a hundred tags, and the
+   * sheet is already at 80dvh on a phone. Hidden tags sort to the top, so the
+   * rows that matter are above the fold without scrolling.
+   */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3125rem;
+    max-height: 9.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.125rem;
+  }
+
+  .tag .count {
+    margin-left: 0.3125rem;
+    opacity: 0.6;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /*
+   * Struck through rather than merely dimmed. "Hidden" is the pressed state of
+   * this control, so it must not read as the disabled-looking one — the strike
+   * says what has happened to the tag, and the chip stays fully legible.
+   */
+  .hidden-tag {
+    border-style: dashed;
+    color: var(--text-muted);
+    text-decoration: line-through;
   }
 
   .chip.on {

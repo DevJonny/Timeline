@@ -12,7 +12,14 @@
   import { chooseTickScale, generateTicks } from '../lib/ticks.ts';
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
   import { clusterOverflow, importanceGate, relaxationFor } from '../lib/lod.ts';
-  import { applyFilters, isFilterActive, type Filters } from '../lib/filter.ts';
+  import {
+    activeHidden,
+    applyFilters,
+    applyHidden,
+    collectKeywords,
+    isFilterActive,
+    type Filters,
+  } from '../lib/filter.ts';
   import {
     formatAxisYear,
     presentDecimalYear,
@@ -88,10 +95,34 @@
     persist(next);
   }
 
+  /**
+   * Tags the reader hid, minus any they are currently asking for. Hiding is a
+   * default, not a ban — see `activeHidden`.
+   */
+  const hidden = $derived(activeHidden(prefs.hiddenKeywords, filters));
+
+  /**
+   * The dataset as the reader has chosen to keep it. Everything downstream
+   * measures against this rather than `entries`, so a hidden tag is absent
+   * rather than perpetually "filtered out" — including the level-of-detail
+   * gate, which would otherwise sit permanently relaxed against a dataset the
+   * reader never sees.
+   */
+  const available = $derived(applyHidden(entries, hidden));
+  const hiddenByPrefs = $derived(entries.length - available.length);
+
+  /**
+   * Every tag with its full count, from *all* entries — the settings list is
+   * the only way back from a hidden tag, so it cannot be built from what is
+   * currently visible the way the search panel's chips are. A tag hidden to
+   * zero results would vanish from the very list that un-hides it.
+   */
+  const allKeywords = $derived(collectKeywords(entries));
+
   /** Excluded entries are removed outright rather than dimmed. */
-  const filtered = $derived(applyFilters(entries, filters));
+  const filtered = $derived(applyFilters(available, filters));
   const filterActive = $derived(isFilterActive(filters));
-  const hiddenByFilter = $derived(entries.length - filtered.length);
+  const hiddenByFilter = $derived(available.length - filtered.length);
 
   function resolve(entry: Entry): Resolved {
     return {
@@ -226,7 +257,7 @@
    * not merely thin the page out.
    */
   const gate = $derived(
-    importanceGate(transform.k, relaxationFor(filtered.length, entries.length)),
+    importanceGate(transform.k, relaxationFor(filtered.length, available.length)),
   );
 
   const labels: Label[] = $derived(
@@ -646,6 +677,7 @@
         endYear: toHistoricalYear(Math.floor(visible[1])),
       }}
       {storageAvailable}
+      {allKeywords}
       onchange={updatePrefs}
       onclose={() => (settingsOpen = false)}
     />
@@ -668,6 +700,15 @@
         <span class="hidden-count">· {hiddenByFilter} filtered out</span>
       {:else if hiddenCount > 0}
         <span class="hidden-count">· {hiddenCount} clustered</span>
+      {/if}
+      <!--
+        Reported separately from the filter count and whenever it is non-zero.
+        A hidden tag is a standing choice the reader made once and will not be
+        holding in mind later; without this the timeline just looks short of
+        content it actually has.
+      -->
+      {#if hiddenByPrefs > 0}
+        <span class="hidden-count">· {hiddenByPrefs} hidden by settings</span>
       {/if}
     </div>
   {/if}

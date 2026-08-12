@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  activeHidden,
   applyFilters,
+  applyHidden,
   collectKeywords,
   EMPTY_FILTERS,
   isFilterActive,
@@ -113,5 +115,63 @@ describe('toggle', () => {
     expect(toggle(list, 'b')).toEqual(['a', 'b']);
     expect(toggle(list, 'a')).toEqual([]);
     expect(list).toEqual(['a']);
+  });
+});
+
+describe('hidden tags', () => {
+  const hidden = ['tank'];
+  const tanks: Entry[] = [
+    ...entries,
+    entry({ id: 'mark-iv', title: 'Mark IV Tank', keywords: ['tank', 'world-war-1'] }),
+    entry({ id: 'tiger', title: 'Tiger I', keywords: ['tank', 'world-war-2'] }),
+  ];
+
+  it('hides entries carrying a hidden tag when nothing is asked for', () => {
+    const active = activeHidden(hidden, EMPTY_FILTERS);
+    expect(active).toEqual(['tank']);
+    expect(applyHidden(tanks, active).map((e) => e.id)).toEqual([
+      'hastings',
+      'ww2',
+      'rome',
+      'liz',
+    ]);
+  });
+
+  it('steps aside when the tag is explicitly selected', () => {
+    const active = activeHidden(hidden, { ...EMPTY_FILTERS, keywords: ['tank'] });
+    expect(active).toEqual([]);
+    expect(applyHidden(tanks, active)).toHaveLength(tanks.length);
+  });
+
+  it('steps aside when the query names the tag', () => {
+    expect(activeHidden(hidden, { ...EMPTY_FILTERS, query: 'tank' })).toEqual([]);
+    expect(activeHidden(hidden, { ...EMPTY_FILTERS, query: '  TANK ' })).toEqual([]);
+  });
+
+  it('stays hidden for a query that does not name the tag', () => {
+    // The trap this guards: any active filter revealing everything hidden.
+    expect(activeHidden(hidden, { ...EMPTY_FILTERS, query: 'battle' })).toEqual(['tank']);
+    expect(activeHidden(hidden, { ...EMPTY_FILTERS, keywords: ['england'] })).toEqual(['tank']);
+    expect(activeHidden(hidden, { ...EMPTY_FILTERS, types: ['battle'] })).toEqual(['tank']);
+  });
+
+  it('matches a hyphenated tag through its spaced form, as search does', () => {
+    expect(activeHidden(['world-war-2'], { ...EMPTY_FILTERS, query: 'world war 2' })).toEqual([]);
+    expect(activeHidden(['world-war-2'], { ...EMPTY_FILTERS, query: 'world-war-2' })).toEqual([]);
+  });
+
+  it('is a no-op with nothing hidden, and copies rather than aliases', () => {
+    expect(activeHidden([], { ...EMPTY_FILTERS, query: 'tank' })).toEqual([]);
+    const out = applyHidden(tanks, []);
+    expect(out).toEqual(tanks);
+    expect(out).not.toBe(tanks);
+  });
+
+  it('hides an entry that carries any one of several hidden tags', () => {
+    expect(applyHidden(tanks, ['tank', 'rome']).map((e) => e.id)).toEqual([
+      'hastings',
+      'ww2',
+      'liz',
+    ]);
   });
 });
