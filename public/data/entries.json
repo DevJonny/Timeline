@@ -5285,6 +5285,1721 @@
         "renaissance",
         "literature"
       ]
+    },
+    {
+      "id": "xia-dynasty",
+      "title": "Xia Dynasty",
+      "type": "empire",
+      "start": {
+        "year": -2070,
+        "circa": true
+      },
+      "end": {
+        "year": -1600,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "antiquity",
+        "bronze-age",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "shang-dynasty",
+      "title": "Shang Dynasty",
+      "type": "empire",
+      "start": {
+        "year": -1600,
+        "circa": true
+      },
+      "end": {
+        "year": -1046,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "bronze-age",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "zhou-dynasty",
+      "title": "Zhou Dynasty",
+      "type": "empire",
+      "start": {
+        "year": -1046,
+        "circa": true
+      },
+      "end": {
+        "year": -256
+      },
+      "importance": 2,
+      "keywords": [
+        "china",
+        "antiquity",
+        "monarchy",
+        "bronze-age"
+      ]
+    },
+    {
+      "id": "spring-and-autumn-period",
+      "title": "Spring and Autumn Period",
+      "type": "empire",
+      "start": {
+        "year": -770
+      },
+      "end": {
+        "year": -476
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "antiquity",
+        "philosophy",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "warring-states-period",
+      "title": "Warring States Period",
+      "type": "empire",
+      "start": {
+        "year": -475
+      },
+      "end": {
+        "year": -221
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "philosophy",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "qin-dynasty",
+      "title": "Qin Dynasty",
+      "type": "empire",
+      "start": {
+        "year": -221
+      },
+      "end": {
+        "year": -206
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "empire",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "qin-shi-huang",
+      "title": "Qin Shi Huang",
+      "type": "ruler",
+      "start": {
+        "year": -221
+      },
+      "end": {
+        "year": -210
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "empire",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "great-wall-of-china",
+      "title": "Great Wall of China",
+      "type": "event",
+      "start": {
+        "year": -221,
+        "circa": true
+      },
+      "end": {
+        "year": 1644
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "technology",
+        "empire"
+      ]
+    },
+    {
+      "id": "three-kingdoms-period",
+      "title": "Three Kingdoms Period",
+      "type": "empire",
+      "start": {
+        "year": 220
+      },
+      "end": {
+        "year": 280
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "antiquity",
+        "empire"
+      ]
+    },
+    {
+      "id": "northern-and-southern-dynasties",
+      "title": "Northern and Southern Dynasties",
+      "type": "empire",
+      "start": {
+        "year": 420
+      },
+      "end": {
+        "year": 589
+      },
+      "importance": 5,
+      "keywords": [
+        "china",
+        "antiquity",
+        "medieval",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "sui-dynasty",
+      "title": "Sui Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 581
+      },
+      "end": {
+        "year": 618
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "medieval",
+        "empire",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "grand-canal",
+      "title": "Grand Canal",
+      "type": "event",
+      "start": {
+        "year": 605
+      },
+      "end": {
+        "year": 609
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "medieval",
+        "technology",
+        "empire"
+      ]
+    },
+    {
+      "id": "tang-dynasty",
+      "title": "Tang Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 618
+      },
+      "end": {
+        "year": 907
+      },
+      "importance": 2,
+      "keywords": [
+        "china",
+        "medieval",
+        "empire",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "wu-zetian",
+      "title": "Wu Zetian",
+      "type": "ruler",
+      "start": {
+        "year": 690
+      },
+      "end": {
+        "year": 705
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "medieval",
+        "monarchy",
+        "empire"
+      ]
+    },
+    {
+      "id": "an-lushan-rebellion",
+      "title": "An Lushan Rebellion",
+      "type": "war",
+      "start": {
+        "year": 755,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 763
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "medieval",
+        "empire"
+      ]
+    },
+    {
+      "id": "five-dynasties-and-ten-kingdoms",
+      "title": "Five Dynasties and Ten Kingdoms",
+      "type": "empire",
+      "start": {
+        "year": 907
+      },
+      "end": {
+        "year": 979
+      },
+      "importance": 5,
+      "keywords": [
+        "china",
+        "medieval",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "song-dynasty",
+      "title": "Song Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 960
+      },
+      "end": {
+        "year": 1279
+      },
+      "importance": 2,
+      "keywords": [
+        "china",
+        "medieval",
+        "empire",
+        "technology"
+      ]
+    },
+    {
+      "id": "yuan-dynasty",
+      "title": "Yuan Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 1271
+      },
+      "end": {
+        "year": 1368
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "medieval",
+        "empire",
+        "mongols"
+      ]
+    },
+    {
+      "id": "ming-dynasty",
+      "title": "Ming Dynasty",
+      "type": "empire",
+      "start": {
+        "year": 1368
+      },
+      "end": {
+        "year": 1644
+      },
+      "importance": 2,
+      "keywords": [
+        "china",
+        "empire",
+        "monarchy",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "hongwu-emperor",
+      "title": "Hongwu Emperor",
+      "type": "ruler",
+      "start": {
+        "year": 1368,
+        "month": 1,
+        "day": 23
+      },
+      "end": {
+        "year": 1398,
+        "month": 6,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "medieval",
+        "monarchy",
+        "empire"
+      ]
+    },
+    {
+      "id": "yongle-emperor",
+      "title": "Yongle Emperor",
+      "type": "ruler",
+      "start": {
+        "year": 1402,
+        "month": 7,
+        "day": 17
+      },
+      "end": {
+        "year": 1424,
+        "month": 8,
+        "day": 12
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "medieval",
+        "monarchy",
+        "empire"
+      ]
+    },
+    {
+      "id": "zheng-he-voyages",
+      "title": "Zheng He's Treasure Voyages",
+      "type": "event",
+      "start": {
+        "year": 1405
+      },
+      "end": {
+        "year": 1433
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "naval",
+        "medieval",
+        "empire"
+      ]
+    },
+    {
+      "id": "kangxi-emperor",
+      "title": "Kangxi Emperor",
+      "type": "ruler",
+      "start": {
+        "year": 1661,
+        "month": 2,
+        "day": 5
+      },
+      "end": {
+        "year": 1722,
+        "month": 12,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "china",
+        "early-modern",
+        "monarchy",
+        "empire"
+      ]
+    },
+    {
+      "id": "first-opium-war",
+      "title": "First Opium War",
+      "type": "war",
+      "start": {
+        "year": 1839,
+        "month": 9,
+        "day": 4
+      },
+      "end": {
+        "year": 1842,
+        "month": 8,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "britain",
+        "19th-century",
+        "colonialism"
+      ]
+    },
+    {
+      "id": "taiping-rebellion",
+      "title": "Taiping Rebellion",
+      "type": "war",
+      "start": {
+        "year": 1851,
+        "month": 1,
+        "day": 11
+      },
+      "end": {
+        "year": 1864,
+        "month": 7,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "19th-century",
+        "empire"
+      ]
+    },
+    {
+      "id": "xinhai-revolution",
+      "title": "Xinhai Revolution",
+      "type": "event",
+      "start": {
+        "year": 1911,
+        "month": 10,
+        "day": 10
+      },
+      "end": {
+        "year": 1912,
+        "month": 2,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "china",
+        "revolution",
+        "20th-century",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "emperor-jimmu",
+      "title": "Emperor Jimmu",
+      "type": "ruler",
+      "start": {
+        "year": -660,
+        "circa": true
+      },
+      "end": {
+        "year": -585,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "antiquity",
+        "mythology"
+      ]
+    },
+    {
+      "id": "empress-suiko",
+      "title": "Empress Suiko",
+      "type": "ruler",
+      "start": {
+        "year": 593
+      },
+      "end": {
+        "year": 628
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "antiquity",
+        "buddhism"
+      ]
+    },
+    {
+      "id": "taika-reform",
+      "title": "Taika Reform",
+      "type": "event",
+      "start": {
+        "year": 645
+      },
+      "end": {
+        "year": 646
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "antiquity",
+        "law"
+      ]
+    },
+    {
+      "id": "emperor-tenmu",
+      "title": "Emperor Tenmu",
+      "type": "ruler",
+      "start": {
+        "year": 673
+      },
+      "end": {
+        "year": 686
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "antiquity",
+        "law"
+      ]
+    },
+    {
+      "id": "empress-genmei",
+      "title": "Empress Genmei",
+      "type": "ruler",
+      "start": {
+        "year": 707
+      },
+      "end": {
+        "year": 715
+      },
+      "importance": 5,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "antiquity"
+      ]
+    },
+    {
+      "id": "nara-period",
+      "title": "Nara Period",
+      "type": "empire",
+      "start": {
+        "year": 710
+      },
+      "end": {
+        "year": 794
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "antiquity",
+        "buddhism"
+      ]
+    },
+    {
+      "id": "emperor-kanmu",
+      "title": "Emperor Kanmu",
+      "type": "ruler",
+      "start": {
+        "year": 781
+      },
+      "end": {
+        "year": 806
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "medieval"
+      ]
+    },
+    {
+      "id": "heian-period",
+      "title": "Heian Period",
+      "type": "empire",
+      "start": {
+        "year": 794
+      },
+      "end": {
+        "year": 1185
+      },
+      "importance": 2,
+      "keywords": [
+        "japan",
+        "medieval",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "emperor-go-toba",
+      "title": "Emperor Go-Toba",
+      "type": "ruler",
+      "start": {
+        "year": 1183
+      },
+      "end": {
+        "year": 1198
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "medieval",
+        "samurai"
+      ]
+    },
+    {
+      "id": "jokyu-war",
+      "title": "Jōkyū War",
+      "type": "war",
+      "start": {
+        "year": 1221,
+        "month": 6
+      },
+      "end": {
+        "year": 1221,
+        "month": 7
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "medieval",
+        "samurai",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "emperor-go-daigo",
+      "title": "Emperor Go-Daigo",
+      "type": "ruler",
+      "start": {
+        "year": 1318
+      },
+      "end": {
+        "year": 1339
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "medieval",
+        "samurai"
+      ]
+    },
+    {
+      "id": "kenmu-restoration",
+      "title": "Kenmu Restoration",
+      "type": "event",
+      "start": {
+        "year": 1333
+      },
+      "end": {
+        "year": 1336
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "medieval",
+        "samurai",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "emperor-komei",
+      "title": "Emperor Kōmei",
+      "type": "ruler",
+      "start": {
+        "year": 1846,
+        "month": 3,
+        "day": 10
+      },
+      "end": {
+        "year": 1867,
+        "month": 1,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "early-modern",
+        "19th-century",
+        "samurai"
+      ]
+    },
+    {
+      "id": "emperor-meiji",
+      "title": "Emperor Meiji",
+      "type": "ruler",
+      "start": {
+        "year": 1867,
+        "month": 2,
+        "day": 3
+      },
+      "end": {
+        "year": 1912,
+        "month": 7,
+        "day": 30
+      },
+      "importance": 2,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "19th-century",
+        "empire",
+        "modern"
+      ]
+    },
+    {
+      "id": "meiji-restoration",
+      "title": "Meiji Restoration",
+      "type": "event",
+      "start": {
+        "year": 1868,
+        "month": 1,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "19th-century",
+        "revolution",
+        "monarchy",
+        "samurai"
+      ]
+    },
+    {
+      "id": "meiji-constitution",
+      "title": "Meiji Constitution",
+      "type": "event",
+      "start": {
+        "year": 1889,
+        "month": 2,
+        "day": 11
+      },
+      "end": {
+        "year": 1947,
+        "month": 5,
+        "day": 3
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "law",
+        "19th-century",
+        "empire",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "emperor-taisho",
+      "title": "Emperor Taishō",
+      "type": "ruler",
+      "start": {
+        "year": 1912,
+        "month": 7,
+        "day": 30
+      },
+      "end": {
+        "year": 1926,
+        "month": 12,
+        "day": 25
+      },
+      "importance": 5,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "20th-century",
+        "empire"
+      ]
+    },
+    {
+      "id": "emperor-showa",
+      "title": "Emperor Shōwa",
+      "type": "ruler",
+      "start": {
+        "year": 1926,
+        "month": 12,
+        "day": 25
+      },
+      "end": {
+        "year": 1989,
+        "month": 1,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "20th-century",
+        "world-war-2",
+        "empire"
+      ]
+    },
+    {
+      "id": "humanity-declaration",
+      "title": "Humanity Declaration",
+      "type": "event",
+      "start": {
+        "year": 1946,
+        "month": 1,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "20th-century",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "constitution-of-japan",
+      "title": "Constitution of Japan",
+      "type": "event",
+      "start": {
+        "year": 1947,
+        "month": 5,
+        "day": 3
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "japan",
+        "law",
+        "monarchy",
+        "20th-century"
+      ]
+    },
+    {
+      "id": "emperor-akihito",
+      "title": "Emperor Akihito",
+      "type": "ruler",
+      "start": {
+        "year": 1989,
+        "month": 1,
+        "day": 7
+      },
+      "end": {
+        "year": 2019,
+        "month": 4,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "20th-century",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "emperor-naruhito",
+      "title": "Emperor Naruhito",
+      "type": "ruler",
+      "start": {
+        "year": 2019,
+        "month": 5,
+        "day": 1
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "japan",
+        "monarchy",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "subutai",
+      "title": "Subutai",
+      "type": "person",
+      "start": {
+        "year": 1175,
+        "circa": true
+      },
+      "end": {
+        "year": 1248
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "europe",
+        "medieval"
+      ]
+    },
+    {
+      "id": "mongol-conquest-of-khwarazmia",
+      "title": "Mongol Conquest of Khwarazmia",
+      "type": "war",
+      "start": {
+        "year": 1219
+      },
+      "end": {
+        "year": 1221
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "central-asia",
+        "islam",
+        "persia",
+        "medieval"
+      ]
+    },
+    {
+      "id": "battle-of-the-kalka-river",
+      "title": "Battle of the Kalka River",
+      "type": "battle",
+      "start": {
+        "year": 1223,
+        "month": 5,
+        "day": 31
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "russia",
+        "europe",
+        "medieval"
+      ]
+    },
+    {
+      "id": "chagatai-khanate",
+      "title": "Chagatai Khanate",
+      "type": "empire",
+      "start": {
+        "year": 1226
+      },
+      "end": {
+        "year": 1347
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "central-asia",
+        "empire",
+        "medieval"
+      ]
+    },
+    {
+      "id": "batu-khan",
+      "title": "Batu Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1227
+      },
+      "end": {
+        "year": 1255
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "russia",
+        "medieval"
+      ]
+    },
+    {
+      "id": "ogedei-khan",
+      "title": "Ögedei Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1229,
+        "month": 9,
+        "day": 13
+      },
+      "end": {
+        "year": 1241,
+        "month": 12,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "medieval"
+      ]
+    },
+    {
+      "id": "yam-relay-system",
+      "title": "The Yam Relay System",
+      "type": "event",
+      "start": {
+        "year": 1234
+      },
+      "end": {
+        "year": 1368,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "mongols",
+        "silk-road",
+        "technology",
+        "medieval"
+      ]
+    },
+    {
+      "id": "mongol-conquest-of-song-china",
+      "title": "Mongol Conquest of Song China",
+      "type": "war",
+      "start": {
+        "year": 1235
+      },
+      "end": {
+        "year": 1279
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "china",
+        "medieval"
+      ]
+    },
+    {
+      "id": "mongol-invasion-of-rus",
+      "title": "Mongol Invasion of Rus'",
+      "type": "war",
+      "start": {
+        "year": 1237
+      },
+      "end": {
+        "year": 1242
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "russia",
+        "europe",
+        "medieval"
+      ]
+    },
+    {
+      "id": "battle-of-legnica",
+      "title": "Battle of Legnica",
+      "type": "battle",
+      "start": {
+        "year": 1241,
+        "month": 4,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "poland",
+        "europe",
+        "medieval"
+      ]
+    },
+    {
+      "id": "battle-of-mohi",
+      "title": "Battle of Mohi",
+      "type": "battle",
+      "start": {
+        "year": 1241,
+        "month": 4,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "hungary",
+        "europe",
+        "medieval"
+      ]
+    },
+    {
+      "id": "golden-horde",
+      "title": "The Golden Horde",
+      "type": "empire",
+      "start": {
+        "year": 1242
+      },
+      "end": {
+        "year": 1502
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "russia",
+        "empire",
+        "medieval"
+      ]
+    },
+    {
+      "id": "guyuk-khan",
+      "title": "Güyük Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1246,
+        "month": 8,
+        "day": 24
+      },
+      "end": {
+        "year": 1248,
+        "month": 4,
+        "day": 20
+      },
+      "importance": 5,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "medieval"
+      ]
+    },
+    {
+      "id": "mongke-khan",
+      "title": "Möngke Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1251,
+        "month": 7,
+        "day": 1
+      },
+      "end": {
+        "year": 1259,
+        "month": 8,
+        "day": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "medieval"
+      ]
+    },
+    {
+      "id": "hulagu-khan",
+      "title": "Hulagu Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1256
+      },
+      "end": {
+        "year": 1265,
+        "month": 2,
+        "day": 8
+      },
+      "importance": 4,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "persia",
+        "islam",
+        "medieval"
+      ]
+    },
+    {
+      "id": "ilkhanate",
+      "title": "The Ilkhanate",
+      "type": "empire",
+      "start": {
+        "year": 1256
+      },
+      "end": {
+        "year": 1335
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "persia",
+        "islam",
+        "empire",
+        "medieval"
+      ]
+    },
+    {
+      "id": "siege-of-baghdad",
+      "title": "Siege of Baghdad",
+      "type": "battle",
+      "start": {
+        "year": 1258,
+        "month": 1,
+        "day": 29
+      },
+      "end": {
+        "year": 1258,
+        "month": 2,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "islam",
+        "mesopotamia",
+        "medieval"
+      ]
+    },
+    {
+      "id": "pax-mongolica",
+      "title": "Pax Mongolica",
+      "type": "empire",
+      "start": {
+        "year": 1260,
+        "circa": true
+      },
+      "end": {
+        "year": 1350,
+        "circa": true
+      },
+      "importance": 2,
+      "keywords": [
+        "mongols",
+        "silk-road",
+        "empire",
+        "medieval"
+      ]
+    },
+    {
+      "id": "kublai-khan",
+      "title": "Kublai Khan",
+      "type": "ruler",
+      "start": {
+        "year": 1260,
+        "month": 5,
+        "day": 5
+      },
+      "end": {
+        "year": 1294,
+        "month": 2,
+        "day": 18
+      },
+      "importance": 2,
+      "keywords": [
+        "mongols",
+        "monarchy",
+        "china",
+        "medieval"
+      ]
+    },
+    {
+      "id": "battle-of-ain-jalut",
+      "title": "Battle of Ain Jalut",
+      "type": "battle",
+      "start": {
+        "year": 1260,
+        "month": 9,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "islam",
+        "egypt",
+        "medieval"
+      ]
+    },
+    {
+      "id": "mongol-invasions-of-japan",
+      "title": "Mongol Invasions of Japan",
+      "type": "war",
+      "start": {
+        "year": 1274
+      },
+      "end": {
+        "year": 1281
+      },
+      "importance": 3,
+      "keywords": [
+        "mongols",
+        "japan",
+        "samurai",
+        "naval",
+        "medieval"
+      ]
+    },
+    {
+      "id": "battle-of-yamen",
+      "title": "Battle of Yamen",
+      "type": "battle",
+      "start": {
+        "year": 1279,
+        "month": 3,
+        "day": 19
+      },
+      "importance": 5,
+      "keywords": [
+        "mongols",
+        "china",
+        "naval",
+        "medieval"
+      ]
+    },
+    {
+      "id": "ernest-swinton",
+      "title": "Ernest Swinton",
+      "type": "person",
+      "start": {
+        "year": 1868,
+        "month": 10,
+        "day": 21
+      },
+      "end": {
+        "year": 1951,
+        "month": 1,
+        "day": 15
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "walter-gordon-wilson",
+      "title": "Walter Gordon Wilson",
+      "type": "person",
+      "start": {
+        "year": 1874,
+        "month": 4,
+        "day": 21
+      },
+      "end": {
+        "year": 1957,
+        "month": 7,
+        "day": 1
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "william-tritton",
+      "title": "William Tritton",
+      "type": "person",
+      "start": {
+        "year": 1875
+      },
+      "end": {
+        "year": 1946
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "landships-committee",
+      "title": "Landships Committee",
+      "type": "event",
+      "start": {
+        "year": 1915,
+        "month": 2
+      },
+      "end": {
+        "year": 1916
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "mother-tank",
+      "title": "Mother (Big Willie)",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 1
+      },
+      "end": {
+        "year": 1916,
+        "month": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "mark-ii-tank",
+      "title": "Mark II Tank",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 12
+      },
+      "end": {
+        "year": 1918
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "schneider-ca1",
+      "title": "Schneider CA1",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 4,
+        "day": 16
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "france",
+        "technology"
+      ]
+    },
+    {
+      "id": "saint-chamond-tank",
+      "title": "Saint-Chamond",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 5,
+        "day": 5
+      },
+      "end": {
+        "year": 1918,
+        "month": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "france",
+        "technology"
+      ]
+    },
+    {
+      "id": "mark-iv-tank",
+      "title": "Mark IV Tank",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 6,
+        "day": 7
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "gun-carrier-mark-i",
+      "title": "Gun Carrier Mark I",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 7
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "formation-of-the-tank-corps",
+      "title": "Formation of the Tank Corps",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 7,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "battle-of-cambrai",
+      "title": "Battle of Cambrai",
+      "type": "battle",
+      "start": {
+        "year": 1917,
+        "month": 11,
+        "day": 20
+      },
+      "end": {
+        "year": 1917,
+        "month": 12,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "germany"
+      ]
+    },
+    {
+      "id": "mark-viii-tank",
+      "title": "Mark VIII Liberty Tank",
+      "type": "event",
+      "start": {
+        "year": 1918
+      },
+      "end": {
+        "year": 1934
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "a7v",
+      "title": "A7V Sturmpanzerwagen",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 3,
+        "day": 21
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "germany",
+        "technology"
+      ]
+    },
+    {
+      "id": "medium-mark-a-whippet",
+      "title": "Medium Mark A Whippet",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 3,
+        "day": 26
+      },
+      "end": {
+        "year": 1930,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "first-tank-versus-tank-battle",
+      "title": "First Tank-versus-Tank Battle",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 4,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "germany"
+      ]
+    },
+    {
+      "id": "mark-v-tank",
+      "title": "Mark V Tank",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 7,
+        "day": 4
+      },
+      "end": {
+        "year": 1930,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "mark-v-star-tank",
+      "title": "Mark V* Tank",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 8,
+        "day": 8
+      },
+      "end": {
+        "year": 1919
+      },
+      "importance": 5,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "battle-of-amiens",
+      "title": "Battle of Amiens",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 8,
+        "day": 8
+      },
+      "end": {
+        "year": 1918,
+        "month": 8,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "tank",
+        "world-war-1",
+        "britain",
+        "germany"
+      ]
     }
   ]
 }
