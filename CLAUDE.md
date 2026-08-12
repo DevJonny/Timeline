@@ -13,6 +13,9 @@ npm run check                     # svelte-check — runs with --fail-on-warning
 npm test                          # vitest
 npm run icons                     # regenerate PWA icons; output is committed
 
+npm run brief -- /tmp/b/BRIEF.md          # research brief, generated from live data
+npm run merge-staged -- /tmp/b            # merge staged agent output; --apply to write
+
 npx vitest run tests/ticks.test.ts          # one file
 npx vitest run -t "no granularity hole"     # one test by name
 npx vitest                                  # watch mode
@@ -136,6 +139,19 @@ Add an entry to `entries.json` plus a matching `details/{id}.json`, then run
 detail file per entry with a matching id, and orphans. `importance` (1–5) is
 the main authoring lever: it decides the zoom at which an entry appears. See
 README.md for the field reference.
+
+**Importance 1 is closed.** It is what renders when the timeline is fully
+zoomed out, and it belongs to the ages and the few spans already holding it.
+New content starts at 2.
+
+For bulk additions, use the `timeline-batch` skill: it researches subject areas
+in parallel via `timeline-researcher` agents and merges centrally. Two rules
+matter more than the rest. The brief is **generated** by `npm run brief`, never
+hand-written or reused — it embeds the existing ids and keyword vocabulary, and
+a stale copy tells agents to duplicate entries that already exist, which
+nothing catches until merge. And every category gets an explicit list of
+subjects owned by *other* agents, because the areas overlap far more than they
+appear to.
 
 ## Scripts and Node
 

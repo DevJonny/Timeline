@@ -8,6 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "validate": "node scripts/validate-data.ts",
+    "brief": "node scripts/author-brief.ts",
+    "merge-staged": "node scripts/merge-staged.ts",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
     "test": "vitest run --passWithNoTests",
