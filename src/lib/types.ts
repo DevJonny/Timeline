@@ -108,3 +108,67 @@ export interface Detail {
   short: string;
   full: string;
 }
+
+// --- focused timelines ------------------------------------------------------
+
+/**
+ * Which main-timeline entries a focus inherits.
+ *
+ * A selector rather than a list of ids, so a focus keeps up with the main
+ * timeline: adding a Roman entry to `entries.json` puts it in the Roman focus
+ * without anyone remembering to also list it there. `include` and `exclude`
+ * are the escape hatches for what keywords get wrong in either direction.
+ */
+export interface FocusSelector {
+  /** A main entry carrying any of these, and overlapping the range, joins. */
+  keywords: string[];
+  /** Ids pulled in whatever their keywords say. */
+  include: string[];
+  /** Ids kept out whatever else says. Beats both of the above. */
+  exclude: string[];
+}
+
+/** The period a focus covers. `end` may be `'present'` for an open subject. */
+export interface FocusRange {
+  start: TimePoint;
+  end: EndPoint;
+}
+
+/**
+ * A focused timeline: the same render pipeline over one subject's dataset.
+ *
+ * Its entries live in a sibling `entries.json` and are authored at a finer
+ * grain than the main timeline could ever show. Note that `range` is the
+ * *opening view*, not the axis domain — see `resolveFocus` in focus.ts, which
+ * widens the domain to hold anything the selector drags in from outside.
+ */
+export interface Focus {
+  schemaVersion: 1;
+  id: string;
+  title: string;
+  /** One sentence, shown in the menu. */
+  blurb: string;
+  /** The main-timeline entry this focus expands, when there is one. */
+  subject?: string;
+  range: FocusRange;
+  select: FocusSelector;
+}
+
+/**
+ * A focus as the menu needs it, without fetching every focus file.
+ *
+ * These fields are duplicated from `focus.json` deliberately: one small
+ * request renders the whole menu. Validation asserts the copies match, so the
+ * duplication cannot drift.
+ */
+export interface FocusSummary {
+  id: string;
+  title: string;
+  blurb: string;
+  range: FocusRange;
+}
+
+export interface FocusIndex {
+  schemaVersion: 1;
+  focuses: FocusSummary[];
+}

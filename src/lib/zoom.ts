@@ -43,7 +43,6 @@ export function zoomable(node: HTMLElement, options: ZoomableOptions) {
   let opts = options;
 
   const behaviour = d3Zoom<HTMLElement, unknown>()
-    .scaleExtent(opts.scaleExtent ?? [MIN_ZOOM, MAX_ZOOM])
     .on('zoom', (event: D3ZoomEvent<HTMLElement, unknown>) => {
       current = event.transform;
       // Published synchronously and deliberately not coalesced.
@@ -73,7 +72,19 @@ export function zoomable(node: HTMLElement, options: ZoomableOptions) {
     ]);
   }
 
+  /**
+   * Re-applied on update, not just at construction: the upper bound depends on
+   * the domain span, so a focused timeline spanning centuries needs a
+   * different one from the main timeline's megayears. Left set once, a focus
+   * mounted into a reused node would keep bounds meant for another domain and
+   * either refuse to zoom in or allow absurd depth.
+   */
+  function applyScaleExtent(extent: [number, number] | undefined): void {
+    behaviour.scaleExtent(extent ?? [MIN_ZOOM, MAX_ZOOM]);
+  }
+
   applyExtents(opts.width, opts.height);
+  applyScaleExtent(opts.scaleExtent);
   selection.call(behaviour);
 
   if (opts.initial) {
@@ -105,9 +116,13 @@ export function zoomable(node: HTMLElement, options: ZoomableOptions) {
 
   return {
     update(next: ZoomableOptions) {
+      const previousExtent = opts.scaleExtent;
       opts = next;
       if (next.width !== options.width || next.height !== options.height) {
         applyExtents(next.width, next.height);
+      }
+      if (next.scaleExtent?.[0] !== previousExtent?.[0] || next.scaleExtent?.[1] !== previousExtent?.[1]) {
+        applyScaleExtent(next.scaleExtent);
       }
       if (next.disabled) {
         selection.on('.zoom', null);

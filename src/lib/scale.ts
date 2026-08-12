@@ -112,8 +112,30 @@ export function extentOf(
 }
 
 /**
- * Zoom bounds. k=1 shows the whole 3.3-million-year span; the upper bound is
- * set so the deepest zoom approaches roughly one day per pixel.
+ * Zoom bounds. k=1 always shows the whole domain, whatever that domain is.
  */
 export const MIN_ZOOM = 1;
+
+/**
+ * The narrowest view the deepest zoom offers, in years — roughly one day per
+ * pixel on a phone.
+ *
+ * This, not a fixed `k`, is what the upper zoom bound actually means. A focused
+ * timeline spans centuries rather than megayears, so the same *physical* depth
+ * is reached at a k three or four orders of magnitude smaller; expressing the
+ * bound in years is what lets both timelines share one rule.
+ */
+export const FINEST_VISIBLE_SPAN = 1 / 3;
+
+/** The upper zoom bound for a domain of `domainSpan` years. */
+export function maxZoomFor(domainSpan: number): number {
+  if (!(domainSpan > 0)) return MIN_ZOOM;
+  return Math.max(MIN_ZOOM, domainSpan / FINEST_VISIBLE_SPAN);
+}
+
+/**
+ * The main timeline's upper bound, retained as the reference point the
+ * importance gate is calibrated against — `maxZoomFor` over the full
+ * 3.3-Myr domain returns this to within a percent.
+ */
 export const MAX_ZOOM = 1e7;

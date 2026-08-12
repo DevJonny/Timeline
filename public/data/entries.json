@@ -8089,6 +8089,1029 @@
         "pacific",
         "cold-war"
       ]
+    },
+    {
+      "id": "uss-nautilus",
+      "title": "USS Nautilus (SSN-571)",
+      "type": "event",
+      "start": {
+        "year": 1954,
+        "month": 9,
+        "day": 30
+      },
+      "end": {
+        "year": 1980,
+        "month": 3,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "k-19",
+      "title": "K-19",
+      "type": "event",
+      "start": {
+        "year": 1961,
+        "month": 4,
+        "day": 30
+      },
+      "end": {
+        "year": 1990,
+        "month": 4,
+        "day": 19
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "soviet-union",
+        "technology"
+      ]
+    },
+    {
+      "id": "uss-enterprise-cvn-65",
+      "title": "USS Enterprise (CVN-65)",
+      "type": "event",
+      "start": {
+        "year": 1961,
+        "month": 11,
+        "day": 25
+      },
+      "end": {
+        "year": 2017,
+        "month": 2,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "hms-conqueror",
+      "title": "HMS Conqueror (S48)",
+      "type": "event",
+      "start": {
+        "year": 1971,
+        "month": 11,
+        "day": 9
+      },
+      "end": {
+        "year": 1990,
+        "month": 8,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "britain"
+      ]
+    },
+    {
+      "id": "uss-nimitz",
+      "title": "USS Nimitz (CVN-68)",
+      "type": "event",
+      "start": {
+        "year": 1975,
+        "month": 5,
+        "day": 3
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "united-states",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "hms-invincible-r05",
+      "title": "HMS Invincible (R05)",
+      "type": "event",
+      "start": {
+        "year": 1980,
+        "month": 7,
+        "day": 11
+      },
+      "end": {
+        "year": 2005,
+        "month": 8,
+        "day": 3
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "britain",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "uss-ohio",
+      "title": "USS Ohio (SSGN-726)",
+      "type": "event",
+      "start": {
+        "year": 1981,
+        "month": 11,
+        "day": 11
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "united-states",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "dmitriy-donskoy-tk-208",
+      "title": "TK-208 Dmitriy Donskoy",
+      "type": "event",
+      "start": {
+        "year": 1981,
+        "month": 12,
+        "day": 29
+      },
+      "end": {
+        "year": 2023,
+        "month": 2,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "soviet-union",
+        "russia"
+      ]
+    },
+    {
+      "id": "moskva-cruiser",
+      "title": "Moskva",
+      "type": "event",
+      "start": {
+        "year": 1983,
+        "month": 1,
+        "day": 30
+      },
+      "end": {
+        "year": 2022,
+        "month": 4,
+        "day": 14
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "cold-war",
+        "soviet-union",
+        "russia",
+        "contemporary"
+      ]
+    },
+    {
+      "id": "uss-arleigh-burke",
+      "title": "USS Arleigh Burke (DDG-51)",
+      "type": "event",
+      "start": {
+        "year": 1991,
+        "month": 7,
+        "day": 4
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "contemporary",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "charles-de-gaulle-r91",
+      "title": "Charles de Gaulle (R91)",
+      "type": "event",
+      "start": {
+        "year": 2001,
+        "month": 5,
+        "day": 18
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "contemporary",
+        "france"
+      ]
+    },
+    {
+      "id": "hms-queen-elizabeth-r08",
+      "title": "HMS Queen Elizabeth (R08)",
+      "type": "event",
+      "start": {
+        "year": 2017,
+        "month": 12,
+        "day": 7
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "contemporary",
+        "britain"
+      ]
+    },
+    {
+      "id": "mary-rose",
+      "title": "Mary Rose",
+      "type": "event",
+      "start": {
+        "year": 1511
+      },
+      "end": {
+        "year": 1545
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "england",
+        "tudor",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "golden-hind",
+      "title": "Golden Hind",
+      "type": "event",
+      "start": {
+        "year": 1577
+      },
+      "end": {
+        "year": 1580
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "england",
+        "tudor",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "vasa",
+      "title": "Vasa",
+      "type": "event",
+      "start": {
+        "year": 1628
+      },
+      "end": {
+        "year": 1628
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "sweden",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "sovereign-of-the-seas",
+      "title": "Sovereign of the Seas",
+      "type": "event",
+      "start": {
+        "year": 1637
+      },
+      "end": {
+        "year": 1696
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "england",
+        "stuart",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "hms-endeavour",
+      "title": "HMS Endeavour",
+      "type": "event",
+      "start": {
+        "year": 1764
+      },
+      "end": {
+        "year": 1778
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "britain",
+        "science",
+        "pacific"
+      ]
+    },
+    {
+      "id": "hms-victory",
+      "title": "HMS Victory",
+      "type": "event",
+      "start": {
+        "year": 1765
+      },
+      "end": "present",
+      "importance": 2,
+      "keywords": [
+        "naval",
+        "britain",
+        "hanoverian",
+        "napoleonic-wars"
+      ]
+    },
+    {
+      "id": "uss-constitution",
+      "title": "USS Constitution",
+      "type": "event",
+      "start": {
+        "year": 1797
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "united-states",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "hms-beagle",
+      "title": "HMS Beagle",
+      "type": "event",
+      "start": {
+        "year": 1820
+      },
+      "end": {
+        "year": 1870
+      },
+      "importance": 2,
+      "keywords": [
+        "naval",
+        "britain",
+        "science",
+        "evolution",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "hms-erebus",
+      "title": "HMS Erebus",
+      "type": "event",
+      "start": {
+        "year": 1826
+      },
+      "end": {
+        "year": 1848
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "britain",
+        "exploration",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "hms-nemesis",
+      "title": "HMS Nemesis",
+      "type": "event",
+      "start": {
+        "year": 1839
+      },
+      "end": {
+        "year": 1852
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "britain",
+        "first-opium-war",
+        "technology",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "la-gloire",
+      "title": "La Gloire",
+      "type": "event",
+      "start": {
+        "year": 1859
+      },
+      "end": {
+        "year": 1879
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "france",
+        "technology",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "hms-warrior",
+      "title": "HMS Warrior",
+      "type": "event",
+      "start": {
+        "year": 1860
+      },
+      "end": {
+        "year": 1883
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "britain",
+        "technology",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "uss-monitor",
+      "title": "USS Monitor",
+      "type": "event",
+      "start": {
+        "year": 1862
+      },
+      "end": {
+        "year": 1862
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "united-states",
+        "american-civil-war",
+        "technology"
+      ]
+    },
+    {
+      "id": "css-virginia",
+      "title": "CSS Virginia",
+      "type": "event",
+      "start": {
+        "year": 1862
+      },
+      "end": {
+        "year": 1862
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "united-states",
+        "american-civil-war",
+        "technology"
+      ]
+    },
+    {
+      "id": "css-alabama",
+      "title": "CSS Alabama",
+      "type": "event",
+      "start": {
+        "year": 1862
+      },
+      "end": {
+        "year": 1864
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "united-states",
+        "american-civil-war",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "hms-dreadnought",
+      "title": "HMS Dreadnought",
+      "type": "event",
+      "start": {
+        "year": 1906,
+        "month": 12,
+        "day": 2
+      },
+      "end": {
+        "year": 1919,
+        "month": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "hms-invincible-1907",
+      "title": "HMS Invincible",
+      "type": "event",
+      "start": {
+        "year": 1909,
+        "month": 3,
+        "day": 20
+      },
+      "end": {
+        "year": 1916,
+        "month": 5,
+        "day": 31
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "sms-emden",
+      "title": "SMS Emden",
+      "type": "event",
+      "start": {
+        "year": 1909,
+        "month": 7,
+        "day": 10
+      },
+      "end": {
+        "year": 1914,
+        "month": 11,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "germany"
+      ]
+    },
+    {
+      "id": "sm-u-9",
+      "title": "SM U-9",
+      "type": "event",
+      "start": {
+        "year": 1910,
+        "month": 4,
+        "day": 18
+      },
+      "end": {
+        "year": 1918,
+        "month": 11,
+        "day": 26
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "germany",
+        "technology"
+      ]
+    },
+    {
+      "id": "sms-goeben",
+      "title": "SMS Goeben",
+      "type": "event",
+      "start": {
+        "year": 1912,
+        "month": 7,
+        "day": 2
+      },
+      "end": {
+        "year": 1950,
+        "month": 12,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "germany",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "sms-seydlitz",
+      "title": "SMS Seydlitz",
+      "type": "event",
+      "start": {
+        "year": 1913,
+        "month": 5,
+        "day": 22
+      },
+      "end": {
+        "year": 1919,
+        "month": 6,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "germany"
+      ]
+    },
+    {
+      "id": "hms-iron-duke",
+      "title": "HMS Iron Duke",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 3
+      },
+      "end": {
+        "year": 1946,
+        "month": 3
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "uss-texas-bb-35",
+      "title": "USS Texas",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 3,
+        "day": 12
+      },
+      "end": {
+        "year": 1948,
+        "month": 4,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "world-war-2",
+        "united-states"
+      ]
+    },
+    {
+      "id": "sms-derfflinger",
+      "title": "SMS Derfflinger",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 9,
+        "day": 1
+      },
+      "end": {
+        "year": 1919,
+        "month": 6,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "germany"
+      ]
+    },
+    {
+      "id": "hms-tiger",
+      "title": "HMS Tiger",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 10,
+        "day": 3
+      },
+      "end": {
+        "year": 1931,
+        "month": 5,
+        "day": 15
+      },
+      "importance": 5,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "hms-queen-elizabeth-1913",
+      "title": "HMS Queen Elizabeth",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 12,
+        "day": 22
+      },
+      "end": {
+        "year": 1948
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "world-war-2",
+        "britain"
+      ]
+    },
+    {
+      "id": "hms-warspite",
+      "title": "HMS Warspite",
+      "type": "event",
+      "start": {
+        "year": 1915,
+        "month": 3,
+        "day": 8
+      },
+      "end": {
+        "year": 1945,
+        "month": 2,
+        "day": 1
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-1",
+        "world-war-2",
+        "britain"
+      ]
+    },
+    {
+      "id": "hms-hood",
+      "title": "HMS Hood",
+      "type": "event",
+      "start": {
+        "year": 1920
+      },
+      "end": {
+        "year": 1941
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "britain"
+      ]
+    },
+    {
+      "id": "akagi",
+      "title": "Akagi",
+      "type": "event",
+      "start": {
+        "year": 1927
+      },
+      "end": {
+        "year": 1942
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "japan",
+        "aviation"
+      ]
+    },
+    {
+      "id": "uss-lexington-cv-2",
+      "title": "USS Lexington (CV-2)",
+      "type": "event",
+      "start": {
+        "year": 1927
+      },
+      "end": {
+        "year": 1942
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "united-states",
+        "aviation"
+      ]
+    },
+    {
+      "id": "uss-yorktown-cv-5",
+      "title": "USS Yorktown (CV-5)",
+      "type": "event",
+      "start": {
+        "year": 1937
+      },
+      "end": {
+        "year": 1942
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "united-states",
+        "aviation"
+      ]
+    },
+    {
+      "id": "uss-enterprise-cv-6",
+      "title": "USS Enterprise (CV-6)",
+      "type": "event",
+      "start": {
+        "year": 1938
+      },
+      "end": {
+        "year": 1947
+      },
+      "importance": 2,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "united-states",
+        "aviation"
+      ]
+    },
+    {
+      "id": "u-47",
+      "title": "U-47",
+      "type": "event",
+      "start": {
+        "year": 1938
+      },
+      "end": {
+        "year": 1941
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "germany"
+      ]
+    },
+    {
+      "id": "hms-ark-royal",
+      "title": "HMS Ark Royal",
+      "type": "event",
+      "start": {
+        "year": 1938
+      },
+      "end": {
+        "year": 1941
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "britain",
+        "aviation"
+      ]
+    },
+    {
+      "id": "scharnhorst",
+      "title": "Scharnhorst",
+      "type": "event",
+      "start": {
+        "year": 1939
+      },
+      "end": {
+        "year": 1943
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "germany"
+      ]
+    },
+    {
+      "id": "bismarck",
+      "title": "Bismarck",
+      "type": "event",
+      "start": {
+        "year": 1940
+      },
+      "end": {
+        "year": 1941
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "germany"
+      ]
+    },
+    {
+      "id": "yamato",
+      "title": "Yamato",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "japan"
+      ]
+    },
+    {
+      "id": "tirpitz",
+      "title": "Tirpitz",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1944
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "germany"
+      ]
+    },
+    {
+      "id": "zuikaku",
+      "title": "Zuikaku",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1944
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "japan",
+        "aviation"
+      ]
+    },
+    {
+      "id": "shokaku",
+      "title": "Shokaku",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1944
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "japan",
+        "aviation"
+      ]
+    },
+    {
+      "id": "hms-prince-of-wales",
+      "title": "HMS Prince of Wales",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1941
+      },
+      "importance": 4,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "britain"
+      ]
+    },
+    {
+      "id": "uss-missouri",
+      "title": "USS Missouri",
+      "type": "event",
+      "start": {
+        "year": 1944
+      },
+      "end": {
+        "year": 1992
+      },
+      "importance": 3,
+      "keywords": [
+        "naval",
+        "world-war-2",
+        "united-states"
+      ]
     }
   ]
 }

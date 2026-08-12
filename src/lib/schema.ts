@@ -11,7 +11,17 @@
 
 import { z } from 'zod';
 import { ENTRY_TYPES } from './types.ts';
-import type { Detail, EntriesFile, Entry, TimePoint } from './types.ts';
+import type {
+  Detail,
+  EntriesFile,
+  Entry,
+  Focus,
+  FocusIndex,
+  FocusRange,
+  FocusSelector,
+  FocusSummary,
+  TimePoint,
+} from './types.ts';
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -56,6 +66,48 @@ export const detailSchema = z.strictObject({
   full: z.string().min(1),
 });
 
+// --- focused timelines ------------------------------------------------------
+
+const slugArray = z.array(z.string().regex(SLUG, 'must be a lowercase hyphenated slug'));
+
+export const focusRangeSchema = z.strictObject({
+  start: timePointSchema,
+  end: endPointSchema,
+});
+
+/**
+ * Every selector field defaults to empty, so a focus that inherits nothing
+ * writes `"select": {}` rather than three empty arrays. The parsed output is
+ * fully populated, which is what the app and `resolveFocus` consume.
+ */
+export const focusSelectorSchema = z.strictObject({
+  keywords: slugArray.default([]),
+  include: slugArray.default([]),
+  exclude: slugArray.default([]),
+});
+
+export const focusSchema = z.strictObject({
+  schemaVersion: z.literal(1),
+  id: z.string().regex(SLUG, 'id must be a lowercase hyphenated slug'),
+  title: z.string().min(1),
+  blurb: z.string().min(1),
+  subject: z.string().regex(SLUG).optional(),
+  range: focusRangeSchema,
+  select: focusSelectorSchema,
+});
+
+export const focusSummarySchema = z.strictObject({
+  id: z.string().regex(SLUG),
+  title: z.string().min(1),
+  blurb: z.string().min(1),
+  range: focusRangeSchema,
+});
+
+export const focusIndexSchema = z.strictObject({
+  schemaVersion: z.literal(1),
+  focuses: z.array(focusSummarySchema),
+});
+
 // --- drift guards: these fail compilation if schema and types diverge -------
 
 type Assert<T extends true> = T;
@@ -65,3 +117,8 @@ export type _TimePointMatches = Assert<Eq<z.infer<typeof timePointSchema>, TimeP
 export type _EntryMatches = Assert<Eq<z.infer<typeof entrySchema>, Entry>>;
 export type _EntriesFileMatches = Assert<Eq<z.infer<typeof entriesFileSchema>, EntriesFile>>;
 export type _DetailMatches = Assert<Eq<z.infer<typeof detailSchema>, Detail>>;
+export type _FocusRangeMatches = Assert<Eq<z.infer<typeof focusRangeSchema>, FocusRange>>;
+export type _FocusSelectorMatches = Assert<Eq<z.infer<typeof focusSelectorSchema>, FocusSelector>>;
+export type _FocusMatches = Assert<Eq<z.infer<typeof focusSchema>, Focus>>;
+export type _FocusSummaryMatches = Assert<Eq<z.infer<typeof focusSummarySchema>, FocusSummary>>;
+export type _FocusIndexMatches = Assert<Eq<z.infer<typeof focusIndexSchema>, FocusIndex>>;

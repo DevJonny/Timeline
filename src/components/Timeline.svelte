@@ -4,6 +4,8 @@
   import {
     createBaseScale,
     extentOf,
+    maxZoomFor,
+    MIN_ZOOM,
     transformForDomain,
     transformForDomainPadded,
     visibleDomain,
@@ -17,6 +19,7 @@
     applyFilters,
     applyHidden,
     collectKeywords,
+    EMPTY_FILTERS,
     isFilterActive,
     type Filters,
   } from '../lib/filter.ts';
@@ -28,7 +31,8 @@
     toHistoricalYear,
   } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
-  import { onSelectionChange, readSelection, writeSelection } from '../lib/hash.ts';
+  import { onLocationChange, readLocation, writeLocation } from '../lib/hash.ts';
+  import type { FocusView } from '../lib/focus.ts';
   import {
     DEFAULT_PREFERENCES,
     debounce,
@@ -38,22 +42,37 @@
   } from '../lib/prefs.ts';
   import { applyMotion, applyTheme } from '../lib/theme.ts';
   import { zoomable, type ZoomController } from '../lib/zoom.ts';
-  import type { Entry } from '../lib/types.ts';
+  import type { Entry, FocusSummary } from '../lib/types.ts';
   import Axis from './Axis.svelte';
   import ClusterMarker from './ClusterMarker.svelte';
   import DetailSheet from './DetailSheet.svelte';
   import EntryMarker from './EntryMarker.svelte';
   import EraRail from './EraRail.svelte';
+  import FocusMenu from './FocusMenu.svelte';
   import Legend from './Legend.svelte';
   import SearchPanel from './SearchPanel.svelte';
   import SettingsSheet from './SettingsSheet.svelte';
   import SpanBand from './SpanBand.svelte';
 
   interface Props {
+    /** The whole dataset for this timeline — the main one, or a focus's. */
     entries: Entry[];
+    /** Null on the main timeline. */
+    focus?: FocusView | null;
+    /** Focused timelines available from the menu. */
+    focuses?: FocusSummary[];
+    onopenfocus?: (id: string) => void;
+    /** Back to the main timeline. Only called in focus mode. */
+    onexit?: () => void;
   }
 
-  let { entries }: Props = $props();
+  let {
+    entries,
+    focus = null,
+    focuses = [],
+    onopenfocus = () => {},
+    onexit = () => {},
+  }: Props = $props();
 
   /** Resolved once per load and injected, so "present" is consistent and testable. */
   const present = presentDecimalYear();
@@ -74,14 +93,25 @@
   let storageAvailable = $state(true);
   let searchOpen = $state(false);
   let settingsOpen = $state(false);
+  let menuOpen = $state(false);
 
   /**
-   * Derived from `prefs`, never held separately. A second copy has to be
-   * written back on every filter change, and the one write that forgets
-   * leaves `prefs.filters` stale — after which the next settings change
-   * spreads that stale copy over what was saved.
+   * A focus filters its own dataset and does not persist it.
+   *
+   * Saving it would mean the reader's main-timeline filter followed them into
+   * the Roman Empire — where "tank" matches nothing — and the focus would open
+   * empty and read as broken. It is session state about a different dataset,
+   * so it lives with the component instance and dies with it.
    */
-  const filters = $derived(prefs.filters);
+  let focusFilters = $state<Filters>(EMPTY_FILTERS);
+
+  /**
+   * On the main timeline, derived from `prefs` and never held separately. A
+   * second copy has to be written back on every filter change, and the one
+   * write that forgets leaves `prefs.filters` stale — after which the next
+   * settings change spreads that stale copy over what was saved.
+   */
+  const filters = $derived(focus ? focusFilters : prefs.filters);
 
   const persist = debounce((next: Preferences) => {
     storageAvailable = savePreferences(next);
@@ -156,8 +186,14 @@
    * to fit the current filter the axis would rescale underneath the reader
    * every time they toggled a chip, and the zoom transform would mean
    * something different from one moment to the next.
+   *
+   * A focus supplies its own, already computed by `resolveFocus`, and it is
+   * deliberately *not* stretched to `present`: an axis running from Augustus
+   * to today would put the entire Roman Empire in the top fifth of the screen.
    */
   const domain: [number, number] = $derived.by(() => {
+    if (focus) return focus.domain;
+
     let min = Infinity;
     let max = present;
     for (const item of allResolved) {
@@ -166,6 +202,15 @@
     }
     return [Number.isFinite(min) ? min : -3_299_999, max];
   });
+
+  /**
+   * The zoom ceiling follows the domain, so the deepest zoom shows about the
+   * same handful of months whether the axis spans megayears or centuries.
+   */
+  const scaleExtent: [number, number] = $derived([
+    MIN_ZOOM,
+    maxZoomFor(domain[1] - domain[0]),
+  ]);
 
   let width = $state(0);
   let height = $state(0);
@@ -209,6 +254,16 @@
   const maxLabelLanes = $derived(width >= 1024 ? 3 : width >= 640 ? 2 : 1);
   const gutterPx = $derived(compact ? 72 : 96);
 
+  /**
+   * The rail is a table of contents, so a timeline with no chapters has none —
+   * and the labels reclaim the strip it would have occupied rather than
+   * leaving a 44px void down the right edge. Tested against `entries` rather
+   * than the rail's own list so the layout constants stay independent of the
+   * rail section further down.
+   */
+  const hasRail = $derived(entries.some((e) => e.type === 'age' && e.end !== undefined));
+  const railWidth = $derived(hasRail ? RAIL_WIDTH : 0);
+
   // --- spans: coloured bars in the spine -------------------------------------
 
   interface Bar {
@@ -233,7 +288,7 @@
   );
 
   const spinePx = $derived(Math.max(barPacking.lanes, 1) * BAND_PITCH + 6);
-  const labelAreaPx = $derived(Math.max(140, width - gutterPx - spinePx - RAIL_WIDTH));
+  const labelAreaPx = $derived(Math.max(140, width - gutterPx - spinePx - railWidth));
   const labelLaneWidth = $derived(labelAreaPx / maxLabelLanes);
 
   // --- labels: every entry competes for the same columns ---------------------
@@ -256,8 +311,18 @@
    * further: filtering should drill *in* and reveal more of what survived,
    * not merely thin the page out.
    */
+  /**
+   * `focus.gateScale` keeps importance meaning the same absolute thing in both
+   * timelines. The gate reads k, where k=1 is "the whole domain on screen" —
+   * relative to the domain, which is right within one timeline and wrong
+   * across two. Unscaled, a focus would open at gate 1 and show a bare band
+   * where five centuries fill the screen. See `gateScaleFor` in focus.ts.
+   */
   const gate = $derived(
-    importanceGate(transform.k, relaxationFor(filtered.length, available.length)),
+    importanceGate(
+      transform.k * (focus?.gateScale ?? 1),
+      relaxationFor(filtered.length, available.length),
+    ),
   );
 
   /**
@@ -367,13 +432,24 @@
    * reads as a clean axis until the user picks something. Selection is
    * mirrored into the URL so a detail view is linkable and Back dismisses it.
    */
+  /**
+   * Which details directory an entry's prose lives in.
+   *
+   * A focus renders inherited main-timeline entries alongside its own, and the
+   * inherited ones keep their prose in the main `details/`. Only the ids the
+   * focus authored resolve against the focus's own directory.
+   */
+  function detailScope(id: string): string | undefined {
+    return focus && focus.ownIds.has(id) ? focus.id : undefined;
+  }
+
   function select(id: string | null): void {
     // Clicking the open entry's own marker closes it.
     const next = id !== null && selectedId === id ? null : id;
     const opening = selectedId === null && next !== null;
     selectedId = next;
-    writeSelection(next, !opening);
-    if (next) prefetchDetail(next);
+    writeLocation({ focus: focus?.id ?? null, entry: next }, !opening);
+    if (next) prefetchDetail(next, detailScope(next));
   }
 
   /**
@@ -388,7 +464,7 @@
    */
   function selectFromUrl(id: string | null): void {
     selectedId = id;
-    if (id) prefetchDetail(id);
+    if (id) prefetchDetail(id, detailScope(id));
   }
 
   /**
@@ -423,7 +499,7 @@
    * in creation order but only after mount, so the view effect could latch
    * "applied" while the selection was still null and then never re-run.
    */
-  const initialSelectionId = readSelection();
+  const initialSelectionId = readLocation().entry;
 
   /**
    * Registers once. `selectFromUrl` assigns `selectedId` without reading it,
@@ -437,7 +513,9 @@
     if (initialSelectionId && entries.some((e) => e.id === initialSelectionId)) {
       selectFromUrl(initialSelectionId);
     }
-    return onSelectionChange(selectFromUrl);
+    // Only the entry half is ours: which focus is open is the shell's business,
+    // and reacting to it here would fight the component that owns it.
+    return onLocationChange((next) => selectFromUrl(next.entry));
   });
 
   /**
@@ -462,6 +540,10 @@
    * no such ambiguity.
    */
   function updateFilters(next: Filters): void {
+    if (focus) {
+      focusFilters = next;
+      return;
+    }
     updatePrefs({ ...prefs, filters: next });
   }
 
@@ -470,8 +552,13 @@
    *
    * Precedence is deliberate: a deep-linked ranged entry wins, because
    * someone following a shared link wants to land on that thing; then the
-   * user's saved default range; then the full span. Transient scroll position
-   * is never restored — the default is the whole timeline unless configured.
+   * focus's declared period, or on the main timeline the user's saved default
+   * range; then the full span. Transient scroll position is never restored —
+   * the default is the whole timeline unless configured.
+   *
+   * A saved default view is main-timeline state and is ignored inside a focus:
+   * a reader whose default is 1900–2000 would otherwise enter the Roman Empire
+   * pointed at empty axis fifteen centuries past its end.
    */
   let initialViewApplied = false;
 
@@ -489,6 +576,14 @@
       // is invisible. transformForDomainPadded gives a zero-length range a
       // sensible window rather than infinite zoom.
       controller.zoomTo(transformForDomainPadded(base, linked.t0, linked.t1 ?? linked.t0), false);
+      return;
+    }
+
+    if (focus) {
+      controller.zoomTo(
+        transformForDomain(base, focus.initialView[0], focus.initialView[1]),
+        false,
+      );
       return;
     }
 
@@ -584,6 +679,24 @@
       {/if}
     </button>
 
+    {#if focuses.length > 0}
+      <button
+        class="menu-toggle"
+        class:active={focus !== null}
+        onclick={() => (menuOpen = true)}
+        aria-label="Choose a timeline"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path
+            d="M2.5 4h11M2.5 8h7M2.5 12h4"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    {/if}
+
     <button class="settings-toggle" onclick={() => (settingsOpen = true)} aria-label="Settings">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
         <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.7" />
@@ -619,6 +732,7 @@
       use:zoomable={{
         width,
         height,
+        scaleExtent,
         onTransform: handleTransform,
         onReady: (c) => (controller = c),
       }}
@@ -648,7 +762,7 @@
             selected={selectedId === placement.item.item.entry.id}
             {compact}
             onselect={(id) => select(id)}
-            onprefetch={prefetchDetail}
+            onprefetch={(id) => prefetchDetail(id, detailScope(id))}
           />
         {/each}
 
@@ -669,7 +783,9 @@
       {/if}
     </div>
 
-    <EraRail ages={railAges} {visible} dimEmpty={prefs.dimEmptyAges} onjump={jumpTo} />
+    {#if hasRail}
+      <EraRail ages={railAges} {visible} dimEmpty={prefs.dimEmptyAges} onjump={jumpTo} />
+    {/if}
     <Legend />
 
     <SearchPanel
@@ -700,34 +816,60 @@
       onclose={() => (settingsOpen = false)}
     />
 
+    <FocusMenu
+      open={menuOpen}
+      {focuses}
+      current={focus?.id ?? null}
+      onopen={onopenfocus}
+      onexit={onexit}
+      onclose={() => (menuOpen = false)}
+    />
+
     {#if selected}
       <DetailSheet
         entry={selected.entry}
+        focusId={detailScope(selected.entry.id) ?? null}
         onzoom={selected.t1 === null ? null : zoomToSelected}
         onclose={() => select(null)}
       />
     {/if}
 
-    <div class="readout">
-      {formatAxisYear(visible[0], false, readoutStep)} – {formatAxisYear(
-        visible[1],
-        false,
-        readoutStep,
-      )}
-      {#if filterActive}
-        <span class="hidden-count">· {hiddenByFilter} filtered out</span>
-      {:else if hiddenCount > 0}
-        <span class="hidden-count">· {hiddenCount} clustered</span>
-      {/if}
+    <div class="status">
       <!--
-        Reported separately from the filter count and whenever it is non-zero.
-        A hidden tag is a standing choice the reader made once and will not be
-        holding in mind later; without this the timeline just looks short of
-        content it actually has.
+        The way out of a focus, always on screen. Back also works, but a reader
+        who arrived on a shared link has no history to go back to, and a phone
+        in a standalone PWA window has no browser chrome to offer.
       -->
-      {#if hiddenByPrefs > 0}
-        <span class="hidden-count">· {hiddenByPrefs} hidden by settings</span>
+      {#if focus}
+        <div class="crumb-row">
+          <button class="crumb" onclick={onexit}>
+            <span aria-hidden="true">←</span> All of history
+          </button>
+          <span class="focus-title">{focus.title}</span>
+        </div>
       {/if}
+
+      <div class="readout">
+        {formatAxisYear(visible[0], false, readoutStep)} – {formatAxisYear(
+          visible[1],
+          false,
+          readoutStep,
+        )}
+        {#if filterActive}
+          <span class="hidden-count">· {hiddenByFilter} filtered out</span>
+        {:else if hiddenCount > 0}
+          <span class="hidden-count">· {hiddenCount} clustered</span>
+        {/if}
+        <!--
+          Reported separately from the filter count and whenever it is non-zero.
+          A hidden tag is a standing choice the reader made once and will not be
+          holding in mind later; without this the timeline just looks short of
+          content it actually has.
+        -->
+        {#if hiddenByPrefs > 0}
+          <span class="hidden-count">· {hiddenByPrefs} hidden by settings</span>
+        {/if}
+      </div>
     </div>
   {/if}
 </div>
@@ -798,10 +940,72 @@
     border-radius: 0.25rem;
   }
 
-  .readout {
+  /*
+    Top-left cluster. The container ignores pointer events so panning still
+    works through the gap beside the readout; the one button inside opts back
+    in.
+  */
+  .status {
     position: absolute;
     top: max(0.5rem, env(safe-area-inset-top));
     left: max(0.5rem, env(safe-area-inset-left));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .crumb-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .crumb {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-height: 32px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    background: color-mix(in srgb, var(--surface-1) 88%, transparent);
+    backdrop-filter: blur(6px);
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 0.6875rem;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  /*
+    The visual is 32px rather than the usual 44px minimum: this sits over the
+    top edge of a pannable canvas, and a taller chip would swallow a
+    meaningful strip of drag area. The hit area is extended back out here, the
+    same trick the era rail uses to stay thin without being fiddly.
+  */
+  .crumb::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+  }
+
+  .crumb:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 1px;
+  }
+
+  .focus-title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .readout {
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--border);
     border-radius: 0.375rem;
@@ -810,14 +1014,13 @@
     font-size: 0.6875rem;
     font-variant-numeric: tabular-nums;
     color: var(--text-secondary);
-    pointer-events: none;
-    z-index: 2;
   }
 
   .hidden-count {
     color: var(--text-muted);
   }
 
+  .menu-toggle,
   .search-toggle,
   .settings-toggle {
     position: absolute;
@@ -838,6 +1041,16 @@
     z-index: 3;
   }
 
+  /*
+    Right-to-left: settings, search, timelines. The 2.25rem base offset clears
+    the era rail; each further button steps 3rem. Three of these plus the
+    readout is the tightest the top row gets — checked at 360px.
+  */
+  .menu-toggle {
+    right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem + 6rem);
+    justify-content: center;
+  }
+
   .search-toggle {
     right: calc(max(0.375rem, env(safe-area-inset-right)) + 2.25rem + 3rem);
   }
@@ -847,6 +1060,7 @@
     justify-content: center;
   }
 
+  .menu-toggle.active,
   .search-toggle.active {
     color: var(--text-primary);
     border-color: currentColor;
@@ -858,6 +1072,7 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .menu-toggle:focus-visible,
   .search-toggle:focus-visible,
   .settings-toggle:focus-visible {
     outline: 2px solid var(--text-primary);

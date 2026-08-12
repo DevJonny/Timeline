@@ -7,18 +7,24 @@
 
   interface Props {
     entry: Entry;
+    /**
+     * The focus that authored this entry, when one did. Inherited entries keep
+     * their prose in the main details directory even while a focus is open, so
+     * this is not simply "the timeline being viewed".
+     */
+    focusId?: string | null;
     /** Present only for ranged entries — instants have nothing to zoom to. */
     onzoom: (() => void) | null;
     onclose: () => void;
   }
 
-  let { entry, onzoom, onclose }: Props = $props();
+  let { entry, focusId = null, onzoom, onclose }: Props = $props();
 
   let sheet = $state<HTMLElement | null>(null);
   let dragOffset = $state(0);
   let dragging = $state(false);
 
-  const detail: Promise<Detail> = $derived(loadDetail(entry.id));
+  const detail: Promise<Detail> = $derived(loadDetail(entry.id, focusId ?? undefined));
   const range = $derived(formatRange(entry.start, entry.end));
 
   // Move focus into the sheet when it opens so keyboard and screen-reader
