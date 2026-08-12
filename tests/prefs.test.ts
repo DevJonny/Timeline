@@ -46,8 +46,26 @@ describe('parsePreferences', () => {
       filters: { query: 'rome', types: ['battle'], keywords: ['england'] },
       theme: 'dark',
       motion: 'reduced',
+      dimEmptyAges: false,
     };
     expect(parsePreferences(JSON.stringify(prefs))).toEqual(prefs);
+  });
+
+  it('defaults dimEmptyAges on for preferences saved before the field existed', () => {
+    // Every returning device is in exactly this state, and a missing key must
+    // not read as an explicit "off".
+    const raw = JSON.stringify({ version: 1, theme: 'dark' });
+    expect(parsePreferences(raw).dimEmptyAges).toBe(true);
+  });
+
+  it('keeps an explicit dimEmptyAges: false and rejects non-booleans', () => {
+    const parse = (value: unknown) =>
+      parsePreferences(JSON.stringify({ version: 1, dimEmptyAges: value })).dimEmptyAges;
+
+    expect(parse(false)).toBe(false);
+    expect(parse(true)).toBe(true);
+    expect(parse('false')).toBe(true);
+    expect(parse(0)).toBe(true);
   });
 
   it('falls back per field, so one bad value does not discard the rest', () => {

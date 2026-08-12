@@ -107,6 +107,15 @@
     onchange({ ...prefs, motion });
   }
 
+  /**
+   * A single boolean with immediate visible feedback, so it applies live like
+   * theme and motion rather than waiting on a Save. Only the default view is
+   * committed, because only it spans two fields.
+   */
+  function setDimEmptyAges(dimEmptyAges: boolean): void {
+    onchange({ ...prefs, dimEmptyAges });
+  }
+
   function handleKeydown(event: KeyboardEvent): void {
     if (open && event.key === 'Escape') {
       event.stopPropagation();
@@ -214,6 +223,31 @@
             aria-pressed={prefs.motion === 'reduced'}
           >
             reduce
+          </button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Era rail</legend>
+        <p class="hint">
+          Ages holding nothing that matches your filter are greyed out and can't be jumped to.
+        </p>
+        <div class="chips">
+          <button
+            class="chip"
+            class:on={prefs.dimEmptyAges}
+            onclick={() => setDimEmptyAges(true)}
+            aria-pressed={prefs.dimEmptyAges}
+          >
+            grey out empty ages
+          </button>
+          <button
+            class="chip"
+            class:on={!prefs.dimEmptyAges}
+            onclick={() => setDimEmptyAges(false)}
+            aria-pressed={!prefs.dimEmptyAges}
+          >
+            always show all
           </button>
         </div>
       </fieldset>

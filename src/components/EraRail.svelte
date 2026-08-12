@@ -6,15 +6,23 @@
     entry: Entry;
     t0: number;
     t1: number;
+    /** No entry survives the current filter inside this span. */
+    empty: boolean;
   }
 
   interface Props {
     ages: RailAge[];
     visible: [number, number];
+    /** When false, empty ages render as ordinary segments. */
+    dimEmpty: boolean;
     onjump: (t0: number, t1: number) => void;
   }
 
-  let { ages, visible, onjump }: Props = $props();
+  let { ages, visible, dimEmpty, onjump }: Props = $props();
+
+  const dimmed = $derived(
+    new Set(dimEmpty ? ages.filter((a) => a.empty).map((a) => a.entry.id) : []),
+  );
 
   const active = $derived(
     new Set(ages.filter((a) => a.t0 < visible[1] && visible[0] < a.t1).map((a) => a.entry.id)),
@@ -42,11 +50,17 @@
   {#each ages as age (age.entry.id)}
     <button
       class="segment"
-      class:active={active.has(age.entry.id)}
+      class:active={active.has(age.entry.id) && !dimmed.has(age.entry.id)}
+      class:empty={dimmed.has(age.entry.id)}
       style="--colour: {familyColour(age.entry.type)}"
       onclick={() => onjump(age.t0, age.t1)}
-      title={age.entry.title}
-      aria-label="Jump to {age.entry.title}"
+      disabled={dimmed.has(age.entry.id)}
+      title={dimmed.has(age.entry.id)
+        ? `${age.entry.title} — nothing matches the current filter`
+        : age.entry.title}
+      aria-label={dimmed.has(age.entry.id)
+        ? `${age.entry.title}, nothing matches the current filter`
+        : `Jump to ${age.entry.title}`}
       aria-current={active.has(age.entry.id) ? 'true' : undefined}
     >
       <span class="abbr" aria-hidden="true">{initials(age.entry.title)}</span>
@@ -93,6 +107,22 @@
 
   .segment.active {
     background: var(--colour);
+  }
+
+  /*
+   * Kept in place rather than removed. The rail is a table of contents and its
+   * ordering is the only spatial cue it offers, so segments that drop out
+   * under one filter and return under the next would move every other button
+   * under the reader's thumb.
+   */
+  .segment.empty {
+    background: color-mix(in srgb, var(--text-muted) 12%, transparent);
+    cursor: default;
+  }
+
+  .segment.empty .abbr {
+    color: var(--text-muted);
+    opacity: 0.5;
   }
 
   .abbr {

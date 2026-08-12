@@ -32,6 +32,13 @@ export interface Preferences {
   filters: Filters;
   theme: ThemeChoice;
   motion: MotionChoice;
+  /**
+   * Dim and disable era-rail segments holding nothing under the current
+   * filter. Rail order is spatial memory, so these are greyed in place rather
+   * than removed — a rail that reflows on every chip toggle costs more than
+   * the clutter it saves.
+   */
+  dimEmptyAges: boolean;
 }
 
 export const DEFAULT_PREFERENCES: Preferences = {
@@ -40,6 +47,7 @@ export const DEFAULT_PREFERENCES: Preferences = {
   filters: EMPTY_FILTERS,
   theme: 'system',
   motion: 'system',
+  dimEmptyAges: true,
 };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -103,6 +111,13 @@ export function parsePreferences(raw: string | null): Preferences {
     filters: parseFilters(parsed.filters),
     theme: parseChoice(parsed.theme, ['system', 'light', 'dark'] as const, 'system'),
     motion: parseChoice(parsed.motion, ['system', 'reduced'] as const, 'system'),
+    // Absent in preferences saved before this field existed, which is the
+    // common case on any returning device — fall back to the default rather
+    // than treating a missing key as false.
+    dimEmptyAges:
+      typeof parsed.dimEmptyAges === 'boolean'
+        ? parsed.dimEmptyAges
+        : DEFAULT_PREFERENCES.dimEmptyAges,
   };
 }
 

@@ -274,13 +274,30 @@
 
   // --- era rail --------------------------------------------------------------
 
-  const railAges = $derived(
-    resolved
+  /**
+   * Built from *all* ages, never the filtered set — the same rule the axis
+   * domain follows, and for the same reason. Ages carry the keywords of an
+   * age, so almost any subject filter excludes every one of them and the rail
+   * used to vanish outright the moment a reader typed into search.
+   *
+   * Occupancy is what responds to the filter instead. An age counts as empty
+   * when nothing surviving the filter overlaps its span; because a matching
+   * age is itself in `resolved`, filtering to ages leaves the whole rail live
+   * rather than dimming all of it.
+   */
+  const railAges = $derived.by(() => {
+    const spans = allResolved
       .filter((item) => item.entry.type === 'age' && item.t1 !== null)
       .slice()
-      .sort((a, b) => a.t0 - b.t0)
-      .map((item) => ({ entry: item.entry, t0: item.t0, t1: item.t1! })),
-  );
+      .sort((a, b) => a.t0 - b.t0);
+
+    return spans.map((item) => ({
+      entry: item.entry,
+      t0: item.t0,
+      t1: item.t1!,
+      empty: !resolved.some((other) => other.t0 <= item.t1! && item.t0 <= (other.t1 ?? other.t0)),
+    }));
+  });
 
   const todayY = $derived(view(present));
   const todayVisible = $derived(todayY >= 0 && todayY <= height);
@@ -579,7 +596,7 @@
       {/if}
     </div>
 
-    <EraRail ages={railAges} {visible} onjump={jumpTo} />
+    <EraRail ages={railAges} {visible} dimEmpty={prefs.dimEmptyAges} onjump={jumpTo} />
     <Legend />
 
     <SearchPanel

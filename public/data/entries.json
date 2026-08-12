@@ -213,8 +213,8 @@
       },
       "end": {
         "year": 476,
-        "day": 4,
-        "month": 9
+        "month": 9,
+        "day": 4
       },
       "importance": 1,
       "keywords": [
@@ -4248,6 +4248,1042 @@
         "japan",
         "united-states",
         "pacific"
+      ]
+    },
+    {
+      "id": "jethro-tull",
+      "title": "Jethro Tull",
+      "type": "person",
+      "start": {
+        "year": 1674,
+        "month": 3,
+        "day": 30,
+        "circa": true
+      },
+      "end": {
+        "year": 1741,
+        "month": 2,
+        "day": 21
+      },
+      "importance": 5,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "agriculture",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "john-harrison",
+      "title": "John Harrison",
+      "type": "person",
+      "start": {
+        "year": 1693,
+        "month": 3,
+        "day": 24
+      },
+      "end": {
+        "year": 1776,
+        "month": 3,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "technology",
+        "science"
+      ]
+    },
+    {
+      "id": "john-wesley",
+      "title": "John Wesley",
+      "type": "person",
+      "start": {
+        "year": 1703,
+        "month": 6,
+        "day": 28
+      },
+      "end": {
+        "year": 1791,
+        "month": 3,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "early-modern",
+        "religion"
+      ]
+    },
+    {
+      "id": "george-i",
+      "title": "George I",
+      "type": "ruler",
+      "start": {
+        "year": 1714,
+        "month": 8,
+        "day": 1
+      },
+      "end": {
+        "year": 1727,
+        "month": 6,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "monarchy",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "adam-smith",
+      "title": "Adam Smith",
+      "type": "person",
+      "start": {
+        "year": 1723,
+        "month": 6,
+        "day": 5,
+        "circa": true
+      },
+      "end": {
+        "year": 1790,
+        "month": 7,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "scotland",
+        "early-modern",
+        "free-trade"
+      ]
+    },
+    {
+      "id": "george-ii",
+      "title": "George II",
+      "type": "ruler",
+      "start": {
+        "year": 1727,
+        "month": 6,
+        "day": 11
+      },
+      "end": {
+        "year": 1760,
+        "month": 10,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "monarchy",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "james-cook",
+      "title": "James Cook",
+      "type": "person",
+      "start": {
+        "year": 1728,
+        "month": 10,
+        "day": 27
+      },
+      "end": {
+        "year": 1779,
+        "month": 2,
+        "day": 14
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "naval",
+        "pacific"
+      ]
+    },
+    {
+      "id": "james-watt",
+      "title": "James Watt",
+      "type": "person",
+      "start": {
+        "year": 1736,
+        "month": 1,
+        "day": 19
+      },
+      "end": {
+        "year": 1819,
+        "month": 8,
+        "day": 25
+      },
+      "importance": 2,
+      "keywords": [
+        "hanoverian",
+        "scotland",
+        "industrial-revolution",
+        "technology"
+      ]
+    },
+    {
+      "id": "edward-jenner",
+      "title": "Edward Jenner",
+      "type": "person",
+      "start": {
+        "year": 1749,
+        "month": 5,
+        "day": 17
+      },
+      "end": {
+        "year": 1823,
+        "month": 1,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "science",
+        "disease"
+      ]
+    },
+    {
+      "id": "horatio-nelson",
+      "title": "Horatio Nelson",
+      "type": "person",
+      "start": {
+        "year": 1758,
+        "month": 9,
+        "day": 29
+      },
+      "end": {
+        "year": 1805,
+        "month": 10,
+        "day": 21
+      },
+      "importance": 2,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "naval",
+        "napoleonic-wars"
+      ]
+    },
+    {
+      "id": "mary-wollstonecraft",
+      "title": "Mary Wollstonecraft",
+      "type": "person",
+      "start": {
+        "year": 1759,
+        "month": 4,
+        "day": 27
+      },
+      "end": {
+        "year": 1797,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "william-wilberforce",
+      "title": "William Wilberforce",
+      "type": "person",
+      "start": {
+        "year": 1759,
+        "month": 8,
+        "day": 24
+      },
+      "end": {
+        "year": 1833,
+        "month": 7,
+        "day": 29
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "law",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "thomas-malthus",
+      "title": "Thomas Malthus",
+      "type": "person",
+      "start": {
+        "year": 1766,
+        "month": 2,
+        "day": 14,
+        "circa": true
+      },
+      "end": {
+        "year": 1834,
+        "month": 12,
+        "day": 29
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "19th-century",
+        "science"
+      ]
+    },
+    {
+      "id": "richard-trevithick",
+      "title": "Richard Trevithick",
+      "type": "person",
+      "start": {
+        "year": 1771,
+        "month": 4,
+        "day": 13
+      },
+      "end": {
+        "year": 1833,
+        "month": 4,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "technology",
+        "industrial-revolution"
+      ]
+    },
+    {
+      "id": "j-m-w-turner",
+      "title": "J. M. W. Turner",
+      "type": "person",
+      "start": {
+        "year": 1775,
+        "month": 4,
+        "day": 23
+      },
+      "end": {
+        "year": 1851,
+        "month": 12,
+        "day": 19
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "jane-austen",
+      "title": "Jane Austen",
+      "type": "person",
+      "start": {
+        "year": 1775,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 1817,
+        "month": 7,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "george-brummell",
+      "title": "George Brummell",
+      "type": "person",
+      "start": {
+        "year": 1778,
+        "month": 6,
+        "day": 7
+      },
+      "end": {
+        "year": 1840,
+        "month": 3,
+        "day": 30
+      },
+      "importance": 5,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "michael-faraday",
+      "title": "Michael Faraday",
+      "type": "person",
+      "start": {
+        "year": 1791,
+        "month": 9,
+        "day": 22
+      },
+      "end": {
+        "year": 1867,
+        "month": 8,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "science",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "mary-shelley",
+      "title": "Mary Shelley",
+      "type": "person",
+      "start": {
+        "year": 1797,
+        "month": 8,
+        "day": 30
+      },
+      "end": {
+        "year": 1851,
+        "month": 2,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "isambard-kingdom-brunel",
+      "title": "Isambard Kingdom Brunel",
+      "type": "person",
+      "start": {
+        "year": 1806,
+        "month": 4,
+        "day": 9
+      },
+      "end": {
+        "year": 1859,
+        "month": 9,
+        "day": 15
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "industrial-revolution",
+        "technology",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "charles-dickens",
+      "title": "Charles Dickens",
+      "type": "person",
+      "start": {
+        "year": 1812,
+        "month": 2,
+        "day": 7
+      },
+      "end": {
+        "year": 1870,
+        "month": 6,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "england",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "george-iv",
+      "title": "George IV",
+      "type": "ruler",
+      "start": {
+        "year": 1820,
+        "month": 1,
+        "day": 29
+      },
+      "end": {
+        "year": 1830,
+        "month": 6,
+        "day": 26
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "monarchy",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "florence-nightingale",
+      "title": "Florence Nightingale",
+      "type": "person",
+      "start": {
+        "year": 1820,
+        "month": 5,
+        "day": 12
+      },
+      "end": {
+        "year": 1910,
+        "month": 8,
+        "day": 13
+      },
+      "importance": 3,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "science",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "william-iv",
+      "title": "William IV",
+      "type": "ruler",
+      "start": {
+        "year": 1830,
+        "month": 6,
+        "day": 26
+      },
+      "end": {
+        "year": 1837,
+        "month": 6,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "monarchy",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "charles-grey",
+      "title": "Charles Grey",
+      "type": "ruler",
+      "start": {
+        "year": 1830,
+        "month": 11,
+        "day": 22
+      },
+      "end": {
+        "year": 1834,
+        "month": 7,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "hanoverian",
+        "britain",
+        "prime-minister",
+        "19th-century"
+      ]
+    },
+    {
+      "id": "guy-fawkes",
+      "title": "Guy Fawkes",
+      "type": "person",
+      "start": {
+        "year": 1570,
+        "month": 4,
+        "day": 13
+      },
+      "end": {
+        "year": 1606,
+        "month": 1,
+        "day": 31
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "thomas-hobbes",
+      "title": "Thomas Hobbes",
+      "type": "person",
+      "start": {
+        "year": 1588,
+        "month": 4,
+        "day": 5
+      },
+      "end": {
+        "year": 1679,
+        "month": 12,
+        "day": 4
+      },
+      "importance": 2,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "john-milton",
+      "title": "John Milton",
+      "type": "person",
+      "start": {
+        "year": 1608,
+        "month": 12,
+        "day": 9
+      },
+      "end": {
+        "year": 1674,
+        "month": 11,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern",
+        "republic"
+      ]
+    },
+    {
+      "id": "thomas-fairfax",
+      "title": "Thomas Fairfax",
+      "type": "person",
+      "start": {
+        "year": 1612,
+        "month": 1,
+        "day": 17
+      },
+      "end": {
+        "year": 1671,
+        "month": 11,
+        "day": 12
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern",
+        "english-civil-war"
+      ]
+    },
+    {
+      "id": "prince-rupert-of-the-rhine",
+      "title": "Prince Rupert of the Rhine",
+      "type": "person",
+      "start": {
+        "year": 1619,
+        "month": 12,
+        "day": 17
+      },
+      "end": {
+        "year": 1682,
+        "month": 11,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern",
+        "english-civil-war",
+        "naval"
+      ]
+    },
+    {
+      "id": "john-locke",
+      "title": "John Locke",
+      "type": "person",
+      "start": {
+        "year": 1632,
+        "month": 8,
+        "day": 29
+      },
+      "end": {
+        "year": 1704,
+        "month": 10,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern",
+        "science"
+      ]
+    },
+    {
+      "id": "christopher-wren",
+      "title": "Christopher Wren",
+      "type": "person",
+      "start": {
+        "year": 1632,
+        "month": 10,
+        "day": 20
+      },
+      "end": {
+        "year": 1723,
+        "month": 2,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "samuel-pepys",
+      "title": "Samuel Pepys",
+      "type": "person",
+      "start": {
+        "year": 1633,
+        "month": 2,
+        "day": 23
+      },
+      "end": {
+        "year": 1703,
+        "month": 5,
+        "day": 26
+      },
+      "importance": 3,
+      "keywords": [
+        "stuart",
+        "england",
+        "early-modern",
+        "naval"
+      ]
+    },
+    {
+      "id": "john-churchill-duke-of-marlborough",
+      "title": "John Churchill, 1st Duke of Marlborough",
+      "type": "person",
+      "start": {
+        "year": 1650,
+        "month": 5,
+        "day": 26
+      },
+      "end": {
+        "year": 1722,
+        "month": 6,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "stuart",
+        "england",
+        "europe",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "james-ii",
+      "title": "James II",
+      "type": "ruler",
+      "start": {
+        "year": 1685,
+        "month": 2,
+        "day": 6
+      },
+      "end": {
+        "year": 1688,
+        "month": 12,
+        "day": 11
+      },
+      "importance": 2,
+      "keywords": [
+        "stuart",
+        "england",
+        "scotland",
+        "monarchy",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "thomas-wolsey",
+      "title": "Thomas Wolsey",
+      "type": "person",
+      "start": {
+        "year": 1473,
+        "circa": true
+      },
+      "end": {
+        "year": 1530,
+        "month": 11,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "religion"
+      ]
+    },
+    {
+      "id": "thomas-more",
+      "title": "Thomas More",
+      "type": "person",
+      "start": {
+        "year": 1478,
+        "month": 2,
+        "day": 7
+      },
+      "end": {
+        "year": 1535,
+        "month": 7,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "renaissance",
+        "law"
+      ]
+    },
+    {
+      "id": "thomas-cromwell",
+      "title": "Thomas Cromwell",
+      "type": "person",
+      "start": {
+        "year": 1485,
+        "circa": true
+      },
+      "end": {
+        "year": 1540,
+        "month": 7,
+        "day": 28
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "reformation",
+        "politics"
+      ]
+    },
+    {
+      "id": "catherine-of-aragon",
+      "title": "Catherine of Aragon",
+      "type": "person",
+      "start": {
+        "year": 1485,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 1536,
+        "month": 1,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "spain",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "thomas-cranmer",
+      "title": "Thomas Cranmer",
+      "type": "person",
+      "start": {
+        "year": 1489,
+        "month": 7,
+        "day": 2
+      },
+      "end": {
+        "year": 1556,
+        "month": 3,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "reformation",
+        "religion"
+      ]
+    },
+    {
+      "id": "william-tyndale",
+      "title": "William Tyndale",
+      "type": "person",
+      "start": {
+        "year": 1494,
+        "circa": true
+      },
+      "end": {
+        "year": 1536,
+        "month": 10,
+        "day": 6,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "reformation",
+        "renaissance"
+      ]
+    },
+    {
+      "id": "anne-boleyn",
+      "title": "Anne Boleyn",
+      "type": "person",
+      "start": {
+        "year": 1501,
+        "circa": true
+      },
+      "end": {
+        "year": 1536,
+        "month": 5,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "reformation",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "william-cecil",
+      "title": "William Cecil",
+      "type": "person",
+      "start": {
+        "year": 1520,
+        "month": 9,
+        "day": 13
+      },
+      "end": {
+        "year": 1598,
+        "month": 8,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "politics"
+      ]
+    },
+    {
+      "id": "francis-walsingham",
+      "title": "Francis Walsingham",
+      "type": "person",
+      "start": {
+        "year": 1532,
+        "circa": true
+      },
+      "end": {
+        "year": 1590,
+        "month": 4,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "politics"
+      ]
+    },
+    {
+      "id": "francis-drake",
+      "title": "Francis Drake",
+      "type": "person",
+      "start": {
+        "year": 1540,
+        "circa": true
+      },
+      "end": {
+        "year": 1596,
+        "month": 1,
+        "day": 28
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "naval",
+        "americas"
+      ]
+    },
+    {
+      "id": "edward-vi",
+      "title": "Edward VI",
+      "type": "ruler",
+      "start": {
+        "year": 1547,
+        "month": 1,
+        "day": 28
+      },
+      "end": {
+        "year": 1553,
+        "month": 7,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "tudor",
+        "england",
+        "monarchy",
+        "reformation",
+        "early-modern"
+      ]
+    },
+    {
+      "id": "william-shakespeare",
+      "title": "William Shakespeare",
+      "type": "person",
+      "start": {
+        "year": 1564,
+        "month": 4,
+        "day": 26,
+        "circa": true
+      },
+      "end": {
+        "year": 1616,
+        "month": 4,
+        "day": 23
+      },
+      "importance": 2,
+      "keywords": [
+        "tudor",
+        "england",
+        "early-modern",
+        "renaissance",
+        "literature"
       ]
     }
   ]
