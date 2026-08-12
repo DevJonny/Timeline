@@ -62,6 +62,13 @@ rather than just thinning the view. Lane packing returns what does not fit as
 `overflow`, which is exactly what clustering consumes. All four stages are pure
 functions over arrays — test them directly, not through the DOM.
 
+That relaxation is also where the dataset's scaling limit lives, not in file
+size. `packLanes` compares each item against the occupants already in a lane,
+so its cost grows with whatever survives the gate — and a broad filter both
+matches more entries and relaxes the gate that would otherwise cull them.
+Normal browsing never exercises this. Measure it with a filter matching a large
+fraction of the dataset (at 211 entries, 87 matches re-render in ~15ms).
+
 **4. `types.ts` must never import zod.** The app imports `TYPE_FAMILY` and
 friends as runtime values, so anything `types.ts` pulls in lands in the browser
 bundle. Validation lives in `schema.ts`, which is script- and test-only, and
