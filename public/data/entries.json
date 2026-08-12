@@ -16,8 +16,7 @@
       "importance": 1,
       "keywords": [
         "prehistory",
-        "stone-age",
-        "three-age-system"
+        "stone-age"
       ]
     },
     {
@@ -35,8 +34,7 @@
       "importance": 1,
       "keywords": [
         "prehistory",
-        "stone-age",
-        "three-age-system"
+        "stone-age"
       ]
     },
     {
@@ -55,8 +53,7 @@
       "keywords": [
         "prehistory",
         "stone-age",
-        "agriculture",
-        "three-age-system"
+        "agriculture"
       ]
     },
     {
@@ -74,8 +71,7 @@
       "importance": 1,
       "keywords": [
         "prehistory",
-        "metallurgy",
-        "three-age-system"
+        "metallurgy"
       ]
     },
     {
@@ -93,8 +89,7 @@
       "importance": 1,
       "keywords": [
         "prehistory",
-        "metallurgy",
-        "three-age-system"
+        "metallurgy"
       ]
     },
     {
@@ -405,8 +400,7 @@
       "keywords": [
         "mongols",
         "medieval",
-        "empire",
-        "asia"
+        "empire"
       ]
     },
     {
@@ -425,8 +419,7 @@
       "keywords": [
         "mongols",
         "medieval",
-        "monarchy",
-        "asia"
+        "monarchy"
       ]
     },
     {
@@ -1983,7 +1976,8 @@
         "prime-minister",
         "britain",
         "labour",
-        "20th-century"
+        "20th-century",
+        "european-union"
       ]
     },
     {
@@ -2004,9 +1998,9 @@
       "keywords": [
         "prime-minister",
         "britain",
-        "europe",
         "conservative",
-        "20th-century"
+        "20th-century",
+        "european-union"
       ]
     },
     {
@@ -2051,8 +2045,8 @@
         "prime-minister",
         "britain",
         "conservative",
-        "europe",
-        "20th-century"
+        "20th-century",
+        "european-union"
       ]
     },
     {
@@ -2119,7 +2113,8 @@
         "britain",
         "conservative",
         "brexit",
-        "contemporary"
+        "contemporary",
+        "european-union"
       ]
     },
     {
@@ -2142,7 +2137,8 @@
         "britain",
         "conservative",
         "brexit",
-        "contemporary"
+        "contemporary",
+        "european-union"
       ]
     },
     {
@@ -2165,7 +2161,8 @@
         "britain",
         "conservative",
         "brexit",
-        "contemporary"
+        "contemporary",
+        "european-union"
       ]
     },
     {
@@ -2717,7 +2714,6 @@
       "importance": 2,
       "keywords": [
         "sweden",
-        "europe",
         "empire",
         "early-modern",
         "baltic"
@@ -2736,7 +2732,6 @@
       "importance": 2,
       "keywords": [
         "sweden",
-        "europe",
         "monarchy",
         "early-modern",
         "sabaton"
@@ -2759,7 +2754,6 @@
       "importance": 2,
       "keywords": [
         "sweden",
-        "europe",
         "germany",
         "early-modern",
         "sabaton"
@@ -2778,7 +2772,6 @@
       "keywords": [
         "sweden",
         "germany",
-        "europe",
         "early-modern",
         "sabaton"
       ]
@@ -2796,7 +2789,6 @@
       "keywords": [
         "sweden",
         "germany",
-        "europe",
         "early-modern"
       ]
     },
@@ -2812,7 +2804,6 @@
       "importance": 3,
       "keywords": [
         "sweden",
-        "europe",
         "germany",
         "early-modern",
         "sabaton"
@@ -2832,7 +2823,6 @@
       "keywords": [
         "sweden",
         "monarchy",
-        "europe",
         "early-modern"
       ]
     },
@@ -2850,7 +2840,6 @@
       "keywords": [
         "sweden",
         "monarchy",
-        "europe",
         "early-modern",
         "sabaton"
       ]
@@ -2872,7 +2861,6 @@
       "keywords": [
         "sweden",
         "russia",
-        "europe",
         "early-modern",
         "baltic"
       ]
@@ -3017,8 +3005,7 @@
       "keywords": [
         "empire",
         "persia",
-        "antiquity",
-        "asia"
+        "antiquity"
       ]
     },
     {
@@ -3053,7 +3040,6 @@
       "keywords": [
         "empire",
         "china",
-        "asia",
         "antiquity"
       ]
     },
@@ -3075,7 +3061,6 @@
       "keywords": [
         "empire",
         "medieval",
-        "europe",
         "rome"
       ]
     },
@@ -3114,7 +3099,6 @@
       "importance": 3,
       "keywords": [
         "empire",
-        "europe",
         "germany",
         "medieval"
       ]
@@ -3248,7 +3232,6 @@
       "keywords": [
         "empire",
         "india",
-        "asia",
         "early-modern"
       ]
     },
@@ -3268,7 +3251,6 @@
       "keywords": [
         "empire",
         "china",
-        "asia",
         "early-modern"
       ]
     },
@@ -3288,7 +3270,6 @@
       "keywords": [
         "empire",
         "russia",
-        "europe",
         "early-modern"
       ]
     },
@@ -3709,7 +3690,6 @@
       "keywords": [
         "world-war-1",
         "britain",
-        "europe",
         "sabaton"
       ]
     },
@@ -3808,7 +3788,6 @@
       "keywords": [
         "world-war-2",
         "spain",
-        "europe",
         "20th-century"
       ]
     },
@@ -4102,7 +4081,6 @@
       "keywords": [
         "world-war-2",
         "italy",
-        "europe",
         "sabaton"
       ]
     },
@@ -4206,7 +4184,6 @@
       "importance": 3,
       "keywords": [
         "world-war-2",
-        "europe",
         "germany",
         "20th-century"
       ]
@@ -4990,7 +4967,6 @@
       "keywords": [
         "stuart",
         "england",
-        "europe",
         "early-modern"
       ]
     },
@@ -6253,7 +6229,6 @@
       "keywords": [
         "mongols",
         "russia",
-        "europe",
         "medieval"
       ]
     },
@@ -6364,7 +6339,6 @@
       "keywords": [
         "mongols",
         "russia",
-        "europe",
         "medieval"
       ]
     },
@@ -6381,7 +6355,6 @@
       "keywords": [
         "mongols",
         "poland",
-        "europe",
         "medieval"
       ]
     },
@@ -6398,7 +6371,6 @@
       "keywords": [
         "mongols",
         "hungary",
-        "europe",
         "medieval"
       ]
     },
