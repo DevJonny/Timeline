@@ -7214,6 +7214,881 @@
         "monarchy",
         "central-asia"
       ]
+    },
+    {
+      "id": "f-86-sabre",
+      "title": "North American F-86 Sabre",
+      "type": "event",
+      "start": {
+        "year": 1949
+      },
+      "end": {
+        "year": 1994
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "mig-15",
+      "title": "Mikoyan-Gurevich MiG-15",
+      "type": "event",
+      "start": {
+        "year": 1949
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "soviet-union",
+        "technology"
+      ]
+    },
+    {
+      "id": "b-52-stratofortress",
+      "title": "Boeing B-52 Stratofortress",
+      "type": "event",
+      "start": {
+        "year": 1955
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "avro-vulcan",
+      "title": "Avro Vulcan",
+      "type": "event",
+      "start": {
+        "year": 1956
+      },
+      "end": {
+        "year": 1984
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "u-2",
+      "title": "Lockheed U-2",
+      "type": "event",
+      "start": {
+        "year": 1956
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "mig-21",
+      "title": "Mikoyan-Gurevich MiG-21",
+      "type": "event",
+      "start": {
+        "year": 1959
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "soviet-union",
+        "technology"
+      ]
+    },
+    {
+      "id": "uh-1-iroquois",
+      "title": "Bell UH-1 Iroquois",
+      "type": "event",
+      "start": {
+        "year": 1959
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "english-electric-lightning",
+      "title": "English Electric Lightning",
+      "type": "event",
+      "start": {
+        "year": 1959
+      },
+      "end": {
+        "year": 1988
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "britain",
+        "technology"
+      ]
+    },
+    {
+      "id": "f-4-phantom-ii",
+      "title": "McDonnell Douglas F-4 Phantom II",
+      "type": "event",
+      "start": {
+        "year": 1960
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology",
+        "naval"
+      ]
+    },
+    {
+      "id": "sr-71-blackbird",
+      "title": "Lockheed SR-71 Blackbird",
+      "type": "event",
+      "start": {
+        "year": 1966
+      },
+      "end": {
+        "year": 1999
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "harrier-jump-jet",
+      "title": "Harrier Jump Jet",
+      "type": "event",
+      "start": {
+        "year": 1969
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "britain",
+        "technology",
+        "naval"
+      ]
+    },
+    {
+      "id": "mig-25",
+      "title": "Mikoyan-Gurevich MiG-25",
+      "type": "event",
+      "start": {
+        "year": 1970
+      },
+      "end": {
+        "year": 2022
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "cold-war",
+        "soviet-union",
+        "technology"
+      ]
+    },
+    {
+      "id": "f-15-eagle",
+      "title": "F-15 Eagle",
+      "type": "event",
+      "start": {
+        "year": 1976,
+        "month": 1,
+        "day": 9
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "a-10-thunderbolt-ii",
+      "title": "A-10 Thunderbolt II",
+      "type": "event",
+      "start": {
+        "year": 1977,
+        "month": 10
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "f-16-fighting-falcon",
+      "title": "F-16 Fighting Falcon",
+      "type": "event",
+      "start": {
+        "year": 1978,
+        "month": 8,
+        "day": 17
+      },
+      "end": "present",
+      "importance": 2,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "f-117-nighthawk",
+      "title": "F-117 Nighthawk",
+      "type": "event",
+      "start": {
+        "year": 1983,
+        "month": 10
+      },
+      "end": {
+        "year": 2008
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "su-27",
+      "title": "Sukhoi Su-27",
+      "type": "event",
+      "start": {
+        "year": 1985,
+        "month": 6,
+        "day": 22
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "soviet-union",
+        "cold-war"
+      ]
+    },
+    {
+      "id": "ah-64-apache",
+      "title": "AH-64 Apache",
+      "type": "event",
+      "start": {
+        "year": 1986,
+        "month": 4
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states"
+      ]
+    },
+    {
+      "id": "b-2-spirit",
+      "title": "B-2 Spirit",
+      "type": "event",
+      "start": {
+        "year": 1997,
+        "month": 1,
+        "day": 1
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "eurofighter-typhoon",
+      "title": "Eurofighter Typhoon",
+      "type": "event",
+      "start": {
+        "year": 2003,
+        "month": 8,
+        "day": 4
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "europe"
+      ]
+    },
+    {
+      "id": "f-22-raptor",
+      "title": "F-22 Raptor",
+      "type": "event",
+      "start": {
+        "year": 2005,
+        "month": 12
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "mq-9-reaper",
+      "title": "MQ-9 Reaper",
+      "type": "event",
+      "start": {
+        "year": 2007,
+        "month": 5,
+        "day": 1
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "ka-52-alligator",
+      "title": "Kamov Ka-52 Alligator",
+      "type": "event",
+      "start": {
+        "year": 2011,
+        "month": 4
+      },
+      "end": "present",
+      "importance": 5,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "russia"
+      ]
+    },
+    {
+      "id": "f-35-lightning-ii",
+      "title": "F-35 Lightning II",
+      "type": "event",
+      "start": {
+        "year": 2015,
+        "month": 7,
+        "day": 31
+      },
+      "end": "present",
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "contemporary",
+        "air-warfare",
+        "united-states",
+        "technology"
+      ]
+    },
+    {
+      "id": "wright-military-flyer",
+      "title": "Wright Military Flyer",
+      "type": "event",
+      "start": {
+        "year": 1909,
+        "month": 8,
+        "day": 2
+      },
+      "end": {
+        "year": 1911
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "technology",
+        "united-states"
+      ]
+    },
+    {
+      "id": "sikorsky-ilya-muromets",
+      "title": "Sikorsky Ilya Muromets",
+      "type": "event",
+      "start": {
+        "year": 1914,
+        "month": 8
+      },
+      "end": {
+        "year": 1922,
+        "month": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "technology",
+        "world-war-1",
+        "russia"
+      ]
+    },
+    {
+      "id": "fokker-eindecker",
+      "title": "Fokker Eindecker",
+      "type": "event",
+      "start": {
+        "year": 1915,
+        "month": 7
+      },
+      "end": {
+        "year": 1916
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "germany",
+        "technology"
+      ]
+    },
+    {
+      "id": "nieuport-17",
+      "title": "Nieuport 17",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 3
+      },
+      "end": {
+        "year": 1934
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "france"
+      ]
+    },
+    {
+      "id": "albatros-d-iii",
+      "title": "Albatros D.III",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 12
+      },
+      "end": {
+        "year": 1923
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "germany"
+      ]
+    },
+    {
+      "id": "gotha-g-iv",
+      "title": "Gotha G.IV",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 3
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "germany",
+        "technology"
+      ]
+    },
+    {
+      "id": "se5a",
+      "title": "Royal Aircraft Factory S.E.5a",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 3
+      },
+      "end": {
+        "year": 1920
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "bristol-f2-fighter",
+      "title": "Bristol F.2 Fighter",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 4
+      },
+      "end": {
+        "year": 1932
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "spad-s-xiii",
+      "title": "SPAD S.XIII",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 5
+      },
+      "end": {
+        "year": 1925
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "france"
+      ]
+    },
+    {
+      "id": "sopwith-camel",
+      "title": "Sopwith Camel",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 6
+      },
+      "end": {
+        "year": 1920,
+        "month": 1
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "britain"
+      ]
+    },
+    {
+      "id": "fokker-dr-1",
+      "title": "Fokker Dr.I",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 8
+      },
+      "end": {
+        "year": 1918,
+        "month": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-1",
+        "germany"
+      ]
+    },
+    {
+      "id": "junkers-ju-87",
+      "title": "Junkers Ju 87",
+      "type": "event",
+      "start": {
+        "year": 1936
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "germany",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "messerschmitt-bf-109",
+      "title": "Messerschmitt Bf 109",
+      "type": "event",
+      "start": {
+        "year": 1937,
+        "month": 2
+      },
+      "end": {
+        "year": 1965,
+        "month": 12,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "germany",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "hawker-hurricane",
+      "title": "Hawker Hurricane",
+      "type": "event",
+      "start": {
+        "year": 1937,
+        "month": 12,
+        "day": 25
+      },
+      "end": {
+        "year": 1947
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "britain",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "b-17-flying-fortress",
+      "title": "B-17 Flying Fortress",
+      "type": "event",
+      "start": {
+        "year": 1938,
+        "month": 4
+      },
+      "end": {
+        "year": 1968
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "united-states",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "supermarine-spitfire",
+      "title": "Supermarine Spitfire",
+      "type": "event",
+      "start": {
+        "year": 1938,
+        "month": 8,
+        "day": 4
+      },
+      "end": {
+        "year": 1961
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "britain",
+        "technology",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "mitsubishi-a6m-zero",
+      "title": "Mitsubishi A6M Zero",
+      "type": "event",
+      "start": {
+        "year": 1940,
+        "month": 7,
+        "day": 1
+      },
+      "end": {
+        "year": 1945
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "japan",
+        "pacific",
+        "naval"
+      ]
+    },
+    {
+      "id": "ilyushin-il-2",
+      "title": "Ilyushin Il-2",
+      "type": "event",
+      "start": {
+        "year": 1941
+      },
+      "end": {
+        "year": 1954
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "soviet-union",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "de-havilland-mosquito",
+      "title": "de Havilland Mosquito",
+      "type": "event",
+      "start": {
+        "year": 1941,
+        "month": 11,
+        "day": 15
+      },
+      "end": {
+        "year": 1956
+      },
+      "importance": 4,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "britain",
+        "technology",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "p-51-mustang",
+      "title": "P-51 Mustang",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 1,
+        "day": 5
+      },
+      "end": {
+        "year": 1984
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "united-states",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "avro-lancaster",
+      "title": "Avro Lancaster",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 2
+      },
+      "end": {
+        "year": 1964,
+        "month": 4,
+        "day": 1
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "britain",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "messerschmitt-me-262",
+      "title": "Messerschmitt Me 262",
+      "type": "event",
+      "start": {
+        "year": 1944,
+        "month": 4
+      },
+      "end": {
+        "year": 1951
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "germany",
+        "technology",
+        "air-warfare"
+      ]
+    },
+    {
+      "id": "b-29-superfortress",
+      "title": "B-29 Superfortress",
+      "type": "event",
+      "start": {
+        "year": 1944,
+        "month": 5,
+        "day": 8
+      },
+      "end": {
+        "year": 1960,
+        "month": 6,
+        "day": 21
+      },
+      "importance": 3,
+      "keywords": [
+        "aviation",
+        "world-war-2",
+        "united-states",
+        "pacific",
+        "cold-war"
+      ]
     }
   ]
 }
