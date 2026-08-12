@@ -260,9 +260,27 @@
     importanceGate(transform.k, relaxationFor(filtered.length, available.length)),
   );
 
+  /**
+   * Spans that drew a band in the spine.
+   *
+   * Bars carry no importance gate, so without this a span could render as a
+   * coloured band with no label attached to it at any zoom between the band
+   * appearing and the gate reaching its importance — for the Akkadian Empire
+   * that was every view from roughly a thousand years wide down to seventeen.
+   * An anonymous bar is worse than no bar: the reader can see something is
+   * there and has no way to find out what.
+   *
+   * Anything banded therefore competes for a label whatever the gate says. It
+   * only competes — lane packing still decides, and what will not fit becomes
+   * a "+N" cluster, which is at least a labelled thing that says what it hides.
+   */
+  const bandedIds = $derived(
+    new Set(barPacking.placed.map((placement) => placement.item.item.entry.id)),
+  );
+
   const labels: Label[] = $derived(
     resolved
-      .filter((item) => item.entry.importance <= gate)
+      .filter((item) => item.entry.importance <= gate || bandedIds.has(item.entry.id))
       .map((item) => {
         const py0 = view(item.t0);
         if (item.t1 === null) {
