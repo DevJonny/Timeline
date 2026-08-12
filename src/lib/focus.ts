@@ -146,3 +146,10 @@ export function gateScaleFor(mainSpan: number, focusSpan: number): number {
   if (!(mainSpan > 0) || !(focusSpan > 0)) return 1;
   return mainSpan / focusSpan;
 }
+
+export interface FocusView extends ResolvedFocus {
+  id: string;
+  title: string;
+  gateScale: number;
+  ownIds: Set<string>;
+}

@@ -9112,6 +9112,916 @@
         "world-war-2",
         "united-states"
       ]
+    },
+    {
+      "id": "first-english-civil-war",
+      "title": "First English Civil War",
+      "type": "war",
+      "start": {
+        "year": 1642,
+        "month": 8,
+        "day": 22
+      },
+      "end": {
+        "year": 1646,
+        "month": 5,
+        "day": 5
+      },
+      "importance": 3,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england",
+        "britain",
+        "revolution"
+      ]
+    },
+    {
+      "id": "battle-of-edgehill",
+      "title": "Battle of Edgehill",
+      "type": "battle",
+      "start": {
+        "year": 1642,
+        "month": 10,
+        "day": 23
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england"
+      ]
+    },
+    {
+      "id": "solemn-league-and-covenant",
+      "title": "Solemn League and Covenant",
+      "type": "event",
+      "start": {
+        "year": 1643,
+        "month": 9,
+        "day": 25
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "religion",
+        "scotland",
+        "england"
+      ]
+    },
+    {
+      "id": "battle-of-marston-moor",
+      "title": "Battle of Marston Moor",
+      "type": "battle",
+      "start": {
+        "year": 1644,
+        "month": 7,
+        "day": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england"
+      ]
+    },
+    {
+      "id": "new-model-army",
+      "title": "New Model Army",
+      "type": "event",
+      "start": {
+        "year": 1645,
+        "month": 2,
+        "day": 15
+      },
+      "end": {
+        "year": 1660
+      },
+      "importance": 3,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england",
+        "revolution"
+      ]
+    },
+    {
+      "id": "battle-of-naseby",
+      "title": "Battle of Naseby",
+      "type": "battle",
+      "start": {
+        "year": 1645,
+        "month": 6,
+        "day": 14
+      },
+      "importance": 3,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england"
+      ]
+    },
+    {
+      "id": "putney-debates",
+      "title": "Putney Debates",
+      "type": "event",
+      "start": {
+        "year": 1647,
+        "month": 10,
+        "day": 28
+      },
+      "end": {
+        "year": 1647,
+        "month": 11,
+        "day": 8
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "politics",
+        "england",
+        "revolution"
+      ]
+    },
+    {
+      "id": "second-english-civil-war",
+      "title": "Second English Civil War",
+      "type": "war",
+      "start": {
+        "year": 1648,
+        "month": 2
+      },
+      "end": {
+        "year": 1649,
+        "month": 1,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england",
+        "britain",
+        "revolution"
+      ]
+    },
+    {
+      "id": "prides-purge",
+      "title": "Pride's Purge",
+      "type": "event",
+      "start": {
+        "year": 1648,
+        "month": 12,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "politics",
+        "england"
+      ]
+    },
+    {
+      "id": "rump-parliament",
+      "title": "Rump Parliament",
+      "type": "event",
+      "start": {
+        "year": 1648,
+        "month": 12,
+        "day": 6
+      },
+      "end": {
+        "year": 1653,
+        "month": 4,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "politics",
+        "england",
+        "republic"
+      ]
+    },
+    {
+      "id": "execution-of-charles-i",
+      "title": "Execution of Charles I",
+      "type": "event",
+      "start": {
+        "year": 1649,
+        "month": 1,
+        "day": 30
+      },
+      "importance": 2,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "monarchy",
+        "england",
+        "revolution"
+      ]
+    },
+    {
+      "id": "battle-of-worcester",
+      "title": "Battle of Worcester",
+      "type": "battle",
+      "start": {
+        "year": 1651,
+        "month": 9,
+        "day": 3
+      },
+      "importance": 4,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "england",
+        "scotland"
+      ]
+    },
+    {
+      "id": "the-protectorate",
+      "title": "The Protectorate",
+      "type": "age",
+      "start": {
+        "year": 1653,
+        "month": 12,
+        "day": 16
+      },
+      "end": {
+        "year": 1659,
+        "month": 5,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "english-civil-war",
+        "early-modern",
+        "britain",
+        "republic",
+        "politics"
+      ]
+    },
+    {
+      "id": "james-francis-edward-stuart",
+      "title": "James Francis Edward Stuart",
+      "type": "person",
+      "start": {
+        "year": 1688,
+        "month": 6,
+        "day": 10
+      },
+      "end": {
+        "year": 1766,
+        "month": 1,
+        "day": 1
+      },
+      "importance": 3,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "stuart",
+        "monarchy",
+        "britain"
+      ]
+    },
+    {
+      "id": "battle-of-killiecrankie",
+      "title": "Battle of Killiecrankie",
+      "type": "battle",
+      "start": {
+        "year": 1689,
+        "month": 7,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart"
+      ]
+    },
+    {
+      "id": "battle-of-the-boyne",
+      "title": "Battle of the Boyne",
+      "type": "battle",
+      "start": {
+        "year": 1690,
+        "month": 7,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "ireland",
+        "stuart",
+        "religion"
+      ]
+    },
+    {
+      "id": "glencoe-massacre",
+      "title": "Glencoe Massacre",
+      "type": "event",
+      "start": {
+        "year": 1692,
+        "month": 2,
+        "day": 13
+      },
+      "importance": 3,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart"
+      ]
+    },
+    {
+      "id": "jacobite-rising-of-1715",
+      "title": "Jacobite Rising of 1715",
+      "type": "war",
+      "start": {
+        "year": 1715,
+        "month": 9,
+        "day": 6
+      },
+      "end": {
+        "year": 1716,
+        "month": 2,
+        "day": 4
+      },
+      "importance": 2,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart",
+        "britain"
+      ]
+    },
+    {
+      "id": "battle-of-sheriffmuir",
+      "title": "Battle of Sheriffmuir",
+      "type": "battle",
+      "start": {
+        "year": 1715,
+        "month": 11,
+        "day": 13
+      },
+      "importance": 4,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart"
+      ]
+    },
+    {
+      "id": "jacobite-rising-of-1719",
+      "title": "Jacobite Rising of 1719",
+      "type": "war",
+      "start": {
+        "year": 1719,
+        "month": 3
+      },
+      "end": {
+        "year": 1719,
+        "month": 6,
+        "day": 10
+      },
+      "importance": 5,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart",
+        "spain"
+      ]
+    },
+    {
+      "id": "charles-edward-stuart",
+      "title": "Charles Edward Stuart",
+      "type": "person",
+      "start": {
+        "year": 1720,
+        "month": 12,
+        "day": 31
+      },
+      "end": {
+        "year": 1788,
+        "month": 1,
+        "day": 31
+      },
+      "importance": 2,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "stuart",
+        "monarchy",
+        "britain"
+      ]
+    },
+    {
+      "id": "jacobite-rising-of-1745",
+      "title": "Jacobite Rising of 1745",
+      "type": "war",
+      "start": {
+        "year": 1745,
+        "month": 8,
+        "day": 19
+      },
+      "end": {
+        "year": 1746,
+        "month": 4,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart",
+        "britain"
+      ]
+    },
+    {
+      "id": "battle-of-prestonpans",
+      "title": "Battle of Prestonpans",
+      "type": "battle",
+      "start": {
+        "year": 1745,
+        "month": 9,
+        "day": 21
+      },
+      "importance": 4,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart"
+      ]
+    },
+    {
+      "id": "battle-of-culloden",
+      "title": "Battle of Culloden",
+      "type": "battle",
+      "start": {
+        "year": 1746,
+        "month": 4,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "jacobite",
+        "early-modern",
+        "scotland",
+        "stuart",
+        "britain"
+      ]
+    },
+    {
+      "id": "harrying-of-the-north",
+      "title": "Harrying of the North",
+      "type": "event",
+      "start": {
+        "year": 1069
+      },
+      "end": {
+        "year": 1070
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest"
+      ]
+    },
+    {
+      "id": "domesday-book",
+      "title": "Domesday Book",
+      "type": "event",
+      "start": {
+        "year": 1086
+      },
+      "importance": 2,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "law"
+      ]
+    },
+    {
+      "id": "william-ii",
+      "title": "William II",
+      "type": "ruler",
+      "start": {
+        "year": 1087,
+        "month": 9,
+        "day": 26
+      },
+      "end": {
+        "year": 1100,
+        "month": 8,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "henry-i",
+      "title": "Henry I",
+      "type": "ruler",
+      "start": {
+        "year": 1100,
+        "month": 8,
+        "day": 5
+      },
+      "end": {
+        "year": 1135,
+        "month": 12,
+        "day": 1
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "empress-matilda",
+      "title": "Empress Matilda",
+      "type": "person",
+      "start": {
+        "year": 1102,
+        "month": 2,
+        "day": 7,
+        "circa": true
+      },
+      "end": {
+        "year": 1167,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "holy-roman-empire",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "battle-of-tinchebray",
+      "title": "Battle of Tinchebray",
+      "type": "battle",
+      "start": {
+        "year": 1106,
+        "month": 9,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "england",
+        "france",
+        "medieval",
+        "norman-conquest"
+      ]
+    },
+    {
+      "id": "white-ship-disaster",
+      "title": "White Ship Disaster",
+      "type": "event",
+      "start": {
+        "year": 1120,
+        "month": 11,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "france",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "stephen",
+      "title": "King Stephen",
+      "type": "ruler",
+      "start": {
+        "year": 1135,
+        "month": 12,
+        "day": 22
+      },
+      "end": {
+        "year": 1154,
+        "month": 10,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "the-anarchy",
+      "title": "The Anarchy",
+      "type": "war",
+      "start": {
+        "year": 1138
+      },
+      "end": {
+        "year": 1153
+      },
+      "importance": 3,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "battle-of-the-standard",
+      "title": "Battle of the Standard",
+      "type": "battle",
+      "start": {
+        "year": 1138,
+        "month": 8,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "england",
+        "scotland",
+        "medieval",
+        "norman-conquest"
+      ]
+    },
+    {
+      "id": "first-battle-of-lincoln",
+      "title": "First Battle of Lincoln",
+      "type": "battle",
+      "start": {
+        "year": 1141,
+        "month": 2,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest"
+      ]
+    },
+    {
+      "id": "treaty-of-wallingford",
+      "title": "Treaty of Wallingford",
+      "type": "event",
+      "start": {
+        "year": 1153
+      },
+      "importance": 4,
+      "keywords": [
+        "england",
+        "medieval",
+        "norman-conquest",
+        "monarchy",
+        "treaty"
+      ]
+    },
+    {
+      "id": "richard-of-york",
+      "title": "Richard of York",
+      "type": "person",
+      "start": {
+        "year": 1411,
+        "month": 9,
+        "day": 21
+      },
+      "end": {
+        "year": 1460,
+        "month": 12,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "henry-vi",
+      "title": "Henry VI",
+      "type": "ruler",
+      "start": {
+        "year": 1422,
+        "month": 9,
+        "day": 1
+      },
+      "end": {
+        "year": 1471,
+        "month": 4,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "monarchy",
+        "plantagenet"
+      ]
+    },
+    {
+      "id": "richard-neville-warwick",
+      "title": "Richard Neville, Earl of Warwick",
+      "type": "person",
+      "start": {
+        "year": 1428,
+        "month": 11,
+        "day": 22
+      },
+      "end": {
+        "year": 1471,
+        "month": 4,
+        "day": 14
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "politics"
+      ]
+    },
+    {
+      "id": "margaret-of-anjou",
+      "title": "Margaret of Anjou",
+      "type": "person",
+      "start": {
+        "year": 1430,
+        "month": 3,
+        "day": 23
+      },
+      "end": {
+        "year": 1482,
+        "month": 8,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "monarchy",
+        "france"
+      ]
+    },
+    {
+      "id": "wars-of-the-roses",
+      "title": "Wars of the Roses",
+      "type": "war",
+      "start": {
+        "year": 1455,
+        "month": 5,
+        "day": 22
+      },
+      "end": {
+        "year": 1487,
+        "month": 6,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "first-battle-of-st-albans",
+      "title": "First Battle of St Albans",
+      "type": "battle",
+      "start": {
+        "year": 1455,
+        "month": 5,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england"
+      ]
+    },
+    {
+      "id": "edward-iv",
+      "title": "Edward IV",
+      "type": "ruler",
+      "start": {
+        "year": 1461,
+        "month": 3,
+        "day": 4
+      },
+      "end": {
+        "year": 1483,
+        "month": 4,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "monarchy",
+        "plantagenet"
+      ]
+    },
+    {
+      "id": "battle-of-towton",
+      "title": "Battle of Towton",
+      "type": "battle",
+      "start": {
+        "year": 1461,
+        "month": 3,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england"
+      ]
+    },
+    {
+      "id": "battle-of-barnet",
+      "title": "Battle of Barnet",
+      "type": "battle",
+      "start": {
+        "year": 1471,
+        "month": 4,
+        "day": 14
+      },
+      "importance": 4,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england"
+      ]
+    },
+    {
+      "id": "battle-of-tewkesbury",
+      "title": "Battle of Tewkesbury",
+      "type": "battle",
+      "start": {
+        "year": 1471,
+        "month": 5,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england"
+      ]
+    },
+    {
+      "id": "battle-of-bosworth-field",
+      "title": "Battle of Bosworth Field",
+      "type": "battle",
+      "start": {
+        "year": 1485,
+        "month": 8,
+        "day": 22
+      },
+      "importance": 3,
+      "keywords": [
+        "wars-of-the-roses",
+        "medieval",
+        "england",
+        "tudor"
+      ]
     }
   ]
 }
