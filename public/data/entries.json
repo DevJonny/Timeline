@@ -2,6 +2,22 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "ancient-greece",
+      "title": "Ancient Greece",
+      "type": "age",
+      "start": {
+        "year": -1600
+      },
+      "end": {
+        "year": -146
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity"
+      ]
+    },
+    {
       "id": "palaeolithic",
       "title": "Palaeolithic",
       "type": "age",
@@ -10021,6 +10037,183 @@
         "medieval",
         "england",
         "tudor"
+      ]
+    },
+    {
+      "id": "minoan-civilization",
+      "title": "Minoan Civilization",
+      "type": "age",
+      "start": {
+        "year": -3500,
+        "circa": true
+      },
+      "end": {
+        "year": -1100,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "bronze-age"
+      ]
+    },
+    {
+      "id": "mycenaean-greece",
+      "title": "Mycenaean Greece",
+      "type": "age",
+      "start": {
+        "year": -1750,
+        "circa": true
+      },
+      "end": {
+        "year": -1050,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "bronze-age"
+      ]
+    },
+    {
+      "id": "sparta",
+      "title": "Sparta",
+      "type": "empire",
+      "start": {
+        "year": -900,
+        "circa": true
+      },
+      "end": {
+        "year": -192
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "empire"
+      ]
+    },
+    {
+      "id": "athens",
+      "title": "Athens",
+      "type": "empire",
+      "start": {
+        "year": -508,
+        "circa": true
+      },
+      "end": {
+        "year": -322
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "republic",
+        "empire"
+      ]
+    },
+    {
+      "id": "battle-of-marathon",
+      "title": "Battle of Marathon",
+      "type": "battle",
+      "start": {
+        "year": -490
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "persia"
+      ]
+    },
+    {
+      "id": "socrates",
+      "title": "Socrates",
+      "type": "person",
+      "start": {
+        "year": -470,
+        "circa": true
+      },
+      "end": {
+        "year": -399
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "peloponnesian-war",
+      "title": "Peloponnesian War",
+      "type": "war",
+      "start": {
+        "year": -431
+      },
+      "end": {
+        "year": -404
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity"
+      ]
+    },
+    {
+      "id": "plato",
+      "title": "Plato",
+      "type": "person",
+      "start": {
+        "year": -428,
+        "circa": true
+      },
+      "end": {
+        "year": -348,
+        "circa": true
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "aristotle",
+      "title": "Aristotle",
+      "type": "person",
+      "start": {
+        "year": -384
+      },
+      "end": {
+        "year": -322
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "philosophy",
+        "science"
+      ]
+    },
+    {
+      "id": "alexander-the-great",
+      "title": "Alexander the Great",
+      "type": "ruler",
+      "start": {
+        "year": -336
+      },
+      "end": {
+        "year": -323
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "antiquity",
+        "empire"
       ]
     }
   ]
