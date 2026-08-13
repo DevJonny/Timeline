@@ -1,0 +1,884 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "mycenaean-age",
+      "title": "Mycenaean Greece",
+      "type": "age",
+      "start": {
+        "year": -1600
+      },
+      "end": {
+        "year": -1100
+      },
+      "importance": 1,
+      "keywords": [
+        "greece",
+        "mycenaean"
+      ]
+    },
+    {
+      "id": "greek-dark-ages",
+      "title": "Greek Dark Ages",
+      "type": "age",
+      "start": {
+        "year": -1100
+      },
+      "end": {
+        "year": -800
+      },
+      "importance": 1,
+      "keywords": [
+        "greece"
+      ]
+    },
+    {
+      "id": "archaic-greece",
+      "title": "Archaic Period",
+      "type": "age",
+      "start": {
+        "year": -800
+      },
+      "end": {
+        "year": -480
+      },
+      "importance": 1,
+      "keywords": [
+        "greece"
+      ]
+    },
+    {
+      "id": "classical-greece",
+      "title": "Classical Period",
+      "type": "age",
+      "start": {
+        "year": -480
+      },
+      "end": {
+        "year": -323
+      },
+      "importance": 1,
+      "keywords": [
+        "greece"
+      ]
+    },
+    {
+      "id": "hellenistic-period",
+      "title": "Hellenistic Period",
+      "type": "age",
+      "start": {
+        "year": -323
+      },
+      "end": {
+        "year": -146
+      },
+      "importance": 1,
+      "keywords": [
+        "greece",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "battle-of-salamis",
+      "title": "Battle of Salamis",
+      "type": "battle",
+      "start": {
+        "year": -480,
+        "month": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "persian-wars",
+        "athens"
+      ]
+    },
+    {
+      "id": "battle-of-plataea",
+      "title": "Battle of Plataea",
+      "type": "battle",
+      "start": {
+        "year": -479,
+        "month": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "persian-wars",
+        "sparta"
+      ]
+    },
+    {
+      "id": "sicilian-expedition",
+      "title": "Sicilian Expedition",
+      "type": "war",
+      "start": {
+        "year": -415
+      },
+      "end": {
+        "year": -413
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "athens",
+        "syracuse"
+      ]
+    },
+    {
+      "id": "battle-of-aegospotami",
+      "title": "Battle of Aegospotami",
+      "type": "battle",
+      "start": {
+        "year": -405
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "sparta",
+        "athens"
+      ]
+    },
+    {
+      "id": "corinthian-war",
+      "title": "Corinthian War",
+      "type": "war",
+      "start": {
+        "year": -395
+      },
+      "end": {
+        "year": -387
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "war",
+        "sparta"
+      ]
+    },
+    {
+      "id": "battle-of-leuctra",
+      "title": "Battle of Leuctra",
+      "type": "battle",
+      "start": {
+        "year": -371,
+        "month": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "thebes",
+        "sparta"
+      ]
+    },
+    {
+      "id": "battle-of-chaeronea",
+      "title": "Battle of Chaeronea",
+      "type": "battle",
+      "start": {
+        "year": -338,
+        "month": 8,
+        "day": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "macedon"
+      ]
+    },
+    {
+      "id": "battle-of-issus",
+      "title": "Battle of Issus",
+      "type": "battle",
+      "start": {
+        "year": -333,
+        "month": 11
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "macedon",
+        "persia"
+      ]
+    },
+    {
+      "id": "battle-of-gaugamela",
+      "title": "Battle of Gaugamela",
+      "type": "battle",
+      "start": {
+        "year": -331,
+        "month": 10,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "macedon",
+        "persia"
+      ]
+    },
+    {
+      "id": "wars-of-the-diadochi",
+      "title": "Wars of the Diadochi",
+      "type": "war",
+      "start": {
+        "year": -322
+      },
+      "end": {
+        "year": -281
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "war",
+        "macedon",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "battle-of-ipsus",
+      "title": "Battle of Ipsus",
+      "type": "battle",
+      "start": {
+        "year": -301
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "diadochi"
+      ]
+    },
+    {
+      "id": "battle-of-corinth",
+      "title": "Battle of Corinth",
+      "type": "battle",
+      "start": {
+        "year": -146
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "war",
+        "battle",
+        "rome",
+        "achaean-league"
+      ]
+    },
+    {
+      "id": "homer",
+      "title": "Homer",
+      "type": "person",
+      "start": {
+        "year": -800,
+        "circa": true
+      },
+      "end": {
+        "year": -701,
+        "circa": true
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "culture",
+        "literature",
+        "mythology"
+      ]
+    },
+    {
+      "id": "oracle-of-delphi",
+      "title": "Oracle of Delphi",
+      "type": "event",
+      "start": {
+        "year": -800,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "culture",
+        "mythology",
+        "religion"
+      ]
+    },
+    {
+      "id": "first-olympic-games",
+      "title": "First Olympic Games",
+      "type": "event",
+      "start": {
+        "year": -776
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "culture",
+        "olympics",
+        "sports"
+      ]
+    },
+    {
+      "id": "city-dionysia",
+      "title": "City Dionysia",
+      "type": "event",
+      "start": {
+        "year": -534
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "theatre"
+      ]
+    },
+    {
+      "id": "sophocles",
+      "title": "Sophocles",
+      "type": "person",
+      "start": {
+        "year": -497
+      },
+      "end": {
+        "year": -406
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "culture",
+        "theatre",
+        "literature"
+      ]
+    },
+    {
+      "id": "phidias",
+      "title": "Phidias",
+      "type": "person",
+      "start": {
+        "year": -480,
+        "circa": true
+      },
+      "end": {
+        "year": -430,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "sculpture",
+        "art"
+      ]
+    },
+    {
+      "id": "hippocrates",
+      "title": "Hippocrates of Kos",
+      "type": "person",
+      "start": {
+        "year": -460,
+        "circa": true
+      },
+      "end": {
+        "year": -370,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "culture",
+        "science",
+        "medicine"
+      ]
+    },
+    {
+      "id": "parthenon",
+      "title": "Construction of the Parthenon",
+      "type": "event",
+      "start": {
+        "year": -447
+      },
+      "end": {
+        "year": -432
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "culture",
+        "architecture",
+        "athens"
+      ]
+    },
+    {
+      "id": "statue-of-zeus-at-olympia",
+      "title": "Statue of Zeus at Olympia",
+      "type": "event",
+      "start": {
+        "year": -435,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "sculpture",
+        "olympics"
+      ]
+    },
+    {
+      "id": "colossus-of-rhodes",
+      "title": "Colossus of Rhodes",
+      "type": "event",
+      "start": {
+        "year": -292
+      },
+      "end": {
+        "year": -226
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "architecture",
+        "sculpture",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "library-of-alexandria",
+      "title": "Founding of the Library of Alexandria",
+      "type": "event",
+      "start": {
+        "year": -285,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "culture",
+        "architecture",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "lighthouse-of-alexandria",
+      "title": "Lighthouse of Alexandria",
+      "type": "event",
+      "start": {
+        "year": -280,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "architecture",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "great-altar-of-pergamon",
+      "title": "Great Altar of Pergamon",
+      "type": "event",
+      "start": {
+        "year": -166,
+        "circa": true
+      },
+      "end": {
+        "year": -156,
+        "circa": true
+      },
+      "importance": 5,
+      "keywords": [
+        "greece",
+        "culture",
+        "architecture",
+        "sculpture",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "antikythera-mechanism",
+      "title": "Antikythera Mechanism",
+      "type": "event",
+      "start": {
+        "year": -150,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "culture",
+        "science",
+        "technology",
+        "hellenistic"
+      ]
+    },
+    {
+      "id": "pythagoras",
+      "title": "Pythagoras",
+      "type": "person",
+      "start": {
+        "year": -570,
+        "circa": true
+      },
+      "end": {
+        "year": -495,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "people",
+        "philosophy",
+        "science"
+      ]
+    },
+    {
+      "id": "pericles",
+      "title": "Pericles",
+      "type": "person",
+      "start": {
+        "year": -495,
+        "circa": true
+      },
+      "end": {
+        "year": -429
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "people",
+        "politics"
+      ]
+    },
+    {
+      "id": "herodotus",
+      "title": "Herodotus",
+      "type": "person",
+      "start": {
+        "year": -484,
+        "circa": true
+      },
+      "end": {
+        "year": -425,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "people",
+        "history"
+      ]
+    },
+    {
+      "id": "thucydides",
+      "title": "Thucydides",
+      "type": "person",
+      "start": {
+        "year": -460,
+        "circa": true
+      },
+      "end": {
+        "year": -400,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "people",
+        "history",
+        "politics"
+      ]
+    },
+    {
+      "id": "democritus",
+      "title": "Democritus",
+      "type": "person",
+      "start": {
+        "year": -460,
+        "circa": true
+      },
+      "end": {
+        "year": -370,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "people",
+        "philosophy",
+        "science"
+      ]
+    },
+    {
+      "id": "diogenes",
+      "title": "Diogenes",
+      "type": "person",
+      "start": {
+        "year": -412,
+        "circa": true
+      },
+      "end": {
+        "year": -323
+      },
+      "importance": 5,
+      "keywords": [
+        "greece",
+        "people",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "lycurgan-reforms",
+      "title": "Lycurgan Reforms",
+      "type": "event",
+      "start": {
+        "year": -820,
+        "circa": true
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "politics",
+        "sparta",
+        "law"
+      ]
+    },
+    {
+      "id": "draconian-constitution",
+      "title": "Draconian Constitution",
+      "type": "event",
+      "start": {
+        "year": -621
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "law"
+      ]
+    },
+    {
+      "id": "solon-reforms",
+      "title": "Reforms of Solon",
+      "type": "event",
+      "start": {
+        "year": -594
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "law"
+      ]
+    },
+    {
+      "id": "peloponnesian-league",
+      "title": "Peloponnesian League",
+      "type": "empire",
+      "start": {
+        "year": -550,
+        "circa": true
+      },
+      "end": {
+        "year": -366
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "politics",
+        "sparta",
+        "alliance"
+      ]
+    },
+    {
+      "id": "boeotian-league",
+      "title": "Boeotian League",
+      "type": "empire",
+      "start": {
+        "year": -550,
+        "circa": true
+      },
+      "end": {
+        "year": -171
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "thebes",
+        "alliance"
+      ]
+    },
+    {
+      "id": "cleisthenes-reforms",
+      "title": "Reforms of Cleisthenes",
+      "type": "event",
+      "start": {
+        "year": -508
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "democracy"
+      ]
+    },
+    {
+      "id": "delian-league",
+      "title": "Delian League",
+      "type": "empire",
+      "start": {
+        "year": -478
+      },
+      "end": {
+        "year": -404
+      },
+      "importance": 2,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "alliance"
+      ]
+    },
+    {
+      "id": "ephialtes-reforms",
+      "title": "Reforms of Ephialtes",
+      "type": "event",
+      "start": {
+        "year": -462
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "democracy"
+      ]
+    },
+    {
+      "id": "periclean-citizenship-law",
+      "title": "Periclean Citizenship Law",
+      "type": "event",
+      "start": {
+        "year": -451
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "law"
+      ]
+    },
+    {
+      "id": "thirty-tyrants",
+      "title": "Thirty Tyrants",
+      "type": "event",
+      "start": {
+        "year": -404
+      },
+      "end": {
+        "year": -403
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "oligarchy"
+      ]
+    },
+    {
+      "id": "second-athenian-league",
+      "title": "Second Athenian League",
+      "type": "empire",
+      "start": {
+        "year": -378
+      },
+      "end": {
+        "year": -355
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "athens",
+        "alliance"
+      ]
+    },
+    {
+      "id": "aetolian-league",
+      "title": "Aetolian League",
+      "type": "empire",
+      "start": {
+        "year": -370,
+        "circa": true
+      },
+      "end": {
+        "year": -189
+      },
+      "importance": 4,
+      "keywords": [
+        "greece",
+        "politics",
+        "hellenistic",
+        "alliance"
+      ]
+    },
+    {
+      "id": "league-of-corinth",
+      "title": "League of Corinth",
+      "type": "empire",
+      "start": {
+        "year": -338
+      },
+      "end": {
+        "year": -322
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "politics",
+        "macedon",
+        "alliance"
+      ]
+    },
+    {
+      "id": "achaean-league",
+      "title": "Achaean League",
+      "type": "empire",
+      "start": {
+        "year": -280
+      },
+      "end": {
+        "year": -146
+      },
+      "importance": 3,
+      "keywords": [
+        "greece",
+        "politics",
+        "hellenistic",
+        "alliance"
+      ]
+    }
+  ]
+}

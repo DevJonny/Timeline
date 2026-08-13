@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "ancient-greece",
+  "title": "Ancient Greece",
+  "blurb": "From the palaces of Mycenae to the conquests of Alexander, the foundation of Western civilisation.",
+  "subject": "ancient-greece",
+  "range": { "start": { "year": -1600 }, "end": { "year": -146 } },
+  "select": {
+    "keywords": ["greece", "athens", "sparta", "macedon", "hellenistic"],
+    "include": [],
+    "exclude": ["classical-antiquity", "roman-empire"]
+  }
+}
