@@ -9,7 +9,7 @@ import {
   resolveFocus,
 } from '../src/lib/focus.ts';
 import { importanceGate } from '../src/lib/lod.ts';
-import { maxZoomFor } from '../src/lib/scale.ts';
+import { GATE_REFERENCE_SPAN, maxZoomFor } from '../src/lib/scale.ts';
 import type { Entry, Focus } from '../src/lib/types.ts';
 
 /** 2026-01-01, so "present" never drifts under the tests. */
@@ -159,14 +159,29 @@ describe('mainDomain', () => {
 });
 
 describe('gate calibration across the two timelines', () => {
-  const main = mainDomain(
-    [entry('palaeolithic', -3_300_000, -12_000), entry('now', 2000)],
-    PRESENT,
-  );
-  const mainSpan = main[1] - main[0];
+  /**
+   * The reference is a constant, not the main timeline's span. Collapsing the
+   * empty ages means no timeline is the unscaled case any more — the main one
+   * is scaled onto this the same way a focus is.
+   */
+  const mainSpan = GATE_REFERENCE_SPAN;
 
-  it('leaves the main timeline unscaled', () => {
+  it('is unscaled only for a timeline spanning the reference itself', () => {
     expect(gateScaleFor(mainSpan, mainSpan)).toBe(1);
+  });
+
+  /**
+   * The main timeline after its three empty ages collapse: about five and a
+   * half thousand years of axis. It has to land where the *uncollapsed* main
+   * timeline landed when zoomed to show the same stretch, or the same view
+   * would earn different detail before and after the change.
+   */
+  it('gives the collapsed main timeline the detail its visible span earned', () => {
+    const collapsedSpan = 5646;
+    const scale = gateScaleFor(mainSpan, collapsedSpan);
+
+    expect(importanceGate(1 * scale)).toBe(importanceGate(mainSpan / collapsedSpan));
+    expect(importanceGate(1 * scale)).toBeGreaterThan(1);
   });
 
   it('opens a focus on real detail rather than a bare band', () => {
@@ -221,6 +236,5 @@ describe('focusView', () => {
     expect(view.ownIds.has('battle-of-actium')).toBe(true);
     expect(view.ownIds.has('roman-empire')).toBe(false);
     expect(view.id).toBe('roman-empire-focus');
-    expect(view.gateScale).toBeGreaterThan(1);
   });
 });

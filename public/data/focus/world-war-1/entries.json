@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "ww1-1914",
+      "title": "1914: Outbreak & Maneuver",
+      "type": "age",
+      "start": {
+        "year": 1914,
+        "month": 7,
+        "day": 28
+      },
+      "end": {
+        "year": 1914,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1"
+      ]
+    },
+    {
+      "id": "ww1-1915",
+      "title": "1915: Stalemate & Escalation",
+      "type": "age",
+      "start": {
+        "year": 1915,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1915,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1"
+      ]
+    },
+    {
+      "id": "ww1-1916",
+      "title": "1916: Attrition",
+      "type": "age",
+      "start": {
+        "year": 1916,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1916,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1"
+      ]
+    },
+    {
+      "id": "ww1-1917",
+      "title": "1917: Mutiny & Revolution",
+      "type": "age",
+      "start": {
+        "year": 1917,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1917,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1"
+      ]
+    },
+    {
+      "id": "ww1-1918",
+      "title": "1918: End of the War",
+      "type": "age",
+      "start": {
+        "year": 1918,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1918,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-1"
+      ]
+    },
+    {
+      "id": "battle-of-cer",
+      "title": "Battle of Cer",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 8,
+        "day": 15
+      },
+      "end": {
+        "year": 1914,
+        "month": 8,
+        "day": 24
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "balkans",
+        "serbia",
+        "austria-hungary"
+      ]
+    },
+    {
+      "id": "battle-of-tannenberg",
+      "title": "Battle of Tannenberg",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 8,
+        "day": 26
+      },
+      "end": {
+        "year": 1914,
+        "month": 8,
+        "day": 30
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "eastern-front",
+        "germany",
+        "russia"
+      ]
+    },
+    {
+      "id": "battle-of-tanga",
+      "title": "Battle of Tanga",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 11,
+        "day": 3
+      },
+      "end": {
+        "year": 1914,
+        "month": 11,
+        "day": 5
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "africa",
+        "british-empire",
+        "germany"
+      ]
+    },
+    {
+      "id": "gorlice-tarnow-offensive",
+      "title": "Gorlice-Tarnów Offensive",
+      "type": "battle",
+      "start": {
+        "year": 1915,
+        "month": 5,
+        "day": 2
+      },
+      "end": {
+        "year": 1915,
+        "month": 7,
+        "day": 13
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "eastern-front",
+        "germany",
+        "austria-hungary",
+        "russia"
+      ]
+    },
+    {
+      "id": "siege-of-kut",
+      "title": "Siege of Kut",
+      "type": "battle",
+      "start": {
+        "year": 1915,
+        "month": 12,
+        "day": 7
+      },
+      "end": {
+        "year": 1916,
+        "month": 4,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "middle-east",
+        "british-empire",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "brusilov-offensive",
+      "title": "Brusilov Offensive",
+      "type": "battle",
+      "start": {
+        "year": 1916,
+        "month": 6,
+        "day": 4
+      },
+      "end": {
+        "year": 1916,
+        "month": 9,
+        "day": 20
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "eastern-front",
+        "russia",
+        "austria-hungary"
+      ]
+    },
+    {
+      "id": "arab-revolt",
+      "title": "Arab Revolt",
+      "type": "war",
+      "start": {
+        "year": 1916,
+        "month": 6,
+        "day": 10
+      },
+      "end": {
+        "year": 1918,
+        "month": 10,
+        "day": 25
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "middle-east",
+        "arabia",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "battle-of-caporetto",
+      "title": "Battle of Caporetto",
+      "type": "battle",
+      "start": {
+        "year": 1917,
+        "month": 10,
+        "day": 24
+      },
+      "end": {
+        "year": 1917,
+        "month": 11,
+        "day": 19
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "italian-front",
+        "italy",
+        "austria-hungary",
+        "germany"
+      ]
+    },
+    {
+      "id": "battle-of-megiddo",
+      "title": "Battle of Megiddo",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 9,
+        "day": 19
+      },
+      "end": {
+        "year": 1918,
+        "month": 9,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "middle-east",
+        "british-empire",
+        "ottoman-empire"
+      ]
+    },
+    {
+      "id": "battle-of-vittorio-veneto",
+      "title": "Battle of Vittorio Veneto",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 10,
+        "day": 24
+      },
+      "end": {
+        "year": 1918,
+        "month": 11,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "battles-other-fronts",
+        "italian-front",
+        "italy",
+        "austria-hungary"
+      ]
+    },
+    {
+      "id": "battle-of-the-frontiers",
+      "title": "Battle of the Frontiers",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 8,
+        "day": 7
+      },
+      "end": {
+        "year": 1914,
+        "month": 9,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "france",
+        "german-empire"
+      ]
+    },
+    {
+      "id": "first-battle-of-the-aisne",
+      "title": "First Battle of the Aisne",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 9,
+        "day": 13
+      },
+      "end": {
+        "year": 1914,
+        "month": 9,
+        "day": 28
+      },
+      "importance": 5,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "trench-warfare",
+        "france"
+      ]
+    },
+    {
+      "id": "first-battle-of-ypres",
+      "title": "First Battle of Ypres",
+      "type": "battle",
+      "start": {
+        "year": 1914,
+        "month": 10,
+        "day": 19
+      },
+      "end": {
+        "year": 1914,
+        "month": 11,
+        "day": 22
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "british-empire",
+        "trench-warfare"
+      ]
+    },
+    {
+      "id": "second-battle-of-ypres",
+      "title": "Second Battle of Ypres",
+      "type": "battle",
+      "start": {
+        "year": 1915,
+        "month": 4,
+        "day": 22
+      },
+      "end": {
+        "year": 1915,
+        "month": 5,
+        "day": 25
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "poison-gas",
+        "british-empire"
+      ]
+    },
+    {
+      "id": "battle-of-loos",
+      "title": "Battle of Loos",
+      "type": "battle",
+      "start": {
+        "year": 1915,
+        "month": 9,
+        "day": 25
+      },
+      "end": {
+        "year": 1915,
+        "month": 10,
+        "day": 8
+      },
+      "importance": 5,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "british-empire",
+        "poison-gas"
+      ]
+    },
+    {
+      "id": "battle-of-arras",
+      "title": "Battle of Arras",
+      "type": "battle",
+      "start": {
+        "year": 1917,
+        "month": 4,
+        "day": 9
+      },
+      "end": {
+        "year": 1917,
+        "month": 5,
+        "day": 16
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "british-empire",
+        "trench-warfare"
+      ]
+    },
+    {
+      "id": "second-battle-of-the-aisne",
+      "title": "Second Battle of the Aisne",
+      "type": "battle",
+      "start": {
+        "year": 1917,
+        "month": 4,
+        "day": 16
+      },
+      "end": {
+        "year": 1917,
+        "month": 5,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "france",
+        "trench-warfare"
+      ]
+    },
+    {
+      "id": "spring-offensive",
+      "title": "Spring Offensive",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 3,
+        "day": 21
+      },
+      "end": {
+        "year": 1918,
+        "month": 7,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "german-empire"
+      ]
+    },
+    {
+      "id": "second-battle-of-the-marne",
+      "title": "Second Battle of the Marne",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 7,
+        "day": 15
+      },
+      "end": {
+        "year": 1918,
+        "month": 8,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "france",
+        "united-states"
+      ]
+    },
+    {
+      "id": "hundred-days-offensive",
+      "title": "Hundred Days Offensive",
+      "type": "battle",
+      "start": {
+        "year": 1918,
+        "month": 8,
+        "day": 8
+      },
+      "end": {
+        "year": 1918,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-western-front",
+        "world-war-1",
+        "british-empire",
+        "united-states",
+        "france"
+      ]
+    },
+    {
+      "id": "easter-rising",
+      "title": "Easter Rising",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 4,
+        "day": 24
+      },
+      "end": {
+        "year": 1916,
+        "month": 4,
+        "day": 29
+      },
+      "importance": 5,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "ireland",
+        "united-kingdom",
+        "rebellion"
+      ]
+    },
+    {
+      "id": "sykes-picot-agreement",
+      "title": "Sykes-Picot Agreement",
+      "type": "event",
+      "start": {
+        "year": 1916,
+        "month": 5,
+        "day": 16
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "middle-east",
+        "imperialism",
+        "treaty"
+      ]
+    },
+    {
+      "id": "zimmermann-telegram",
+      "title": "Zimmermann Telegram",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 1,
+        "day": 16
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "united-states",
+        "germany",
+        "intelligence"
+      ]
+    },
+    {
+      "id": "february-revolution",
+      "title": "February Revolution",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 3,
+        "day": 8
+      },
+      "end": {
+        "year": 1917,
+        "month": 3,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "russia",
+        "revolution"
+      ]
+    },
+    {
+      "id": "us-entry-into-ww1",
+      "title": "US Entry into World War I",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 4,
+        "day": 6
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "united-states",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "balfour-declaration",
+      "title": "Balfour Declaration",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 11,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "middle-east",
+        "zionism",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "october-revolution",
+      "title": "October Revolution",
+      "type": "event",
+      "start": {
+        "year": 1917,
+        "month": 11,
+        "day": 7
+      },
+      "end": {
+        "year": 1917,
+        "month": 11,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "russia",
+        "revolution",
+        "bolshevism"
+      ]
+    },
+    {
+      "id": "fourteen-points",
+      "title": "Fourteen Points",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 1,
+        "day": 8
+      },
+      "importance": 4,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "united-states",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "treaty-of-brest-litovsk",
+      "title": "Treaty of Brest-Litovsk",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 3,
+        "day": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "russia",
+        "germany",
+        "treaty"
+      ]
+    },
+    {
+      "id": "armistice-of-11-november",
+      "title": "Armistice of 11 November",
+      "type": "event",
+      "start": {
+        "year": 1918,
+        "month": 11,
+        "day": 11
+      },
+      "importance": 3,
+      "keywords": [
+        "world-war-1",
+        "politics-home-front",
+        "germany",
+        "diplomacy",
+        "treaty"
+      ]
+    }
+  ]
+}

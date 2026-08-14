@@ -132,19 +132,25 @@ export function resolveFocus(
 }
 
 /**
- * How much to multiply a focus's zoom by before asking `importanceGate` what
- * to show.
+ * How much to multiply a timeline's zoom by before asking `importanceGate`
+ * what to show.
  *
  * The gate reads `k`, where k=1 means "the whole domain is on screen". That
- * makes it relative to the domain, which is right for one timeline and wrong
+ * makes it relative to the domain, which is right within one timeline and wrong
  * across two: entering a focus at k=1 would put the gate at 1 and open the
  * Roman Empire as a bare band, when 500 years on screen has earned far more
- * detail than that. Scaling by the ratio of the domains restores the absolute
- * reading — the same visible span earns the same detail in either timeline.
+ * detail than that. Scaling by the ratio of the spans restores the absolute
+ * reading — the same visible span earns the same detail wherever it is read.
+ *
+ * `referenceSpan` is `GATE_REFERENCE_SPAN`, and `span` is the timeline's *axis*
+ * domain — after any empty ages have been collapsed out of it, because a
+ * collapsed axis genuinely puts fewer years on screen at k=1 and has genuinely
+ * earned the detail that goes with them. The main timeline is no longer the
+ * unscaled case; nothing is.
  */
-export function gateScaleFor(mainSpan: number, focusSpan: number): number {
-  if (!(mainSpan > 0) || !(focusSpan > 0)) return 1;
-  return mainSpan / focusSpan;
+export function gateScaleFor(referenceSpan: number, span: number): number {
+  if (!(referenceSpan > 0) || !(span > 0)) return 1;
+  return referenceSpan / span;
 }
 
 /**
@@ -154,8 +160,6 @@ export function gateScaleFor(mainSpan: number, focusSpan: number): number {
 export interface FocusView extends ResolvedFocus {
   id: string;
   title: string;
-  /** See `gateScaleFor`. */
-  gateScale: number;
   /**
    * Ids this focus authored. The timeline uses it to decide which details
    * directory an entry's prose comes from — inherited entries keep theirs in
@@ -164,7 +168,13 @@ export interface FocusView extends ResolvedFocus {
   ownIds: Set<string>;
 }
 
-/** Resolve a focus and package it for rendering. */
+/**
+ * Resolve a focus and package it for rendering.
+ *
+ * Deliberately carries no gate scale. That is derived from the *axis* domain,
+ * which is not known until the empty ages have been collapsed out of it, so the
+ * timeline computes it for itself — by one rule, for both kinds of timeline.
+ */
 export function focusView(
   focus: Focus,
   main: readonly Entry[],
@@ -172,13 +182,11 @@ export function focusView(
   present: number,
 ): FocusView {
   const resolved = resolveFocus(focus, main, own, present);
-  const [mainStart, mainEnd] = mainDomain(main, present);
 
   return {
     ...resolved,
     id: focus.id,
     title: focus.title,
-    gateScale: gateScaleFor(mainEnd - mainStart, resolved.domain[1] - resolved.domain[0]),
     ownIds: new Set(resolved.own.map((entry) => entry.id)),
   };
 }

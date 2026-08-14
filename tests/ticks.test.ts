@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { chooseTickScale, generateTicks, tickLadder } from '../src/lib/ticks.ts';
+import { buildAxisMap, type Occupant } from '../src/lib/collapse.ts';
+import {
+  chooseTickScale,
+  generateAxisTicks,
+  generateTicks,
+  tickLadder,
+} from '../src/lib/ticks.ts';
 
 describe('chooseTickScale', () => {
   it('climbs the ladder as the view zooms out', () => {
@@ -153,6 +159,66 @@ describe('generateTicks', () => {
       for (let i = 1; i < ticks.length; i++) {
         expect(ticks[i]!.t).toBeGreaterThan(ticks[i - 1]!.t);
       }
+    }
+  });
+});
+
+describe('generateAxisTicks', () => {
+  const DOMAIN: [number, number] = [-3_300_000, 2026];
+
+  /** The shipped shape: three ages holding nothing, then five millennia. */
+  const ITEMS: Occupant[] = [
+    { age: true, t0: -3_300_000, t1: -12_000 },
+    { age: true, t0: -12_000, t1: -10_000 },
+    { age: true, t0: -10_000, t1: -3300 },
+    { age: true, t0: -3300, t1: 2026 },
+    { age: false, t0: 1066, t1: null },
+  ];
+
+  it('is exactly generateTicks when the axis is not broken', () => {
+    const map = buildAxisMap([{ age: false, t0: 1000, t1: 2000 }], [1000, 2000]);
+    const scale = { kind: 'year', step: 100 } as const;
+
+    expect(generateAxisTicks(map.pieces, [1000, 2000], scale)).toEqual(
+      generateTicks([1000, 2000], scale),
+    );
+  });
+
+  it('rules nothing inside a break', () => {
+    const map = buildAxisMap(ITEMS, DOMAIN);
+    const stub = map.pieces.find((piece) => piece.collapsed)!;
+
+    // A view sitting wholly inside the compressed Palaeolithic. At its real
+    // scale that is tens of thousands of years between adjacent labels, which
+    // would read as the spacing everywhere else on the axis.
+    const inside: [number, number] = [stub.a0 + 1, stub.a1 - 1];
+    expect(generateAxisTicks(map.pieces, inside, { kind: 'year', step: 500 })).toEqual([]);
+  });
+
+  it('labels a tick with its real year, not its axis coordinate', () => {
+    const map = buildAxisMap(ITEMS, DOMAIN);
+    const ticks = generateAxisTicks(map.pieces, [map.to(-2000), map.to(2026)], {
+      kind: 'year',
+      step: 1000,
+    });
+
+    const found = ticks.find((tick) => tick.label.includes('1000 CE'));
+    expect(found).toBeDefined();
+    // Positioned where 1000 CE actually sits on the axis — which, past three
+    // collapsed ages, is nowhere near 1000.
+    expect(found!.t).toBeCloseTo(map.to(1000), 6);
+  });
+
+  it('ticks ascend across a break, so the axis never doubles back', () => {
+    const map = buildAxisMap(ITEMS, DOMAIN);
+    const ticks = generateAxisTicks(map.pieces, [map.to(DOMAIN[0]), map.to(DOMAIN[1])], {
+      kind: 'year',
+      step: 1000,
+    });
+
+    expect(ticks.length).toBeGreaterThan(1);
+    for (let i = 1; i < ticks.length; i++) {
+      expect(ticks[i]!.t).toBeGreaterThan(ticks[i - 1]!.t);
     }
   });
 });

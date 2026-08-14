@@ -139,3 +139,19 @@ export function maxZoomFor(domainSpan: number): number {
  * 3.3-Myr domain returns this to within a percent.
  */
 export const MAX_ZOOM = 1e7;
+
+/**
+ * The span the importance gate's ladder is calibrated against, in years.
+ *
+ * A constant rather than "whatever the main timeline currently spans". The gate
+ * reads `k`, where k=1 means "the whole domain is on screen" — so a gate value
+ * only means a fixed number of visible years relative to some fixed span, and
+ * every timeline is then scaled onto it by `gateScaleFor`.
+ *
+ * It used to be safe to take that reference from the main domain directly,
+ * because the main domain *was* 3.3 Myr. Collapsing the empty ages took it to
+ * around five and a half thousand, which would have quietly recalibrated the
+ * gate for every timeline at once. Pinning it here is what keeps "the same
+ * visible span earns the same detail" true across the change.
+ */
+export const GATE_REFERENCE_SPAN = MAX_ZOOM * FINEST_VISIBLE_SPAN;

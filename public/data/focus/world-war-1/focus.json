@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "world-war-1",
+  "title": "First World War",
+  "blurb": "The global conflict that reshaped the early 20th century.",
+  "subject": "world-war-1",
+  "range": { "start": { "year": 1914 }, "end": { "year": 1918 } },
+  "select": {
+    "keywords": ["world-war-1"],
+    "include": [],
+    "exclude": []
+  }
+}
