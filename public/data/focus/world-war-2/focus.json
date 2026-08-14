@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "world-war-2",
+  "title": "Second World War",
+  "blurb": "The deadliest conflict in human history.",
+  "subject": "world-war-2",
+  "range": { "start": { "year": 1939 }, "end": { "year": 1945 } },
+  "select": {
+    "keywords": ["world-war-2"],
+    "include": [],
+    "exclude": []
+  }
+}

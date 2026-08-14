@@ -12,6 +12,7 @@
  * and "every month": a viewport showing four weeks would get a single tick.
  */
 
+import type { AxisPiece } from './collapse.ts';
 import {
   daysInMonth,
   daysInYear,
@@ -196,6 +197,44 @@ export function generateTicks(
     case 'day':
       return dayTicks(t0, t1, scale.step);
   }
+}
+
+/**
+ * Ticks across a broken axis.
+ *
+ * A collapsed piece gets none. It holds no content by definition, its scale is
+ * a fiction, and ruling it at the same step as its neighbours would print
+ * thirty thousand years between two adjacent labels as though that were the
+ * spacing everywhere else. The break marker says what is there instead.
+ *
+ * Retained pieces are 1:1 by construction — an uncollapsed stretch keeps its
+ * natural scale — so mapping a tick onto the axis is a pure offset, and one
+ * `TickScale` chosen from the viewport's years-per-pixel is correct for all of
+ * them. With nothing collapsed there is a single piece at offset zero and this
+ * reduces exactly to `generateTicks` over the visible range.
+ */
+export function generateAxisTicks(
+  pieces: readonly AxisPiece[],
+  visible: readonly [number, number],
+  scale: TickScale,
+  compact = false,
+): Tick[] {
+  const ticks: Tick[] = [];
+
+  for (const piece of pieces) {
+    if (piece.collapsed) continue;
+
+    const a0 = Math.max(piece.a0, visible[0]);
+    const a1 = Math.min(piece.a1, visible[1]);
+    if (!(a1 > a0)) continue;
+
+    const offset = piece.a0 - piece.t0;
+    for (const tick of generateTicks([a0 - offset, a1 - offset], scale, compact)) {
+      ticks.push({ ...tick, t: tick.t + offset });
+    }
+  }
+
+  return ticks;
 }
 
 /** Approximate spacing of a tick scale, in years. Used for layout budgeting. */

@@ -12,6 +12,18 @@
       "title": "The Roman Empire",
       "blurb": "Five centuries between Augustus and the last emperor in the west, at the grain the whole of history has no room for.",
       "range": { "start": { "year": -27 }, "end": { "year": 476 } }
+    },
+    {
+      "id": "world-war-1",
+      "title": "First World War",
+      "blurb": "The global conflict that reshaped the early 20th century.",
+      "range": { "start": { "year": 1914 }, "end": { "year": 1918 } }
+    },
+    {
+      "id": "world-war-2",
+      "title": "Second World War",
+      "blurb": "The deadliest conflict in human history.",
+      "range": { "start": { "year": 1939 }, "end": { "year": 1945 } }
     }
   ]
 }

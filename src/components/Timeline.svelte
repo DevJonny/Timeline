@@ -4,6 +4,7 @@
   import {
     createBaseScale,
     extentOf,
+    GATE_REFERENCE_SPAN,
     maxZoomFor,
     MIN_ZOOM,
     transformForDomain,
@@ -11,7 +12,8 @@
     visibleDomain,
     yearsPerPixel,
   } from '../lib/scale.ts';
-  import { chooseTickScale, generateTicks } from '../lib/ticks.ts';
+  import { buildAxisMap } from '../lib/collapse.ts';
+  import { chooseTickScale, generateAxisTicks } from '../lib/ticks.ts';
   import { cullToViewport, labelExtent, packLanes, spanExtent } from '../lib/layout.ts';
   import { clusterOverflow, importanceGate, relaxationFor } from '../lib/lod.ts';
   import {
@@ -32,7 +34,7 @@
   } from '../lib/time.ts';
   import { prefetchDetail } from '../lib/data.ts';
   import { onLocationChange, readLocation, writeLocation } from '../lib/hash.ts';
-  import type { FocusView } from '../lib/focus.ts';
+  import { gateScaleFor, mainDomain, type FocusView } from '../lib/focus.ts';
   import {
     DEFAULT_PREFERENCES,
     debounce,
@@ -82,6 +84,13 @@
   const BAND_PITCH = 11;
   const RAIL_WIDTH = 44;
 
+  /**
+   * An entry placed on the axis.
+   *
+   * `t0`/`t1` are **axis coordinates**, not decimal years — the two are equal
+   * only while nothing is collapsed. Anything here that reaches a reader goes
+   * back through `axisMap.from` before it is formatted. See collapse.ts.
+   */
   interface Resolved {
     entry: Entry;
     t0: number;
@@ -154,20 +163,78 @@
   const filterActive = $derived(isFilterActive(filters));
   const hiddenByFilter = $derived(available.length - filtered.length);
 
-  function resolve(entry: Entry): Resolved {
-    return {
+  /**
+   * Every entry in *year* space — what the data says, before the axis is
+   * broken. Only two things read it: the axis map, and the placement below
+   * that applies the map. Everything downstream of those is in axis space.
+   */
+  const dated = $derived(
+    entries.map((entry) => ({
       entry,
       t0: toDecimalYear(entry.start),
       t1: entry.end === undefined ? null : resolveEnd(entry.end, present),
-    };
-  }
+    })),
+  );
+
+  /**
+   * Derived from *all* entries, never the filtered set. If the domain shrank
+   * to fit the current filter the axis would rescale underneath the reader
+   * every time they toggled a chip, and the zoom transform would mean
+   * something different from one moment to the next.
+   *
+   * A focus supplies its own, already computed by `resolveFocus`, and it is
+   * deliberately *not* stretched to `present`: an axis running from Augustus
+   * to today would put the entire Roman Empire in the top fifth of the screen.
+   *
+   * Still years, not axis coordinates — this is the input the axis map is
+   * built over, so it necessarily predates it.
+   */
+  const timeDomain: [number, number] = $derived(
+    focus ? focus.domain : mainDomain(entries, present),
+  );
+
+  /**
+   * The break in the axis: ages holding nothing compress to a stub.
+   *
+   * Built from every entry for the same reason the domain is — emptiness that
+   * answered to the filter would re-break the axis on every chip toggle, and
+   * an entry would jump the moment something unrelated was filtered out.
+   *
+   * A timeline with nothing to collapse gets the identity map, which is every
+   * focused timeline shipped so far.
+   */
+  const axisMap = $derived(
+    buildAxisMap(
+      dated.map((item) => ({ age: item.entry.type === 'age', t0: item.t0, t1: item.t1 })),
+      timeDomain,
+    ),
+  );
+
+  /** The domain the scale actually runs on. Axis coordinates throughout. */
+  const domain: [number, number] = $derived([
+    axisMap.to(timeDomain[0]),
+    axisMap.to(timeDomain[1]),
+  ]);
 
   /** Every entry, regardless of filters. */
-  const allResolved: Resolved[] = $derived(entries.map(resolve));
+  const allResolved: Resolved[] = $derived(
+    dated.map((item) => ({
+      entry: item.entry,
+      t0: axisMap.to(item.t0),
+      t1: item.t1 === null ? null : axisMap.to(item.t1),
+    })),
+  );
+
+  /**
+   * Filtered by id against the already-placed set rather than re-resolved, so
+   * an entry's axis coordinate is computed once per dataset and one thing
+   * decides it.
+   */
+  const filteredIds = $derived(new Set(filtered.map((entry) => entry.id)));
 
   const resolved: Resolved[] = $derived(
-    filtered
-      .map(resolve)
+    allResolved
+      .filter((item) => filteredIds.has(item.entry.id))
       // Priority order for lane assignment: important first, then longer spans
       // (they carry more context), then chronological.
       .sort((a, b) => {
@@ -180,28 +247,6 @@
         return a.t0 - b.t0;
       }),
   );
-
-  /**
-   * Derived from *all* entries, never the filtered set. If the domain shrank
-   * to fit the current filter the axis would rescale underneath the reader
-   * every time they toggled a chip, and the zoom transform would mean
-   * something different from one moment to the next.
-   *
-   * A focus supplies its own, already computed by `resolveFocus`, and it is
-   * deliberately *not* stretched to `present`: an axis running from Augustus
-   * to today would put the entire Roman Empire in the top fifth of the screen.
-   */
-  const domain: [number, number] = $derived.by(() => {
-    if (focus) return focus.domain;
-
-    let min = Infinity;
-    let max = present;
-    for (const item of allResolved) {
-      min = Math.min(min, item.t0);
-      max = Math.max(max, item.t1 ?? item.t0);
-    }
-    return [Number.isFinite(min) ? min : -3_299_999, max];
-  });
 
   /**
    * The zoom ceiling follows the domain, so the deepest zoom shows about the
@@ -241,14 +286,23 @@
   const compact = $derived(width > 0 && width < 640);
 
   const tickScale = $derived(chooseTickScale(ypp, compact ? 44 : 56));
-  const ticks = $derived(generateTicks(visible, tickScale, compact));
+  const ticks = $derived(generateAxisTicks(axisMap.pieces, visible, tickScale, compact));
+
+  /**
+   * The visible range as *years*, for everything a reader reads. `visible` is
+   * an axis range, and across a break the two differ by millennia.
+   */
+  const visibleYears: [number, number] = $derived([
+    axisMap.from(visible[0]),
+    axisMap.from(visible[1]),
+  ]);
 
   /**
    * Precision hint for the visible-range readout. Without it, deep time
    * collapses to "1.7 Mya – 1.7 Mya" because a single decimal place spans
    * 100,000 years.
    */
-  const readoutStep = $derived(Math.max((visible[1] - visible[0]) / 8, 1e-6));
+  const readoutStep = $derived(Math.max((visibleYears[1] - visibleYears[0]) / 8, 1e-6));
 
   const maxBarLanes = $derived(compact ? 3 : 5);
   const maxLabelLanes = $derived(width >= 1024 ? 3 : width >= 640 ? 2 : 1);
@@ -312,17 +366,21 @@
    * not merely thin the page out.
    */
   /**
-   * `focus.gateScale` keeps importance meaning the same absolute thing in both
-   * timelines. The gate reads k, where k=1 is "the whole domain on screen" —
-   * relative to the domain, which is right within one timeline and wrong
-   * across two. Unscaled, a focus would open at gate 1 and show a bare band
-   * where five centuries fill the screen. See `gateScaleFor` in focus.ts.
+   * The gate reads k, where k=1 is "the whole domain on screen" — relative to
+   * the domain, which is right within one timeline and wrong across two.
+   * Unscaled, a focus would open at gate 1 and show a bare band where five
+   * centuries fill the screen.
+   *
+   * Every timeline is therefore scaled onto one reference span, including the
+   * main one: collapsing the empty ages took its domain from 3.3 Myr to about
+   * five and a half thousand years, so k=1 now shows the Bronze Age onwards
+   * and has earned the detail that a five-thousand-year view always earned.
+   * See `gateScaleFor` in focus.ts.
    */
+  const gateScale = $derived(gateScaleFor(GATE_REFERENCE_SPAN, domain[1] - domain[0]));
+
   const gate = $derived(
-    importanceGate(
-      transform.k * (focus?.gateScale ?? 1),
-      relaxationFor(filtered.length, available.length),
-    ),
+    importanceGate(transform.k * gateScale, relaxationFor(filtered.length, available.length)),
   );
 
   /**
@@ -413,8 +471,37 @@
     }));
   });
 
-  const todayY = $derived(view(present));
+  const todayY = $derived(view(axisMap.to(present)));
   const todayVisible = $derived(todayY >= 0 && todayY <= height);
+
+  /**
+   * Where the axis is broken, in pixels.
+   *
+   * Drawn rather than left implicit: a compressed stretch is the one place a
+   * constant distance stops meaning a constant number of years, and a reader
+   * measuring the Bronze Age against the Palaeolithic by eye would otherwise be
+   * badly wrong with nothing on screen to say so.
+   *
+   * Touching pieces merge into one band. The three empty ages at the head of
+   * the main timeline are contiguous, and hatching them separately would put a
+   * rule between them that says "the scale changes here" — when the scale is
+   * the same fiction throughout, and it is the *hatching* that says so. Which
+   * ages are in there is the spine's job; it still bands and names all three.
+   */
+  const axisBreaks = $derived.by(() => {
+    const bands: { y0: number; y1: number }[] = [];
+
+    for (const piece of axisMap.pieces) {
+      if (!piece.collapsed) continue;
+      const y0 = view(piece.a0);
+      const y1 = view(piece.a1);
+      const last = bands[bands.length - 1];
+      if (last && y0 - last.y1 < 0.5) last.y1 = y1;
+      else bands.push({ y0, y1 });
+    }
+
+    return bands.filter((band) => band.y1 > 0 && band.y0 < safeHeight);
+  });
 
   function handleTransform(next: ZoomTransform): void {
     transform = next;
@@ -581,7 +668,11 @@
 
     if (focus) {
       controller.zoomTo(
-        transformForDomain(base, focus.initialView[0], focus.initialView[1]),
+        transformForDomain(
+          base,
+          axisMap.to(focus.initialView[0]),
+          axisMap.to(focus.initialView[1]),
+        ),
         false,
       );
       return;
@@ -590,11 +681,13 @@
     const view = prefs.defaultView;
     if (!view) return;
 
+    // Saved as years, applied on the axis: a default view of 1500–1800 has to
+    // survive the axis being broken somewhere it does not reach.
     controller.zoomTo(
       transformForDomain(
         base,
-        toDecimalYear({ year: view.startYear }),
-        toDecimalYear({ year: view.endYear }),
+        axisMap.to(toDecimalYear({ year: view.startYear })),
+        axisMap.to(toDecimalYear({ year: view.endYear })),
       ),
       false,
     );
@@ -737,7 +830,7 @@
         onReady: (c) => (controller = c),
       }}
     >
-      <Axis {ticks} y={view} />
+      <Axis {ticks} breaks={axisBreaks} y={view} />
 
       <div class="spine">
         {#each barPacking.placed as placement (placement.item.item.entry.id)}
@@ -807,8 +900,8 @@
       open={settingsOpen}
       {prefs}
       currentView={{
-        startYear: toHistoricalYear(Math.floor(visible[0])),
-        endYear: toHistoricalYear(Math.floor(visible[1])),
+        startYear: toHistoricalYear(Math.floor(visibleYears[0])),
+        endYear: toHistoricalYear(Math.floor(visibleYears[1])),
       }}
       {storageAvailable}
       {allKeywords}
@@ -850,8 +943,8 @@
       {/if}
 
       <div class="readout">
-        {formatAxisYear(visible[0], false, readoutStep)} – {formatAxisYear(
-          visible[1],
+        {formatAxisYear(visibleYears[0], false, readoutStep)} – {formatAxisYear(
+          visibleYears[1],
           false,
           readoutStep,
         )}

@@ -4,6 +4,12 @@ A zoomable, inspectable vertical timeline running from the Stone Age
 (c. 3,300,000 BCE) to the present day — where "present" is recomputed on every
 page load.
 
+The scale is broken where the record is. The Palaeolithic, Mesolithic and
+Neolithic are 99.6% of that span and hold nothing, so they compress to a hatched
+stub at the top rather than pushing everything that ever happened into the last
+half-percent of the screen. Any age with nothing in it does the same, in either
+kind of timeline; add an entry to one and it opens back up.
+
 Over 200 entries: the periodising ages, the rise and fall of empires, British
 and Scottish monarchs, prime ministers and presidents, the battles of both
 world wars, and a century of armoured vehicles. What you see depends on how far
@@ -128,7 +134,10 @@ alongside an `entries.json` in the same shape as the main index and a
 | `subject` | Optional. The main-timeline entry this focus expands. |
 
 Chapters are ordinary entries of type `age` at importance 1 — the only entries
-in a focus that may hold 1 — and they become the rail down the right edge.
+in a focus that may hold 1 — and they become the rail down the right edge. A
+chapter you have not written anything into yet collapses to a stub on the axis,
+the same as an empty age on the main timeline, and reopens by itself once it
+holds something.
 `npm run validate` reports what each focus resolved to, which is the quickest
 way to see whether a selector did what you meant.
 

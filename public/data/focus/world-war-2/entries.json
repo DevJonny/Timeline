@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "ww2-1939",
+      "title": "1939: Outbreak & Blitzkrieg",
+      "type": "age",
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 1
+      },
+      "end": {
+        "year": 1939,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1940",
+      "title": "1940: Fall of France & Britain",
+      "type": "age",
+      "start": {
+        "year": 1940,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1940,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1941",
+      "title": "1941: Barbarossa & Pearl Harbor",
+      "type": "age",
+      "start": {
+        "year": 1941,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1941,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1942",
+      "title": "1942: Turning the Tide",
+      "type": "age",
+      "start": {
+        "year": 1942,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1942,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1943",
+      "title": "1943: Allied Offensives",
+      "type": "age",
+      "start": {
+        "year": 1943,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1943,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1944",
+      "title": "1944: Liberation Begins",
+      "type": "age",
+      "start": {
+        "year": 1944,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1944,
+        "month": 12,
+        "day": 31
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "ww2-1945",
+      "title": "1945: Final Victory",
+      "type": "age",
+      "start": {
+        "year": 1945,
+        "month": 1,
+        "day": 1
+      },
+      "end": {
+        "year": 1945,
+        "month": 9,
+        "day": 2
+      },
+      "importance": 1,
+      "keywords": [
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "battle-of-the-atlantic",
+      "title": "Battle of the Atlantic",
+      "type": "battle",
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 3
+      },
+      "end": {
+        "year": 1945,
+        "month": 5,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "naval-warfare",
+        "germany",
+        "united-kingdom",
+        "united-states"
+      ]
+    },
+    {
+      "id": "norwegian-campaign",
+      "title": "Norwegian Campaign",
+      "type": "battle",
+      "start": {
+        "year": 1940,
+        "month": 4,
+        "day": 9
+      },
+      "end": {
+        "year": 1940,
+        "month": 6,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "scandinavia",
+        "germany",
+        "united-kingdom"
+      ]
+    },
+    {
+      "id": "battle-of-france",
+      "title": "Battle of France",
+      "type": "battle",
+      "start": {
+        "year": 1940,
+        "month": 5,
+        "day": 10
+      },
+      "end": {
+        "year": 1940,
+        "month": 6,
+        "day": 25
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "western-front",
+        "germany",
+        "france"
+      ]
+    },
+    {
+      "id": "operation-compass",
+      "title": "Operation Compass",
+      "type": "battle",
+      "start": {
+        "year": 1940,
+        "month": 12,
+        "day": 9
+      },
+      "end": {
+        "year": 1941,
+        "month": 2,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "north-africa",
+        "italy",
+        "united-kingdom"
+      ]
+    },
+    {
+      "id": "battle-of-greece",
+      "title": "Battle of Greece",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 4,
+        "day": 6
+      },
+      "end": {
+        "year": 1941,
+        "month": 4,
+        "day": 30
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "balkans",
+        "germany",
+        "greece",
+        "italy"
+      ]
+    },
+    {
+      "id": "battle-of-crete",
+      "title": "Battle of Crete",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 5,
+        "day": 20
+      },
+      "end": {
+        "year": 1941,
+        "month": 6,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "mediterranean-theatre",
+        "germany",
+        "united-kingdom"
+      ]
+    },
+    {
+      "id": "siege-of-leningrad",
+      "title": "Siege of Leningrad",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 9,
+        "day": 8
+      },
+      "end": {
+        "year": 1944,
+        "month": 1,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "eastern-front",
+        "germany",
+        "soviet-union"
+      ]
+    },
+    {
+      "id": "battle-of-moscow",
+      "title": "Battle of Moscow",
+      "type": "battle",
+      "start": {
+        "year": 1941,
+        "month": 10,
+        "day": 2
+      },
+      "end": {
+        "year": 1942,
+        "month": 1,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "eastern-front",
+        "germany",
+        "soviet-union"
+      ]
+    },
+    {
+      "id": "first-battle-of-el-alamein",
+      "title": "First Battle of El Alamein",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 7,
+        "day": 1
+      },
+      "end": {
+        "year": 1942,
+        "month": 7,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "north-africa",
+        "germany",
+        "united-kingdom"
+      ]
+    },
+    {
+      "id": "operation-torch",
+      "title": "Operation Torch",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 11,
+        "day": 8
+      },
+      "end": {
+        "year": 1942,
+        "month": 11,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "north-africa",
+        "united-states",
+        "united-kingdom",
+        "vichy-france"
+      ]
+    },
+    {
+      "id": "battle-of-kasserine-pass",
+      "title": "Battle of Kasserine Pass",
+      "type": "battle",
+      "start": {
+        "year": 1943,
+        "month": 2,
+        "day": 19
+      },
+      "end": {
+        "year": 1943,
+        "month": 2,
+        "day": 24
+      },
+      "importance": 5,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "north-africa",
+        "germany",
+        "united-states"
+      ]
+    },
+    {
+      "id": "operation-husky",
+      "title": "Allied invasion of Sicily",
+      "type": "battle",
+      "start": {
+        "year": 1943,
+        "month": 7,
+        "day": 9
+      },
+      "end": {
+        "year": 1943,
+        "month": 8,
+        "day": 17
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "mediterranean-theatre",
+        "italy",
+        "united-states",
+        "united-kingdom"
+      ]
+    },
+    {
+      "id": "battle-of-anzio",
+      "title": "Battle of Anzio",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 1,
+        "day": 22
+      },
+      "end": {
+        "year": 1944,
+        "month": 6,
+        "day": 5
+      },
+      "importance": 4,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "italian-campaign",
+        "germany",
+        "united-states"
+      ]
+    },
+    {
+      "id": "operation-bagration",
+      "title": "Operation Bagration",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 6,
+        "day": 22
+      },
+      "end": {
+        "year": 1944,
+        "month": 8,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "eastern-front",
+        "germany",
+        "soviet-union"
+      ]
+    },
+    {
+      "id": "battle-of-berlin-1945",
+      "title": "Battle of Berlin",
+      "type": "battle",
+      "start": {
+        "year": 1945,
+        "month": 4,
+        "day": 16
+      },
+      "end": {
+        "year": 1945,
+        "month": 5,
+        "day": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-europe-africa",
+        "world-war-2",
+        "eastern-front",
+        "germany",
+        "soviet-union"
+      ]
+    },
+    {
+      "id": "battle-of-singapore",
+      "title": "Battle of Singapore",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 2,
+        "day": 8
+      },
+      "end": {
+        "year": 1942,
+        "month": 2,
+        "day": 15
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "british-empire",
+        "japan"
+      ]
+    },
+    {
+      "id": "battle-of-the-coral-sea",
+      "title": "Battle of the Coral Sea",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 5,
+        "day": 4
+      },
+      "end": {
+        "year": 1942,
+        "month": 5,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "naval"
+      ]
+    },
+    {
+      "id": "kokoda-track-campaign",
+      "title": "Kokoda Track Campaign",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 7,
+        "day": 21
+      },
+      "end": {
+        "year": 1942,
+        "month": 11,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "australia",
+        "japan"
+      ]
+    },
+    {
+      "id": "guadalcanal-campaign",
+      "title": "Guadalcanal Campaign",
+      "type": "battle",
+      "start": {
+        "year": 1942,
+        "month": 8,
+        "day": 7
+      },
+      "end": {
+        "year": 1943,
+        "month": 2,
+        "day": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan"
+      ]
+    },
+    {
+      "id": "battle-of-tarawa",
+      "title": "Battle of Tarawa",
+      "type": "battle",
+      "start": {
+        "year": 1943,
+        "month": 11,
+        "day": 20
+      },
+      "end": {
+        "year": 1943,
+        "month": 11,
+        "day": 23
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "amphibious"
+      ]
+    },
+    {
+      "id": "battle-of-saipan",
+      "title": "Battle of Saipan",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 6,
+        "day": 15
+      },
+      "end": {
+        "year": 1944,
+        "month": 7,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "amphibious"
+      ]
+    },
+    {
+      "id": "battle-of-the-philippine-sea",
+      "title": "Battle of the Philippine Sea",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 6,
+        "day": 19
+      },
+      "end": {
+        "year": 1944,
+        "month": 6,
+        "day": 20
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "naval"
+      ]
+    },
+    {
+      "id": "battle-of-leyte-gulf",
+      "title": "Battle of Leyte Gulf",
+      "type": "battle",
+      "start": {
+        "year": 1944,
+        "month": 10,
+        "day": 23
+      },
+      "end": {
+        "year": 1944,
+        "month": 10,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "naval"
+      ]
+    },
+    {
+      "id": "battle-of-iwo-jima",
+      "title": "Battle of Iwo Jima",
+      "type": "battle",
+      "start": {
+        "year": 1945,
+        "month": 2,
+        "day": 19
+      },
+      "end": {
+        "year": 1945,
+        "month": 3,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "amphibious"
+      ]
+    },
+    {
+      "id": "battle-of-okinawa",
+      "title": "Battle of Okinawa",
+      "type": "battle",
+      "start": {
+        "year": 1945,
+        "month": 4,
+        "day": 1
+      },
+      "end": {
+        "year": 1945,
+        "month": 6,
+        "day": 22
+      },
+      "importance": 2,
+      "keywords": [
+        "battles-pacific",
+        "world-war-2",
+        "united-states",
+        "japan",
+        "amphibious"
+      ]
+    },
+    {
+      "id": "anglo-french-declaration-of-war-germany",
+      "title": "UK and France Declare War on Germany",
+      "type": "event",
+      "start": {
+        "year": 1939,
+        "month": 9,
+        "day": 3
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "united-kingdom",
+        "france",
+        "germany",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "tripartite-pact",
+      "title": "Tripartite Pact",
+      "type": "event",
+      "start": {
+        "year": 1940,
+        "month": 9,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "politics-diplomacy",
+        "germany",
+        "italy",
+        "japan",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "atlantic-charter",
+      "title": "Atlantic Charter",
+      "type": "event",
+      "start": {
+        "year": 1941,
+        "month": 8,
+        "day": 14
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "united-states",
+        "united-kingdom",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "us-declaration-of-war-japan",
+      "title": "United States Declares War on Japan",
+      "type": "event",
+      "start": {
+        "year": 1941,
+        "month": 12,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "united-states",
+        "japan",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "casablanca-conference",
+      "title": "Casablanca Conference",
+      "type": "event",
+      "start": {
+        "year": 1943,
+        "month": 1,
+        "day": 14
+      },
+      "end": {
+        "year": 1943,
+        "month": 1,
+        "day": 24
+      },
+      "importance": 3,
+      "keywords": [
+        "politics-diplomacy",
+        "allied-powers",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "tehran-conference",
+      "title": "Tehran Conference",
+      "type": "event",
+      "start": {
+        "year": 1943,
+        "month": 11,
+        "day": 28
+      },
+      "end": {
+        "year": 1943,
+        "month": 12,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "allied-powers",
+        "soviet-union",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "yalta-conference",
+      "title": "Yalta Conference",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 2,
+        "day": 4
+      },
+      "end": {
+        "year": 1945,
+        "month": 2,
+        "day": 11
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "allied-powers",
+        "soviet-union",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "german-instrument-of-surrender",
+      "title": "German Instrument of Surrender",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 5,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "germany",
+        "allied-powers",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "potsdam-conference",
+      "title": "Potsdam Conference",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 7,
+        "day": 17
+      },
+      "end": {
+        "year": 1945,
+        "month": 8,
+        "day": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "allied-powers",
+        "soviet-union",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "japanese-instrument-of-surrender",
+      "title": "Japanese Instrument of Surrender",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 9,
+        "day": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "politics-diplomacy",
+        "japan",
+        "allied-powers",
+        "world-war-2"
+      ]
+    },
+    {
+      "id": "wannsee-conference",
+      "title": "Wannsee Conference",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 1,
+        "day": 20
+      },
+      "importance": 3,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "germany",
+        "the-holocaust"
+      ]
+    },
+    {
+      "id": "manhattan-project",
+      "title": "Manhattan Project",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 8,
+        "day": 13
+      },
+      "end": {
+        "year": 1947,
+        "month": 8,
+        "day": 15
+      },
+      "importance": 2,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "united-states",
+        "nuclear-weapons"
+      ]
+    },
+    {
+      "id": "v-2-rocket",
+      "title": "V-2 Rocket",
+      "type": "event",
+      "start": {
+        "year": 1942,
+        "month": 10,
+        "day": 3
+      },
+      "end": {
+        "year": 1952
+      },
+      "importance": 3,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "germany",
+        "technology"
+      ]
+    },
+    {
+      "id": "warsaw-ghetto-uprising",
+      "title": "Warsaw Ghetto Uprising",
+      "type": "battle",
+      "start": {
+        "year": 1943,
+        "month": 4,
+        "day": 19
+      },
+      "end": {
+        "year": 1943,
+        "month": 5,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "the-holocaust",
+        "poland"
+      ]
+    },
+    {
+      "id": "colossus-computer",
+      "title": "Colossus Computer",
+      "type": "event",
+      "start": {
+        "year": 1944,
+        "month": 2,
+        "day": 5
+      },
+      "end": {
+        "year": 1960
+      },
+      "importance": 3,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "united-kingdom",
+        "technology"
+      ]
+    },
+    {
+      "id": "liberation-of-auschwitz",
+      "title": "Liberation of Auschwitz",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 1,
+        "day": 27
+      },
+      "importance": 2,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "the-holocaust",
+        "poland"
+      ]
+    },
+    {
+      "id": "trinity-test",
+      "title": "Trinity Test",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 7,
+        "day": 16
+      },
+      "importance": 3,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "united-states",
+        "nuclear-weapons"
+      ]
+    },
+    {
+      "id": "atomic-bombings-japan",
+      "title": "Atomic bombings of Hiroshima and Nagasaki",
+      "type": "event",
+      "start": {
+        "year": 1945,
+        "month": 8,
+        "day": 6
+      },
+      "end": {
+        "year": 1945,
+        "month": 8,
+        "day": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "technology-holocaust",
+        "world-war-2",
+        "japan",
+        "united-states",
+        "nuclear-weapons"
+      ]
+    }
+  ]
+}
