@@ -1,0 +1,878 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "rise-to-great-power",
+      "title": "Rise to Great Power",
+      "type": "age",
+      "start": {
+        "year": 1611
+      },
+      "end": {
+        "year": 1648
+      },
+      "importance": 1,
+      "keywords": [
+        "swedish-empire"
+      ]
+    },
+    {
+      "id": "carolingian-era",
+      "title": "The Carolingian Era",
+      "type": "age",
+      "start": {
+        "year": 1648
+      },
+      "end": {
+        "year": 1700
+      },
+      "importance": 1,
+      "keywords": [
+        "swedish-empire"
+      ]
+    },
+    {
+      "id": "era-great-northern-war",
+      "title": "Great Northern War Era",
+      "type": "age",
+      "start": {
+        "year": 1700
+      },
+      "end": {
+        "year": 1721
+      },
+      "importance": 1,
+      "keywords": [
+        "swedish-empire"
+      ]
+    },
+    {
+      "id": "treaty-of-stolbovo",
+      "title": "Treaty of Stolbovo",
+      "type": "event",
+      "start": {
+        "year": 1617,
+        "month": 2,
+        "day": 27
+      },
+      "importance": 3,
+      "keywords": [
+        "domestic-administration",
+        "treaty",
+        "russia"
+      ]
+    },
+    {
+      "id": "queen-christina",
+      "title": "Queen Christina",
+      "type": "ruler",
+      "start": {
+        "year": 1632
+      },
+      "end": {
+        "year": 1654,
+        "month": 6,
+        "day": 16
+      },
+      "importance": 2,
+      "keywords": [
+        "domestic-administration",
+        "monarch",
+        "vasa"
+      ]
+    },
+    {
+      "id": "instrument-of-government-1634",
+      "title": "Instrument of Government",
+      "type": "event",
+      "start": {
+        "year": 1634,
+        "month": 7,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "domestic-administration",
+        "government",
+        "constitution"
+      ]
+    },
+    {
+      "id": "bergskollegium",
+      "title": "Bergskollegium",
+      "type": "event",
+      "start": {
+        "year": 1637
+      },
+      "end": {
+        "year": 1857
+      },
+      "importance": 4,
+      "keywords": [
+        "domestic-administration",
+        "economy",
+        "industry"
+      ]
+    },
+    {
+      "id": "new-sweden",
+      "title": "New Sweden",
+      "type": "event",
+      "start": {
+        "year": 1638,
+        "month": 3
+      },
+      "end": {
+        "year": 1655
+      },
+      "importance": 4,
+      "keywords": [
+        "domestic-administration",
+        "colony",
+        "trade"
+      ]
+    },
+    {
+      "id": "swedish-africa-company",
+      "title": "Swedish Africa Company",
+      "type": "event",
+      "start": {
+        "year": 1649
+      },
+      "end": {
+        "year": 1663
+      },
+      "importance": 5,
+      "keywords": [
+        "domestic-administration",
+        "colony",
+        "trade"
+      ]
+    },
+    {
+      "id": "sveriges-riksbank",
+      "title": "Sveriges Riksbank",
+      "type": "event",
+      "start": {
+        "year": 1668
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "domestic-administration",
+        "economy",
+        "finance"
+      ]
+    },
+    {
+      "id": "reductions-of-charles-xi",
+      "title": "Great Reduction",
+      "type": "event",
+      "start": {
+        "year": 1680
+      },
+      "importance": 3,
+      "keywords": [
+        "domestic-administration",
+        "economy",
+        "nobility"
+      ]
+    },
+    {
+      "id": "indelningsverket",
+      "title": "Allotment System",
+      "type": "event",
+      "start": {
+        "year": 1682,
+        "month": 10,
+        "day": 27
+      },
+      "end": {
+        "year": 1901
+      },
+      "importance": 3,
+      "keywords": [
+        "domestic-administration",
+        "military",
+        "government"
+      ]
+    },
+    {
+      "id": "treaty-of-traventhal",
+      "title": "Treaty of Traventhal",
+      "type": "event",
+      "start": {
+        "year": 1700,
+        "month": 8,
+        "day": 18
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "treaty",
+        "denmark-norway"
+      ]
+    },
+    {
+      "id": "battle-of-kliszow",
+      "title": "Battle of Kliszów",
+      "type": "battle",
+      "start": {
+        "year": 1702,
+        "month": 7,
+        "day": 19
+      },
+      "importance": 3,
+      "keywords": [
+        "great-northern-war",
+        "poland-lithuania",
+        "saxony"
+      ]
+    },
+    {
+      "id": "battle-of-lesnaya",
+      "title": "Battle of Lesnaya",
+      "type": "battle",
+      "start": {
+        "year": 1708,
+        "month": 10,
+        "day": 9
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "carolean"
+      ]
+    },
+    {
+      "id": "siege-of-riga-1710",
+      "title": "Siege of Riga",
+      "type": "battle",
+      "start": {
+        "year": 1709,
+        "month": 11,
+        "day": 3
+      },
+      "end": {
+        "year": 1710,
+        "month": 7,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "livonia"
+      ]
+    },
+    {
+      "id": "capitulation-estonia-livonia",
+      "title": "Capitulation of Estonia and Livonia",
+      "type": "event",
+      "start": {
+        "year": 1710
+      },
+      "importance": 3,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "livonia",
+        "estonia"
+      ]
+    },
+    {
+      "id": "battle-of-helsingborg",
+      "title": "Battle of Helsingborg",
+      "type": "battle",
+      "start": {
+        "year": 1710,
+        "month": 3,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "denmark-norway",
+        "scania"
+      ]
+    },
+    {
+      "id": "siege-of-stralsund",
+      "title": "Siege of Stralsund",
+      "type": "battle",
+      "start": {
+        "year": 1711
+      },
+      "end": {
+        "year": 1715,
+        "month": 12,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "pomerania",
+        "denmark-norway",
+        "prussia"
+      ]
+    },
+    {
+      "id": "pruth-river-campaign",
+      "title": "Pruth River Campaign",
+      "type": "event",
+      "start": {
+        "year": 1711,
+        "month": 7,
+        "day": 18
+      },
+      "end": {
+        "year": 1711,
+        "month": 7,
+        "day": 22
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "ottoman-empire",
+        "russian-empire"
+      ]
+    },
+    {
+      "id": "battle-of-gadebusch",
+      "title": "Battle of Gadebusch",
+      "type": "battle",
+      "start": {
+        "year": 1712,
+        "month": 12,
+        "day": 20
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "denmark-norway",
+        "saxony"
+      ]
+    },
+    {
+      "id": "battle-of-storkyro",
+      "title": "Battle of Storkyro",
+      "type": "battle",
+      "start": {
+        "year": 1714,
+        "month": 3,
+        "day": 2
+      },
+      "importance": 5,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "finland"
+      ]
+    },
+    {
+      "id": "battle-of-gangut",
+      "title": "Battle of Gangut",
+      "type": "battle",
+      "start": {
+        "year": 1714,
+        "month": 8,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "navy"
+      ]
+    },
+    {
+      "id": "carolean-death-march",
+      "title": "Carolean Death March",
+      "type": "event",
+      "start": {
+        "year": 1718,
+        "month": 12,
+        "day": 28
+      },
+      "end": {
+        "year": 1719,
+        "month": 1,
+        "day": 5
+      },
+      "importance": 4,
+      "keywords": [
+        "great-northern-war",
+        "norway",
+        "carolean"
+      ]
+    },
+    {
+      "id": "russian-galley-raids",
+      "title": "Russian Galley Raids",
+      "type": "event",
+      "start": {
+        "year": 1719
+      },
+      "end": {
+        "year": 1721
+      },
+      "importance": 3,
+      "keywords": [
+        "great-northern-war",
+        "russian-empire",
+        "navy",
+        "sweden-proper"
+      ]
+    },
+    {
+      "id": "torstensson-war",
+      "title": "Torstensson War",
+      "type": "war",
+      "start": {
+        "year": 1643
+      },
+      "end": {
+        "year": 1645
+      },
+      "importance": 3,
+      "keywords": [
+        "northern-wars",
+        "denmark",
+        "military"
+      ]
+    },
+    {
+      "id": "treaty-of-bromsebro",
+      "title": "Treaty of Brömsebro",
+      "type": "event",
+      "start": {
+        "year": 1645,
+        "month": 8,
+        "day": 13
+      },
+      "importance": 3,
+      "keywords": [
+        "northern-wars",
+        "treaty",
+        "denmark"
+      ]
+    },
+    {
+      "id": "charles-x-gustav",
+      "title": "Charles X Gustav",
+      "type": "ruler",
+      "start": {
+        "year": 1654,
+        "month": 6,
+        "day": 6
+      },
+      "end": {
+        "year": 1660,
+        "month": 2,
+        "day": 13
+      },
+      "importance": 2,
+      "keywords": [
+        "northern-wars",
+        "ruler",
+        "wittelsbach"
+      ]
+    },
+    {
+      "id": "second-northern-war",
+      "title": "Second Northern War",
+      "type": "war",
+      "start": {
+        "year": 1655
+      },
+      "end": {
+        "year": 1660
+      },
+      "importance": 2,
+      "keywords": [
+        "northern-wars",
+        "poland",
+        "denmark"
+      ]
+    },
+    {
+      "id": "march-across-the-belts",
+      "title": "March Across the Belts",
+      "type": "event",
+      "start": {
+        "year": 1658,
+        "month": 1,
+        "day": 30
+      },
+      "end": {
+        "year": 1658,
+        "month": 2,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "northern-wars",
+        "military",
+        "denmark"
+      ]
+    },
+    {
+      "id": "treaty-of-roskilde",
+      "title": "Treaty of Roskilde",
+      "type": "event",
+      "start": {
+        "year": 1658,
+        "month": 2,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "northern-wars",
+        "treaty",
+        "territory"
+      ]
+    },
+    {
+      "id": "siege-of-copenhagen",
+      "title": "Siege of Copenhagen",
+      "type": "battle",
+      "start": {
+        "year": 1658,
+        "month": 8,
+        "day": 11
+      },
+      "end": {
+        "year": 1660,
+        "month": 5,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "northern-wars",
+        "denmark",
+        "siege"
+      ]
+    },
+    {
+      "id": "treaty-of-copenhagen",
+      "title": "Treaty of Copenhagen",
+      "type": "event",
+      "start": {
+        "year": 1660,
+        "month": 5,
+        "day": 27
+      },
+      "importance": 4,
+      "keywords": [
+        "northern-wars",
+        "treaty",
+        "denmark"
+      ]
+    },
+    {
+      "id": "scanian-war",
+      "title": "Scanian War",
+      "type": "war",
+      "start": {
+        "year": 1675
+      },
+      "end": {
+        "year": 1679
+      },
+      "importance": 2,
+      "keywords": [
+        "northern-wars",
+        "denmark",
+        "scania"
+      ]
+    },
+    {
+      "id": "battle-of-fehrbellin",
+      "title": "Battle of Fehrbellin",
+      "type": "battle",
+      "start": {
+        "year": 1675,
+        "month": 6,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "northern-wars",
+        "brandenburg",
+        "military"
+      ]
+    },
+    {
+      "id": "battle-of-lund",
+      "title": "Battle of Lund",
+      "type": "battle",
+      "start": {
+        "year": 1676,
+        "month": 12,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "northern-wars",
+        "scania",
+        "military"
+      ]
+    },
+    {
+      "id": "treaty-of-fontainebleau",
+      "title": "Treaty of Fontainebleau",
+      "type": "event",
+      "start": {
+        "year": 1679,
+        "month": 9,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "northern-wars",
+        "treaty",
+        "france"
+      ]
+    },
+    {
+      "id": "axel-oxenstierna",
+      "title": "Axel Oxenstierna",
+      "type": "person",
+      "start": {
+        "year": 1583,
+        "month": 6,
+        "day": 16
+      },
+      "end": {
+        "year": 1654,
+        "month": 8,
+        "day": 28
+      },
+      "importance": 2,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "johan-baner",
+      "title": "Johan Banér",
+      "type": "person",
+      "start": {
+        "year": 1596,
+        "month": 6,
+        "day": 23
+      },
+      "end": {
+        "year": 1641,
+        "month": 5,
+        "day": 10
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "commander"
+      ]
+    },
+    {
+      "id": "lennart-torstensson",
+      "title": "Lennart Torstensson",
+      "type": "person",
+      "start": {
+        "year": 1603,
+        "month": 8,
+        "day": 17
+      },
+      "end": {
+        "year": 1651,
+        "month": 4,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "commander"
+      ]
+    },
+    {
+      "id": "treaty-of-stettin",
+      "title": "Treaty of Stettin",
+      "type": "event",
+      "start": {
+        "year": 1630,
+        "month": 9,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "treaty-of-barwalde",
+      "title": "Treaty of Bärwalde",
+      "type": "event",
+      "start": {
+        "year": 1631,
+        "month": 1,
+        "day": 23
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "diplomacy",
+        "france"
+      ]
+    },
+    {
+      "id": "battle-of-rain",
+      "title": "Battle of Rain",
+      "type": "battle",
+      "start": {
+        "year": 1632,
+        "month": 4,
+        "day": 15
+      },
+      "importance": 4,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-alte-veste",
+      "title": "Battle of Alte Veste",
+      "type": "battle",
+      "start": {
+        "year": 1632,
+        "month": 9,
+        "day": 3
+      },
+      "end": {
+        "year": 1632,
+        "month": 9,
+        "day": 4
+      },
+      "importance": 4,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-nordlingen",
+      "title": "Battle of Nördlingen",
+      "type": "battle",
+      "start": {
+        "year": 1634,
+        "month": 9,
+        "day": 5
+      },
+      "end": {
+        "year": 1634,
+        "month": 9,
+        "day": 6
+      },
+      "importance": 2,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-wittstock",
+      "title": "Battle of Wittstock",
+      "type": "battle",
+      "start": {
+        "year": 1636,
+        "month": 10,
+        "day": 4
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-leipzig-1642",
+      "title": "Second Battle of Breitenfeld",
+      "type": "battle",
+      "start": {
+        "year": 1642,
+        "month": 10,
+        "day": 23
+      },
+      "importance": 4,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-jankau",
+      "title": "Battle of Jankau",
+      "type": "battle",
+      "start": {
+        "year": 1645,
+        "month": 3,
+        "day": 6
+      },
+      "importance": 3,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "battle-of-zusmarshausen",
+      "title": "Battle of Zusmarshausen",
+      "type": "battle",
+      "start": {
+        "year": 1648,
+        "month": 5,
+        "day": 17
+      },
+      "importance": 4,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    },
+    {
+      "id": "siege-of-prague-1648",
+      "title": "Siege of Prague",
+      "type": "battle",
+      "start": {
+        "year": 1648,
+        "month": 7,
+        "day": 25
+      },
+      "end": {
+        "year": 1648,
+        "month": 11,
+        "day": 1
+      },
+      "importance": 4,
+      "keywords": [
+        "swedish-empire",
+        "thirty-years-war",
+        "battle"
+      ]
+    }
+  ]
+}

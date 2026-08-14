@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "swedish-empire",
+  "title": "Swedish Empire",
+  "blurb": "Sweden's century as a great European power, from Gustavus Adolphus to the Great Northern War.",
+  "subject": "swedish-empire",
+  "range": { "start": { "year": 1611 }, "end": { "year": 1721 } },
+  "select": {
+    "keywords": ["sweden", "swedish-empire"],
+    "include": [],
+    "exclude": []
+  }
+}
