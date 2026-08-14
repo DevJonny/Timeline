@@ -15,7 +15,7 @@
 
 import { extentOf } from './scale.ts';
 import { resolveEnd, toDecimalYear } from './time.ts';
-import type { Entry, Focus, FocusRange } from './types.ts';
+import type { Entry, Focus, FocusRange, FocusSummary } from './types.ts';
 
 export interface ResolvedFocus {
   /** Inherited and own together — what the timeline renders. */
@@ -60,6 +60,23 @@ export function mainDomain(entries: readonly Entry[], present: number): [number,
 /** The declared period as axis coordinates. */
 export function rangeExtent(range: FocusRange, present: number): [number, number] {
   return [toDecimalYear(range.start), resolveEnd(range.end, present)];
+}
+
+/**
+ * The menu's reading order: chronological by the period each focus covers,
+ * oldest first.
+ *
+ * Sorted here rather than maintained by hand in `focus/index.json`, so a focus
+ * added to that file lands in the right place without anyone remembering to
+ * move it. The key is the *decimal* year, because historical years have no year
+ * 0 and comparing them raw puts 1 BCE and 1 CE the wrong way round. Title
+ * breaks a tie so the order is total, and therefore stable across engines.
+ */
+export function orderFocuses(focuses: readonly FocusSummary[]): FocusSummary[] {
+  return [...focuses].sort((a, b) => {
+    const start = toDecimalYear(a.range.start) - toDecimalYear(b.range.start);
+    return start !== 0 ? start : a.title.localeCompare(b.title);
+  });
 }
 
 function overlaps(entry: Entry, present: number, from: number, to: number): boolean {

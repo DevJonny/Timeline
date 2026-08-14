@@ -127,7 +127,7 @@ alongside an `entries.json` in the same shape as the main index and a
 
 | Field | Notes |
 |---|---|
-| `range` | The **opening view**, not the axis domain — the domain widens to hold anything the focus contains. |
+| `range` | The **opening view**, not the axis domain — the domain widens to hold anything the focus contains. Its `start` is also the menu's sort key: focuses are listed oldest first, so where a focus sits in `index.json` does not matter. |
 | `select.keywords` | Main-timeline entries carrying any of these, and overlapping `range`, are inherited. Adding one to the main timeline later adds it here too. |
 | `select.include` | Ids pulled in whatever their keywords, and whatever their dates. |
 | `select.exclude` | Ids kept out. Beats both of the above — this is how you stop a neighbouring empire stretching the axis past the subject. |

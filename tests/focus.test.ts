@@ -5,12 +5,13 @@ import {
   gateScaleFor,
   inheritedEntries,
   mainDomain,
+  orderFocuses,
   rangeExtent,
   resolveFocus,
 } from '../src/lib/focus.ts';
 import { importanceGate } from '../src/lib/lod.ts';
 import { GATE_REFERENCE_SPAN, maxZoomFor } from '../src/lib/scale.ts';
-import type { Entry, Focus } from '../src/lib/types.ts';
+import type { Entry, Focus, FocusSummary } from '../src/lib/types.ts';
 
 /** 2026-01-01, so "present" never drifts under the tests. */
 const PRESENT = 2026;
@@ -236,5 +237,40 @@ describe('focusView', () => {
     expect(view.ownIds.has('battle-of-actium')).toBe(true);
     expect(view.ownIds.has('roman-empire')).toBe(false);
     expect(view.id).toBe('roman-empire-focus');
+  });
+});
+
+describe('orderFocuses', () => {
+  function summary(id: string, year: number, title = id): FocusSummary {
+    return { id, title, blurb: '', range: { start: { year }, end: { year: year + 1 } } };
+  }
+
+  it('reads oldest period first, whatever order the index file was authored in', () => {
+    const ordered = orderFocuses([
+      summary('world-war-2', 1939),
+      summary('ancient-greece', -1600),
+      summary('world-war-1', 1914),
+      summary('roman-empire', -27),
+      summary('the-tudors', 1485),
+    ]);
+
+    expect(ordered.map((focus) => focus.id)).toEqual([
+      'ancient-greece',
+      'roman-empire',
+      'the-tudors',
+      'world-war-1',
+      'world-war-2',
+    ]);
+  });
+
+  it('sorts across the BCE/CE boundary, where there is no year 0', () => {
+    const ordered = orderFocuses([summary('ce', 1), summary('bce', -1)]);
+    expect(ordered.map((focus) => focus.id)).toEqual(['bce', 'ce']);
+  });
+
+  it('breaks a tie by title, and leaves the input untouched', () => {
+    const input = [summary('b', 1500, 'Beta'), summary('a', 1500, 'Alpha')];
+    expect(orderFocuses(input).map((focus) => focus.id)).toEqual(['a', 'b']);
+    expect(input.map((focus) => focus.id)).toEqual(['b', 'a']);
   });
 });

@@ -52,6 +52,12 @@ public/data/focus/<id>/details/<id>.json        # prose per chapter
 The index duplicates `title`, `blurb` and `range` so the menu renders in one
 request; validation fails if the copies disagree.
 
+**Append to `focuses`; where in the array does not matter.** The menu sorts by
+`range.start`, oldest first, in `orderFocuses` — so a new focus lands in its
+chronological place whatever order the file is in. Keeping the file sorted is
+tidy, not load-bearing; do not add ordering logic anywhere else, and do not
+read the file's order as meaning anything.
+
 ### Choosing the selector — the one judgement call
 
 `range` is the **opening view**. The axis domain is the range *union everything

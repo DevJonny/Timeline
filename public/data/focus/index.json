@@ -14,6 +14,12 @@
       "range": { "start": { "year": -27 }, "end": { "year": 476 } }
     },
     {
+      "id": "the-tudors",
+      "title": "The Tudors",
+      "blurb": "The dynasty that reshaped religion and state in England.",
+      "range": { "start": { "year": 1485 }, "end": { "year": 1603 } }
+    },
+    {
       "id": "world-war-1",
       "title": "First World War",
       "blurb": "The global conflict that reshaped the early 20th century.",
@@ -24,12 +30,6 @@
       "title": "Second World War",
       "blurb": "The deadliest conflict in human history.",
       "range": { "start": { "year": 1939 }, "end": { "year": 1945 } }
-    },
-    {
-      "id": "the-tudors",
-      "title": "The Tudors",
-      "blurb": "The dynasty that reshaped religion and state in England.",
-      "range": { "start": { "year": 1485 }, "end": { "year": 1603 } }
     }
   ]
 }

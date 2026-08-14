@@ -7,6 +7,7 @@
  * indirection exists to prevent.
  */
 
+import { orderFocuses } from './focus.ts';
 import type {
   Detail,
   EntriesFile,
@@ -36,7 +37,7 @@ export async function loadEntries(): Promise<Entry[]> {
 // --- focused timelines ------------------------------------------------------
 
 /**
- * The menu's list of focuses.
+ * The menu's list of focuses, oldest period first.
  *
  * Never rejects. A focus index that is missing, malformed, or not yet
  * deployed costs the reader the menu button and nothing else — the main
@@ -46,7 +47,7 @@ export async function loadEntries(): Promise<Entry[]> {
 export async function loadFocusIndex(): Promise<FocusSummary[]> {
   try {
     const file = await fetchJson<FocusIndex>('focus/index.json', 'the focus index');
-    return Array.isArray(file?.focuses) ? file.focuses : [];
+    return Array.isArray(file?.focuses) ? orderFocuses(file.focuses) : [];
   } catch {
     return [];
   }
