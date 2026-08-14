@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "the-tudors",
+  "title": "The Tudors",
+  "blurb": "The dynasty that reshaped religion and state in England.",
+  "subject": "the-tudors",
+  "range": { "start": { "year": 1485 }, "end": { "year": 1603 } },
+  "select": {
+    "keywords": ["tudors", "england", "reformation"],
+    "include": [],
+    "exclude": []
+  }
+}

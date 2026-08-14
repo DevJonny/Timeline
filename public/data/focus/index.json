@@ -24,6 +24,12 @@
       "title": "Second World War",
       "blurb": "The deadliest conflict in human history.",
       "range": { "start": { "year": 1939 }, "end": { "year": 1945 } }
+    },
+    {
+      "id": "the-tudors",
+      "title": "The Tudors",
+      "blurb": "The dynasty that reshaped religion and state in England.",
+      "range": { "start": { "year": 1485 }, "end": { "year": 1603 } }
     }
   ]
 }
