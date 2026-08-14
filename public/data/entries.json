@@ -10215,6 +10215,22 @@
         "antiquity",
         "empire"
       ]
+    },
+    {
+      "id": "the-tudors",
+      "title": "The Tudors",
+      "type": "age",
+      "importance": 1,
+      "start": {
+        "year": 1485
+      },
+      "end": {
+        "year": 1603
+      },
+      "keywords": [
+        "england",
+        "monarchy"
+      ]
     }
   ]
 }

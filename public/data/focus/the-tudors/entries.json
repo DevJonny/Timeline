@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "reign-of-henry-vii",
+      "title": "Henry VII",
+      "type": "age",
+      "start": {
+        "year": 1485
+      },
+      "end": {
+        "year": 1509
+      },
+      "importance": 1,
+      "keywords": [
+        "tudors"
+      ]
+    },
+    {
+      "id": "reign-of-henry-viii",
+      "title": "Henry VIII",
+      "type": "age",
+      "start": {
+        "year": 1509
+      },
+      "end": {
+        "year": 1547
+      },
+      "importance": 1,
+      "keywords": [
+        "tudors"
+      ]
+    },
+    {
+      "id": "mid-tudor-crisis",
+      "title": "Edward & Mary",
+      "type": "age",
+      "start": {
+        "year": 1547
+      },
+      "end": {
+        "year": 1558
+      },
+      "importance": 1,
+      "keywords": [
+        "tudors"
+      ]
+    },
+    {
+      "id": "elizabethan-era",
+      "title": "Elizabethan Era",
+      "type": "age",
+      "start": {
+        "year": 1558
+      },
+      "end": {
+        "year": 1603
+      },
+      "importance": 1,
+      "keywords": [
+        "tudors"
+      ]
+    },
+    {
+      "id": "john-cabot-voyage",
+      "title": "John Cabot's Voyage",
+      "type": "event",
+      "start": {
+        "year": 1497,
+        "month": 5,
+        "day": 20
+      },
+      "end": {
+        "year": 1497,
+        "month": 8,
+        "day": 6
+      },
+      "importance": 2,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "north-america"
+      ]
+    },
+    {
+      "id": "john-dee",
+      "title": "John Dee",
+      "type": "person",
+      "start": {
+        "year": 1527,
+        "month": 7,
+        "day": 13
+      },
+      "end": {
+        "year": 1609,
+        "circa": true
+      },
+      "importance": 4,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "science"
+      ]
+    },
+    {
+      "id": "richard-hakluyt",
+      "title": "Richard Hakluyt",
+      "type": "person",
+      "start": {
+        "year": 1552,
+        "circa": true
+      },
+      "end": {
+        "year": 1616,
+        "month": 11,
+        "day": 23
+      },
+      "importance": 4,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "literature"
+      ]
+    },
+    {
+      "id": "muscovy-company",
+      "title": "Muscovy Company",
+      "type": "event",
+      "start": {
+        "year": 1555
+      },
+      "end": {
+        "year": 1917
+      },
+      "importance": 3,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "trade"
+      ]
+    },
+    {
+      "id": "drakes-circumnavigation",
+      "title": "Francis Drake's Circumnavigation",
+      "type": "event",
+      "start": {
+        "year": 1577,
+        "month": 12,
+        "day": 13
+      },
+      "end": {
+        "year": 1580,
+        "month": 9,
+        "day": 26
+      },
+      "importance": 2,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "navigation"
+      ]
+    },
+    {
+      "id": "roanoke-colony",
+      "title": "Roanoke Colony",
+      "type": "event",
+      "start": {
+        "year": 1585
+      },
+      "end": {
+        "year": 1590,
+        "month": 8,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "colonisation"
+      ]
+    },
+    {
+      "id": "globe-theatre",
+      "title": "Globe Theatre",
+      "type": "event",
+      "start": {
+        "year": 1599
+      },
+      "end": {
+        "year": 1644
+      },
+      "importance": 2,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "theatre",
+        "london"
+      ]
+    },
+    {
+      "id": "east-india-company",
+      "title": "East India Company",
+      "type": "event",
+      "start": {
+        "year": 1600,
+        "month": 12,
+        "day": 31
+      },
+      "end": {
+        "year": 1874,
+        "month": 6,
+        "day": 1
+      },
+      "importance": 2,
+      "keywords": [
+        "culture-exploration",
+        "tudors",
+        "trade"
+      ]
+    },
+    {
+      "id": "battle-of-flodden",
+      "title": "Battle of Flodden",
+      "type": "battle",
+      "start": {
+        "year": 1513,
+        "month": 9,
+        "day": 9
+      },
+      "importance": 3,
+      "keywords": [
+        "foreign-policy-war",
+        "scotland",
+        "tudors"
+      ]
+    },
+    {
+      "id": "treaty-of-london-1518",
+      "title": "Treaty of London",
+      "type": "event",
+      "start": {
+        "year": 1518,
+        "month": 10,
+        "day": 2
+      },
+      "importance": 4,
+      "keywords": [
+        "foreign-policy-war",
+        "diplomacy",
+        "tudors"
+      ]
+    },
+    {
+      "id": "field-of-the-cloth-of-gold",
+      "title": "Field of the Cloth of Gold",
+      "type": "event",
+      "start": {
+        "year": 1520,
+        "month": 6,
+        "day": 7
+      },
+      "end": {
+        "year": 1520,
+        "month": 6,
+        "day": 24
+      },
+      "importance": 4,
+      "keywords": [
+        "foreign-policy-war",
+        "france",
+        "tudors"
+      ]
+    },
+    {
+      "id": "rough-wooing",
+      "title": "The Rough Wooing",
+      "type": "war",
+      "start": {
+        "year": 1543,
+        "month": 12
+      },
+      "end": {
+        "year": 1551,
+        "month": 3
+      },
+      "importance": 3,
+      "keywords": [
+        "foreign-policy-war",
+        "scotland",
+        "tudors"
+      ]
+    },
+    {
+      "id": "battle-of-pinkie-cleugh",
+      "title": "Battle of Pinkie Cleugh",
+      "type": "battle",
+      "start": {
+        "year": 1547,
+        "month": 9,
+        "day": 10
+      },
+      "importance": 4,
+      "keywords": [
+        "foreign-policy-war",
+        "scotland",
+        "tudors"
+      ]
+    },
+    {
+      "id": "loss-of-calais",
+      "title": "Loss of Calais",
+      "type": "event",
+      "start": {
+        "year": 1558,
+        "month": 1,
+        "day": 7
+      },
+      "importance": 3,
+      "keywords": [
+        "foreign-policy-war",
+        "france",
+        "tudors"
+      ]
+    },
+    {
+      "id": "anglo-spanish-war-1585",
+      "title": "Anglo-Spanish War",
+      "type": "war",
+      "start": {
+        "year": 1585
+      },
+      "end": {
+        "year": 1604
+      },
+      "importance": 2,
+      "keywords": [
+        "foreign-policy-war",
+        "spain",
+        "tudors"
+      ]
+    },
+    {
+      "id": "spanish-armada",
+      "title": "Spanish Armada",
+      "type": "event",
+      "start": {
+        "year": 1588,
+        "month": 7,
+        "day": 19
+      },
+      "end": {
+        "year": 1588,
+        "month": 9
+      },
+      "importance": 2,
+      "keywords": [
+        "foreign-policy-war",
+        "spain",
+        "naval",
+        "tudors"
+      ]
+    },
+    {
+      "id": "english-armada",
+      "title": "English Armada",
+      "type": "event",
+      "start": {
+        "year": 1589,
+        "month": 4,
+        "day": 28
+      },
+      "end": {
+        "year": 1589,
+        "month": 7
+      },
+      "importance": 4,
+      "keywords": [
+        "foreign-policy-war",
+        "spain",
+        "naval",
+        "tudors"
+      ]
+    },
+    {
+      "id": "nine-years-war-ireland",
+      "title": "Nine Years' War (Ireland)",
+      "type": "war",
+      "start": {
+        "year": 1594
+      },
+      "end": {
+        "year": 1603
+      },
+      "importance": 3,
+      "keywords": [
+        "foreign-policy-war",
+        "ireland",
+        "tudors"
+      ]
+    },
+    {
+      "id": "first-succession-act",
+      "title": "First Succession Act",
+      "type": "event",
+      "start": {
+        "year": 1534,
+        "month": 3,
+        "day": 30
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "parliament",
+        "succession"
+      ]
+    },
+    {
+      "id": "treason-act-1534",
+      "title": "Treason Act 1534",
+      "type": "event",
+      "start": {
+        "year": 1534,
+        "month": 12,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "parliament",
+        "treason"
+      ]
+    },
+    {
+      "id": "second-succession-act",
+      "title": "Second Succession Act",
+      "type": "event",
+      "start": {
+        "year": 1536,
+        "month": 7,
+        "day": 18
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "parliament",
+        "succession"
+      ]
+    },
+    {
+      "id": "pilgrimage-of-grace",
+      "title": "Pilgrimage of Grace",
+      "type": "event",
+      "start": {
+        "year": 1536,
+        "month": 10
+      },
+      "end": {
+        "year": 1537,
+        "month": 2
+      },
+      "importance": 2,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "rebellion",
+        "religion"
+      ]
+    },
+    {
+      "id": "marriage-anne-of-cleves",
+      "title": "Marriage of Henry VIII and Anne of Cleves",
+      "type": "event",
+      "start": {
+        "year": 1540,
+        "month": 1,
+        "day": 6
+      },
+      "importance": 4,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "marriage",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "execution-catherine-howard",
+      "title": "Execution of Catherine Howard",
+      "type": "event",
+      "start": {
+        "year": 1542,
+        "month": 2,
+        "day": 13
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "execution",
+        "treason"
+      ]
+    },
+    {
+      "id": "third-succession-act",
+      "title": "Third Succession Act",
+      "type": "event",
+      "start": {
+        "year": 1544,
+        "month": 3,
+        "day": 29
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "parliament",
+        "succession"
+      ]
+    },
+    {
+      "id": "wyatts-rebellion",
+      "title": "Wyatt's Rebellion",
+      "type": "event",
+      "start": {
+        "year": 1554,
+        "month": 1,
+        "day": 25
+      },
+      "end": {
+        "year": 1554,
+        "month": 2
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "rebellion",
+        "treason"
+      ]
+    },
+    {
+      "id": "marriage-mary-philip",
+      "title": "Marriage of Mary I and Philip of Spain",
+      "type": "event",
+      "start": {
+        "year": 1554,
+        "month": 7,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "marriage",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "babington-plot",
+      "title": "Babington Plot",
+      "type": "event",
+      "start": {
+        "year": 1586,
+        "month": 7
+      },
+      "end": {
+        "year": 1586,
+        "month": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "plot",
+        "treason"
+      ]
+    },
+    {
+      "id": "execution-mary-queen-of-scots",
+      "title": "Execution of Mary, Queen of Scots",
+      "type": "event",
+      "start": {
+        "year": 1587,
+        "month": 2,
+        "day": 8
+      },
+      "importance": 2,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "execution",
+        "treason"
+      ]
+    },
+    {
+      "id": "essex-rebellion",
+      "title": "Essex Rebellion",
+      "type": "event",
+      "start": {
+        "year": 1601,
+        "month": 2,
+        "day": 8
+      },
+      "importance": 3,
+      "keywords": [
+        "tudors",
+        "monarchs-politics",
+        "rebellion",
+        "treason"
+      ]
+    },
+    {
+      "id": "submission-of-the-clergy",
+      "title": "Submission of the Clergy",
+      "type": "event",
+      "start": {
+        "year": 1532,
+        "month": 5,
+        "day": 15
+      },
+      "importance": 3,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "church-of-england"
+      ]
+    },
+    {
+      "id": "act-of-supremacy",
+      "title": "Act of Supremacy",
+      "type": "event",
+      "start": {
+        "year": 1534,
+        "month": 11,
+        "day": 3
+      },
+      "importance": 2,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "church-of-england"
+      ]
+    },
+    {
+      "id": "dissolution-of-the-monasteries",
+      "title": "Dissolution of the Monasteries",
+      "type": "event",
+      "start": {
+        "year": 1536
+      },
+      "end": {
+        "year": 1540,
+        "month": 3,
+        "day": 23
+      },
+      "importance": 2,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "catholicism"
+      ]
+    },
+    {
+      "id": "great-bible",
+      "title": "Great Bible",
+      "type": "event",
+      "start": {
+        "year": 1539,
+        "month": 4
+      },
+      "end": "present",
+      "importance": 4,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "protestantism"
+      ]
+    },
+    {
+      "id": "six-articles",
+      "title": "Six Articles",
+      "type": "event",
+      "start": {
+        "year": 1539,
+        "month": 6,
+        "day": 28
+      },
+      "importance": 4,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "catholicism"
+      ]
+    },
+    {
+      "id": "book-of-common-prayer",
+      "title": "Book of Common Prayer",
+      "type": "event",
+      "start": {
+        "year": 1549,
+        "month": 6,
+        "day": 9
+      },
+      "end": "present",
+      "importance": 2,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "church-of-england",
+        "protestantism"
+      ]
+    },
+    {
+      "id": "marian-persecutions",
+      "title": "Marian Persecutions",
+      "type": "event",
+      "start": {
+        "year": 1555,
+        "month": 1
+      },
+      "end": {
+        "year": 1558,
+        "month": 11,
+        "day": 17
+      },
+      "importance": 3,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "catholicism"
+      ]
+    },
+    {
+      "id": "elizabethan-religious-settlement",
+      "title": "Elizabethan Religious Settlement",
+      "type": "event",
+      "start": {
+        "year": 1559,
+        "month": 5
+      },
+      "importance": 2,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "church-of-england"
+      ]
+    },
+    {
+      "id": "regnans-in-excelsis",
+      "title": "Regnans in Excelsis",
+      "type": "event",
+      "start": {
+        "year": 1570,
+        "month": 2,
+        "day": 25
+      },
+      "importance": 3,
+      "keywords": [
+        "religion-reformation",
+        "tudors",
+        "catholicism"
+      ]
+    }
+  ]
+}
