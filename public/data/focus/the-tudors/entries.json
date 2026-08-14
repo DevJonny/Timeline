@@ -763,6 +763,83 @@
         "tudors",
         "catholicism"
       ]
+    },
+    {
+      "id": "jane-seymour",
+      "title": "Jane Seymour",
+      "type": "person",
+      "importance": 3,
+      "start": {
+        "year": 1508,
+        "circa": true
+      },
+      "end": {
+        "year": 1537,
+        "month": 10,
+        "day": 24
+      },
+      "keywords": [
+        "monarchy",
+        "england"
+      ]
+    },
+    {
+      "id": "anne-of-cleves",
+      "title": "Anne of Cleves",
+      "type": "person",
+      "importance": 3,
+      "start": {
+        "year": 1515,
+        "month": 9,
+        "day": 22
+      },
+      "end": {
+        "year": 1557,
+        "month": 7,
+        "day": 16
+      },
+      "keywords": [
+        "monarchy",
+        "england"
+      ]
+    },
+    {
+      "id": "catherine-howard",
+      "title": "Catherine Howard",
+      "type": "person",
+      "importance": 3,
+      "start": {
+        "year": 1523,
+        "circa": true
+      },
+      "end": {
+        "year": 1542,
+        "month": 2,
+        "day": 13
+      },
+      "keywords": [
+        "monarchy",
+        "england"
+      ]
+    },
+    {
+      "id": "catherine-parr",
+      "title": "Catherine Parr",
+      "type": "person",
+      "importance": 3,
+      "start": {
+        "year": 1512,
+        "circa": true
+      },
+      "end": {
+        "year": 1548,
+        "month": 9,
+        "day": 5
+      },
+      "keywords": [
+        "monarchy",
+        "england"
+      ]
     }
   ]
 }
